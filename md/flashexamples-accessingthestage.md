@@ -2,7 +2,7 @@ Example: Accessing the Stage
 ============================
 
 
-You can access the [Flash Stage](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Stage.html.html) from your C#/JS scripts in the following way:
+You can access the [Flash Stage](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Stage.html.md) from your C#/JS scripts in the following way:
 
 ````
 

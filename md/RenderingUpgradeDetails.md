@@ -2,15 +2,15 @@ Rendering upgrade details
 =========================
 
 
-Unity 3 brings a lot of graphics related changes, and some things might need to be tweaked when you upgrade existing Unity 2.x projects. For changes related to shaders, see [Shader Upgrade Guide](SL-V3Conversion.html).
+Unity 3 brings a lot of graphics related changes, and some things might need to be tweaked when you upgrade existing Unity 2.x projects. For changes related to shaders, see [Shader Upgrade Guide](SL-V3Conversion.md).
 
 Forward Rendering Path changes
 ------------------------------
 
 
-Unity 2.x had one rendering path, which is called [Forward](RenderTech-ForwardRendering.html) in Unity 3. Major changes in it compared to Unity 2.x:
+Unity 2.x had one rendering path, which is called [Forward](RenderTech-ForwardRendering.md) in Unity 3. Major changes in it compared to Unity 2.x:
 * Most common case (one directional per-pixel light) is drawn in one pass now! (used to be two passes)
-* Point & Spot light shadows are not supported. Only one Directional light can cast shadows. Use [Deferred Lighting](RenderTech-DeferredLighting.html) path if you need more shadows.
+* Point & Spot light shadows are not supported. Only one Directional light can cast shadows. Use [Deferred Lighting](RenderTech-DeferredLighting.md) path if you need more shadows.
 * Most "Vertex" lights replaced with Spherical Harmonics lighting.
 * Forward rendering path is purely shader based now, so it works on OpenGL ES 2.0, Xbox 360, PS3 (i.e. platforms that don't support fixed function rendering).
 
@@ -19,7 +19,7 @@ Shader changes
 --------------
 
 
-See [Shader Upgrade Guide](SL-V3Conversion.html) for more details. Largest change is: if you want to write shaders that interact with lighting, you should use [Surface Shaders](SL-SurfaceShaders.html).
+See [Shader Upgrade Guide](SL-V3Conversion.md) for more details. Largest change is: if you want to write shaders that interact with lighting, you should use [Surface Shaders](SL-SurfaceShaders.md).
 
 
 Obscure Graphics Changes That No One Will Probably Notice '^TM^'
@@ -31,7 +31,7 @@ Obscure Graphics Changes That No One Will Probably Notice '^TM^'
 * Removed non-attenuated lights. All point and spot lights are attenuated now.
 * Removed script callbacks: `OnPreCullObject` and `RenderBeforeQueues` attribute.
 * Removed p-buffer based RenderTextures. RenderTextures on OpenGL require FBO support now.
-* Most [Pass LightMode tags](SL-PassTags.html) are gone, and replaced with new tags. You should generally be using [Surface Shaders](SL-SurfaceShaders.html) for that stuff anyway.
+* Most [Pass LightMode tags](SL-PassTags.md) are gone, and replaced with new tags. You should generally be using [Surface Shaders](SL-SurfaceShaders.md) for that stuff anyway.
 * Texture instanceIDs are not OpenGL texture names anymore. Might affect C++ Plugins that were relying on that; use `texture.GetNativeTextureID()` instead.
 * Rename shader keywords SHADOWS_NATIVE to SHADOWS_DEPTH; SHADOWS_PCF4 to SHADOWS_SOFT.
 * Removed ambient boost on objects that were affected by more than 8 vertex lights.

@@ -11,7 +11,7 @@ The following table summarizes iOS hardware available in devices of various gene
 (:table width=100%:)
 (:cellnr:)
 
-###[iPhone Models](http://en.wikipedia.org/wiki/IPhone#Model_comparison.html)
+###[iPhone Models](http://en.wikipedia.org/wiki/IPhone#Model_comparison.md)
 
 
 ###Original iPhone
@@ -104,7 +104,7 @@ The iPhone 4S, with the new A5 chip, is capable of rendering complex shaders thr
 * GPS support
 * Compass Support
 
-###[iPod Touch Models](http://en.wikipedia.org/wiki/IPod_Touch#Specifications.html)
+###[iPod Touch Models](http://en.wikipedia.org/wiki/IPod_Touch#Specifications.md)
 
 (:cellnr:)
 
@@ -144,7 +144,7 @@ Requires scripting optimization for complex games. This is the average hardware 
 
 (:cellnr:)
 
-###[iPad Models](http://en.wikipedia.org/wiki/IPad#Technical_specifications.html)
+###[iPad Models](http://en.wikipedia.org/wiki/IPad#Technical_specifications.md)
 
 (:div style="float:right; padding:5px; color:#BBBBBB; font-size:10px; width:250px;":)
 %thumb width=240px float=right padding=5px%Attach:airmail.jpg
@@ -223,10 +223,10 @@ The GPU's frame buffer is divided up into tiles and rendering happens tile by ti
 In other words, the iPhone/iPad GPU implements a <span class=keyword>Hidden Surface Removal</span> operation at reduced cost. Such an architecture consumes less memory bandwidth, has lower power consumption and utilizes the texture cache better. Tile-Based Deferred Rendering allows the device to reject occluded fragments before actual rasterization, which helps to keep overdraw low.
 
 For more information see also:-
-* [POWERVR MBX Technology Overview](http://www.imgtec.com/factsheets/SDK/PowerVR%20Technology%20Overview.1.0.2e.External.pdf.html)
-* [Apple Notes on iPhone/iPad GPU and OpenGL ES](http://developer.apple.com/iphone/library/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/OpenGLESPlatforms/OpenGLESPlatforms.html#//apple_ref/doc/uid/TP40008793-CH106-SW1.html)
-* [Apple Performance Advices for OpenGL ES in General](http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Performance/Performance.html.html)
-* [Apple Performance Advices for OpenGL ES Shaders](http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/BestPracticesforShaders/BestPracticesforShaders.html.html)
+* [POWERVR MBX Technology Overview](http://www.imgtec.com/factsheets/SDK/PowerVR%20Technology%20Overview.1.0.2e.External.pdf.md)
+* [Apple Notes on iPhone/iPad GPU and OpenGL ES](http://developer.apple.com/iphone/library/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/OpenGLESPlatforms/OpenGLESPlatforms.html#//apple_ref/doc/uid/TP40008793-CH106-SW1.md)
+* [Apple Performance Advices for OpenGL ES in General](http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/Performance/Performance.html.md)
+* [Apple Performance Advices for OpenGL ES Shaders](http://developer.apple.com/library/ios/#documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/BestPracticesforShaders/BestPracticesforShaders.html.md)
 
 ###MBX series
 

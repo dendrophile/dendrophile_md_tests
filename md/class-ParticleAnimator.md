@@ -4,6 +4,7 @@ Particle Animator (Legacy)
 
 <span class=keyword>Particle Animators</span> move your particles over time, you use them to apply wind, drag & color cycling to your particle systems.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-ParticleAnimator.png)  
 _The Particle Animator <span class=keyword>Inspector</span>_
 
@@ -29,7 +30,7 @@ Details
 -------
 
 
-Particle Animators allow your particle systems to be dynamic.  They allow you to change the color of your particles, apply forces and rotation, and choose to destroy them when they are finished emitting.  For more information about Particle Systems, reference [Mesh Particle Emitters](class-MeshParticleEmitter.html), [Ellipsoid Particle Emitters](class-EllipsoidParticleEmitter.html), and [Particle Renderers](class-ParticleRenderer.html).
+Particle Animators allow your particle systems to be dynamic.  They allow you to change the color of your particles, apply forces and rotation, and choose to destroy them when they are finished emitting.  For more information about Particle Systems, reference [Mesh Particle Emitters](class-MeshParticleEmitter.md), [Ellipsoid Particle Emitters](class-EllipsoidParticleEmitter.md), and [Particle Renderers](class-ParticleRenderer.md).
 
 
 ###Animating Color
@@ -37,6 +38,7 @@ Particle Animators allow your particle systems to be dynamic.  They allow you to
 If you would like your particles to change colors or fade in/out, enable them to <span class=component>Animate Color</span> and specify the colors for the cycle.  Any particle system that animates color will cycle through the 5 colors you choose.  The speed at which they cycle will be determined by the Emitter's <span class=component>Energy</span> value.
 
 If you want your particles to fade in rather than instantly appear, set your first or last color to have a low Alpha value.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ParticleRainbow.png)  
 _An <span class=component>Animating Color</span> Particle System_
@@ -67,7 +69,7 @@ You can destroy the Particle System and any attached <span class=keyword>GameObj
 
 Note that automatic destruction takes effect only after some particles have been emitted. The precise rules for when the object is destroyed when <span class=component>AutoDestruct</span> is on:
 * If there have been some particles emitted already, but all of them are dead now, _or_
-* If the [emitter](class-EllipsoidParticleEmitter.html) did have <span class=component>Emit</span> on at some point, but now <span class=component>Emit</span> is off.
+* If the [emitter](class-EllipsoidParticleEmitter.md) did have <span class=component>Emit</span> on at some point, but now <span class=component>Emit</span> is off.
 
 Hints
 -----

@@ -14,6 +14,7 @@ In order to take full advantage of Mecanim's humanoid animation system and retar
 
 1. The mesh or _skin_ must then be connected to the joint hierarchy in order to define which parts of the character mesh move when a given joint is animated. The process of connecting the skeleton to the mesh is known as <span class=keyword>skinning</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Char200.png)  
 >   Stages for preparing a character (modeling, rigging, and skinning)
 
@@ -23,11 +24,11 @@ How to obtain humanoid models
 
 There are three main ways to obtain humanoid models for with the Mecanim Animation system:
 
-1. Use a procedural character system or character generator such as _Poser_, _Makehuman_ or [_Mixamo_](http://www.mixamo.com/.html). Some of these systems will rig and skin your mesh (eg, Mixamo) while others will not. Furthermore, these methods may require that you reduce the number of polygons in your original mesh to make it suitable for use in Unity.
+1. Use a procedural character system or character generator such as _Poser_, _Makehuman_ or [_Mixamo_](http://www.mixamo.com/.md). Some of these systems will rig and skin your mesh (eg, Mixamo) while others will not. Furthermore, these methods may require that you reduce the number of polygons in your original mesh to make it suitable for use in Unity.
 
-1. Purchase demo examples and character content from the [Unity Asset Store](http://unity3d.com/unity/asset-store/.html).
+1. Purchase demo examples and character content from the [Unity Asset Store](http://unity3d.com/unity/asset-store/.md).
 
-1. Also, you can of course [prepare your own character](Preparingacharacterfromscratch.html) from scratch.
+1. Also, you can of course [prepare your own character](Preparingacharacterfromscratch.md) from scratch.
 
 
 Export & Verify
@@ -46,4 +47,4 @@ Further details
 The following pages cover the stages of preparing and importing animation assets in greater depth
 (:tocportion:)
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

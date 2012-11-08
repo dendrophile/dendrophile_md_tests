@@ -4,6 +4,7 @@ Particle Renderer (Legacy)
 
 The <span class=keyword>Particle Renderer</span> renders the <span class=keyword>Particle System</span> on screen.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-ParticleRenderer.png)  
 _The Particle Renderer <span class=keyword>Inspector</span>_
 
@@ -16,7 +17,7 @@ Properties
 |**_Property:_** |**_Function:_** |
 |:---|:---|
 |<span class=component>Materials</span> |Reference to a list of <span class=keyword>Materials</span> that will be displayed in the position of each individual particle. |
-|<span class=component>Camera Velocity Scale</span> |The amount of stretching that is applied to the Particles based on [Camera](class-Camera.html) movement. |
+|<span class=component>Camera Velocity Scale</span> |The amount of stretching that is applied to the Particles based on [Camera](class-Camera.md) movement. |
 |<span class=component>Stretch Particles</span> |Determines how the particles are rendered. |
 |>>><span class=component>Billboard</span> |The particles are rendered as if facing the camera. |
 |>>><span class=component>Stretched</span> |The particles are facing the direction they are moving. |
@@ -37,6 +38,7 @@ Details
 
 Particle Renderers are required for any Particle Systems to be displayed on the screen.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ParticleRendererExhaust.png)  
 _A Particle Renderer makes the Gunship's engine exhaust appear on the screen_
 
@@ -47,7 +49,7 @@ When setting up a Particle Renderer it is very important to use an appropriate m
 
 Creating a new material is easy:
 1. Select <span class=menu>Assets->Create Other->Material</span> from the menu bar.
-1. The [Material](class-Material.html) has a shader popup, choose one of the shaders in the Particles group. Eg. <span class=menu>Particles->Multiply</span>.
+1. The [Material](class-Material.md) has a shader popup, choose one of the shaders in the Particles group. Eg. <span class=menu>Particles->Multiply</span>.
 1. Now assign a Texture. The different shaders use the alpha channel of the textures slightly differently, but most of the time a value of black will make it invisible and white in the alpha channel will display it on screen.
 
 

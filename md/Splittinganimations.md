@@ -9,6 +9,7 @@ Working with models that have pre-split animations
 
 
 The simplest types of models to work with are those that contain pre-split animations. If you have an animation like that, the <span class=inspector>Animations</span> tab in the <span class=inspector>Animation Importer Inspector</span> will look like this:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimImportPreSplitAnimation.png)  
 
 You will see a list available clips which you can preview by pressing Play in the <span class=inspector>Preview Window</span> (lower down in the inspector). The frame ranges of the clips can be edited, if needed. 
@@ -19,6 +20,7 @@ Working with models that have unsplit animations
 
 For models where the clips are supplied as one continuous animation, the <span class=inspector>Animation</span> tab in the <span class=inspector>Animation Importer Inspector</span> will look like this:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimImportAnimationNoSplit.png)  
 
 In cases like this, you can define the frame ranges that correspond to each of the separate animation sequences (walking, jumping, etc). You can create a new animation clip by pressing (+) and selecting the range of frames that are included in it. 
@@ -27,6 +29,7 @@ For example:
 * walk animation during frames 1 - 33
 * run animation during frames 41 - 57
 * kick animation during frames 81 - 97
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimImportAnimationSplitting.png)  
@@ -45,6 +48,7 @@ In the Import Settings, the <span class=component>Split Animations</span> table 
 
 Working with animation clips for Mecanim animations.
 ----------------------------------------------------
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimImportChristmasTree.png)  
 
@@ -83,6 +87,7 @@ For models that have muscle definitions (Mecanim), the process is different:-
 
 Another way to import animations is to follow a naming scheme that Unity allows for the animation files. You create separate model files and name them with the convention 'modelName@animationName.fbx'. For example, for a model called "goober", you could import separate idle, walk, jump and walljump animations using files named "goober@idle.fbx", "goober@walk.fbx", "goober@jump.fbx" and "goober@walljump.fbx". Only the animation data from these files will be used, even if the original files are exported with mesh data.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/animation_at_naming.png)  
 
 _An example of four animation files for an animated character (note that the .fbx suffix is not shown within Unity)_
@@ -91,4 +96,4 @@ Unity automatically imports all four files and collects all animations to the fi
 
 For FBX files, simply export a model file with no animation ticked (eg, goober.fbx) and the 4 clips as goober@_animname_.fbx by exporting the desired keyframes for each (enable animation in the FBX dialog).
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

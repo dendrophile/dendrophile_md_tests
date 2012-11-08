@@ -71,6 +71,7 @@ We support `jpeg` textures, as well as RGBA / Truecolor. Textures which are jpg-
 
 The compression ratio can be specified in the texture import under 'Override for FlashPlayer' setting.  Compressed textures get converted to `jpeg` with the chosen compression ratio.  The compression ratio is worth experimenting with since it can considerably reduce the size of the final SWF.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/flashtextureoverride.png)  
 
 Texture quality ranges from 0 to 100, with 100 indicating no compression, and 0 the highest amount of compression possible.  

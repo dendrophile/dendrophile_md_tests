@@ -11,6 +11,7 @@ Unity has a rich and sophisticated animation system called <span class=keyword>M
 * Management of complex interactions between animations with a visual programming tool.
 * Animating different body parts with different logic.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimShowcase.png)  
 _Typical setup in the Visual Programming Tool and the <span class=inspector>Animation Preview window</span>_
 
@@ -22,11 +23,11 @@ Workflow in Mecanim can be split into three major stages.
 
 1. __Asset preparation and import__. This is done by artists or animators, with 3rd party tools, such as Max or Maya. This step is independent of Mecanim features.   
 2. Character setup for Mecanim, which can be done in 2 ways:
-   a. __Humanoid character setup__. Mecanim has a special workflow for humanoid models, with extended GUI support and [retargeting](Retargeting.html). The setup involves creating and setting up an [Avatar<span class=keyword>](</span>CreatingtheAvatar.html) and tweaking [Muscle definitions<span class=keyword>](</span>MuscleDefinitions.html).  
+   a. __Humanoid character setup__. Mecanim has a special workflow for humanoid models, with extended GUI support and [retargeting](Retargeting.md). The setup involves creating and setting up an [Avatar<span class=keyword>](</span>CreatingtheAvatar.md) and tweaking [Muscle definitions<span class=keyword>](</span>MuscleDefinitions.md).  
    b. __Generic character setup__. This is for anything like creatures, animated props, four-legged animals, etc. Retargeting is not possible here, but you can still take advantage of the rich feature set of Mecanim, including everything described below. 
-3. __Bringing characters to life__. This involves [setting up animation clips](AligningAnimationClips.html), as well as interactions between them, and involves setup of [State Machines](AnimationStateMachines.html) and [Blend Trees](AnimationBlendTrees.html), exposing [Animation Parameters](AnimationParameters.html), and controlling animations from code. 
+3. __Bringing characters to life__. This involves [setting up animation clips](AligningAnimationClips.md), as well as interactions between them, and involves setup of [State Machines](AnimationStateMachines.md) and [Blend Trees](AnimationBlendTrees.md), exposing [Animation Parameters](AnimationParameters.md), and controlling animations from code. 
 
-Mecanim comes with a lot of new concepts and terminology. If at any point, you need to find out what something means, go to our [Animation Glossary](AnimationGlossary.html).
+Mecanim comes with a lot of new concepts and terminology. If at any point, you need to find out what something means, go to our [Animation Glossary](AnimationGlossary.md).
 
 (:tocportion:)
 
@@ -34,6 +35,6 @@ Legacy animation system
 -----------------------
 
 While Mecanim is recommended for use in most situations, especially for working humanoid animations, the Legacy animation system is still used in a variety of contexts. One of them is working legacy animations and code (content created before Unity 4.0). Another is controlling animation clips with parameters other than time (for example for controlling the aiming angle). 
-For information on the Legacy animation system, see [this section](Main.Animations40.html)
+For information on the Legacy animation system, see [this section](Main.Animations40.md)
 
 Unity intends to phase out the Legacy animation system over time for all cases by merging the workflows into Mecanim.

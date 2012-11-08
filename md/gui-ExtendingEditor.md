@@ -6,7 +6,7 @@ Introduction
 ------------
 
 
-You can create your own custom design tools inside Unity through <span class=keyword>Editor Windows</span>.  Scripts that derive from [EditorWindow](ScriptRef:EditorWindow.html.html) instead of [MonoBehaviour](ScriptRef:MonoBehaviour.html.html) can leverage both [GUI](ScriptRef:EditorGUI.html.html)/[GUILayout](ScriptRef:GUI.html.html) and [EditorGUI](ScriptRef:GUILayout.html.html)/[EditorGUILayout](ScriptRef:EditorGUILayout.html.html) controls. Alternatively, you can use <span class=keyword>Custom Inspectors</span> to expose these GUI controls in your GameObject Inspector.
+You can create your own custom design tools inside Unity through <span class=keyword>Editor Windows</span>.  Scripts that derive from [EditorWindow](ScriptRef:EditorWindow.html) instead of [MonoBehaviour](ScriptRef:MonoBehaviour.html) can leverage both [GUI](ScriptRef:EditorGUI.html)/[GUILayout](ScriptRef:GUI.html) and [EditorGUI](ScriptRef:GUILayout.html)/[EditorGUILayout](ScriptRef:EditorGUILayout.html) controls. Alternatively, you can use <span class=keyword>Custom Inspectors</span> to expose these GUI controls in your GameObject Inspector.
 
 
 Editor Windows
@@ -14,6 +14,7 @@ Editor Windows
 
 
 You can create any number of custom windows in your app. These behave just like the Inspector, Scene or any other built-in ones. This is a great way to add a user interface to a sub-system for your game.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CustomEditorWindow.png)  
 _Custom Editor Interface by Serious Games Interactive used for scripting cutscene actions_
@@ -41,7 +42,7 @@ _MyWindow.js - placed in a folder called 'Editor' within your project._
 In order to show the window on screen, make a menu item that displays it. This is done by creating a function which is activated by the 
 <span class=keyword>MenuItem</span> property. 
 
-The default behavior in Unity is to recycle windows (so selecting the menu item again would show existing windows. This is done by using the function [EditorWindow.GetWindow](ScriptRef:EditorWindow.GetWindow.html.html) Like this:
+The default behavior in Unity is to recycle windows (so selecting the menu item again would show existing windows. This is done by using the function [EditorWindow.GetWindow](ScriptRef:EditorWindow.GetWindow.html) Like this:
 ````
 
 class MyWindow extends EditorWindow {
@@ -58,7 +59,7 @@ class MyWindow extends EditorWindow {
 ````
 _Showing the MyWindow_
 
-This will create a standard, dockable editor window that saves its position between invocations, can be used in custom layouts, etc. To have more control over what gets created, you can use [GetWindowWithRect](ScriptRef:EditorWindow.GetWindowWithRect.html.html)
+This will create a standard, dockable editor window that saves its position between invocations, can be used in custom layouts, etc. To have more control over what gets created, you can use [GetWindowWithRect](ScriptRef:EditorWindow.GetWindowWithRect.html)
 
 ###Implementing Your Window's GUI
 
@@ -100,11 +101,12 @@ public class MyWindow : EditorWindow
 ````
 
 This example results in a window which looks like this:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ExampleEditorWindow.png)  
 _Custom Editor Window created using supplied example._
 
 
-For more info, take a look at the example and documentation on the [EditorWindow page](ScriptRef:EditorWindow.html.html).
+For more info, take a look at the example and documentation on the [EditorWindow page](ScriptRef:EditorWindow.html).
 
 Custom Inspectors
 -----------------
@@ -162,6 +164,7 @@ The code in OnInspectorGUI is exectued whenever Unity displays the inspector. Yo
 The EditorUtility.SetDirty code is executed if the user has changed any of the values by checking GUI.changed.
 
 In this case, we make one of the Vector3 fields like is used in the Transform Inspector - like so:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CustomInspector.png)  
 _Yay for shiny inspectors_
 
@@ -189,6 +192,6 @@ class LookAtPointEditor extends Editor {
 
 ````
 
-OnSceneGUI works just like OnInspectorGUI - except it gets run in the scene view. To help you make your editing interface, you can use the functions defined in [Handles](ScriptRef:Handles.html.html) class. All functions in there are designed for working in 3D Scene views.
+OnSceneGUI works just like OnInspectorGUI - except it gets run in the scene view. To help you make your editing interface, you can use the functions defined in [Handles](ScriptRef:Handles.html) class. All functions in there are designed for working in 3D Scene views.
 
 If you want to put 2D GUI objects (GUI, EditorGUI and friends), you need to wrap them in calls to Handles.BeginGUI() and Handles.EndGUI().

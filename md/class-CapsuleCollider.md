@@ -4,6 +4,7 @@ Capsule Collider
 
 The <span class=keyword>Capsule Collider</span> is made of two half-spheres joined together by a cylinder.  It is the same shape as the Capsule primitive.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-CapsuleCollider.png)  
 _A pile of Capsule Colliders_
 
@@ -29,7 +30,8 @@ Details
 -------
 
 
-You can adjust the Capsule Collider's <span class=component>Radius</span> and <span class=component>Height</span> independently of each other.  It is used in the [Character Controller](class-CharacterController.html) and works well for poles, or can be combined with other Colliders for unusual shapes.
+You can adjust the Capsule Collider's <span class=component>Radius</span> and <span class=component>Height</span> independently of each other.  It is used in the [Character Controller](class-CharacterController.md) and works well for poles, or can be combined with other Colliders for unusual shapes.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/capsulecollider.png)  
 _A standard Capsule Collider_

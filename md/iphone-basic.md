@@ -9,7 +9,7 @@ Prerequisites
 
 
 ###I've just received iPhone Developer approval from Apple, but I've never developed for iOS before.  What do I do first?
-__A__: Download the SDK, get up and running on the Apple developer site, and set up your team, devices, and provisioning. We've provided a [basic list of steps](iphone-accountsetup.html) to get you started.
+__A__: Download the SDK, get up and running on the Apple developer site, and set up your team, devices, and provisioning. We've provided a [basic list of steps](iphone-accountsetup.md) to get you started.
 
 ###Can Unity-built games run in the iPhone Simulator?
 __A__: No, but Unity iOS can build to iPad Simulator if you're using the latest SDK. However the simulator itself is not very useful for Unity because it does not simulate all inputs from iOS or properly emulate the performance you get on the iPhone/iPad. You should test out gameplay directly inside Unity using the iPhone/iPad as a remote control while it is running the Unity Remote application. Then, when you are ready to test performance and optimize the game, you publish to iOS devices.
@@ -19,7 +19,7 @@ Unity Features
 
 
 ###How do I work with the touch screen and accelerometer?
-__A__: In the scripting reference inside your Unity iOS installation, you will find classes that provide the hooks into the device's functionality that you will need to build your apps. Consult the [Input System page](Input#Input.html) for more information.
+__A__: In the scripting reference inside your Unity iOS installation, you will find classes that provide the hooks into the device's functionality that you will need to build your apps. Consult the [Input System page](Input#Input.md) for more information.
 
 ###My existing particle systems seem to run very slowly on iOS.  What should I do?
 __A__: iOS has relatively low fillrate. If your particles cover a rather large portion of the screen with multiple layers, it will kill iOS performance even with the simplest shader. We suggest baking your particle effects into a series of textures off-line. Then, at run-time, you can use 1-2 particles to display them via animated textures. You can get fairly decent looking effects with a minimum amount of overdraw this way.

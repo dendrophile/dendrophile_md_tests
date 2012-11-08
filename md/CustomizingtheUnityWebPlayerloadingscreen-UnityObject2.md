@@ -2,7 +2,7 @@ Customizing the Unity Web Player loading screen
 ===============================================
 
 
-Customize the loading screen with _UnityObject2_ is similiar to the way it's done with [UnityObject](CustomizingtheUnityWebPlayerloadingscreen.html).
+Customize the loading screen with _UnityObject2_ is similiar to the way it's done with [UnityObject](CustomizingtheUnityWebPlayerloadingscreen.md).
 
 Please note that modifying the loader images is only possible with <span class=keyword>Unity Pro</span>.
 
@@ -22,5 +22,5 @@ u.initPlugin(jQuery("#unityPlayer")[0], "Example.unity3d");
 
 ````
 
-See [UnityObject2](WorkingwithUnityObject2#constructor.html) for more details.
+See [UnityObject2](WorkingwithUnityObject2#constructor.md) for more details.
 

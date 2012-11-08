@@ -4,6 +4,7 @@ Physics Manager
 
 You can access the <span class=keyword>Physics Manager</span> by selecting <span class=menu>Edit->Project Settings->Physics</span> from the menu bar.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PhysicsSet4b7.png)  
 _The Physics Manager_
 
@@ -24,12 +25,12 @@ Properties
 |<span class=component>Min Penetration For Penalty</span> |How deep in meters are two objects allowed to penetrate before the collision solver pushes them apart. A higher value will make objects penetrate more but reduces jitter. |
 |<span class=component>Solver Iteration Count</span> |Determines how accurately joints and contacts are resolved. Usually a value of 7 works very well for almost all situations. |
 |<span class=component>Raycasts Hit Triggers</span> |If enabled, any Raycast that intersects with a Collider marked as a Trigger will return a hit.  If disabled, these intersections will not return a hit. |
-|<span class=component>Layer Collision Matrix</span> |Defines how the [layer-based collision](LayerBasedCollision.html) detection system will behave.|
+|<span class=component>Layer Collision Matrix</span> |Defines how the [layer-based collision](LayerBasedCollision.md) detection system will behave.|
 
 Details
 -------
 
-The Physics Manager is where you define the default behaviors of your world.  For an explanation of Rigidbody Sleeping, read this page about [sleeping](RigidbodySleeping.html).
+The Physics Manager is where you define the default behaviors of your world.  For an explanation of Rigidbody Sleeping, read this page about [sleeping](RigidbodySleeping.md).
 
 Hints
 -----

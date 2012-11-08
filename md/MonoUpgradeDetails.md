@@ -7,9 +7,9 @@ C# Improvements
 ---------------
 
 Basically the differences betweeen C# 3.5 and C# 2.0, including:
-* Variable type inference. More info [here](http://msdn.microsoft.com/en-us/library/bb383973.aspx.html).
+* Variable type inference. More info [here](http://msdn.microsoft.com/en-us/library/bb383973.aspx.md).
 * Linq .
-* Lambdas. More info [here](http://msdn.microsoft.com/en-us/library/bb397687.aspx.html).
+* Lambdas. More info [here](http://msdn.microsoft.com/en-us/library/bb397687.aspx.md).
 
 JavaScript Improvements
 -----------------------

@@ -4,19 +4,19 @@ Practical Guide to Optimization for Mobiles - Optimizing Scripts
 
 This section demonstrates how you would go about optimizing the actual scripts and methods your game uses, and it also goes into detail about the reasons why the optimizations work, and why applying them will benefit you in certain situations.
 
-[Profiler](Main.Profiler.html) is King (Unity Pro)
---------------------------------------------------
+[Profiler](Main.Profiler.md) is King (Unity Pro)
+------------------------------------------------
 
 
 There is no such thing as a list of boxes to check that will ensure your project runs smoothly. To optimize a slow project, you have to profile to find specific offenders that take up a disproportionate amount of time. Trying to optimize without profiling or without thoroughly understanding the results that the profiler gives is like trying to optimize with a blindfold on. 
 
-So, if you want to make a technologically demanding game that runs on mobile platforms, you probably need Unity Pro for the [Profiler](Main.Profiler.html). 
+So, if you want to make a technologically demanding game that runs on mobile platforms, you probably need Unity Pro for the [Profiler](Main.Profiler.md). 
 
 ###What About Indie?
 
-You can use the [internal profiler](Main.iphone-InternalProfiler.html) to figure out what kind of process is slowing your game down, be it physics, scripts, or rendering, but you can't drill down into specific scripts and methods to find the actual offenders. However, by building switches into your game which enable and disable certain functionality, you can narrow down the worst offenders significantly. For example, if you remove the enemy characters' AI script and the framerate doubles, you know that the script, or something that it brings into the game, has to be optimized. The only problem is that you may have to try a lot of different things before you find the problem.
+You can use the [internal profiler](Main.iphone-InternalProfiler.md) to figure out what kind of process is slowing your game down, be it physics, scripts, or rendering, but you can't drill down into specific scripts and methods to find the actual offenders. However, by building switches into your game which enable and disable certain functionality, you can narrow down the worst offenders significantly. For example, if you remove the enemy characters' AI script and the framerate doubles, you know that the script, or something that it brings into the game, has to be optimized. The only problem is that you may have to try a lot of different things before you find the problem.
 
-For more about profiling on mobile devices, see the [profiling section](Main.iphone-PracticalGuide#Profile.html).
+For more about profiling on mobile devices, see the [profiling section](Main.iphone-PracticalGuide#Profile.md).
 
 Optimized by Design
 -------------------
@@ -27,7 +27,7 @@ Attempting to develop something which is fast from the beginning is risky, becau
     1. Object Pooling##
 ###Object Pooling
 
-We gave object pooling as an example of the intersection between good gameplay and good code design in our [introduction to optimized scripting methods](Main.iphone-OptimizedScriptingMethods.html). Using object pooling for ephemeral objects is faster than creating and destroying them, because it makes memory allocation simpler and removes dynamic memory allocation overhead and Garbage Collection, or GC.
+We gave object pooling as an example of the intersection between good gameplay and good code design in our [introduction to optimized scripting methods](Main.iphone-OptimizedScriptingMethods.md). Using object pooling for ephemeral objects is faster than creating and destroying them, because it makes memory allocation simpler and removes dynamic memory allocation overhead and Garbage Collection, or GC.
 
 ###Memory Allocation
 
@@ -37,10 +37,10 @@ Scripts you write in Unity use automatic memory management. Just about all scrip
 __Note:__ If I have a game object variable like <span class=component>`GameObject myGameObject;`</span> or <span class=component>`var myGameObject : GameObject;`</span>, why isn't it destroyed when I say <span class=component>`myGameObject = null;`</span>?
 * The game object is still referenced by Unity, because Unity has to maintain a reference to it in order for it to be drawn, updated, etc. Calling <span class=component>`Destroy(myGameObject);`</span> removes that reference and deletes the object.
 
-But if you create an object that Unity has no idea about, for example, an instance of a class that does not inherit from anything (in contrast, most classes or "script components" inherit from [MonoBehaviour](ScriptRef:MonoBehaviour.html.html) ) and then set your reference variable to it to null, what actually happens is that the object is lost as far as your script and Unity are concerned; they can't access it and will never see it again, but it stays in memory. Then, some time later, the Garbage Collector runs, and it removes anything in memory that is not referenced anywhere. It is able to do this because, behind the scenes, the number of references to each block of memory is kept track of. This is one reason why scripting languages are slower than C++.
+But if you create an object that Unity has no idea about, for example, an instance of a class that does not inherit from anything (in contrast, most classes or "script components" inherit from [MonoBehaviour](ScriptRef:MonoBehaviour.html) ) and then set your reference variable to it to null, what actually happens is that the object is lost as far as your script and Unity are concerned; they can't access it and will never see it again, but it stays in memory. Then, some time later, the Garbage Collector runs, and it removes anything in memory that is not referenced anywhere. It is able to do this because, behind the scenes, the number of references to each block of memory is kept track of. This is one reason why scripting languages are slower than C++.
 (:showhideend:)
 
-* Read more about [Automatic Memory Management and the Garbage Collector](Main.UnderstandingAutomaticMemoryManagement.html).
+* Read more about [Automatic Memory Management and the Garbage Collector](Main.UnderstandingAutomaticMemoryManagement.md).
 
 ###How to Avoid Allocating Memory
 
@@ -73,11 +73,11 @@ MyFunction(foo);
 ````
 then <span class=component>MyFunction</span> will receive a copy of <span class=component>foo</span>. <span class=component>foo</span> is never allocated on the heap and never garbage collected. If <span class=component>MyFunction</span> modifies it's copy of <span class=component>foo</span>, the other <span class=component>foo</span> is unaffected.
 (:showhideend:)
-* Objects which stick around for a long time should be classes, and objects which are ephemeral should be structs.  [Vector3](ScriptRef:Vector3.html.html) is probably the most famous struct. If it were a class, everything would be a lot slower.
+* Objects which stick around for a long time should be classes, and objects which are ephemeral should be structs.  [Vector3](ScriptRef:Vector3.html) is probably the most famous struct. If it were a class, everything would be a lot slower.
 
 ###Why Object Pooling is Faster
 
-The upshot of this is that __using Instantiate and Destroy a lot gives the Garbage Collector a lot to do__, and this can cause a "hitch" in gameplay. As the [Automatic Memory Management page](Main.UnderstandingAutomaticMemoryManagement.html) explains, there are other ways to get around the common performance hitches that surround Instantiate and Destroy, such as triggering the Garbage Collector manually when nothing is going on, or triggering it very often so that a large backlog of unused memory never builds up.
+The upshot of this is that __using Instantiate and Destroy a lot gives the Garbage Collector a lot to do__, and this can cause a "hitch" in gameplay. As the [Automatic Memory Management page](Main.UnderstandingAutomaticMemoryManagement.md) explains, there are other ways to get around the common performance hitches that surround Instantiate and Destroy, such as triggering the Garbage Collector manually when nothing is going on, or triggering it very often so that a large backlog of unused memory never builds up.
 
 Another reason is that, when a specific prefab is instantiated for the first time, sometimes additional things have to be loaded into RAM, or textures and meshes need to be uploaded to the GPU. This can cause a hitch as well, and with object pooling, this happens when the level loads instead of during gameplay.
 
@@ -257,7 +257,7 @@ function Update () {
 Of course, for a large, complicated game, you will want to make a generic solution that works for all your prefabs.
 
 
-The example of "Hundreds of rotating, dynamically lit, collectable coins onscreen at once" which was given in the [Scripting Methods section](Main.iphone-OptimizedScriptingMethods.html) will be used to demonstrate how script code, Unity components like the Particle System, and custom shaders can be used to create a stunning effect without taxing the weak mobile hardware.
+The example of "Hundreds of rotating, dynamically lit, collectable coins onscreen at once" which was given in the [Scripting Methods section](Main.iphone-OptimizedScriptingMethods.md) will be used to demonstrate how script code, Unity components like the Particle System, and custom shaders can be used to create a stunning effect without taxing the weak mobile hardware.
 
 Imagine that this effect lives in the context of a 2D sidescrolling game with tons of coins that fall, bounce, and rotate. The coins are dynamically lit by point lights. We want to capture the light glinting off the coins to make our game more impressive. 
 
@@ -274,17 +274,17 @@ If you want to display a lot of objects which all move in a similar way and can 
 
 * Collectables or Coins
 * Flying Debris
-* [Hordes or Flocks of Simple Enemies](http://www.gamespot.com/ikaruga/images/580047/.html)
+* [Hordes or Flocks of Simple Enemies](http://www.gamespot.com/ikaruga/images/580047/.md)
 * Cheering Crowds
 * Hundreds of Projectiles or Explosions
 
-There is a free editor extension called [Sprite Packer](http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E.html) that facilitates the creation of animated sprite particle systems. It renders frames of your object to a texture, which can then be used as an animated sprite sheet on a particle system. For our use case, we would use it on our rotating coin. 
+There is a free editor extension called [Sprite Packer](http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E.md) that facilitates the creation of animated sprite particle systems. It renders frames of your object to a texture, which can then be used as an animated sprite sheet on a particle system. For our use case, we would use it on our rotating coin. 
 
 ###Reference Implementation
 
 %thumb width=250px float=right padding=5px%Attach:coinsParts.jpg
 
-Included in the [Sprite Packer project](http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E.html) is an example that demonstrates a solution to this exact problem. 
+Included in the [Sprite Packer project](http://u3d.as/content/forest-johnson/sprite-packer-with-legacy-particle-emitter-to-shuriken-converter-/34E.md) is an example that demonstrates a solution to this exact problem. 
 
 It uses a family of assets of all different kinds to achieve a dazzling effect on a low computing budget:
 
@@ -419,7 +419,7 @@ function Update () {
 }
 ````
 
-That could be slow, if there are enough of them running at the same time. Little known fact: all of the component accessors in <span class=component>[MonoBehaviour](ScriptRef:MonoBehaviour.html.html)</span>, things like <span class=component>transform</span>, <span class=component>renderer</span>, and <span class=component>audio</span>, are equivalent to their <span class=component>GetComponent(Transform)</span> counterparts, and they are actually a bit slow. <span class=component>[GameObject](ScriptRef:GameObject.html.html).FindWithTag</span> has been optimized, but in some cases, for example, in inner loops, or on scripts that run on a lot of instances, this script might be a bit slow.
+That could be slow, if there are enough of them running at the same time. Little known fact: all of the component accessors in <span class=component>[MonoBehaviour](ScriptRef:MonoBehaviour.html)</span>, things like <span class=component>transform</span>, <span class=component>renderer</span>, and <span class=component>audio</span>, are equivalent to their <span class=component>GetComponent(Transform)</span> counterparts, and they are actually a bit slow. <span class=component>[GameObject](ScriptRef:GameObject.html).FindWithTag</span> has been optimized, but in some cases, for example, in inner loops, or on scripts that run on a lot of instances, this script might be a bit slow.
 
 This is a better version of the script.
 ````
@@ -551,8 +551,8 @@ Just calling a function has a little bit of overhead in itself. If you are calli
 The NVIDIA PhysX physics engine used by Unity is available on mobiles, but the performance limits of the hardware will be reached more easily on mobile platforms than desktops.
 
 Here are some tips for tuning physics to get better performance on mobiles:-
-* You can adjust the <span class=component>Fixed Timestep</span> setting (in the [Time manager](Main.class-TimeManager.html)) to reduce the time spent on physics updates. Increasing the timestep will reduce the CPU overhead at the expense of the accuracy of the physics. Often, lower accuracy is an acceptable tradeoff for increased speed.
-* Set the <span class=component>Maximum Allowed Timestep</span> in the [Time manager](Main.class-TimeManager.html) in the 8-10fps range to cap the time spent on physics in the worst case scenario.
+* You can adjust the <span class=component>Fixed Timestep</span> setting (in the [Time manager](Main.class-TimeManager.md)) to reduce the time spent on physics updates. Increasing the timestep will reduce the CPU overhead at the expense of the accuracy of the physics. Often, lower accuracy is an acceptable tradeoff for increased speed.
+* Set the <span class=component>Maximum Allowed Timestep</span> in the [Time manager](Main.class-TimeManager.md) in the 8-10fps range to cap the time spent on physics in the worst case scenario.
 * Mesh colliders have a much higher performance overhead than primitive colliders, so use them sparingly. It is often possible to approximate the shape of a mesh by using child objects with primitive colliders. The child colliders will be controlled collectively as a single compound collider by the rigidbody on the parent.
 * While wheel colliders are not strictly colliders in the sense of solid objects, they nonetheless have a high CPU overhead.
 

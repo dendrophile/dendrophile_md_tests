@@ -2,7 +2,7 @@ Custom Lighting models in Surface Shaders
 =========================================
 
 
-When writing [Surface Shaders](SL-SurfaceShaders.html), you're describing properties of a surface (albedo color, normal, ...) and the lighting interaction is computed by a <span class=keyword>Lighting Model</span>. Built-in lighting models are <span class=keyword>Lambert</span> (diffuse lighting) and <span class=keyword>BlinnPhong</span> (specular lighting).
+When writing [Surface Shaders](SL-SurfaceShaders.md), you're describing properties of a surface (albedo color, normal, ...) and the lighting interaction is computed by a <span class=keyword>Lighting Model</span>. Built-in lighting models are <span class=keyword>Lambert</span> (diffuse lighting) and <span class=keyword>BlinnPhong</span> (specular lighting).
 
 Sometimes you might want to use a custom lighting model, and it is possible to do that in Surface Shaders. Lighting model is nothing more than a couple of Cg/HLSL functions that match some conventions. The built-in `Lambert` and `BlinnPhong` models are defined in `Lighting.cginc` file inside Unity (<span class=menu>{unity install path}/Data/CGIncludes/Lighting.cginc</span> on Windows, <span class=menu>/Applications/Unity/Unity.app/Contents/CGIncludes/Lighting.cginc</span> on Mac).
 
@@ -33,5 +33,5 @@ Examples
 --------
 
 
-__[Surface Shader Lighting Examples](SL-SurfaceShaderLightingExamples.html)__
+__[Surface Shader Lighting Examples](SL-SurfaceShaderLightingExamples.md)__
 

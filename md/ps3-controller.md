@@ -17,6 +17,7 @@ To query analog axis values:
 
 ###Pad controllers:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ps3_pad.png)  
 
 
@@ -41,9 +42,10 @@ To query analog axis values:
 
 ###Move & Navigation controllers:
 
-* The buttons & analog sticks are accessed through the default Unity [Input](ScriptRef:Input.html.html) API just like the Pad controller.
-* You can access the Playstation 3 Move controller sphere/handle rotation, position and sphere tracking via the [PS3Move](ScriptRef:PS3Move.html.html) API provided in the scripts.
+* The buttons & analog sticks are accessed through the default Unity [Input](ScriptRef:Input.html) API just like the Pad controller.
+* You can access the Playstation 3 Move controller sphere/handle rotation, position and sphere tracking via the [PS3Move](ScriptRef:PS3Move.html) API provided in the scripts.
 * If you want to display the camera texture (for calibration) you can access it via the ___PS3CameraTexture__ sampler2D inside the shader.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ps3_move.png)  
 

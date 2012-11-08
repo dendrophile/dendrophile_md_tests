@@ -4,14 +4,15 @@ Noise And Grain
 
 The <span class=keyword>Noise And Grain</span> image effect simulates noise and film grain which is a typical effect happening in film or photography. This special noise implementation can even be used to enhance image contrast as it's using a special blend mode. It also enables typical noise scenarios, such as as low level light noise or softening glowing halo's or bloom borders.
 
-The [DirectX 11](DirectX11.html) implementation is totally independent of any texture reads and thus a good fit for modern graphics hardware. 
+The [DirectX 11](DirectX11.md) implementation is totally independent of any texture reads and thus a good fit for modern graphics hardware. 
 
 The standard version uses a noise texture that should have an average luminance of 0.5 to prevent unwanted brightness changes of the resulting image. The used default texture is an example for this.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./NoiseAndGrain.png)  
 _Example screenshot of the effect. Notice its smoothness, how it sticks mostly to bright and dark areas and that it has a distinct blue tint._
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------
@@ -20,7 +21,7 @@ Properties
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
-|<span class=component>[DirectX11](DirectX11.html) Grain</span> |Enable high quality noise and grain (DX11 only).|
+|<span class=component>[DirectX11](DirectX11.md) Grain</span> |Enable high quality noise and grain (DX11 only).|
 |<span class=component>Monochrome</span> |Use greyscale noise only.|
 |<span class=component>Intensity Multiplier</span> |Global intensity adjustment.|
 |<span class=component>General</span> |Add noise equally for all luminance ranges.|

@@ -22,6 +22,7 @@ How to set up a <span class=keyword>Cache Server</span> (user)
 --------------------------------------------------------------
 
 Setting up the Cache Server couldn't be easier. All you need to do is click Use Cache Server in the preferences and tell the local machine's <span class=keyword>Unity Editor</span> where the <span class=keyword>Cache Server</span> is. 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CacheServerEnabled.png)  
 
 This can be found in <span class=menu>Unity->Preferences</span> on the Mac or <span class=menu>Edit->Preferences</span> on the PC. 
@@ -34,12 +35,14 @@ How to set up a <span class=keyword>Cache Server</span> (admin)
 Admins need to set up the <span class=keyword>Cache Server</span> machine that will host the cached assets. 
 
 You need to:
-* Download the Cache Server [here](http://unity3d.com/unity/team/cacheserver/.html)
+* Download the Cache Server [here](http://unity3d.com/unity/team/cacheserver/.md)
 * Unzip the file, after which you should see something like this:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CacheServerZipCropped.png)  
 
 * Depending on your operating system, run the appropriate command script.
 * You will see a terminal window, indicating that the Cache Server is running in the background
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CacheServerTerminal.png)  
 
 The <span class=keyword>Cache Server</span> needs to be on a reliable machine with very large storage (much larger than the size of the project itself, as there will likely be multiple versions of imported resources stored). If the hard disk becomes full the <span class=keyword>Cache Server</span> could perform slowly.

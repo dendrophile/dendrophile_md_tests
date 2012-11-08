@@ -2,7 +2,7 @@ PlayStation3: Native Plugins
 ============================
 
 
-This page describes [Native Code Plugins](Plugins.html) for PS3
+This page describes [Native Code Plugins](Plugins.md) for PS3
 
 
 Plugin development:
@@ -14,7 +14,7 @@ Plugin development:
 Plugin requirements:
 --------------------
 
-* Linked against the same SDK as Unity. (See the [Getting Started](ps3-gettingstarted.html) page for current SDK Version.)
+* Linked against the same SDK as Unity. (See the [Getting Started](ps3-gettingstarted.md) page for current SDK Version.)
 * OnModuleStart / OnModuleStop functions have the following signature:
 
 -->`int OnModuleStart(unsigned int args, void* argp);`
@@ -26,8 +26,8 @@ Plugin requirements:
 
 
 * In order to be loaded by the runtime, the plugin's .sprx and _stub.a and  must reside in _/path/to/project/Assets/Plugins/PS3/_. For example if your plugin is called _MyPlugin_, then _/path/to/project/Assets/Plugins/PS3/_ should contain _MyPlugin.sprx_ and _MyPlugin_stub.a_
-    * See [Project Structure](ps3-projectstructure.html) for more details
-    * See [Mono Interop docs](http://www.mono-project.com/Interop_with_Native_Libraries.html) for marshaling details.
+    * See [Project Structure](ps3-projectstructure.md) for more details
+    * See [Mono Interop docs](http://www.mono-project.com/Interop_with_Native_Libraries.md) for marshaling details.
 
 
 Notes

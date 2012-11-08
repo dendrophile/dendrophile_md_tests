@@ -2,9 +2,10 @@ Vortex image effect
 ===================
 
 
-The <span class=keyword>Vortex</span> image effect distorts the rendered image within a circular region. Pixels in the image are displaced around a central circular area by a specified angle; the amount of displacement reduces with distance from the centre, diminishing to zero at the circle's edge. Vortex is similar to another image effect called [Twirl](script-TwirlEffect.html), although Twirl distorts the image around a point rather than a circle.
+The <span class=keyword>Vortex</span> image effect distorts the rendered image within a circular region. Pixels in the image are displaced around a central circular area by a specified angle; the amount of displacement reduces with distance from the centre, diminishing to zero at the circle's edge. Vortex is similar to another image effect called [Twirl](script-TwirlEffect.md), although Twirl distorts the image around a point rather than a circle.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxVortex.png)  
 _Vortex image effect applied to the scene_

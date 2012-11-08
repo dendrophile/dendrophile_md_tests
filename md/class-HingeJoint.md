@@ -2,7 +2,8 @@ Hinge Joint
 ===========
 
 
-The <span class=keyword>Hinge Joint</span> groups together two [Rigidbodies](class-Rigidbody.html), constraining them to move like they are connected by a hinge. It is perfect for doors, but can also be used to model chains, pendulums, etc.
+The <span class=keyword>Hinge Joint</span> groups together two [Rigidbodies](class-Rigidbody.md), constraining them to move like they are connected by a hinge. It is perfect for doors, but can also be used to model chains, pendulums, etc.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-HingeJoint.png)  
 _The Hinge Joint <span class=keyword>Inspector</span>_

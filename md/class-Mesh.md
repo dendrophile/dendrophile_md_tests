@@ -2,7 +2,8 @@ Meshes
 ======
 
 
-<span class=keyword>Meshes</span> make up a large part of your 3D worlds. Aside from some [Asset store](http://unity3d.com/unity/asset-store/.html) plugins, Unity does not include modelling tools. Unity does however have great interactivity with most 3D modelling packages. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons.
+<span class=keyword>Meshes</span> make up a large part of your 3D worlds. Aside from some [Asset store](http://unity3d.com/unity/asset-store/.md) plugins, Unity does not include modelling tools. Unity does however have great interactivity with most 3D modelling packages. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Tris.png)  
 
@@ -10,13 +11,13 @@ Meshes
 
 Here are some guidelines for directly supported 3D applications, others can most often export file type listed above.
 
-* [Maya](HOWTO-ImportObjectMaya.html)
-* [Cinema 4D](HOWTO-ImportObjectCinema4D.html)
-* [3ds Max](HOWTO-ImportObjectMax.html)
-* [Cheetah3D](HOWTO-ImportObjectCheetah3D.html)
-* [Modo](HOWTO-ImportObjectModo.html)
-* [Lightwave](HOWTO-importObjectLightwave.html)
-* [Blender](HOWTO-ImportObjectBlender.html)
+* [Maya](HOWTO-ImportObjectMaya.md)
+* [Cinema 4D](HOWTO-ImportObjectCinema4D.md)
+* [3ds Max](HOWTO-ImportObjectMax.md)
+* [Cheetah3D](HOWTO-ImportObjectCheetah3D.md)
+* [Modo](HOWTO-ImportObjectModo.md)
+* [Lightwave](HOWTO-importObjectLightwave.md)
+* [Blender](HOWTO-ImportObjectBlender.md)
 
 
 Textures
@@ -25,11 +26,12 @@ Textures
 
 Unity will attempt to find the textures used by a mesh automatically on import by following a specific search plan. First, the importer will look for a sub-folder called Textures within the same folder as the mesh or in any parent folder. If this fails, an exhaustive search of all textures in the project will be carried out. Although slightly slower, the main disadvantage of the exhaustive search is that there could be two or more textures in the project with the same name. In this case, it is not guaranteed that the right one will be found.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Mesh-TextureImportHierarchy.png)  
 _Place your textures in a <span class=menu>Textures</span> folder at or above the asset's level_
 
 
-[FBX importer options for the model](FBXImporter-Model.html)
+[FBX importer options for the model](FBXImporter-Model.md)
 
 ###Material Generation and Assignment
 
@@ -50,7 +52,7 @@ If you are moving the object around (a car for example), you can not use Mesh co
 
 ###Animations
 
-Animations are automatically imported from the scene. For more details about animation import options see the [Animation Import](Animations.html) chapter.
+Animations are automatically imported from the scene. For more details about animation import options see the [Animation Import](Animations.md) chapter.
 
 ###Normal mapping and characters
 
@@ -76,7 +78,7 @@ This is correct. What you are looking at is the number of vertices/triangles act
 See Also
 --------
 
-* [Modeling Optimized Characters](ModelingOptimizedCharacters.html)
-* [How do I use normal maps?](HOWTO-bumpmap.html)
-* [How do I fix the rotation of an imported model?](HOWTO-FixZAxisIsUp.html)
+* [Modeling Optimized Characters](ModelingOptimizedCharacters.md)
+* [How do I use normal maps?](HOWTO-bumpmap.md)
+* [How do I fix the rotation of an imported model?](HOWTO-FixZAxisIsUp.md)
 

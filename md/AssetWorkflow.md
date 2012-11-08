@@ -9,14 +9,14 @@ Create Rough Asset
 ------------------
 
 
-Use any supported 3D modeling package to create a rough version of your asset.  Our example will use Maya.  Work with the asset until you are ready to save. For a list of applications that are supported by Unity, please see [this page](HOWTO-importObject.html).
+Use any supported 3D modeling package to create a rough version of your asset.  Our example will use Maya.  Work with the asset until you are ready to save. For a list of applications that are supported by Unity, please see [this page](HOWTO-importObject.md).
 
 
 Import
 ------
 
 
-When you save your asset initially, you should save it normally to the <span class=keyword>Assets</span> folder in your Project folder.  When you open the Unity project, the asset will be detected and imported into the project.  When you look in the <span class=keyword>Project View</span>, you'll see the asset located there, right where you saved it. Please note that Unity uses the FBX exporter provided by your modeling package to convert your models to the FBX file format. You will need to have the FBX exporter of your modeling package available for Unity to use. Alternatively, you can directly export as FBX from your application and save in the Projects folder. For a list of applications that are supported by Unity, please see [this page](HOWTO-importObject.html).
+When you save your asset initially, you should save it normally to the <span class=keyword>Assets</span> folder in your Project folder.  When you open the Unity project, the asset will be detected and imported into the project.  When you look in the <span class=keyword>Project View</span>, you'll see the asset located there, right where you saved it. Please note that Unity uses the FBX exporter provided by your modeling package to convert your models to the FBX file format. You will need to have the FBX exporter of your modeling package available for Unity to use. Alternatively, you can directly export as FBX from your application and save in the Projects folder. For a list of applications that are supported by Unity, please see [this page](HOWTO-importObject.md).
 
 
 Import Settings
@@ -53,7 +53,7 @@ Creating a Prefab
 
 When you have a GameObject that contains multiple Components and a hierarchy of child GameObjects, you can make a Prefab of the top-level GameObject (or <span class=keyword>root</span>), and re-use the entire collection of GameObjects.
 
-Think of a Prefab as a blueprint for a structure of GameObjects.  All the Prefab clones are identical to the blueprint.  Therefore, if the blueprint is updated, so are all the clones.  There are different ways you can update the Prefab itself by changing one of its clones and applying those changes to the blueprint.  To read more about using and updating Prefabs, please view the [Prefabs](Prefabs.html) page.
+Think of a Prefab as a blueprint for a structure of GameObjects.  All the Prefab clones are identical to the blueprint.  Therefore, if the blueprint is updated, so are all the clones.  There are different ways you can update the Prefab itself by changing one of its clones and applying those changes to the blueprint.  To read more about using and updating Prefabs, please view the [Prefabs](Prefabs.md) page.
 
 To actually create a Prefab from a GameObject in your scene, simply drag the GameObject from the scene into the project, and you should see the Game Object's name text turn blue. Name the new Prefab whatever you like. You have now created a re-usable prefab.
 

@@ -2,9 +2,9 @@
 ===========
 
 
-Unity supports 3D Texture use and creation from shader and script. While use cases of 3D Textures might not seem as straightforward at first, they can be an integral part of implementing specific kinds of effects such as [3D Color Correction](script-ColorCorrectionLut.html).
+Unity supports 3D Texture use and creation from shader and script. While use cases of 3D Textures might not seem as straightforward at first, they can be an integral part of implementing specific kinds of effects such as [3D Color Correction](script-ColorCorrectionLut.md).
 
-Currently, 3D Textures can only be created from script. The following snippet creates a "neutral" 3D texture where, if used as a lookup texture in [3D Color Correction](script-ColorCorrectionLut.html), the performed correction will be the identity.
+Currently, 3D Textures can only be created from script. The following snippet creates a "neutral" 3D texture where, if used as a lookup texture in [3D Color Correction](script-ColorCorrectionLut.md), the performed correction will be the identity.
 
 ````
 function CreateIdentityLut (dim : int, tex3D : Texture3D) 

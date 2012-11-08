@@ -4,6 +4,7 @@ Projector
 
 A <span class=keyword>Projector</span> allows you to project a <span class=keyword>Material</span> onto all objects that intersect its frustum. The material must use a special type of shader for the projection effect to work correctly - see the projector prefabs in Unity's standard assets for examples of how to use the supplied Projector/Light and Projector/Multiply shaders.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-Projector.png)  
 _The Projector <span class=keyword>Inspector</span>_
 
@@ -30,9 +31,10 @@ Details
 
 With a projector you can:
 1. Create shadows.
-1. Make a real world projector on a tripod with another [Camera](class-Camera.html) that films some other part of the world using a <span class=keyword>Render Texture</span>.
+1. Make a real world projector on a tripod with another [Camera](class-Camera.md) that films some other part of the world using a <span class=keyword>Render Texture</span>.
 1. Create bullet marks.
 1. Funky lighting effects.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Projector-BlobShadow.png)  
 _A Projector is used to create a Blob Shadow for this Robot_

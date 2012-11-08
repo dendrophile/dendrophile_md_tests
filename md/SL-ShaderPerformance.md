@@ -14,9 +14,9 @@ Less Generic Surface Shaders
 ----------------------------
 
 
-[Surface Shaders](SL-SurfaceShaders.html) are great for writing shaders that interact with lighting. However, their default options are tuned for "general case". In many cases, you can tweak them to make shaders run faster or at least be smaller:
+[Surface Shaders](SL-SurfaceShaders.md) are great for writing shaders that interact with lighting. However, their default options are tuned for "general case". In many cases, you can tweak them to make shaders run faster or at least be smaller:
 * `approxview` directive for shaders that use view direction (i.e. Specular) will make view direction be normalized per-vertex instead of per-pixel. This is approximate, but often good enough.
-* `halfasview` for Specular shader types is even faster. Half-vector (halfway between lighting direction and view vector) will be computed and normalized per vertex, and [lighting function](SL-SurfaceShaderLighting.html) will already receive half-vector as a parameter instead of view vector.
+* `halfasview` for Specular shader types is even faster. Half-vector (halfway between lighting direction and view vector) will be computed and normalized per vertex, and [lighting function](SL-SurfaceShaderLighting.md) will already receive half-vector as a parameter instead of view vector.
 * `noforwardadd` will make a shader fully support only one directional light in Forward rendering. The rest of the lights can still have an effect as per-vertex lights or spherical harmonics. This is great to make shader smaller and make sure it always renders in one pass, even with multiple lights present.
 * `noambient` will disable ambient lighting and spherical harmonics lights on a shader. This can be slightly faster.
 
@@ -41,7 +41,7 @@ Alpha Testing
 -------------
 
 
-Fixed function [AlphaTest](SL-AlphaTest.html) or it's programmable equivalent, `clip()`, has different performance characteristics on different platforms:
+Fixed function [AlphaTest](SL-AlphaTest.md) or it's programmable equivalent, `clip()`, has different performance characteristics on different platforms:
 * Generally it's a small advantage to use it to cull out totally transparent pixels on most platforms.
 * However, on PowerVR GPUs found in iOS and some Android devices, alpha testing is expensive. Do not try to use it as "performance optimization" there, it will be slower.
 
@@ -49,4 +49,4 @@ Color Mask
 ----------
 
 
-On some platforms (mostly mobile GPUs found in iOS and Android devices), using [ColorMask](SL-Pass.html) to leave out some channels (e.g. `ColorMask RGB`) can be expensive, so only use it if really necessary.
+On some platforms (mostly mobile GPUs found in iOS and Android devices), using [ColorMask](SL-Pass.md) to leave out some channels (e.g. `ColorMask RGB`) can be expensive, so only use it if really necessary.

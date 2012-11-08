@@ -14,9 +14,9 @@ The information here assumes hardware around the level of the Apple A4 chipset, 
 
 There are much slower, and much faster phones out there as well. The computational capability of mobile devices is increasing at an alarming rate. It's not unheard of for a new generation of a mobile GPU to be five times faster than its predecessor. That's _'_fast_'_, when compared to the PC industry.
 
-For an overview of Apple mobile device tech specs, see [the Hardware page](Main.iphone-Hardware.html).
+For an overview of Apple mobile device tech specs, see [the Hardware page](Main.iphone-Hardware.md).
 
-If you want to develop for mobile devices which will be popular in the future, or exclusively for high end devices right now, you will be able to get away with doing more. See [Future Mobile Devices](Main.iphone-FutureDevices.html).
+If you want to develop for mobile devices which will be popular in the future, or exclusively for high end devices right now, you will be able to get away with doing more. See [Future Mobile Devices](Main.iphone-FutureDevices.md).
 
 The very low end, such as the iPhone 3G and the first and second generation iPod touches, are extremely limited and even more care must be taken to optimize for them. However, there is some question to whether consumers who have not upgraded their device will be buying apps. So unless you are making a free app, it might not be worthwhile to support the old hardware.
 
@@ -45,8 +45,8 @@ Artists also need to know the limitations of the platform and the methods that a
 
 These two pages detail general trends in game performance, and will explain how you can best design your game to be optimized, or how you can intuitively figure out which things need to be optimized if you've already gone into production.
 
-* [Practical Methods for Optimized Rendering](Main.iphone-OptimizedGraphicsMethods.html)
-* [Practical Methods for Optimized Scripting and Gameplay](Main.iphone-OptimizedScriptingMethods.html)
+* [Practical Methods for Optimized Rendering](Main.iphone-OptimizedGraphicsMethods.md)
+* [Practical Methods for Optimized Scripting and Gameplay](Main.iphone-OptimizedScriptingMethods.md)
 
     1. Profile##
 Profile early and often
@@ -59,21 +59,21 @@ Often different parts of the game and different situations perform differently a
 
 ###Unity Profiler (Pro only)
 
-The main Profiler in Unity can be used when targeting iOS or Android. See the [Profiler guide](Main.Profiler.html) for basic instructions on how to use it.
+The main Profiler in Unity can be used when targeting iOS or Android. See the [Profiler guide](Main.Profiler.md) for basic instructions on how to use it.
 
 ###Internal Profiler
 
 The internal profiler spews out text every 30 frames. It can help you figure out which aspects of your game are slowing things down, be it physics, scripts, or rendering, but it doesn't go into much detail, for example, which script or which renderer is the culprit.
 
-See the [Internal Profiler page](Main.iphone-InternalProfiler.html) for more details on how it works and how to turn it on.
+See the [Internal Profiler page](Main.iphone-InternalProfiler.md) for more details on how it works and how to turn it on.
 
 ###Profiler indicates most of time spent rendering
 
-* [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.html)
+* [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.md)
 
 ###Profiler indicates most of time spent outside of rendering
 
-* [Scripting Optimizations](Main.iphone-PracticalScriptingOptimizations.html)
+* [Scripting Optimizations](Main.iphone-PracticalScriptingOptimizations.md)
 
 
 ###Table of Contents

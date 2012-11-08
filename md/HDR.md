@@ -12,24 +12,29 @@ Working with HDR
 
 HDR is enabled separately for each camera using a setting on the Camera component:-
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-HDR.png)  
 
-When HDR is active, the scene is rendered into an HDR image buffer which can accommodate pixel values outside the 0..1 range. This buffer is then postprocessed using image effects such as [HDR bloom](script-Bloom.html). The [tonemapping](script-Tonemapping.html) image effect is what converts the HDR image into the standard low dynamic range (LDR) image to be sent for display. The conversion to LDR must be applied at some point in the image effect pipeline but it need not be the final step if LDR-only image effects are to be applied afterwards. For convenience, some image effects can automatically convert to LDR after applying an HDR effect (see Scripting below).
+When HDR is active, the scene is rendered into an HDR image buffer which can accommodate pixel values outside the 0..1 range. This buffer is then postprocessed using image effects such as [HDR bloom](script-Bloom.md). The [tonemapping](script-Tonemapping.md) image effect is what converts the HDR image into the standard low dynamic range (LDR) image to be sent for display. The conversion to LDR must be applied at some point in the image effect pipeline but it need not be the final step if LDR-only image effects are to be applied afterwards. For convenience, some image effects can automatically convert to LDR after applying an HDR effect (see Scripting below).
 
 ###Tonemapping
-Tonemapping is the process of mapping HDR values back into the LDR range. There are many different techniques, and what is good for one project may not be the best for another. A variety of tonemapping image effects have been included in Unity. To use them select <span class=keyword>Assets -> Import Package -> Image Effects (Pro Only)</span> select the camera in the scene then select <span class=keyword>Component -> Image Effects ->ToneMapping</span> a detailed description of the tonemapping types can be found in the [image effects documentation](script-Tonemapping.html).
+Tonemapping is the process of mapping HDR values back into the LDR range. There are many different techniques, and what is good for one project may not be the best for another. A variety of tonemapping image effects have been included in Unity. To use them select <span class=keyword>Assets -> Import Package -> Image Effects (Pro Only)</span> select the camera in the scene then select <span class=keyword>Component -> Image Effects ->ToneMapping</span> a detailed description of the tonemapping types can be found in the [image effects documentation](script-Tonemapping.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/WithoutTonemap.png)  
 _An exceptionally bright scene rendered in HDR. Without tonemapping, most pixels seem out of range._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/WithTonemap.png)  
 _The same scene as above. But this time, the tonemapping effect is bringing most intensities into a more plausible range. Note that adaptive tonemapping can even blend between above and this image thus simulating the adaptive nature of capturing media (e.g. eyes, cameras)._
 
 ###HDR Bloom and Glow
-Using HDR allows for much more control in post processing. LDR bloom has an unfortunate side effect of blurring many areas of a scene even if their pixel intensity is less than 1.0. By using HDR it is possible to only bloom areas where the intensity is greater than one. This leads to a much more desiarable outcome with only super bright elements of a scene bleeding into neighboring pixels. The built in 'Bloom and Lens Flares' image effect now also supports HDR. To attach it to a camera select <span class=keyword>Assets -> Import Package -> Image Effects (Pro Only)</span> select the camera in the scene then select <span class=keyword>Component -> Image Effects ->Bloom</span> a detailed description of the 'Bloom' effect can be found in the [image effects documentation](script-Bloom.html).
+Using HDR allows for much more control in post processing. LDR bloom has an unfortunate side effect of blurring many areas of a scene even if their pixel intensity is less than 1.0. By using HDR it is possible to only bloom areas where the intensity is greater than one. This leads to a much more desiarable outcome with only super bright elements of a scene bleeding into neighboring pixels. The built in 'Bloom and Lens Flares' image effect now also supports HDR. To attach it to a camera select <span class=keyword>Assets -> Import Package -> Image Effects (Pro Only)</span> select the camera in the scene then select <span class=keyword>Component -> Image Effects ->Bloom</span> a detailed description of the 'Bloom' effect can be found in the [image effects documentation](script-Bloom.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GlowWithHdrAdjusted.png)  
 _The car window sun reflections in this scene have intensity values far bigger than 1.0. Bloom can only pick up and glow these parts if the camera is HDR enabled thus capturing these intensities._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GlowWithoutHdrAdjusted.png)  
 _The car window will remain without glow if the camera is not HDR enabled. Only way to add glow is to lower the intensity threshhold but then unwanted parts of the image will start glowing as well._
@@ -45,7 +50,7 @@ Disadvantages of HDR
 --------------------
 
 * Uses Floating Point buffers (rendering is slower and requires more VRAM)
-* No hardware anti-aliasing support (but you can use [Anti-Aliasing image effect](script-AntialiasingAsPostEffect.html) to smooth out the edges)
+* No hardware anti-aliasing support (but you can use [Anti-Aliasing image effect](script-AntialiasingAsPostEffect.md) to smooth out the edges)
 * Not supported on all hardware
 
 Usage notes

@@ -4,6 +4,7 @@ Character Controller
 
 The <span class=keyword>Character Controller</span> is mainly used for third-person or first-person player control that does not make use of <span class=keyword>Rigidbody</span> physics.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-CharacterController.png)  
 _The Character Controller_
 
@@ -33,7 +34,7 @@ The Controller does not react to forces on its own and it does not automatically
 
 If you want to push Rigidbodies or objects with the Character Controller, you can apply forces to any object that it collides with via the <span class=component>OnControllerColliderHit()</span> function through scripting.
 
-On the other hand, if you want your player character to be affected by physics then you might be better off using a [Rigidbody](class-Rigidbody.html) instead of the Character Controller.
+On the other hand, if you want your player character to be affected by physics then you might be better off using a [Rigidbody](class-Rigidbody.md) instead of the Character Controller.
 
 
 ###Fine-tuning your character
@@ -54,9 +55,9 @@ It's good practice to keep your <span class=component>Skin Width</span> at least
 
 We recommend keeping <span class=component>Min Move Distance</span> at 0.
 
-See the Character Controller script reference [here](ScriptRef:CharacterController.html.html)
+See the Character Controller script reference [here](ScriptRef:CharacterController.html)
 
-You can download an example project showing pre-setup animated and moving character controllers from the [Resources](http://www.unity3d.com/support/resources.html) area on our website.
+You can download an example project showing pre-setup animated and moving character controllers from the [Resources](http://www.unity3d.com/support/resources.md) area on our website.
 
 Hints
 -----

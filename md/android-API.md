@@ -6,10 +6,10 @@ Unity Android provides a number of scripting APIs unified with iOS APIs to acces
 
 |    |
 |:---|
-|[Input](ScriptRef:Input.html.html) |Access to multi-touch screen, accelerometer and device orientation.
-|[iPhoneSettings](ScriptRef:iPhoneSettings.html.html) |Some of the Android settings, such as screen orientation, dimming and information about device hardware.
-|[iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html.html) |Support for native on-screen keyboard.
-|[iPhoneUtils](ScriptRef:iPhoneUtils.html.html) |Useful functions for movie playback, anti-piracy protection and vibration.
+|[Input](ScriptRef:Input.html) |Access to multi-touch screen, accelerometer and device orientation.
+|[iPhoneSettings](ScriptRef:iPhoneSettings.html) |Some of the Android settings, such as screen orientation, dimming and information about device hardware.
+|[iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html) |Support for native on-screen keyboard.
+|[iPhoneUtils](ScriptRef:iPhoneUtils.html) |Useful functions for movie playback, anti-piracy protection and vibration.
 
 Further Reading
 ---------------

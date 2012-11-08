@@ -2,7 +2,7 @@ Built-in state variables in shader programs
 ===========================================
 
 
-Often in [shader programs](SL-ShaderPrograms.html) you need to access some global state, for example, the current model*view*projection matrix, the current ambient color, and so on. There's no need to declare these variables for the built-in state, you can just use them in shader programs.
+Often in [shader programs](SL-ShaderPrograms.md) you need to access some global state, for example, the current model*view*projection matrix, the current ambient color, and so on. There's no need to declare these variables for the built-in state, you can just use them in shader programs.
 
 Built-in matrices
 -----------------

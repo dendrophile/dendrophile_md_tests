@@ -4,6 +4,7 @@ Occlusion Portals
 
 In order to create occlusion primitive which are openable and closable at runtime, Unity uses <span class=component>Occlusion Portals</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionPortal.png)  
 
 

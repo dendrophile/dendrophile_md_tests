@@ -79,9 +79,9 @@ Video, audio and even textures can use a lot of storage space and you may need t
 
 ###Automatic memory management
 
-The recovery of unused memory from "dead" objects is handled automatically by Unity and often happens imperceptibly on desktop machines. However, the lower memory and CPU power on mobile devices means that garbage collections can be more frequent and the time they take can impinge more heavily on performance (causing unwanted pauses in gameplay, etc). Even if the game runs in the available memory, it may still be necessary to optimise code to avoid garbage collection pauses. More information can be found on our [memory management page](UnderstandingAutomaticMemoryManagement.html).
+The recovery of unused memory from "dead" objects is handled automatically by Unity and often happens imperceptibly on desktop machines. However, the lower memory and CPU power on mobile devices means that garbage collections can be more frequent and the time they take can impinge more heavily on performance (causing unwanted pauses in gameplay, etc). Even if the game runs in the available memory, it may still be necessary to optimise code to avoid garbage collection pauses. More information can be found on our [memory management page](UnderstandingAutomaticMemoryManagement.md).
 
 
 ###CPU power
 
-A game that runs well on a desktop machine may suffer from poor framerate on a mobile device simply because the mobile CPU struggles with the game's complexity. Extra attention may therefore need to be paid to code efficiency when a project is ported to a mobile platform. A number of simple steps to improve efficiency are outlined on [this page](iphone-performance.html) in our manual.
+A game that runs well on a desktop machine may suffer from poor framerate on a mobile device simply because the mobile CPU struggles with the game's complexity. Extra attention may therefore need to be paid to code efficiency when a project is ported to a mobile platform. A number of simple steps to improve efficiency are outlined on [this page](iphone-performance.md) in our manual.

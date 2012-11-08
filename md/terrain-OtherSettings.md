@@ -4,6 +4,7 @@ Other Settings
 
 There are a number of options under the <span class=menu>Terrain Settings</span> button Attach:terrain-TerrainSettings.png in the Terrain Inspector.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/terrain-OtherSettings.png)  
 _All additional Terrain Settings_
 
@@ -17,7 +18,7 @@ Base Terrain
 
 
 ###u40 Details
-<span class=component>Material</span> slot allows assigning a custom material for the terrain. The material should be using a [shader](Shaders.html) that is capable of rendering terrain, for example <span class=component>Nature/Terrain/Diffuse</span> (this shader is used if no material is assigned) or <span class=component>Nature/Terrain/Bumped Specular</span>.
+<span class=component>Material</span> slot allows assigning a custom material for the terrain. The material should be using a [shader](Shaders.md) that is capable of rendering terrain, for example <span class=component>Nature/Terrain/Diffuse</span> (this shader is used if no material is assigned) or <span class=component>Nature/Terrain/Bumped Specular</span>.
 
 Tree & Detail Settings
 ----------------------

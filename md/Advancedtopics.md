@@ -4,4 +4,4 @@ Mecanim Advanced topics:
 
 (:tocportion:)
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

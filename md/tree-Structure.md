@@ -10,6 +10,7 @@ Hierarchy
 
 The hierarchy view is where you start building your tree. It shows a schematic representation of the tree, where each box is a group of nodes. By selecting one of the groups in the hierarchy you can modify its properties. You may also add or remove groups by clicking one of the buttons in the toolbar below the hierarchy.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/treeEditor-HierarchyView.png)  
 (:comment image source treeEditor-HierarchyView.psd :)
 This hierarchy represents a tree with one trunk, 25 child branches. Child branches have in total 70 fronds attached, 280 leaves and 25 fronds with branches. Node representing the last group is selected. Also the trunk has 25 leaves of one type and 15 of another type, the last group is hidden.
@@ -28,26 +29,31 @@ This hierarchy represents a tree with one trunk, 25 child branches. Child branch
 Nodes in the tree hierarchy represent groups of elements in the tree itself, i.e. branches, leaves or fronds. There are 5 types of nodes:
 
 ###Root Node:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeEditor-RootNode.png)  
 
 This is the starting point of a tree. It determines the global parameters for a tree, such as: quality, seed to diversify the trees, ambient occlusion and some material properties.
 
 ###Branch Nodes
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeEditor-BranchNode.png)  
 
 First branch group node attached to the root node creates trunk(s). The following branch nodes will create child branches. Various shape, growth and breaking parameters can be set on this type of node.
 
 ###Leaf Node
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeEditor-LeafNode.png)  
 
 Leaves can be attached to a root node (e.g. for small bushes) or to branch nodes. Leaves are final nodes, meaning no other nodes can be attached to them. Various geometry and distribution parameters can be set on this type of a node.
 
 ###Frond Node
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeEditor-FrondNode.png)  
 
 It has a similar behavior as the branch node, with some of the shape properties disabled and frond specific ones added.
 
 ###Branch + Frond Node
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeEditor-BranchFrondNode.png)  
 
 This kind of node is a mixture of a branch and a frond, with properties of both types being accessible.
@@ -62,6 +68,7 @@ Node Parameters
 
 Editing Tools
 =============
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeEditor-TreeEditingTools.png)  
@@ -89,6 +96,7 @@ Distribution
 
 Allows for diversifying trees by changing the <span class=component>Tree Seed</span> and making groups of trees by adjusting the <span class=component>Area Spread</span> when the frequency on the branch node connected to the root node is higher than 1.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-RootPropertiesDistribution.png)  
 
 
@@ -104,6 +112,7 @@ Geometry
 
 Allows to set the overall quality of the tree geometry and to control ambient occlusion.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-RootPropertiesGeometry.png)  
 
 
@@ -117,6 +126,7 @@ Material
 --------
 
 Controls the global material properties of the tree.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-RootPropertiesMaterial.png)  
 
@@ -132,14 +142,14 @@ Translucency is one of the effects you can control in the Material properties. T
 |<span class=component>Shadow Offset</span>                  |Scales the values from the Shadow Offset texture set in the source material. It is used to offset the position of the leaves when collecting the shadows, so that the leaves appear as if they were not placed on one quad. It's especially important for billboarded leaves and they should have brighter values in the center of the texture and darker ones at the border. Start out with a black texture and add different shades of gray per leaf.|
 |<span class=component>Shadow Caster Resolution</span>       |Defines the resolution of the texture atlas containing alpha values from source diffuse textures. The atlas is used when the leaves are rendered as shadow casters. Using lower resolution might increase performance.|
 
-[Branches](tree-Branches.html)
-==============================
+[Branches](tree-Branches.md)
+============================
 
-This section focuses on explaining the specific [Branch Group Properties](tree-Branches.html).
+This section focuses on explaining the specific [Branch Group Properties](tree-Branches.md).
 
 
-[Leaves](tree-Leaves.html)
-==========================
+[Leaves](tree-Leaves.md)
+========================
 
-This section focuses on explaining the specific [Leaf Group Properties](tree-Leaves.html).
+This section focuses on explaining the specific [Leaf Group Properties](tree-Leaves.md).
 

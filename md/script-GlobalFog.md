@@ -4,13 +4,15 @@ Global Fog
 
 The <span class=keyword>Global Fog</span> image effect creates camera-based exponential fog. All calculations are done in world space which makes it possible to have height-based fog modes that can be used for sophisticated effects (see example).
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GlobalFogExample.png)  
 _Example of global fog, demonstrating both distance and height based fog_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Athmospheric.png)  
 _Example of "cheating" at atmospheric effects using global fog_
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------

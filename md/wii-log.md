@@ -2,7 +2,7 @@ How to view a log from Wii?
 ===========================
 
 
-The information is also available here - [ https://www.warioworld.com/wii/techupdates/etc.asp. ](https://www.warioworld.com/wii/techupdates/etc.asp..html)
+The information is also available here - [ https://www.warioworld.com/wii/techupdates/etc.asp. ](https://www.warioworld.com/wii/techupdates/etc.asp..md)
 
 In short:
 * Download TeraTermPro.

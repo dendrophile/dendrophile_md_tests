@@ -12,6 +12,7 @@ Some general adjustments to be made for example might be:
 * Generate colliders - this will generate a collison mesh to allow your model to collide with other objects - see notes below.
 * Material Naming and Search - this will help you automatically setup your materials and locate textures
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimImporterModelTab.png)  
 _FBX Importer Inspector: Model tab_
 
@@ -20,19 +21,19 @@ _FBX Importer Inspector: Model tab_
 |:---|:---|
 |___Meshes___ |
 |<span class=component>Scale Factor</span> |Unity's physics system expects 1 meter in the game world to be 1 unit in the imported file. If you prefer to model at a different scale then you can compensate for it here. defaults for different 3D packages are as follows .fbx, .max, .jas, .c4d = 0.01, .mb, .ma, .lxo, .dxf, .blend, .dae = 1 .3ds = 0.1|
-|<span class=component>Mesh Compression</span> |Increasing this value will reduce the file size of the mesh, but might introduce irregularities.  It's best to turn it up as high as possible without the mesh looking too different from the uncompressed version. This is useful for [optimizing game size](ReducingFilesize.html). |
+|<span class=component>Mesh Compression</span> |Increasing this value will reduce the file size of the mesh, but might introduce irregularities.  It's best to turn it up as high as possible without the mesh looking too different from the uncompressed version. This is useful for [optimizing game size](ReducingFilesize.md). |
 |<span class=component>Read/Write Enabled</span>|Enables the mesh to be written at runtime so you can modify the data - makes a copy in memory.|
 |<span class=component>Optimize Mesh</span>|This option determines the order in which triangles will be listed in the mesh.|
 |<span class=component>Generate Colliders</span> |If this is enabled, your meshes will be imported with Mesh Colliders automatically attached. This is useful for quickly generating a collision mesh for environment geometry, but should be avoided for geometry you will be moving. For more info see [Colliders](#colliders) below. |
 |<span class=component>Swap UVs</span> |Use this if lightmapped objects pick up the wrong UV channels. This will swap your primary and secondary UV channels.|
 |<span class=component>Generate Lightmap</span> |Use this to create the second UV channel to be used for Lightmapping.|
-|>>><span class=component>Advanced Options</span> |See [Lightmapping UVs document](Main.LightmappingUV.html).|
+|>>><span class=component>Advanced Options</span> |See [Lightmapping UVs document](Main.LightmappingUV.md).|
 |___Normals & Tangents___ |
-|<span class=component>Normals</span> |Defines if and how normals should be calculated. This is useful for [optimizing game size](ReducingFilesize.html). |
+|<span class=component>Normals</span> |Defines if and how normals should be calculated. This is useful for [optimizing game size](ReducingFilesize.md). |
 |>>><span class=component>Import</span> |Default option. Imports normals from the file. |
 |>>><span class=component>Calculate</span> |Calculates normals based on <span class=component>Smoothing angle</span>. If selected, the <span class=component>Smoothing Angle</span> becomes enabled. |
 |>>><span class=component>None</span> |Disables normals. Use this option if the mesh is neither normal mapped nor affected by realtime lighting. |
-|<span class=component>Tangents</span> |Defines if and how tangents and binormals should be calculated. This is useful for [optimizing game size](ReducingFilesize.html). |
+|<span class=component>Tangents</span> |Defines if and how tangents and binormals should be calculated. This is useful for [optimizing game size](ReducingFilesize.md). |
 |>>><span class=component>Import</span> |Imports tangents and binormals from the file. This option is available only for FBX, Maya and 3dsMax files and only when normals are imported from the file. |
 |>>><span class=component>Calculate</span> |Default option. Calculates tangents and binormals. This option is available only when normals are either imported or calculated.  |
 |>>><span class=component>None</span> |Disables tangents and binormals. The mesh will have no Tangents, so won't work with normal-mapped shaders. |

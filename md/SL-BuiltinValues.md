@@ -6,7 +6,7 @@ Unity provides a handful of builtin values for your shaders: things like current
 
 You just use them in ShaderLab like you'd use any other property, the only difference is that you don't have to declare it somewhere - they are "built in".
 
-Using them in [programmable shaders](SL-ShaderPrograms.html) requires including [SL-BuiltinIncludes | <span class=keyword>UnityCG.cginc</span> file](SL-BuiltinIncludes|<span class=keyword>UnityCG.cginc</span>file.html).
+Using them in [programmable shaders](SL-ShaderPrograms.md) requires including [SL-BuiltinIncludes | <span class=keyword>UnityCG.cginc</span> file](SL-BuiltinIncludes|<span class=keyword>UnityCG.cginc</span>file.md).
 
 Transformations
 ---------------

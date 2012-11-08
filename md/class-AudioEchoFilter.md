@@ -5,6 +5,7 @@ Audio Echo Filter (PRO only)
 The <span class=keyword>Audio Echo Filter</span> repeats a sound after a given <span class=component>Delay</span>, attenuating the repetitions based on the <span class=component>Decay Ratio</span>.  
 The <span class=component>Wet Mix</span> determines the amplitude of the filtered signal, where the <span class=component>Dry Mix</span> determines the amplitude of the unfiltered sound output.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioEchoFilter.png)  
 _The <span class=keyword>Audio Echo Filter</span> properties in the inspector._
 
@@ -32,4 +33,4 @@ Hints
 -----
 
 * Hard surfaces reflects the propagation of sound. For example a large canyon can be made more convincing with the <span class=keyword>Audio Echo Filter</span>.
-* Sound propagates slower than light - we all know that from lightning and thunder. To simulate this, add an <span class=keyword>Audio Echo Filter</span> to an event sound, set the <span class=component>Wet Mix</span> to 0.0 and modulate the <span class=component>Delay</span> to the distance between [AudioSource](class-AudioSource.html) and [AudioListener](class-AudioListener.html).
+* Sound propagates slower than light - we all know that from lightning and thunder. To simulate this, add an <span class=keyword>Audio Echo Filter</span> to an event sound, set the <span class=component>Wet Mix</span> to 0.0 and modulate the <span class=component>Delay</span> to the distance between [AudioSource](class-AudioSource.md) and [AudioListener](class-AudioListener.md).

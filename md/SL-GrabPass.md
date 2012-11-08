@@ -6,11 +6,11 @@ GrabPass is a special passtype - it grabs the contents of the screen where the o
 Syntax
 ------
 
-The GrabPass belongs inside a [subshader](SL-SubShader.html). It can take two forms:
+The GrabPass belongs inside a [subshader](SL-SubShader.md). It can take two forms:
 * Just `GrabPass { }` will grab current screen contents into a texture. The texture can be accessed in further passes by `_GrabTexture` name. Note: this form of grab pass will do the expensive screen grabbing operation for each object that uses it!
 * `GrabPass { "_TextureName_" }` will grab screen contents into a texture, but will only do that once per frame for the first object that uses the given texture name. The texture can be accessed in further passes by the given texture name. This is a more performant way when you have multiple objects using grab pass in the scene.
 
-Additionally, GrabPass can use [Name](SL-Name.html) and [Tags](SL-PassTags.html) commands.
+Additionally, GrabPass can use [Name](SL-Name.md) and [Tags](SL-PassTags.md) commands.
 
 
 Example
@@ -37,9 +37,9 @@ Shader "GrabPassInvert" {
 ````
 
 
-This shader has two passes: First pass grabs whatever is behind the object at the time of rendering, then applies that in the second pass. Now of course, the same effect could be achieved much cheaper using an invert [blend mode](SL-Blend.html).
+This shader has two passes: First pass grabs whatever is behind the object at the time of rendering, then applies that in the second pass. Now of course, the same effect could be achieved much cheaper using an invert [blend mode](SL-Blend.md).
 
 See Also
 --------
 
-* [Regular Pass command](SL-Pass.html)
+* [Regular Pass command](SL-Pass.md)

@@ -21,7 +21,7 @@ Geforce 7300GT on OSX 10.6.4
 On Windows x64, Unity crashes when my script throws a NullReferenceException
 ----------------------------------------------------------------------------
 
-* Please apply [Windows Hotfix #976038](http://support.microsoft.com/kb/976038.html).
+* Please apply [Windows Hotfix #976038](http://support.microsoft.com/kb/976038.md).
 
 <a id="DesktopShadowTroubleShooting"></a>
 Graphics
@@ -37,18 +37,18 @@ Shadows
 -------
 
 
-* Shadows are a <span class=keyword>Unity Pro</span> only feature, so without Unity Pro you won't get shadows. Simpler shadow methods, like using a [Projector](class-Projector.html), are still possible, of course.
-* Shadows also require certain graphics hardware support. See [Shadows](Shadows.html) page for details.
-* Check if shadows are not completely disabled in [Quality Settings](class-QualitySettings.html).
+* Shadows are a <span class=keyword>Unity Pro</span> only feature, so without Unity Pro you won't get shadows. Simpler shadow methods, like using a [Projector](class-Projector.md), are still possible, of course.
+* Shadows also require certain graphics hardware support. See [Shadows](Shadows.md) page for details.
+* Check if shadows are not completely disabled in [Quality Settings](class-QualitySettings.md).
 * __Shadows are currently not supported for Android and iOS mobile platforms.__
 
 ###Some of my objects do not cast or receive shadows
 
-An object's [Renderer](class-MeshRenderer.html) must have <span class=component>Receive Shadows</span> enabled for shadows to be rendered onto it. Also, an object must have <span class=component>Cast Shadows</span> enabled in order to cast shadows on other objects (both are on by default).
+An object's [Renderer](class-MeshRenderer.md) must have <span class=component>Receive Shadows</span> enabled for shadows to be rendered onto it. Also, an object must have <span class=component>Cast Shadows</span> enabled in order to cast shadows on other objects (both are on by default).
 
-Only opaque objects cast and receive shadows. This means that objects using the built-in [Transparent](shader-TransparentFamily.html) or Particle shaders will not cast shadows. In most cases it is possible to use [Transparent Cutout](shader-TransparentCutoutFamily.html) shaders for objects like fences, vegetation, etc. If you use custom written [Geometry render queue](Shaders]],theyhavetobepixel-litandusethe[[SL-SubshaderTags.html). Objects using <span class=component>VertexLit</span> shaders do not receive shadows but are able to cast them.
+Only opaque objects cast and receive shadows. This means that objects using the built-in [Transparent](shader-TransparentFamily.md) or Particle shaders will not cast shadows. In most cases it is possible to use [Transparent Cutout](shader-TransparentCutoutFamily.md) shaders for objects like fences, vegetation, etc. If you use custom written [Geometry render queue](Shaders]],theyhavetobepixel-litandusethe[[SL-SubshaderTags.md). Objects using <span class=component>VertexLit</span> shaders do not receive shadows but are able to cast them.
 
-Only <span class=keyword>Pixel lights</span> cast shadows. If you want to make sure that a light always casts shadows no matter how many other lights are in the scene, then you can set it to <span class=component>Force Pixel</span> render mode (see the [Light](class-Light.html) reference page).
+Only <span class=keyword>Pixel lights</span> cast shadows. If you want to make sure that a light always casts shadows no matter how many other lights are in the scene, then you can set it to <span class=component>Force Pixel</span> render mode (see the [Light](class-Light.md) reference page).
 
 
 <a id="iPhoneTroubleShooting"></a>
@@ -146,27 +146,29 @@ The main metric you should rely on is how much RAM your application uses. Your a
 * GLES driver memory pools: textures, framebuffers, compiled shaders, etc.
 Your application memory usage can be tracked by two Xcode Instruments tools: <span class=component>Activity Monitor</span>, <span class=component>Object Allocations</span> and <span class=component>VM Tracker</span>. You can start from the Xcode Run menu: <span class=component>Product > Profile</span> and then select specific tool. <span class=component>Activity Monitor</span> tool shows all process statistics including <span class=component>Real memory</span> which can be regarded as the total amount of RAM used by your application. 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ActivityMonitor.png)  
 
-__Note:__ The [internal profiler](iphone-InternalProfiler.html) shows only the heap allocated by .NET scripts. Total memory usage can be determined via Xcode Instruments as shown above. This figure includes parts of the application binary, some standard framework buffers, Unity engine internal state buffers, the .NET runtime heap (number printed by internal profiler), GLES driver heap and some other miscellaneous stuff.  
+__Note:__ The [internal profiler](iphone-InternalProfiler.md) shows only the heap allocated by .NET scripts. Total memory usage can be determined via Xcode Instruments as shown above. This figure includes parts of the application binary, some standard framework buffers, Unity engine internal state buffers, the .NET runtime heap (number printed by internal profiler), GLES driver heap and some other miscellaneous stuff.  
 
 
 The other tool displays all allocations made by your application and includes both native heap and managed heap statistics (don't forget to check the <span class=component>Created and still living</span> box to get the current state of the application). The important statistic is the <span class=component>Net bytes</span> value.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ObjectAlloc.png)  
 
 To keep memory usage low:
-* Reduce the application binary size by using the strongest iOS stripping options (Advanced license feature), and avoid unnecessary dependencies on different .NET libraries. See the [player settings](Main.class-PlayerSettings.html) and [player size optimization](Main.iphone-playerSizeOptimization.html) manual pages for further details.
-* Reduce the size of your content. Use PVRTC compression for textures and use low poly models. See the manual page about [reducing file size](Main.ReducingFilesize.html) for more information.
-* Don't allocate more memory than necessary in your scripts. Track mono heap size and usage with the [internal profiler](Main.iphone-InternalProfiler.html)
-* __Note:__ with Unity 3.0, the scene loading implementation has changed significantly and now all scene assets are preloaded. This results in fewer hiccups when instantiating game objects. If you need more fine-grained control of asset loading and unloading during gameplay, you should use [Resources.Load](ScriptRef:Resources.Load.html.html) and [Object.Destroy](ScriptRef:Object.Destroy.html.html).
+* Reduce the application binary size by using the strongest iOS stripping options (Advanced license feature), and avoid unnecessary dependencies on different .NET libraries. See the [player settings](Main.class-PlayerSettings.md) and [player size optimization](Main.iphone-playerSizeOptimization.md) manual pages for further details.
+* Reduce the size of your content. Use PVRTC compression for textures and use low poly models. See the manual page about [reducing file size](Main.ReducingFilesize.md) for more information.
+* Don't allocate more memory than necessary in your scripts. Track mono heap size and usage with the [internal profiler](Main.iphone-InternalProfiler.md)
+* __Note:__ with Unity 3.0, the scene loading implementation has changed significantly and now all scene assets are preloaded. This results in fewer hiccups when instantiating game objects. If you need more fine-grained control of asset loading and unloading during gameplay, you should use [Resources.Load](ScriptRef:Resources.Load.html) and [Object.Destroy](ScriptRef:Object.Destroy.html).
 
 Querying the OS about the amount of free memory may seem like a good idea to evaluate how well your application is performing. However, the free memory statistic is likely to be unreliable since the OS uses a lot of dynamic buffers and caches. The only reliable approach is to keep track of memory consumption for your application and use that as the main metric. Pay attention to how the graphs from the tools described above change over time, especially after loading new levels.
 
 The game runs correctly when launched from Xcode but crashes while loading the first level when launched manually on the device.
 --------------------------------------------------------------------------------------------------------------------------------
 
-There could be several reasons for this. You need to inspect the device logs to get more details. Connect the device to your Mac, launch Xcode and select <span class=component>Window > Organizer</span> from the menu. Select your device in the Organizer's left toolbar, then click on the "Console" tab and review the latest messages carefully. Additionally, you may need to investigate crash reports. You can find out how to obtain crash reports here: [http://developer.apple.com/iphone/library/technotes/tn2008/tn2151.html](http://developer.apple.com/iphone/library/technotes/tn2008/tn2151.html.html).
+There could be several reasons for this. You need to inspect the device logs to get more details. Connect the device to your Mac, launch Xcode and select <span class=component>Window > Organizer</span> from the menu. Select your device in the Organizer's left toolbar, then click on the "Console" tab and review the latest messages carefully. Additionally, you may need to investigate crash reports. You can find out how to obtain crash reports here: [http://developer.apple.com/iphone/library/technotes/tn2008/tn2151.html](http://developer.apple.com/iphone/library/technotes/tn2008/tn2151.html.md).
 
 The Xcode Organizer console contains the message "killed by SpringBoard".
 -------------------------------------------------------------------------
@@ -184,9 +186,9 @@ function Start () {
 Type.GetProperty() / Type.GetValue() cause crashes on the device
 ----------------------------------------------------------------
 
-Currently <span class=component>Type.GetProperty()</span> and <span class=component>Type.GetValue()</span> are supported only for the <span class=component>.NET 2.0 Subset</span> profile. You can select the .NET API compatibility level in the [Player Settings](class-PlayerSettings.html). 
+Currently <span class=component>Type.GetProperty()</span> and <span class=component>Type.GetValue()</span> are supported only for the <span class=component>.NET 2.0 Subset</span> profile. You can select the .NET API compatibility level in the [Player Settings](class-PlayerSettings.md). 
 
-__Note:__ <span class=component>Type.GetProperty()</span> and <span class=component>Type.GetValue()</span> might be incompatible with managed code stripping and might need to be excluded (you can supply a custom non-strippable type list during the stripping process to accomplish this). For further details, see the [iOS player size optimization guide](iphone-playerSizeOptimization.html).
+__Note:__ <span class=component>Type.GetProperty()</span> and <span class=component>Type.GetValue()</span> might be incompatible with managed code stripping and might need to be excluded (you can supply a custom non-strippable type list during the stripping process to accomplish this). For further details, see the [iOS player size optimization guide](iphone-playerSizeOptimization.md).
 
 The game crashes with the error message "ExecutionEngineException: Attempting to JIT compile method 'SometType`1<SomeValueType>:.ctor ()' while running with --aot-only."
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -207,7 +209,7 @@ Various crashes occur on the device when a combination of System.Security.Crypto
 
 .NET Cryptography services rely heavily on reflection and so are not compatible with managed code stripping since this involves static code analysis. Sometimes the easiest solution to the crashes is to exclude the whole <span class=component>System.Security.Crypography</span> namespace from the stripping process.
 
-The stripping process can be customized by adding a custom <span class=component>link.xml</span> file to the <span class=component>Assets</span> folder of your Unity project. This specifies which types and namespaces should be excluded from stripping. Further details can be found in the [iOS player size optimization guide](iphone-playerSizeOptimization.html).
+The stripping process can be customized by adding a custom <span class=component>link.xml</span> file to the <span class=component>Assets</span> folder of your Unity project. This specifies which types and namespaces should be excluded from stripping. Further details can be found in the [iOS player size optimization guide](iphone-playerSizeOptimization.md).
 
 ###link.xml
 ````
@@ -224,7 +226,7 @@ The stripping process can be customized by adding a custom <span class=component
 "Ran out of trampolines of type 1/2" runtime error
 --------------------------------------------------
 
-This error usually happens if you use lots of recursive generics. You can hint to the AOT compiler to allocate more trampolines of type 1 or type 2. Additional AOT compiler command line options can be specified in the "Other Settings" section of the [Player Settings](Main.class-PlayerSettings#iOS.html). For type 1 trampolines, specify <span class=component>nrgctx-trampolines=ABCD</span>, where ABCD is the number of new trampolines required (i.e. 4096). For type 2 trampolines specify <span class=component>nimt-trampolines=ABCD</span>.
+This error usually happens if you use lots of recursive generics. You can hint to the AOT compiler to allocate more trampolines of type 1 or type 2. Additional AOT compiler command line options can be specified in the "Other Settings" section of the [Player Settings](Main.class-PlayerSettings#iOS.md). For type 1 trampolines, specify <span class=component>nrgctx-trampolines=ABCD</span>, where ABCD is the number of new trampolines required (i.e. 4096). For type 2 trampolines specify <span class=component>nimt-trampolines=ABCD</span>.
 
 After upgrading Xcode Unity iOS runtime fails with message "You are using Unity iPhone Basic. You are not allowed to remove the Unity splash screen from your game"
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -243,7 +245,7 @@ You might get such message when updating already existing application, which pre
 "PlayerLoop called recursively!" error occurs when using Cocoa via a native function called from a script
 ---------------------------------------------------------------------------------------------------------
 
-Some operations with the UI will result in iOS redrawing the window immediately (the most common example is adding a UIView with a UIViewController to the main UIWindow). If you call a native function from a script, it will happen inside Unity's PlayerLoop, resulting in PlayerLoop being called recursively. In such cases, you should consider using the [performSelectorOnMainThread](http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/occ/instm/NSObject/performSelectorOnMainThread:withObject:waitUntilDone:.html) method with waitUntilDone set to false. It will inform iOS to schedule the operation to run between Unity's PlayerLoop calls.
+Some operations with the UI will result in iOS redrawing the window immediately (the most common example is adding a UIView with a UIViewController to the main UIWindow). If you call a native function from a script, it will happen inside Unity's PlayerLoop, resulting in PlayerLoop being called recursively. In such cases, you should consider using the [performSelectorOnMainThread](http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/occ/instm/NSObject/performSelectorOnMainThread:withObject:waitUntilDone:.md) method with waitUntilDone set to false. It will inform iOS to schedule the operation to run between Unity's PlayerLoop calls.
 
 Profiler or Debugger unable to see game running on iOS device
 -------------------------------------------------------------
@@ -256,7 +258,7 @@ Missing DLLs
 
 If your application runs ok in editor but you get errors in your iOS project this may be caused by missing DLLs (e.g. I18N.dll, I19N.West.dll). In this case, try copying those dlls from within the Unity.app to your project's Assets/Plugins folder. The location of the DLLs within the unity app is:
  Unity.app/Contents/Frameworks/Mono/lib/mono/unity 
-You should then also check the stripping level of your project to ensure the classes in the DLLs aren't being removed when the build is optimised. Refer to the [iOS Optimisation Page ](iphone-playerSizeOptimization.html) for more information on iOS Stripping Levels.
+You should then also check the stripping level of your project to ensure the classes in the DLLs aren't being removed when the build is optimised. Refer to the [iOS Optimisation Page ](iphone-playerSizeOptimization.md) for more information on iOS Stripping Levels.
 
 Xcode Debugger console reports: ExecutionEngineException: Attempting to JIT compile method '(wrapper native-to-managed) Test:TestFunc (int)' while running with --aot-only
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -309,7 +311,7 @@ Troubleshooting Android development
 Unity fails to install your application to your device
 ------------------------------------------------------
 
-1. Verify that your computer can actually see and communicate with the device. See the [Publishing Builds](Main.PublishingBuilds.html) page for further details.
+1. Verify that your computer can actually see and communicate with the device. See the [Publishing Builds](Main.PublishingBuilds.md) page for further details.
 1. Check the error message in the Unity console. This will often help diagnose the problem.
 
 If you get an error saying "Unable to install APK, protocol failure" during a build then this indicates that the device is connected to a low-power USB port (perhaps a port on a keyboard or other peripheral). If this happens, try connecting the device to a USB port on the computer itself.
@@ -317,7 +319,7 @@ If you get an error saying "Unable to install APK, protocol failure" during a bu
 Your application crashes immediately after launch.
 --------------------------------------------------
 
-1. Ensure that you are not trying to use [NativeActivity](Main.class-PlayerSettings#Android.html) with devices that do not support it.
+1. Ensure that you are not trying to use [NativeActivity](Main.class-PlayerSettings#Android.md) with devices that do not support it.
 1. Try removing any native plugins you have.
 1. Try disabling stripping.
 1. Use <span class=keyword>adb logcat</span> to get the crash report from your device.
@@ -349,7 +351,7 @@ Make sure `Settings->Developer Options->Don't keep activities` isn't enabled on 
 My game quits when I press the sleep button
 -------------------------------------------
 
-Change the `<activity>` tag in the `AndroidManifest.xml` to contain `<android:configChanges>` tag as described [here](http://developer.android.com/guide/topics/manifest/activity-element.html#config.html).
+Change the `<activity>` tag in the `AndroidManifest.xml` to contain `<android:configChanges>` tag as described [here](http://developer.android.com/guide/topics/manifest/activity-element.html#config.md).
 
 An example activity tag might look something like this:-
 

@@ -4,6 +4,7 @@ ShaderLab syntax: Fog
 
 Fog parameters are controlled with Fog command.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./PipelineFFP.png)  
 
 Fogging blends the color of the generated pixels down towards a constant color based on distance from camera. Fogging does not modify a blended pixel's alpha value, only its RGB components.
@@ -22,6 +23,6 @@ Details
 -------
 
 
-Default fog settings are based on [Render Settings](class-RenderSettings.html): fog mode is either <span class=component>Exp2</span> or <span class=component>Off</span>; density & color taken from settings as well.
+Default fog settings are based on [Render Settings](class-RenderSettings.md): fog mode is either <span class=component>Exp2</span> or <span class=component>Off</span>; density & color taken from settings as well.
 
-Note that if you use [fragment programs](SL-ShaderPrograms.html), Fog settings of the shader will still be applied. On platforms where there is no fixed function Fog functionality, Unity will patch shaders at runtime to support the requested Fog mode.
+Note that if you use [fragment programs](SL-ShaderPrograms.md), Fog settings of the shader will still be applied. On platforms where there is no fixed function Fog functionality, Unity will patch shaders at runtime to support the requested Fog mode.

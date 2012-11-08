@@ -2,7 +2,7 @@ Predefined shader preprocessor macros
 =====================================
 
 
-When compiling [shader programs](SL-ShaderPrograms.html), Unity defines several preprocessor macros.
+When compiling [shader programs](SL-ShaderPrograms.md), Unity defines several preprocessor macros.
 
 Target platform
 ---------------
@@ -58,7 +58,7 @@ Surface shader pass indicators
 ------------------------------
 
 
-When [Surface Shaders](SL-SurfaceShaders.html) are compiled, they end up generating a lot of code for various passes to do lighting. When compiling each pass, one of the following macros is defined:
+When [Surface Shaders](SL-SurfaceShaders.md) are compiled, they end up generating a lot of code for various passes to do lighting. When compiling each pass, one of the following macros is defined:
 * `UNITY_PASS_FORWARDBASE` - forward rendering base pass (main directional light, lightmaps, SH).
 * `UNITY_PASS_FORWARDADD` - forward rendering additive pass (one light per pass).
 * `UNITY_PASS_PREPASSBASE` - deferred lighting base pass (renders normals & specular exponent).

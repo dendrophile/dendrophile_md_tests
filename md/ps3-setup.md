@@ -16,6 +16,6 @@ Step-by-step guide for installing Unity for PS3:
 
 * Install Unity.
      
-In case you have a source license, you might want to check the [PS3 Setup For Source Code licensees](ps3-setupforsource.html)
+In case you have a source license, you might want to check the [PS3 Setup For Source Code licensees](ps3-setupforsource.md)
 
 

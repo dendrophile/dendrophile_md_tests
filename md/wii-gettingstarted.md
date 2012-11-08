@@ -7,7 +7,7 @@ To develop for Wii you have to be a licensed Nintendo developer. Please visit ht
 
 ###Setup
 Currently Unity Wii only works on Windows, it's possible to do development on Mac as well, but you won't be able to build a Wii player.
-All install packages except cygwin can be found here - [Downloads](https://www.warioworld.com/wii/downloads/.html).
+All install packages except cygwin can be found here - [Downloads](https://www.warioworld.com/wii/downloads/.md).
 1. Install Cygwin, you can get it from http://www.cygwin.com/.
 1. Install Revolution SDK.
 1. Install WiiProfiler v3.0.
@@ -32,7 +32,7 @@ Additional software
 
 And you should be ready to go.
 
-It's also strongly recommended that you register to [Nintendo newsgroup](https://www.warioworld.com/information/news/.html), it's a great resource when finding answers to difficult questions.
+It's also strongly recommended that you register to [Nintendo newsgroup](https://www.warioworld.com/information/news/.md), it's a great resource when finding answers to difficult questions.
 
 ###Build information
 * SDK version: 3.3 + patch 2
@@ -56,8 +56,8 @@ It's also strongly recommended that you register to [Nintendo newsgroup](https:/
     * Wii Balance Board
 
 ###Pages
-* [Latest builds](https://sites.google.com/a/unity3d.com/wii-group/.html)
-* [Unity Wii group](http://groups.google.com/group/unity-wii-3x/.html)
+* [Latest builds](https://sites.google.com/a/unity3d.com/wii-group/.md)
+* [Unity Wii group](http://groups.google.com/group/unity-wii-3x/.md)
 
 ###Further reading:
 (:tocportion:)

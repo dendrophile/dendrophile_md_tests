@@ -2,7 +2,7 @@ Deferred Lighting Rendering Path
 ================================
 
 
-This page details the <span class=keyword>Deferred Lighting</span> [rendering path](RenderingPaths.html). See [this article](http://www.realtimerendering.com/blog/deferred-lighting-approaches/.html) for a technical overview of deferred lighting.
+This page details the <span class=keyword>Deferred Lighting</span> [rendering path](RenderingPaths.md). See [this article](http://www.realtimerendering.com/blog/deferred-lighting-approaches/.md) for a technical overview of deferred lighting.
 
 The <span class=keyword>Deferred Lighting</span> rendering path is the one with the highest lighting and shadow fidelity. There is no limit on the number of lights that can affect an object and all lights are evaluated per-pixel, which means that they all interact correctly with normal maps, etc. Additionally, all lights can have cookies and shadows.
 
@@ -34,12 +34,12 @@ When Deferred Lighting is used, the rendering process in Unity happens in three 
 1. Lighting pass: the previously generated buffers are used to compute lighting into another screen-space buffer.
 1. Final pass: objects are rendered again. They fetch the computed lighting, combine it with color textures and add any ambient/emissive lighting.
 
-Objects with shaders that can't handle deferred lighting are rendered after this process is complete, using the [forward rendering](RenderTech-ForwardRendering.html) path.
+Objects with shaders that can't handle deferred lighting are rendered after this process is complete, using the [forward rendering](RenderTech-ForwardRendering.md) path.
 
 
 ###Base Pass
 
-The base pass renders each object once. View space normals and specular power are rendered into a single ARGB32 [Render Texture](class-RenderTexture.html) (with normals in RGB channels and specular power in A). If the platform and hardware allow the Z buffer to be read as a texture then depth is not explicitly rendered. If the Z buffer can't be accessed as a texture then depth is rendered in an additional rendering pass using [shader replacement](SL-ShaderReplacement.html).
+The base pass renders each object once. View space normals and specular power are rendered into a single ARGB32 [Render Texture](class-RenderTexture.md) (with normals in RGB channels and specular power in A). If the platform and hardware allow the Z buffer to be read as a texture then depth is not explicitly rendered. If the Z buffer can't be accessed as a texture then depth is rendered in an additional rendering pass using [shader replacement](SL-ShaderReplacement.md).
 
 The result of the base pass is a Z buffer filled with the scene contents and a Render Texture with normals and specular power.
 
@@ -52,7 +52,7 @@ Point and spot lights that do not cross the camera's near plane are rendered as 
 
 If a light has shadows enabled then they are also rendered and applied in this pass. Note that shadows do not come for "free"; shadow casters need to be rendered and a more complex light shader must be applied.
 
-The only lighting model available is Blinn-Phong. If a different model is wanted you can modify the lighting pass shader, by placing the modified version of the Internal-PrePassLighting.shader file from the [Built-in shaders](http://unity3d.com/support/resources/assets/built-in-shaders.html) into a folder named "Resources" in your "Assets" folder.
+The only lighting model available is Blinn-Phong. If a different model is wanted you can modify the lighting pass shader, by placing the modified version of the Internal-PrePassLighting.shader file from the [Built-in shaders](http://unity3d.com/support/resources/assets/built-in-shaders.md) into a folder named "Resources" in your "Assets" folder.
 
 ###Final Pass
 

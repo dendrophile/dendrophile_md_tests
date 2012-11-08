@@ -4,6 +4,7 @@ Configurable Joint
 
 <span class=keyword>Configurable Joints</span> are extremely customizable.  They expose all joint-related properties of PhysX, so they are capable of creating behaviors similar to all other joint types.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ConfigurableJointImage.png)  
 _Properties of the Configurable Joint_
 

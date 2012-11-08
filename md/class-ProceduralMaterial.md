@@ -2,7 +2,8 @@ Procedural Material Assets
 ==========================
 
 
-Procedural Material Assets are textures that are generated for you at run-time.  See [Procedural Materials](Main.ProceduralMaterials.html) in the User Guide for more information.  A Procedural Material asset can contain one or more procedural materials.  These can be viewed in the Inspector just like regular materials. Note however that often procedural materials have many tweakable parameters.  As with Material assets the Inspector shows a preview of the Procedural Material at the bottom of the window.
+Procedural Material Assets are textures that are generated for you at run-time.  See [Procedural Materials](Main.ProceduralMaterials.md) in the User Guide for more information.  A Procedural Material asset can contain one or more procedural materials.  These can be viewed in the Inspector just like regular materials. Note however that often procedural materials have many tweakable parameters.  As with Material assets the Inspector shows a preview of the Procedural Material at the bottom of the window.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-ProceduralMaterial1.png)  
 _A Procedural Material viewed in the Inspector._
@@ -42,6 +43,7 @@ The properties of any Procedural Material will change according to how the proce
 
 Generated Textures
 ------------------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-ProceduralMaterial2.png)  

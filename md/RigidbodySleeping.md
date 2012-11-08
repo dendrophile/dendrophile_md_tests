@@ -10,13 +10,13 @@ Rigidbodies automatically wake up when:
 * another rigidbody collides with the sleeping rigidbody
 * another rigidbody connected through a joint is moving.
 * when modifying a property of the rigidbody
-* when [adding forces](ScriptRef:Rigidbody.AddForce.html.html).
+* when [adding forces](ScriptRef:Rigidbody.AddForce.html).
 
 So if you want to make rigidbodies fall to rest, don't modify their properties or add forces when they are about to go into sleep mode.
 
-There are two variables that you can tune to make sure your rigidbodies automatically fall to rest: [Rigidbody.sleepVelocity](ScriptRef:Rigidbody-sleepVelocity.html.html) and [Rigidbody.sleepAngularVelocity](ScriptRef:Rigidbody-sleepAngularVelocity.html.html). Those two variables are initialized to the sleepVelocity and sleepAngularVelocity variable defined in the [Physics Manager](class-PhysicsManager.html) (_Edit -> Project Settings -> Physics_).
+There are two variables that you can tune to make sure your rigidbodies automatically fall to rest: [Rigidbody.sleepVelocity](ScriptRef:Rigidbody-sleepVelocity.html) and [Rigidbody.sleepAngularVelocity](ScriptRef:Rigidbody-sleepAngularVelocity.html). Those two variables are initialized to the sleepVelocity and sleepAngularVelocity variable defined in the [Physics Manager](class-PhysicsManager.md) (_Edit -> Project Settings -> Physics_).
 
-Rigidbodies can also be forced to sleep using [rigidbody.Sleep](ScriptRef:Rigidbody.Sleep.html.html). This is useful to start rigidbodies in a rest state when loading a new level.
+Rigidbodies can also be forced to sleep using [rigidbody.Sleep](ScriptRef:Rigidbody.Sleep.html). This is useful to start rigidbodies in a rest state when loading a new level.
 
 
 Kinematic rigidbodies wake up sleeping rigidbodies. Static Colliders do not.

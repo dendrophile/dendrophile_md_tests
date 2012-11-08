@@ -4,7 +4,7 @@ Metro FAQ : WACK
 
 Starting from 09-14 build, Unity should pass WACK, you might still fail some tests if you use unsupported API in your scripts.
 
-__WACK for Windows RT devices__ - [http://msdn.microsoft.com/en-us/windows/apps/jj572486.aspx](http://msdn.microsoft.com/en-us/windows/apps/jj572486.aspx.html).
+__WACK for Windows RT devices__ - [http://msdn.microsoft.com/en-us/windows/apps/jj572486.aspx](http://msdn.microsoft.com/en-us/windows/apps/jj572486.aspx.md).
 
 Below is a table of functions/classes which should be used as alternative if you'll fail __'Supported API test'__, not all functions/classes are listed here, but in time we'll add more and more.
 

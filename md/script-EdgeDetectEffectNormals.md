@@ -4,7 +4,8 @@ Edge Detect Effect Normals
 
 This version of the <span class=keyword>Edge Detect</span> image effect creates outlines around edges by taking the scene geometry into account. Edges are not determined by colour differences but by the surface normals and distance from camera of neighbouring pixels (the surface normal is an "arrow" that indicates the direction the surface is facing at a given pixel position). Generally, where two adjacent pixels have significantly different normals and/or distances from the camera, there is an edge in the scene.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/EdgeDetectionExampleSciFiScene.png)  
 _Example Edge Detection. Note how edge outlines can be smoothed out by adding an Antialiasing effect to follow Edge Detection._
@@ -72,6 +73,7 @@ Filter Types
 
 
 The new <span class=component>SobelDepthThin</span> filter offers a way to make edge detection work with other depth based image effects such as Depth of Field, Fog or Motion Blur as edges don't cross an object's silhouette:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/EdgeDetectionWidthDofExample.png)  
 _Edges don't leak into the defocused background and at the same time, the background blur doesn't remove the created edges._

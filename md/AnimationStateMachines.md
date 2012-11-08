@@ -12,6 +12,7 @@ The basic idea is that a character is engaged in some particular kind of action 
 
 The states and transitions of a state machine can be represented using a graph diagram, where the nodes represent the states and the arcs (arrows between nodes) represent the transitions. You can think of the current state as being a marker or highlight that is placed on one of the nodes and can then only jump to another node along one of the arrows.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/StateMachineDiagram.png)  
 
 The importance of state machines for animation is that they can be designed and updated quite easily with relatively little coding. Each state has an animation sequence associated with it that will play whenever the machine is in that state. This enables an animator or designer to define the possible sequences of character actions and animations without being concerned about how the code will work. 
@@ -21,7 +22,8 @@ Mecanim state machines
 
 Mecanim's Animation State Machines provide a way to overview all of the animation clips related to a particular character and allow various events in the game (for example user input) to trigger different animations.  
 
-Animation State Machines can be set up from the [Animator Controller Window](Animator.html), and they look something like this:
+Animation State Machines can be set up from the [Animator Controller Window](Animator.md), and they look something like this:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimStateMachine.png)  
 
@@ -29,4 +31,4 @@ State Machines consist of <span class=keyword>States</span>, <span class=keyword
 
 (:tocportion:)
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

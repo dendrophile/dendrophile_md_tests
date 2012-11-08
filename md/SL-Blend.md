@@ -4,6 +4,7 @@ ShaderLab syntax: Blending
 
 Blending is used to make transparent objects.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./PipelineBlend.png)  
 
 When graphics are rendered, after all shaders have executed and all textures have been applied, the pixels are written to the screen. How they are combined with what is already there is controlled by the Blend command.

@@ -9,6 +9,7 @@ Distribution
 
 Adjusts the count and placement of leaves in the group. Use the curves to fine tune position, rotation and scale. The curves are relative to the parent branch.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-LeafNodePropertiesDistribution.png)  
 
 
@@ -27,6 +28,7 @@ Geometry
 
 Select what type of geometry is generated for this leaf group and which materials are applied. If you use a custom mesh, its materials will be used.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-LeafNodePropertiesGeometry.png)  
 
 
@@ -41,6 +43,7 @@ Shape
 
 Adjusts the shape and growth of the leaves.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-LeafNodePropertiesShape.png)  
 
 
@@ -54,6 +57,7 @@ Animation
 ---------
 
 Adjusts the parameters used for animating this group of leaves. Wind zones are only active in Play Mode. If you select too high values for Main Wind and Main Turbulence the leaves may float away from the branches.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-LeafNodePropertiesAnimation.png)  
 

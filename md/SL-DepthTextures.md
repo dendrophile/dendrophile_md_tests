@@ -2,20 +2,20 @@ Using Depth Textures
 ====================
 
 
-It is possible to create [Render Textures](class-RenderTexture.html) where each pixel contains a high precision "depth" value (see [RenderTextureFormat.Depth](ScriptRef:RenderTextureFormat.Depth.html.html)). This is mostly used when some effects need scene's depth to be available (for example, soft particles, screen space ambient occlusion, translucency would all need scene's depth).
+It is possible to create [Render Textures](class-RenderTexture.md) where each pixel contains a high precision "depth" value (see [RenderTextureFormat.Depth](ScriptRef:RenderTextureFormat.Depth.html)). This is mostly used when some effects need scene's depth to be available (for example, soft particles, screen space ambient occlusion, translucency would all need scene's depth).
 
 Pixel values in the depth texture range from 0 to 1 with a nonlinear distribution. Precision is usually 24 or 16 bits, depending on depth buffer used. When reading from depth texture, a high precision value in 0..1 range is returned. If you need to get distance from the camera, or otherwise linear value, you should compute that manually.
 
 Depth textures in Unity are implemented differently on different platforms.
 * On Direct3D 9 (Windows), depth texture is either a native depth buffer, or a single channel 32 bit floating point texture ("R32F" Direct3D format).
     * Graphics card must support either native depth buffer (INTZ format) or floating point render textures in order for them to work.
-    * When rendering into the depth texture, [fragment program](SL-ShaderPrograms.html) must output the value needed.
+    * When rendering into the depth texture, [fragment program](SL-ShaderPrograms.md) must output the value needed.
     * When reading from depth texture, red component of the color contains the high precision value.
-* On OpenGL (Mac OS X), depth texture is the native OpenGL depth buffer (see [ARB_depth_texture](http://www.opengl.org/registry/specs/ARB/depth_texture.txt.html)).
-    * Graphics card must support OpenGL 1.4 or [ARB_depth_texture](http://www.opengl.org/registry/specs/ARB/depth_texture.txt.html) extension.
+* On OpenGL (Mac OS X), depth texture is the native OpenGL depth buffer (see [ARB_depth_texture](http://www.opengl.org/registry/specs/ARB/depth_texture.txt.md)).
+    * Graphics card must support OpenGL 1.4 or [ARB_depth_texture](http://www.opengl.org/registry/specs/ARB/depth_texture.txt.md) extension.
     * Depth texture corresponds to Z buffer contents that are rendered, it __does not__ use the result from the fragment program.
 * OpenGL ES 2.0 (iOS/Android) is very much like OpenGL above.
-    * GPU must support [GL_OES_depth_texture](http://www.khronos.org/registry/gles/extensions/OES/OES_depth_texture.txt.html) extension.
+    * GPU must support [GL_OES_depth_texture](http://www.khronos.org/registry/gles/extensions/OES/OES_depth_texture.txt.md) extension.
 * Direct3D 11 (Windows) has native depth texture capability just like OpenGL.
 * Flash (Stage3D) uses a color-encoded depth texture to emulate the high precision required for it.
 
@@ -23,7 +23,7 @@ Using depth texture helper macros
 ---------------------------------
 
 
-Most of the time depth textures are used to render depth from the camera. [SL-BuiltinIncludes | `UnityCG.cginc` include file](SL-BuiltinIncludes|`UnityCG.cginc`includefile.html) contains some macros to deal with the above complexity in this case:
+Most of the time depth textures are used to render depth from the camera. [SL-BuiltinIncludes | `UnityCG.cginc` include file](SL-BuiltinIncludes|`UnityCG.cginc`includefile.md) contains some macros to deal with the above complexity in this case:
 * <span class=component>UNITY_TRANSFER_DEPTH(o)</span>: computes eye space depth of the vertex and outputs it in <span class=component>o</span> (which must be a float2). Use it in a vertex program when rendering into a depth texture. On platforms with native depth textures this macro does nothing at all, because Z buffer value is rendered implicitly.
 * <span class=component>UNITY_OUTPUT_DEPTH(i)</span>: returns eye space depth from <span class=component>i</span> (which must be a float2). Use it in a fragment program when rendering into a depth texture. On platforms with native depth textures this macro always returns zero, because Z buffer value is rendered implicitly.
 * <span class=component>COMPUTE_EYEDEPTH(i)</span>: computes eye space depth of the vertex and outputs it in <span class=component>o</span>. Use it in a vertex program when __not__ rendering into a depth texture.

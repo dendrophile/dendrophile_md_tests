@@ -2,7 +2,7 @@ Built-in shader include files
 =============================
 
 
-Unity contains several files that can be used by your [shader programs](SL-ShaderPrograms.html) to bring in predefined variables and helper functions. This is done by the standard `#include` directive, e.g.:
+Unity contains several files that can be used by your [shader programs](SL-ShaderPrograms.md) to bring in predefined variables and helper functions. This is done by the standard `#include` directive, e.g.:
 
     CGPROGRAM
     // ...
@@ -13,8 +13,8 @@ Unity contains several files that can be used by your [shader programs](SL-Shade
 Shader include files in Unity are with `.cginc` extension, and the built-in ones are:
 * `HLSLSupport.cginc` - _(automatically included)_ Helper macros and definitions for cross-platform shader compilation.
 * `UnityCG.cginc` - commonly used global variables and helper functions.
-* `AutoLight.cginc` - lighting & shadowing functionality, e.g. [surface shaders](SL-SurfaceShaders.html) use this file internally.
-* `Lighting.cginc` - standard [surface shader](SL-SurfaceShaders.html) lighting models; automatically included when you're writing surface shaders.
+* `AutoLight.cginc` - lighting & shadowing functionality, e.g. [surface shaders](SL-SurfaceShaders.md) use this file internally.
+* `Lighting.cginc` - standard [surface shader](SL-SurfaceShaders.md) lighting models; automatically included when you're writing surface shaders.
 * `TerrainEngine.cginc` - helper functions for Terrain & Vegetation shaders.
 
 These files are found inside Unity application (<span class=menu>{unity install path}/Data/CGIncludes/UnityCG.cginc</span> on Windows, <span class=menu>/Applications/Unity/Unity.app/Contents/CGIncludes/UnityCG.cginc</span> on Mac), if you want to take a look at what exactly is done in any of the helper code.
@@ -24,7 +24,7 @@ HLSLSupport.cginc
 -----------------
 
 
-This file is _automatically included_ when compiling shaders. It mostly declares various [preprocessor macros](SL-BuiltinMacros.html) to aid in multi-platform shader development.
+This file is _automatically included_ when compiling shaders. It mostly declares various [preprocessor macros](SL-BuiltinMacros.md) to aid in multi-platform shader development.
 
 
 UnityCG.cginc

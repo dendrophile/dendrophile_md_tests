@@ -10,7 +10,7 @@ Importing an Asset
 ------------------
 
 
-Unity normally imports assets automatically when they are dragged into the project but it is also possible to import them under script control. To do this you can use the [AssetDatabase.ImportAsset](ScriptRef:AssetDatabase.ImportAsset.html.html) method as in the example below.
+Unity normally imports assets automatically when they are dragged into the project but it is also possible to import them under script control. To do this you can use the [AssetDatabase.ImportAsset](ScriptRef:AssetDatabase.ImportAsset.html) method as in the example below.
 
 ````
 using UnityEngine;
@@ -25,14 +25,14 @@ public class ImportAsset {
 }
 ````
 
-You can also pass an extra parameter of type [AssetDatabase.ImportAssetOptions](ScriptRef:ImportAssetOptions.html.html) to the AssetDatabase.ImportAsset call. The scripting reference page documents the different options and their effects on the function's behaviour.
+You can also pass an extra parameter of type [AssetDatabase.ImportAssetOptions](ScriptRef:ImportAssetOptions.html) to the AssetDatabase.ImportAsset call. The scripting reference page documents the different options and their effects on the function's behaviour.
 
 
 Loading an Asset
 ----------------
 
 
-The editor loads assets only as needed, say if they are added to the scene or edited from the Inspector panel. However, you can load and access assets from a script using [AssetDatabase.LoadAssetAtPath](ScriptRef:AssetDatabase.LoadAssetAtPath.html.html), [AssetDatabase.LoadMainAssetAtPath](ScriptRef:AssetDatabase.LoadMainAssetAtPath.html.html),  [AssetDatabase.LoadAllAssetRepresentationsAtPath](ScriptRef:AssetDatabase.LoadAllAssetRepresentationsAtPath.html.html) and [AssetDatabase.LoadAllAssetsAtPath ](ScriptRef:AssetDatabase.LoadAllAssetsAtPath.html.html). See the scripting documentation for further details.
+The editor loads assets only as needed, say if they are added to the scene or edited from the Inspector panel. However, you can load and access assets from a script using [AssetDatabase.LoadAssetAtPath](ScriptRef:AssetDatabase.LoadAssetAtPath.html), [AssetDatabase.LoadMainAssetAtPath](ScriptRef:AssetDatabase.LoadMainAssetAtPath.html),  [AssetDatabase.LoadAllAssetRepresentationsAtPath](ScriptRef:AssetDatabase.LoadAllAssetRepresentationsAtPath.html) and [AssetDatabase.LoadAllAssetsAtPath ](ScriptRef:AssetDatabase.LoadAllAssetsAtPath .html). See the scripting documentation for further details.
 
 ````
 using UnityEngine;
@@ -52,7 +52,7 @@ File Operations using the AssetDatabase
 ---------------------------------------
 
 
-Since Unity keeps metadata about asset files, you should never create, move or delete them using the filesystem. Instead, you can use [AssetDatabase.Contains](ScriptRef:AssetDatabase.Contains.html.html), [AssetDatabase.CreateAsset](ScriptRef:AssetDatabase.CreateAsset.html.html), [AssetDatabase.CreateFolder](ScriptRef:AssetDatabase.CreateFolder.html.html), [AssetDatabase.RenameAsset](ScriptRef:AssetDatabase.RenameAsset.html.html), [AssetDatabase.CopyAsset](ScriptRef:AssetDatabase.CopyAsset.html.html), [AssetDatabase.MoveAsset](ScriptRef:AssetDatabase.MoveAsset.html.html), [AssetDatabase.MoveAssetToTrash](ScriptRef:AssetDatabase.MoveAssetToTrash.html.html) and [AssetDatabase.DeleteAsset](ScriptRef:AssetDatabase.DeleteAsset.html.html).
+Since Unity keeps metadata about asset files, you should never create, move or delete them using the filesystem. Instead, you can use [AssetDatabase.Contains](ScriptRef:AssetDatabase.Contains.html), [AssetDatabase.CreateAsset](ScriptRef:AssetDatabase.CreateAsset.html), [AssetDatabase.CreateFolder](ScriptRef:AssetDatabase.CreateFolder.html), [AssetDatabase.RenameAsset](ScriptRef:AssetDatabase.RenameAsset.html), [AssetDatabase.CopyAsset](ScriptRef:AssetDatabase.CopyAsset.html), [AssetDatabase.MoveAsset](ScriptRef:AssetDatabase.MoveAsset.html), [AssetDatabase.MoveAssetToTrash](ScriptRef:AssetDatabase.MoveAssetToTrash.html) and [AssetDatabase.DeleteAsset](ScriptRef:AssetDatabase.DeleteAsset.html).
 
 
 ````

@@ -4,7 +4,7 @@ PlayStation3: Getting Started
 
 
 ###Developing for PS3
-To develop for the PS3 you must be a Sony registered developer and own the appropriate hardware. See the [PS3 Setup](ps3-setup.html) or [PS3 Setup for Source Licensees](ps3-setupforsource.html) page depending on your license for a seat setup checklist.
+To develop for the PS3 you must be a Sony registered developer and own the appropriate hardware. See the [PS3 Setup](ps3-setup.md) or [PS3 Setup for Source Licensees](ps3-setupforsource.md) page depending on your license for a seat setup checklist.
 
 ###Build information:
 * SDK version: 410.001

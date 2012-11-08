@@ -2,7 +2,7 @@ iOS Specific Optimizations
 ==========================
 
 
-This page details optimizations which are unique to iOS deployment. For more information on optimizing for mobile devices, see the [Practical Guide to Optimization for Mobiles](Main.iphone-PracticalGuide.html). 
+This page details optimizations which are unique to iOS deployment. For more information on optimizing for mobile devices, see the [Practical Guide to Optimization for Mobiles](Main.iphone-PracticalGuide.md). 
 
 Script Call Optimization
 ------------------------
@@ -88,4 +88,4 @@ To specify the amount of time (in milliseconds) that the OS will spend processin
 Tuning Accelerometer Processing Frequency
 -----------------------------------------
 
-If accelerometer input is processed too frequently then the overall performance of your game may suffer as a result. By default, a Unity iOS application will sample the accelerometer 60 times per second. You may see some performance benefit by reducing the accelerometer sampling frequency and it can even be set to zero for games that don't use accelerometer input. You can change the accelerometer frequency from the <span class=component>Other Settings</span> panel in the [iOS Player Settings](class-PlayerSettings.html).
+If accelerometer input is processed too frequently then the overall performance of your game may suffer as a result. By default, a Unity iOS application will sample the accelerometer 60 times per second. You may see some performance benefit by reducing the accelerometer sampling frequency and it can even be set to zero for games that don't use accelerometer input. You can change the accelerometer frequency from the <span class=component>Other Settings</span> panel in the [iOS Player Settings](class-PlayerSettings.md).

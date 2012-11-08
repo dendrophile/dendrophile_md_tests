@@ -2,7 +2,7 @@ Using External Version Control Systems with Unity
 =================================================
 
 
-Unity offers an [Asset Server](AssetServer.html) add-on product for easy integrated versioning of your projects. If you for some reason are not able use the Unity Asset Server, it is possible to store your project in any other version control system, such as Subversion, Perforce or Bazaar. This requires some initial manual setup of your project. 
+Unity offers an [Asset Server](AssetServer.md) add-on product for easy integrated versioning of your projects. If you for some reason are not able use the Unity Asset Server, it is possible to store your project in any other version control system, such as Subversion, Perforce or Bazaar. This requires some initial manual setup of your project. 
 
 Before checking your project in, you have to tell Unity to modify the project structure slightly to make it compatible with storing assets in an external version control system. This is done by selecting <span class=menu>Edit->Project Settings->Editor</span> in the application menu and enabling External Version Control support by selecting <span class=component>Metafiles</span> in the dropdown for Version Control. This will create a text file for every asset in the `Assets` directory containing the necessary bookkeeping information required by Unity. The files will have a `.meta` file extension with the first part being the full file name of the asset it is associated with. Moving and renaming assets within Unity should also update the relevant  `.meta` files. However, if you move or rename assets from an external tool, make sure to syncronize the relevant `.meta` files as well. 
 

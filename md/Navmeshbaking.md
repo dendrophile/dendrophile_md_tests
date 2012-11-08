@@ -5,6 +5,7 @@ Navmesh Baking
 Once the Navmesh geometry and layers are marked up, it's time to bake the Navmesh geometry. 
 
 Inside the Navigation window (<span class=menu>Window->Navigation</span>), go to the <span class=menu>Bake</span> tab (the upper-right corner), and click on the <span class=menu>Bake</span> button (the lower-right corner).
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NavigationBakeWindow.png)  
 _Navigation Bake Window_
 
@@ -26,4 +27,4 @@ Here are the properties that affect Navmesh baking:
 
 Note that the baked navmesh is part of the scene and agents will be able to traverse it. To remove the navmesh, click on <span class=menu>Clear</span> when you're in the <span class=menu>Bake</span> tab.
 
-(back to [Navigation and Pathfinding](NavmeshandPathfinding.html))
+(back to [Navigation and Pathfinding](NavmeshandPathfinding.md))

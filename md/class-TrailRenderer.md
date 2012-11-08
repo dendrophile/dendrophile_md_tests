@@ -4,6 +4,7 @@ Trail Renderer
 
 The <span class=keyword>Trail Renderer</span> is used to make trails behind objects in the scene as they move about.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-TrailRenderer.png)  
 _The Trail Renderer <span class=keyword>Inspector</span>_
 

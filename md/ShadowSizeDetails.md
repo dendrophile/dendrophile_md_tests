@@ -7,7 +7,7 @@ Shadow Size Computation
 __Note on Mobile platforms__: realtime shadows are not supported on iOS & Android.
 
 
-Unity computes [shadow map](Shadows.html) sizes this way:
+Unity computes [shadow map](Shadows.md) sizes this way:
 
 First light's "coverage box" on the screen is computed. This is what rectangle on the screen the light possibly illuminates:
 * For Directional lights that is the whole screen.

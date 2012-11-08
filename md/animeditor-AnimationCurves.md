@@ -6,9 +6,10 @@ The Property List
 -----------------
 
 
-In an <span class=keyword>Animation Clip</span>, any animatable property can have an <span class=keyword>Animation Curve</span>, which means that the Animation Clip controls that property. In the property list of the <span class=keyword>Animation View</span> properties with <span class=keyword>Animation Curves</span> have colored curve indicators. For information on how to add curves to an animation property, see the section on [Using the Animation View](animeditor-UsingAnimationEditor.html).
+In an <span class=keyword>Animation Clip</span>, any animatable property can have an <span class=keyword>Animation Curve</span>, which means that the Animation Clip controls that property. In the property list of the <span class=keyword>Animation View</span> properties with <span class=keyword>Animation Curves</span> have colored curve indicators. For information on how to add curves to an animation property, see the section on [Using the Animation View](animeditor-UsingAnimationEditor.md).
 
 A <span class=keyword>Game Object</span> can have quite a few components and the property list in the <span class=keyword>Animation View</span> can get very long. To show only the properties that have <span class=keyword>Animation Curves</span>, click the lower left button in the <span class=keyword>Animation View</span> to set its state to <span class=menu>Show: Animated</span>.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorShowAnimatedPP.png)  
 _Set the toggle button in the lower left corner to <span class=menu>Show: Animated</span> to hide all the properties without <span class=keyword>Animation Curves</span> from the property list._
@@ -22,10 +23,12 @@ An <span class=keyword>Animation Curve</span> has multiple <span class=keyword>k
 
 If a property has a <span class=keyword>key</span> in the currently previewed frame, the curve indicator will have a diamond shape.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorDetailPP.png)  
 _The <span class=menu>Rotation.y</span> property has a <span class=keyword>key</span> at the currently previewed frame. The <span class=menu>Keyframe Line</span> marks the <span class=keyword>keyframes</span> for all shown curves._
 
 The <span class=menu>Keyframe Line</span> only shows keyframes for the curves that are shown. If a property is selected in the property list, only that property is shown, and the <span class=menu>Keyframe Line</span> will not mark the keys of the curves that are not shown.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorSimpleSingleCurve.png)  
 _When a property is selected, other properties are not shown and the keys of their curves are not shown in the <span class=menu>Keyframe Line</span>._
@@ -33,6 +36,7 @@ _When a property is selected, other properties are not shown and the keys of the
 
 Adding and Moving Keyframes
 ---------------------------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorKeyframeLine.png)  
@@ -45,7 +49,8 @@ Wrap Mode
 ---------
 
 
-An <span class=keyword>Animation Clip</span> in Unity can have various <span class=keyword>Wrap Modes</span> that can for example set the Animation Clip to loop. See [WrapMode](ScriptRef:WrapMode.html.html) in the Scripting Reference to learn more. The Wrap Mode of an Animation Clip can be set in the <span class=keyword>Animation View</span> in the lower right selection box. The <span class=menu>Curve View</span> will preview the selected <span class=keyword>Wrap Mode</span> as white lines outside of the time range of the Animation Clip.
+An <span class=keyword>Animation Clip</span> in Unity can have various <span class=keyword>Wrap Modes</span> that can for example set the Animation Clip to loop. See [WrapMode](ScriptRef:WrapMode.html) in the Scripting Reference to learn more. The Wrap Mode of an Animation Clip can be set in the <span class=keyword>Animation View</span> in the lower right selection box. The <span class=menu>Curve View</span> will preview the selected <span class=keyword>Wrap Mode</span> as white lines outside of the time range of the Animation Clip.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorWrapmode.png)  
 Setting the <span class=keyword>Wrap Mode</span> of an <span class=keyword>Animation Clip</span> will preview that Wrap Mode in the <span class=menu>Curve View</span>.
@@ -78,7 +83,7 @@ Here are a few examples of the many things the <span class=keyword>Animation Vie
 * Animate the <span class=component>Emit</span> state and <span class=component>Velocities</span> of multiple <span class=component>Ellipsoid Particle Emitters</span> to create spectacular fireworks or fountain displays.
 * Animate variables of your own script components to make things behave differently over time.
 
-When using <span class=keyword>Animation Curves</span> to control game logic, please be aware of the way animations are [played back and sampled](AnimationScripting#Playback.html) in Unity.
+When using <span class=keyword>Animation Curves</span> to control game logic, please be aware of the way animations are [played back and sampled](AnimationScripting#Playback.md) in Unity.
 
 
 Rotation Interpolation Types
@@ -89,12 +94,14 @@ In Unity rotations are internally represented as <span class=component>Quaternio
 
 When interpolating between two rotations, the interpolation can either be performed on the <span class=component>Quaternion</span> values or on the <span class=component>Euler Angles</span> values. The <span class=keyword>Animation View</span> lets you choose which form of interpolation to use when animating <span class=component>Transform</span> rotations. However, the rotations are always shown in the form of <span class=component>Euler Angles</span> values no matter which interpolation form is used.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorQuaternionInterpolationMenu.png)  
 _Transform rotations can use <span class=component>Euler Angles</span> interpolation or <span class=component>Quaternion</span> interpolation._
 
 ###Quaternion Interpolation
 
 Quaternion interpolation always generates nice interpolations along the shortest path between two rotations. This avoids rotation interpolation artifacts such as Gimbal Lock. However, Quaternion interpolation cannot represent rotations larger than 180 degrees, because it is then shorter to go the other way around. If you use Quaternion interpolation and place two keys further apart than 180 degrees, the curve will look discontinuous, even though the actual rotation is still smooth - it simply goes the other way around, because it is shorter. If rotations larger than 180 degrees are desired, additional keys must be placed in between. When using Quaternion interpolation, changing the keys or tangents of one curve may also change the shapes of the other two curves, since all three curves are created from the internal Quaternion representation. When using Quaternion interpolation, keys are always linked, so that creating a key at a specific time for one of the three curves will also create a key at that time for the other two curves.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorQuaternionInterpolation.png)  
 _Placing two keys 270 degrees apart when using Quaternion interpolation will cause the interpolated value to go the other way around, which is only 90 degrees._

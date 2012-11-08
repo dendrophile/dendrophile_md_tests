@@ -8,6 +8,7 @@ You can play your game in the Editor with Profiling on, and it will record perfo
 
 Note that profiling has to _instrument_ your code.  This instrumentation has a small impact on the performance of your game.  Typically this overhead is small enough to not affect the game framerate.  When using profiling it is typical to consider only the ratio (or percentage) of time spent in certain areas.  Also, to improve performance focus on those parts of the game that consume the most time.  Compare profiling results before and after code changes and determine the improvements you measure.  Sometimes changes you make to improve performance might have a negative effect on frame rate; unexpected consequences of code optimization should be expected.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ProfilerWindow2.png)  
 _Profiler window_
 
@@ -21,6 +22,7 @@ Profiler Controls
 -----------------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ProfilerControls.png)  
 
 Profiler controls are in the toolbar at the top of the window. Use these to turn profiling on and off, navigate through profiled frames and so on.  The transport controls are at the far right end of the toolbar.  Note that when the game is running and the profiler is collecting data clicking on any of these transport controls will pause the game.  The controls go to the first recorded frame, step one frame back, step one frame forward and go to the last frame respectively.  The profiler does not keep all recorded frames, so the notion of the _first_ frame should really be though of as the oldest frame that is still kept in memory.  The "current" transport button causes the profile statistics window to display data collected in real-time. The Active Profiler popup menu allows you to select whether profiling should be done in the editor or a separate player (for example, a game running on an attached iOS device).
@@ -31,7 +33,7 @@ When you turn on <span class=component>Deep Profile</span>, _all_ your script co
 
 Note that Deep Profiling incurs a __very large overhead__ and uses a lot of memory, and as a result your game will run significantly slower while profiling. If you are using complex script code, Deep Profiling might not be possible at all.  Deep profiling should work fast enough for small games with simple scripting.  If you find that Deep Profiling for your entire game causes the frame rate to drop so much that the game barely runs, you should consider not using this approach, and instead use the approach described below.  You may find deep profiling more helpful as you are designing your game and deciding how to best implement key features.  Note that for large games deep profiling may cause Unity to run out of memory and so for this reason deep profiling may not be possible.
 
-Manually profiling blocks of your script code will have a smaller overhead than using Deep Profiling. Use [Profiler.BeginSample](ScriptRef:Profiler.BeginSample.html.html) and [Profiler.EndSample](ScriptRef:Profiler.EndSample.html.html) scripting functions to enable and disable profiling around sections of code.
+Manually profiling blocks of your script code will have a smaller overhead than using Deep Profiling. Use [Profiler.BeginSample](ScriptRef:Profiler.BeginSample.html) and [Profiler.EndSample](ScriptRef:Profiler.EndSample.html) scripting functions to enable and disable profiling around sections of code.
 
 ###View SyncTime
 
@@ -39,6 +41,7 @@ When running at a fixed framerate or running in sync with the vertical blank, Un
 
 Profiler Timeline
 -----------------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ProfilerTimeline.png)  
@@ -53,6 +56,7 @@ CPU Usage Area
 --------------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ProfilerCPU.png)  
 
 The CPU Usage area displays where time is spent in your game. When it is selected, the lower pane displays hierarchical time data for the selected frame.
@@ -64,6 +68,7 @@ The way the CPU chart is stacked can be reordered by simply dragging chart label
 
 When an item is selected in the lower pane, it's contribution to the CPU chart is highlighted (and the rest are dimmed). Clicking on an item again de-selects it.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ProfilerCPUSelected.png)  
 _Shader.SetPass is selected and it's contribution is highlighted in the chart._
 
@@ -73,13 +78,15 @@ Rendering Area
 --------------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RenderProfiler35.png)  
 
-The Rendering area displays rendering statistics. The Number of Draw Calls, Triangles and Vertices rendered is displayed graphical in the timeline. The Lower pane displays more rendering statistics and these more closely match the ones shown in the GameView [Rendering Statistics](RenderingStatistics.html) window.
+The Rendering area displays rendering statistics. The Number of Draw Calls, Triangles and Vertices rendered is displayed graphical in the timeline. The Lower pane displays more rendering statistics and these more closely match the ones shown in the GameView [Rendering Statistics](RenderingStatistics.md) window.
 
 
 Memory Area
 -----------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ProfilerMemory.png)  
@@ -91,6 +98,7 @@ The Memory area displays some memory usage data:
 <a id="Audio"></a>
 Audio Area
 ----------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioProfiler35.png)  
@@ -110,17 +118,19 @@ Physics Area
 ------------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PhysicsProfiler.png)  
 
 The Physics area shows the following statistics about the physics in the scene:-
 * <span class=component>Active Rigidbodies</span> is the number of rigidbodies that are not currently sleeping (ie, they are moving or just coming to rest).
-* <span class=component>Sleeping Rigidbodies</span> is the number of rigidbodies that are completely at rest and therefore don't need to be updated actively by the physics engine (see [Rigidbody Sleeping](RigidbodySleeping.html) for further details).
+* <span class=component>Sleeping Rigidbodies</span> is the number of rigidbodies that are completely at rest and therefore don't need to be updated actively by the physics engine (see [Rigidbody Sleeping](RigidbodySleeping.md) for further details).
 * <span class=component>Number of Contacts</span> is the total number of points of contact between all colliders in the scene.
 * <span class=component>Static Colliders</span> is the number of colliders attached to non-rigidbody objects (ie, objects which never move under physics).
 * <span class=component>Dynamic Colliders</span> is the number of colliders attached to rigidbody objects (ie, objects which do move under physics).
 
 GPU Area
 --------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GPUProfiler.png)  
@@ -133,7 +143,7 @@ See Also
 --------
 
 
-* [Optimizing Graphics Performance](OptimizingGraphicsPerformance.html) page.
+* [Optimizing Graphics Performance](OptimizingGraphicsPerformance.md) page.
 
 
 ###ios Details
@@ -155,7 +165,7 @@ __Note:__ Sometimes Unity Editor might not autoconnect to the device. In such ca
 Android
 -------
 
-Remote profiling can be enabled on Android devices through two different paths : WiFi or [ADB ](http://developer.android.com/guide/developing/tools/adb.html.html).
+Remote profiling can be enabled on Android devices through two different paths : WiFi or [ADB ](http://developer.android.com/guide/developing/tools/adb.html.md).
 
 For WiFi profiling, follow these steps:
 1. Make sure to disable Mobile Data on your Android device.
@@ -164,7 +174,7 @@ For WiFi profiling, follow these steps:
 1. Attach your device to your Mac/PC via cable and hit "Build & Run" in Unity Editor.
 1. When the app launches on the device, open the profiler window in Unity Editor (Window->Profiler)
 1. If the Unity Editor fails to autoconnect to the device, select the appropriate device from the Profiler Window <span class=component>Active Profiler</span> drop down menu.
-__Note:__ The Android device and host computer (running the Unity Editor) must both be on the same [subnet ](http://en.wikipedia.org/wiki/Subnetwork.html) for the device detection to work.
+__Note:__ The Android device and host computer (running the Unity Editor) must both be on the same [subnet ](http://en.wikipedia.org/wiki/Subnetwork.md) for the device detection to work.
 
 For ADB profiling, follow these steps:
 * Attach your device to your Mac/PC via cable and make sure ADB recognizes the device (i.e. it shows in _adb devices_ list).

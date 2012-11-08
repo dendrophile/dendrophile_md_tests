@@ -7,6 +7,7 @@ At any time while you are creating your game, you might want to see how it looks
 <span class=menu>File->Build Settings...</span> is the menu item to access the Build Settings window.  It pops up an editable list of the scenes that will be included when you build your game.
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BuildSettings34.png)  
 _The Build Settings window_
 
@@ -15,7 +16,7 @@ The first time you view this window in a project, it will appear blank.  If you 
 
 It is easy to add scene files to the list for multi-scene builds.  There are two ways to add them.  The first way is to click the <span class=menu>Add Current</span> button.  You will see the currently open scene appear in the list.  The second way to add scene files is to drag them from the <span class=keyword>Project View</span> to the list.
 
-At this point, notice that each of your scenes has a different index value.  <span class=keyword>Scene 0</span> is the first scene that will be loaded when you build the game.  When you want to load a new scene, use [Application.LoadLevel()](ScriptRef:Application.LoadLevel.html.html) inside your scripts.
+At this point, notice that each of your scenes has a different index value.  <span class=keyword>Scene 0</span> is the first scene that will be loaded when you build the game.  When you want to load a new scene, use [Application.LoadLevel()](ScriptRef:Application.LoadLevel.html) inside your scripts.
 
 If you've added more than one scene file and want to rearrange them, simply click and drag the scenes on the list above or below others until you have them in the desired order.
 
@@ -23,7 +24,7 @@ If you want to remove a scene from the list, click to highlight the scene and pr
 
 When you are ready to publish your build, select a <span class=keyword>Platform</span> and make sure that the Unity logo is next to the platform; if its not then click in the <span class=menu>Switch Platform</span> button to let Unity know which platform you want to build for. Finally press the <span class=menu>Build</span> button. You will be able to select a name and location for the game using a standard Save dialog. When you click <span class=menu>Save</span>, Unity builds your game pronto. It's that simple. If you are unsure where to save your built game to, consider saving it into the projects root folder.  You cannot save the build into the Assets folder.
 
-Enabling the <span class=keyword>Development Build</span> checkbox on a player will enable [Profiler](ScriptRef:Profiler.html.html) functionality and also make the Autoconnect Profiler and Script Debugging options available.
+Enabling the <span class=keyword>Development Build</span> checkbox on a player will enable [Profiler](ScriptRef:Profiler.html) functionality and also make the Autoconnect Profiler and Script Debugging options available.
 
 
 ##desktop Details
@@ -45,7 +46,7 @@ Application.LoadLevel("levelName");
 
 ````
 
-In a Streaming Web Player, you must first check that the level is finished streaming.  This is done through the [CanStreamedLevelBeLoaded()](ScriptRef:Application.CanStreamedLevelBeLoaded.html.html) function.  This is how it works:
+In a Streaming Web Player, you must first check that the level is finished streaming.  This is done through the [CanStreamedLevelBeLoaded()](ScriptRef:Application.CanStreamedLevelBeLoaded.html) function.  This is how it works:
 
 ````
 
@@ -59,7 +60,7 @@ function LoadNewLevel () {
 
 ````
 
-If you would like to display the level streaming progress to the player, for a loading bar or other representation, you can read the progress by accessing [GetStreamProgressForLevel()](ScriptRef:Application.GetStreamProgressForLevel.html.html).
+If you would like to display the level streaming progress to the player, for a loading bar or other representation, you can read the progress by accessing [GetStreamProgressForLevel()](ScriptRef:Application.GetStreamProgressForLevel.html).
 
 Offline webplayer deployment
 ----------------------------
@@ -84,9 +85,9 @@ The building process will place a blank copy of the built game application where
 
 * Any <span class=keyword>GameObject</span> in a scene that is tagged with 'EditorOnly' will be not be included in the published build. This is useful for debugging scripts that don't need to be included in the final game.
 
-* When a new level loads, all the objects in the previous level are destroyed. To prevent this, use [DontDestroyOnLoad()](ScriptRef:Object.DontDestroyOnLoad.html.html) on any objects you don't want destroyed. This is most commonly used for keeping music playing while loading a level, or for game controller scripts which keep game state and progress.
+* When a new level loads, all the objects in the previous level are destroyed. To prevent this, use [DontDestroyOnLoad()](ScriptRef:Object.DontDestroyOnLoad.html) on any objects you don't want destroyed. This is most commonly used for keeping music playing while loading a level, or for game controller scripts which keep game state and progress.
 
-* After the loading of a new level is finished, the message: [OnLevelWasLoaded()](ScriptRef:MonoBehaviour.OnLevelWasLoaded.html.html) will be sent to all active game objects.
+* After the loading of a new level is finished, the message: [OnLevelWasLoaded()](ScriptRef:MonoBehaviour.OnLevelWasLoaded.html) will be sent to all active game objects.
 * For more information on how to best create a game with multiple scenes, for instance a main menu, a high-score screen, and actual game levels, see the Scripting Tutorial.pdf
 
 ###ios Details
@@ -118,14 +119,17 @@ If Cmd+B is hit then the automatic build and run process is invoked and the late
 Upon the first attempt to build an Android project, Unity would ask you to locate the Android SDK, that is required to build and install your Android application on the device.
 You can change this setting later in <span class=menu>Preferences</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/unity-preferences.png)  
 
 When building the app to the Android, be sure that the device has the "USB Debugging" and the "Allow mock locations" checkboxes checked in the device settings.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/android-device-dev.png)  
 
 You can ensure that the operating system sees your device by running `adb devices` command found in your `Android SDK/platform-tools` folder.
 This should work both for Mac and Windows.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/adb-devices.png)  
 
@@ -136,12 +140,12 @@ Texture Compression
 -------------------
 
 
-Under <span class=keyword>Build Settings</span> you'll also find the <span class=menu>Texture Compression</span> option. By default, Unity uses [ETC1/RGBA16 ](Main.android-GettingStarted.html) texture format for textures that don't have individual texture format overrides (see [Texture 2D / Per-Platform Overrides](Main.class-Texture2D.html)).
+Under <span class=keyword>Build Settings</span> you'll also find the <span class=menu>Texture Compression</span> option. By default, Unity uses [ETC1/RGBA16 ](Main.android-GettingStarted.md) texture format for textures that don't have individual texture format overrides (see [Texture 2D / Per-Platform Overrides](Main.class-Texture2D.md)).
 
 If you want to build an application archive (.apk file) targeting a specific hardware architecture, you can use the <span class=menu>Texture Compression</span> option to override this default behavior.
 Any texture that is set to not be compressed will be left alone; only textures using a compressed texture format will use the format selected in the <span class=menu>Texture Compression</span> option.
 
-To make sure the application is only deployed on devices which support the selected texture compression, Unity will edit the [AndroidManifest ](http://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html.html) to include tags matching the particular format selected.
+To make sure the application is only deployed on devices which support the selected texture compression, Unity will edit the [AndroidManifest ](http://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html.md) to include tags matching the particular format selected.
 This will enable the Android Market filtering mechanism to only serve the application to devices with the appropriate graphics hardware.
 
 
@@ -160,12 +164,12 @@ You're ready to build games
 
 By now, you have learned how to use Unity's interface, how to use assets, how to create scenes, and how to publish your builds. There is nothing stopping you from creating the game of your dreams. You'll certainly learn much more along the way, and we're here to help.
 
-To learn more details about using Unity itself, you can [continue reading the manual](BuildingScenes.html) or follow the [Tutorials](Tutorials.html).
+To learn more details about using Unity itself, you can [continue reading the manual](BuildingScenes.md) or follow the [Tutorials](Tutorials.md).
 
-To learn more about Components, the nuts & bolts of game behaviors, please read the [Component Reference](Components.html).
+To learn more about Components, the nuts & bolts of game behaviors, please read the [Component Reference](Components.md).
 
-To learn more about Scripting, please read the [Scripting Reference](ScriptRef:index.html.html).
+To learn more about Scripting, please read the [Scripting Reference](ScriptRef:index.html).
 
-To learn more about creating Art assets, please read the [Assets section](AssetImportandCreation.html) of the manual.
+To learn more about creating Art assets, please read the [Assets section](AssetImportandCreation.md) of the manual.
 
-To interact with the community of Unity users and developers, visit the [Unity Forums](http://forum.unity3d.com.html).  You can ask questions, share projects, build a team, anything you want to do.  Definitely visit the forums at least once, because we want to see the amazing games that you make.
+To interact with the community of Unity users and developers, visit the [Unity Forums](http://forum.unity3d.com.md).  You can ask questions, share projects, build a team, anything you want to do.  Definitely visit the forums at least once, because we want to see the amazing games that you make.

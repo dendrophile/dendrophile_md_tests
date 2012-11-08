@@ -11,6 +11,7 @@ The following is a step-by-step guide to build and run a new project exported to
 1. Tick Development Build.  (This causes Unity to __not__ compress the final SWF file.  Not compressing will make the build faster, and also, the SWF file will not have to be decompressed before being run in the Flash Player.  Note that an empty scene built using the Development Build option will be around 16M in size, compared to around 2M compressed.)
 1. Press the Build button.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FlashExportBuildSettings.png)  
 
 Unity will build a SWF file at the location you choose.  Additionally it will create the following files:
@@ -61,7 +62,7 @@ Building for a specific Flash Player version
 
 The dropdown box in the build settings window will enable you to choose which Flash Player version you wish to target. This will always default to the lowest supported Flash Player version (currently 11.2) upon creating/reopening your Unity project.
 
-If you wish to build for a specific Flash Player version you can do so by creating an editor script to perform the build for you. In order to do this, you can specify a [FlashBuildSubtarget](http://docs.unity3d.com/Documentation/ScriptReference/FlashBuildSubtarget.html.html) in your [EditorUserBuildSettings](http://docs.unity3d.com/Documentation/ScriptReference/EditorUserBuildSettings.html.html) when building to Flash from an editor script. For example:
+If you wish to build for a specific Flash Player version you can do so by creating an editor script to perform the build for you. In order to do this, you can specify a [FlashBuildSubtarget](http://docs.unity3d.com/Documentation/ScriptReference/FlashBuildSubtarget.html.md) in your [EditorUserBuildSettings](http://docs.unity3d.com/Documentation/ScriptReference/EditorUserBuildSettings.html.md) when building to Flash from an editor script. For example:
 
 ````
 
@@ -76,7 +77,7 @@ Example Build Errors and Warnings
 ---------------------------------
 
 
-Below are some common errors/warnings you may encounter when using the Flash export. We also have sections on the [Forums](http://forum.unity3d.com/forums/36-Flash-Development.html) and [Answers](http://answers.unity3d.com/questions/topics/flash.html.html) dedicated to Flash export which may be of help if your error is not listed below.
+Below are some common errors/warnings you may encounter when using the Flash export. We also have sections on the [Forums](http://forum.unity3d.com/forums/36-Flash-Development.md) and [Answers](http://answers.unity3d.com/questions/topics/flash.html.md) dedicated to Flash export which may be of help if your error is not listed below.
 
 ###Unable to find Java
 ````
@@ -84,7 +85,7 @@ Below are some common errors/warnings you may encounter when using the Flash exp
 Error building Player: Exception: Compiling SWF Failed: Unable to launch Java - is the Java Runtime Environment (JRE) installed?
 
 ````
-If you encounter the above error at build time, please [install the 32-bit JRE](http://www.oracle.com/technetwork/java/javase/install-windows-141940.html.html) and try again. 
+If you encounter the above error at build time, please [install the 32-bit JRE](http://www.oracle.com/technetwork/java/javase/install-windows-141940.html.md) and try again. 
 
   
 
@@ -96,7 +97,7 @@ If you encounter the above error at build time, please [install the 32-bit JRE](
 Asset: 'Assets/New Terrain.asset'
 
 ````
-The terrain feature is not supported when building for the FlashPlayer target.  All [un-supported features](flash-whatssupported.html) will generate a similar warning.  Note that the build will continue, however, the unsupported feature will be missing from the final SWF.
+The terrain feature is not supported when building for the FlashPlayer target.  All [un-supported features](flash-whatssupported.md) will generate a similar warning.  Note that the build will continue, however, the unsupported feature will be missing from the final SWF.
 
   
 

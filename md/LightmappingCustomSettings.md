@@ -8,6 +8,7 @@ Beast reads bake settings defined in XML format. Normally Unity generates the XM
 
 To have Unity automatically generate the XML file for you, click the tab menu in the upper-right corner of the Lightmap Editor window and select _Generate Beast settings file_. You will notice that the BeastSettings.xml file appeared in the project next to your lightmaps and that the Lightmap Editor informs you, that your XML settings will override Unity's settings during the next bake. Click the _open_ button to edit your custom settings.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/XMLSettings40.png)  
 
 A sample Beast configuration file is given below:-

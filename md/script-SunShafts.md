@@ -4,7 +4,8 @@ Sun Shafts
 
 The <span class=keyword>Sun Shafts</span> image effect simulates the radial light scattering (also known as the "god ray" effect) that arises when a very bright light source is partly obscured.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./sunShaftsExample.png)  
 _Example of the Sun Shafts effect_

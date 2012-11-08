@@ -18,7 +18,7 @@ _Parameters:_
 * <span class=component>src</span> - Path to the web player data file. Can be relative or absolute.
 * <span class=component>width</span> - Width of Unity content. Can be specified in pixel values (i.e. <span class=component>600</span>, <span class=component>"450"</span>) or in percentage values (i.e. <span class=component>"50%"</span>, <span class=component>"100%"</span>).
 * <span class=component>height</span> - Height of Unity content. Can be specified in pixel values (i.e. <span class=component>600</span>, <span class=component>"450"</span>) or in percentage values (i.e. <span class=component>"50%"</span>, <span class=component>"100%"</span>).
-* <span class=component>params</span> - _Optional._ Object containing list of parameters. See [Customizing the Unity Web Player loading screen](CustomizingtheUnityWebPlayerloadingscreen.html) and [Customizing the Unity Web Player's Behavior](WebPlayerBehaviorTags.html) for possible values.
+* <span class=component>params</span> - _Optional._ Object containing list of parameters. See [Customizing the Unity Web Player loading screen](CustomizingtheUnityWebPlayerloadingscreen.md) and [Customizing the Unity Web Player's Behavior](WebPlayerBehaviorTags.md) for possible values.
 * <span class=component>attributes</span> - _Optional._ Object containing list of attributes. These will be added to underlying <span class=component><object></span> or <span class=component><embed></span> tag depending on the browser.
 * <span class=component>callback</span> - _Optional._ Function that will be called once Web Player is loaded. Function must accept single argument that contains following properties:
     * <span class=component>success</span> - Boolean value indicating whether operation has succeeded.

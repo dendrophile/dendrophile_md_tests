@@ -2,7 +2,8 @@ Reverb Zones.
 =============
 
 
-<span class=keyword>Reverb Zones</span> take an [Audio Clip](class-AudioClip.html) and distort it depending where the audio listener is located inside the reverb zone. They are used when you want to gradually change from a point where there is no ambient effect to a place where there is one, for example when you are entering a cavern.
+<span class=keyword>Reverb Zones</span> take an [Audio Clip](class-AudioClip.md) and distort it depending where the audio listener is located inside the reverb zone. They are used when you want to gradually change from a point where there is no ambient effect to a place where there is one, for example when you are entering a cavern.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioReverbZone.png)  
 _The Audio Reverb Zone gizmo seen in the inspector._
@@ -20,6 +21,7 @@ Properties
 |<span class=component>Reverb Preset</span> |Determines the reverb effect that will be used by the reverb zone.|
 
 This diagram illustrates the properties of the reverb zone.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ReverbZoneExpl.png)  
 _How the sound works in a reverb zone_
 

@@ -27,10 +27,10 @@ Requirements
 
 In order to import Maya __.mb__ and __.ma__ files, you need to have Maya installed on the machine you are using Unity to import the .mb/.ma file. Maya 8.0 and up is supported.
 
->If you don't have Maya installed on your machine but want to import a Maya file from another machine, you can export [to fbx format](Main.HOWTO-exportFBX.html), which Unity imports natively.  Please Install ->[2011.3](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=15765120.html) for best results. To export see [HOWTO_exportFBX](Main.HOWTO-exportFBX.html).
+>If you don't have Maya installed on your machine but want to import a Maya file from another machine, you can export [to fbx format](Main.HOWTO-exportFBX.md), which Unity imports natively.  Please Install ->[2011.3](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=15765120.md) for best results. To export see [HOWTO_exportFBX](Main.HOWTO-exportFBX.md).
 
 
->Once exported Place the fbx file in the Unity project folder. Unity will now automatically import the fbx file. Check the FBX import setting in the inspector as mentioned in [HOWTO_exportFBX](Main.HOWTO-exportFBX.html)
+>Once exported Place the fbx file in the Unity project folder. Unity will now automatically import the fbx file. Check the FBX import setting in the inspector as mentioned in [HOWTO_exportFBX](Main.HOWTO-exportFBX.md)
 
 ###Behind the import process (Advanced)
 
@@ -43,5 +43,5 @@ Troubleshooting
 * Keep your scene simple, try and work with a file which only contains the objects you need in Unity
 * If your meshes cause problems, make sure you have converted any patches, nurbs surface etc into Polygons (Modify > Convert + also Mesh > Quadragulate/Triangulate) Unity only support Polygons.
 * Maya in some rare cases messes up the node history, which sometimes results in models not exporting correctly. Fortunately you can very easily fix this by selecting <span class=menu>Edit->Delete by Type->Non-Deformer History</span>.
-* Unity likes to keep up with the latest FBX where possible so if you have any issues with importing some models, check for the latest FBX exporters from [Autodesk website](http://autodesk.com/fbx.html) or revert to FBX 2012
+* Unity likes to keep up with the latest FBX where possible so if you have any issues with importing some models, check for the latest FBX exporters from [Autodesk website](http://autodesk.com/fbx.md) or revert to FBX 2012
 * Animation baking in Maya is now done with FBX instead of natively, which allows for more complex animations to be baked properly to FBX format. If you are using driven keys, then make sure to set at least one key on your drivers for the animation to bake properly

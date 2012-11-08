@@ -4,10 +4,12 @@ Check For Updates
 
 Unity checks whether updates are available.  This check happens either when Unity is started, or when you choose the Help->Check for Updates menu item.  The update check sends the current Unity revision number (the five digit number that appears in brackets after the version name in the About Unity dialog) to the update server where is it compared with the most-up-to-date released version. If a newer version of Unity is available the following dialog is shown:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/updatecheck2.jpg)  
 _Window displayed when there is a newer version of Unity available for download._
 
 If the version in use is the most up-to-date then the following dialog is shown:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/updatecheck1.jpg)  
 _Window displayed when Unity is updated to the latest version._

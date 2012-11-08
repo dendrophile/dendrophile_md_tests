@@ -2,7 +2,7 @@ Using Scripts
 =============
 
 
-This brief introduction explains how to create and use scripts in a project.  For detailed information about the Scripting API, please view the [Scripting Reference](Path:../ScriptReference/index.html.html).  For detailed information about creating game play through scripting, please view the [Creating Gameplay](CreatingGameplay.html) page of this manual.
+This brief introduction explains how to create and use scripts in a project.  For detailed information about the Scripting API, please view the [Scripting Reference](Path:../ScriptReference/index.html.md).  For detailed information about creating game play through scripting, please view the [Creating Gameplay](CreatingGameplay.md) page of this manual.
 
 Behaviour scripts in Unity can be written in <span class=keyword>JavaScript</span>, <span class=keyword>C#</span>, or <span class=keyword>Boo</span>. It is possible to use any combination of the three languages in a single project, although there are certain restrictions in cases where one script incorporates classes defined in another script.
 
@@ -12,6 +12,7 @@ Creating New Scripts
 
 
 Unlike other assets like Meshes or Textures, Script files can be created from within Unity. To create a new script, open the <span class=menu>Assets->Create->JavaScript</span> (or <span class=menu>Assets->Create->C Sharp Script</span> or <span class=menu>Assets->Create->Boo Script</span>) from the main menu. This will create a new script called <span class=component>NewBehaviourScript</span> and place it in the selected folder in <span class=keyword>Project View</span>.  If no folder is selected in Project View, the script will be created at the root level.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Scripting-1.png)  
 
@@ -42,17 +43,21 @@ Attaching scripts to objects
 
 Save the above script and create a new object in the Scene by selecting <span class=menu>GameObject->Create Other->Cube</span>. This will create a new GameObject called "Cube" in the current Scene.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Scripting-2.png)  
 
 Now drag the script from the Project View to the Cube (in the Scene or <span class=keyword>Hierarchy View</span>, it doesn't matter). You can also select the Cube and choose <span class=menu>Component->Scripts->New Behaviour Script</span>.  Either of these methods will attach the script to the Cube.  Every script you create will appear in the <span class=menu>Component->Scripts</span> menu.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Scripting-3.png)  
 
 If you select the Cube and look at the <span class=keyword>Inspector</span>, you will see that the script is now visible.  This means it has been attached.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Scripting-4.png)  
 
 Press <span class=keyword>Play</span> to test your creation. You should see the text "Hello World" appear beside the Play/Pause/Step buttons. Exit play mode when you see it.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Scripting-5.png)  
 
@@ -74,16 +79,16 @@ function Update () {
 If you're new to scripting, it's okay if this looks confusing.  These are the important concepts to understand:
 
 1. <span class=component>function Update () {}</span> is a container for code that Unity executes multiple times per second (once per frame).
-1. <span class=component>transform</span> is a reference to the GameObject's [Transform Component](class-Transform.html).
+1. <span class=component>transform</span> is a reference to the GameObject's [Transform Component](class-Transform.md).
 1. <span class=component>Rotate()</span> is a function contained in the Transform <span class=keyword>Component</span>.
 1. The numbers in-between the commas represent the degrees of rotation around each axis of 3D space: X, Y, and Z.
 1. <span class=component>Time.deltaTime</span> is a member of the Time class that evens out movement over one second, so the cube will rotate at the same speed no matter how many frames per second your machine is rendering.  Therefore, <span class=component>5 * Time.deltaTime</span> means 5 degrees per second.
 
 With all this in mind, we can read this code as "every frame, rotate this GameObject's Transform component a small amount so that it will equal five degrees around the Y axis each second."
 
-You can access lots of different Components the same way as we accessed <span class=component>transform</span> already.  You have to add Components to the GameObject using the <span class=menu>Component</span> menu.  All the Components you can access directly are listed under <span class=keyword>Variables</span> on the [GameObject Scripting Reference Page](Path:../ScriptReference/GameObject.html.html).
+You can access lots of different Components the same way as we accessed <span class=component>transform</span> already.  You have to add Components to the GameObject using the <span class=menu>Component</span> menu.  All the Components you can access directly are listed under <span class=keyword>Variables</span> on the [GameObject Scripting Reference Page](Path:../ScriptReference/GameObject.html.md).
 
-For more information about the relationship between GameObjects, Scripts, and Components, please jump ahead to the [GameObjects](GameObjects.html) page or [Using Components](UsingComponents.html) page of this manual.
+For more information about the relationship between GameObjects, Scripts, and Components, please jump ahead to the [GameObjects](GameObjects.md) page or [Using Components](UsingComponents.md) page of this manual.
 
 
 The Power of Variables
@@ -104,6 +109,7 @@ function Update () {
 
 Now, select the Cube and look at the Inspector. Notice how our <span class=component>speed</span> variable appears.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Scripting-6.png)  
 
 This variable can now be modified directly in the Inspector.  Select it, press <span class=menu>Return</span> and change the value.  You can also right- or option-click on the value and drag the mouse up or down.  You can change the variable at any time, even while the game is running.
@@ -121,13 +127,13 @@ When writing a script Component, you can access other components on the GameObje
 
 ###Using the GameObject members
 
-You can directly access any member of the <span class=component>GameObject</span> class.  You can see a list of all the <span class=component>GameObject</span> class members [here](class-GameObject.html).  If any of the indicated classes are attached to the GameObject as a Component, you can access that Component directly through the script by simply typing the member name.  For example, typing <span class=component>transform</span> is equivalent to <span class=component>gameObject.transform</span>.  The <span class=component>gameObject</span> is assumed by the compiler, unless you specifically reference a different GameObject.
+You can directly access any member of the <span class=component>GameObject</span> class.  You can see a list of all the <span class=component>GameObject</span> class members [here](class-GameObject.md).  If any of the indicated classes are attached to the GameObject as a Component, you can access that Component directly through the script by simply typing the member name.  For example, typing <span class=component>transform</span> is equivalent to <span class=component>gameObject.transform</span>.  The <span class=component>gameObject</span> is assumed by the compiler, unless you specifically reference a different GameObject.
 
 Typing <span class=component>this</span> will be accessing the script Component that you are writing.  Typing <span class=component>this.gameObject</span> is referring to the GameObject that the script is attached to.  You can access the same GameObject by simply typing <span class=component>gameObject</span>.  Logically, typing <span class=component>this.transform</span> is the same as typing <span class=component>transform</span>.  If you want to access a Component that is not included as a GameObject member, you have to use <span class=component>gameObject.GetComponent()</span> which is explained on the next page.
 
 There are many Components that can be directly accessed in any script.  For example, if you want to access the <span class=component>Translate</span> function of the Transform component, you can just write <span class=component>transform.Translate()</span> or <span class=component>gameObject.transform.Translate()</span>.  This works because all scripts are attached to a GameObject.  So when you write <span class=component>transform</span> you are implicitly accessing the Transform Component of the GameObject that is being scripted.  To be explicit, you write <span class=component>gameObject.transform</span>.  There is no advantage in one method over the other, it's all a matter of preference for the scripter.
 
-To see a list of all the Components you can access implicitly, take a look at the [GameObject](ScriptRef:GameObject.html.html) page in the [Scripting Reference](ScriptRef:index.html.html).
+To see a list of all the Components you can access implicitly, take a look at the [GameObject](ScriptRef:GameObject.html) page in the [Scripting Reference](ScriptRef:index.html).
 
 ###Using <span class=component>GetComponent()</span>
 
@@ -137,7 +143,7 @@ Pretend you are writing _Script B_ and you want to make a reference to _Script A
 
 <span class=component>scriptA = GetComponent("ScriptA");</span>
 
-For more help with using <span class=component>GetComponent()</span>, take a look at the [GetComponent() Script Reference page](ScriptRef:GameObject.GetComponent.html.html).
+For more help with using <span class=component>GetComponent()</span>, take a look at the [GetComponent() Script Reference page](ScriptRef:GameObject.GetComponent.html).
 
 
 Accessing variables in other script Components
@@ -170,7 +176,7 @@ function Start () {
 
 ###Accessing a variable defined in C# from Javascript
 
-To access variables defined in C# scripts the compiled Assembly containing the C# code must exist when the Javascript code is compiled. Unity performs the compilation in different stages as described in the [Script Compilation](Path:../ScriptReference/index.Script_compilation_28Advanced29.html.html) section in the Scripting Reference. If you want to create a Javascript that uses classes or variables from a C# script just place the C# script in the "Standard Assets", "Pro Standard Assets" or "Plugins" folder and the Javascript outside of these folders. The code inside the "Standard Assets", "Pro Standard Assets" or "Plugins" is compiled first and the code outside is compiled in a later step making the Types defined in the compilation step (your C# script) available to later compilation steps (your Javascript script).
+To access variables defined in C# scripts the compiled Assembly containing the C# code must exist when the Javascript code is compiled. Unity performs the compilation in different stages as described in the [Script Compilation](Path:../ScriptReference/index.Script_compilation_28Advanced29.html.md) section in the Scripting Reference. If you want to create a Javascript that uses classes or variables from a C# script just place the C# script in the "Standard Assets", "Pro Standard Assets" or "Plugins" folder and the Javascript outside of these folders. The code inside the "Standard Assets", "Pro Standard Assets" or "Plugins" is compiled first and the code outside is compiled in a later step making the Types defined in the compilation step (your C# script) available to later compilation steps (your Javascript script).
 
 In general the code inside the "Standard Assets", "Pro Standard Assets" or "Plugins" folders, regardless of the language (C#, Javascript or Boo), will be compiled first and available to scripts in subsequent compilation steps.
 
@@ -216,4 +222,4 @@ Where to go from here
 ---------------------
 
 
-This was just a short introduction on how to use scripts inside the Editor. For more examples, check out the Unity tutorials, available for free on our Asset Store. You should also read through the [Scripting Overview](Path:../ScriptReference/index.html.html) in the Script Reference, which contains a more thorough introduction into scripting with Unity along with pointers to more in-depth information. If you're really stuck, be sure to visit the [Unity Answers](http://answers.unity3d.com.html) or [Unity Forums](http://forum.unity3d.com.html) and ask questions there.  Someone is always willing to help.
+This was just a short introduction on how to use scripts inside the Editor. For more examples, check out the Unity tutorials, available for free on our Asset Store. You should also read through the [Scripting Overview](Path:../ScriptReference/index.html.md) in the Script Reference, which contains a more thorough introduction into scripting with Unity along with pointers to more in-depth information. If you're really stuck, be sure to visit the [Unity Answers](http://answers.unity3d.com.md) or [Unity Forums](http://forum.unity3d.com.md) and ask questions there.  Someone is always willing to help.

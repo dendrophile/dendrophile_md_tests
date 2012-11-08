@@ -14,10 +14,10 @@ Typical bottlenecks and ways to check for them:
 * GPU is often limited by __fillrate__ or memory bandwidth.
     * Does running the game at lower display resolution make it faster? If so, you're most likely limited by fillrate on the GPU.
 * CPU is often limited by the number of things that need to be rendered, also known as "__draw calls__".
-    * Check "draw calls" in [Rendering Statistics](RenderingStatistics.html) window; if it's more than several thousand (for PCs) or several hundred (for mobile), then you might want to optimize the object count.
+    * Check "draw calls" in [Rendering Statistics](RenderingStatistics.md) window; if it's more than several thousand (for PCs) or several hundred (for mobile), then you might want to optimize the object count.
 
 Of course, these are only the rules of thumb; the bottleneck could as well be somewhere else. Less typical bottlenecks:
-* Rendering is not a problem, neither on the GPU nor the CPU! For example, your scripts or physics might be the actual problem. Use [Profiler](Profiler.html) to figure this out.
+* Rendering is not a problem, neither on the GPU nor the CPU! For example, your scripts or physics might be the actual problem. Use [Profiler](Profiler.md) to figure this out.
 * GPU has too many vertices to process. How many vertices are "ok" depends on the GPU and the complexity of vertex shaders. Typical figures are "not more than 100 thousand" on mobile, and "not more than several million" on PC.
 * CPU has too many vertices to process, for things that do vertex processing on the CPU. This could be skinned meshes, cloth simulation, particles etc.
 
@@ -35,13 +35,13 @@ So for example, if you have a thousand triangles, it will be much, much cheaper 
 individual meshes one triangle each. The cost of both scenarios on the GPU will be very similar, but the work done by the CPU to render a thousand objects (instead of one) will be significant.
 
 In order to make CPU do less work, it's good to reduce the visible object count:
-* Combine close objects together, either manually or using Unity's [draw call batching](DrawCallBatching.html).
+* Combine close objects together, either manually or using Unity's [draw call batching](DrawCallBatching.md).
 * Use less materials in your objects, by putting separate textures into a larger texture atlas and so on.
 * Use less things that cause objects to be rendered multiple times (reflections, shadows, per-pixel lights etc., see below).
 
 Combine objects together so that each mesh has at least several hundred triangles and uses only one <span class=keyword>Material</span> for the entire mesh. It is important to understand that combining two objects which don't share a material does not give you any performance increase at all. The most common reason for having multiple materials is that two meshes don't share the same textures, so to optimize CPU performance, you should ensure that any objects you combine share the same textures.
 
-However, when using many pixel lights in the [Forward rendering path](RenderTech-ForwardRendering.html), there are situations where combining objects may not make sense, as explained below.
+However, when using many pixel lights in the [Forward rendering path](RenderTech-ForwardRendering.md), there are situations where combining objects may not make sense, as explained below.
 
 
 GPU: Optimizing Model Geometry
@@ -61,20 +61,20 @@ Lighting Performance
 --------------------
 
 
-Lighting which is not computed at all is always the fastest! Use [Lightmapping](Lightmapping.html) to "bake" static lighting just once, instead of computing it each frame. The process of generating a lightmapped environment takes only a little longer than just placing a light in the scene in Unity, __but__:
+Lighting which is not computed at all is always the fastest! Use [Lightmapping](Lightmapping.md) to "bake" static lighting just once, instead of computing it each frame. The process of generating a lightmapped environment takes only a little longer than just placing a light in the scene in Unity, __but__:
 * It is going to run a lot faster (2-3 times for 2 per-pixel lights)
 * And it will look a lot better since you can bake global illumination and the lightmapper can smooth the results
 
 In a lot of cases there can be simple tricks possible in shaders and content, instead of adding more lights all over the place. For example, instead of adding a light that shines straight into the camera to get "rim lighting" effect, consider adding a dedicated "rim lighting" computation into your shaders directly.
 
 
-###Lights in [forward rendering](RenderTech-ForwardRendering.html)
+###Lights in [forward rendering](RenderTech-ForwardRendering.md)
 
 Per-pixel dynamic lighting will add significant rendering overhead to every affected pixel and can lead to objects being rendered in multiple passes. On less powerful devices, like mobile or low-end PC GPUs, avoid having more than one <span class=keyword>Pixel Light</span> illuminating any single object, and use lightmaps to light static objects instead of having their lighting calculated every frame. Per-vertex dynamic lighting can add significant cost to vertex transformations. Try to avoid situations where multiple lights illuminate any given object.
 
 If you use pixel lighting then each mesh has to be rendered as many times as there are pixel lights illuminating it. If you combine two meshes that are very far apart, it will increase the effective size of the combined object. All pixel lights that illuminate any part of this combined object will be taken into account during rendering, so the number of rendering passes that need to be made could be increased. Generally, the number of passes that must be made to render the combined object is the sum of the number of passes for each of the separate objects, and so nothing is gained by combining.  For this reason, you should not combine meshes that are far enough apart to be affected by different sets of pixel lights.
 
-During rendering, Unity finds all lights surrounding a mesh and calculates which of those lights affect it most. The [Quality Settings](class-QualitySettings.html) are used to modify how many of the lights end up as pixel lights and how many as vertex lights. Each light calculates its importance based on how far away it is from the mesh and how intense its illumination is. Furthermore, some lights are more important than others purely from the game context. For this reason, every light has a <span class=component>Render Mode</span> setting which can be set to <span class=component>Important</span> or <span class=component>Not Important</span>; lights marked as <span class=component>Not Important</span> will typically have a lower rendering overhead.
+During rendering, Unity finds all lights surrounding a mesh and calculates which of those lights affect it most. The [Quality Settings](class-QualitySettings.md) are used to modify how many of the lights end up as pixel lights and how many as vertex lights. Each light calculates its importance based on how far away it is from the mesh and how intense its illumination is. Furthermore, some lights are more important than others purely from the game context. For this reason, every light has a <span class=component>Render Mode</span> setting which can be set to <span class=component>Important</span> or <span class=component>Not Important</span>; lights marked as <span class=component>Not Important</span> will typically have a lower rendering overhead.
 
 As an example, consider a driving game where the player's car is driving in the dark with headlights switched on. The headlights are likely to be the most visually significant light sources in the game, so their Render Mode would probably be set to <span class=component>Important</span>. On the other hand, there may be other lights in the game that are less important (other cars' rear lights, say) and which don't improve the visual effect much by being pixel lights. The Render Mode for such lights can safely be set to <span class=component>Not Important</span> so as to avoid wasting rendering capacity in places where it will give little benefit.
 
@@ -86,12 +86,12 @@ GPU: Texture Compression and Mipmaps
 ------------------------------------
 
 
-Using [Compressed Textures](Main.class-Texture2D.html) will decrease the size of your textures (resulting in faster load times and smaller memory footprint) and can also dramatically increase rendering performance. Compressed textures use only a fraction of the memory bandwidth  needed for uncompressed 32bit RGBA textures.
+Using [Compressed Textures](Main.class-Texture2D.md) will decrease the size of your textures (resulting in faster load times and smaller memory footprint) and can also dramatically increase rendering performance. Compressed textures use only a fraction of the memory bandwidth  needed for uncompressed 32bit RGBA textures.
 
 
 ###Use Texture Mip Maps
 
-As a rule of thumb, always have [Generate Mip Maps](Main.class-Texture2D.html) enabled for textures used in a 3D scene. In the same way Texture Compression can help limit the amount of texture data transfered when the GPU is rendering, a mip mapped texture will enable the GPU to use a lower-resolution texture for smaller triangles.
+As a rule of thumb, always have [Generate Mip Maps](Main.class-Texture2D.md) enabled for textures used in a 3D scene. In the same way Texture Compression can help limit the amount of texture data transfered when the GPU is rendering, a mip mapped texture will enable the GPU to use a lower-resolution texture for smaller triangles.
 
 The only exception to this rule is when a texel (texture pixel) is known to map 1:1 to the rendered screen pixel, as with UI elements or in a 2D game.
 
@@ -103,14 +103,14 @@ LOD and Per-Layer Cull Distances
 
 In some games, it may be appropriate to cull small objects more aggressively than large ones, in order to reduce both the CPU and GPU load. For example, small rocks and debris could be made invisible at long distances while large buildings would still be visible.
 
-This can be either achieved by [separate layer](LevelOfDetail]]system,orbysettingmanualper-layercullingdistancesonthecamera.Youcouldputsmallobjectsintoa[[Layers.html) and setup per-layer cull distances using the [Camera.layerCullDistances](ScriptRef:Camera-layerCullDistances.html.html) script function.
+This can be either achieved by [separate layer](LevelOfDetail]]system,orbysettingmanualper-layercullingdistancesonthecamera.Youcouldputsmallobjectsintoa[[Layers.md) and setup per-layer cull distances using the [Camera.layerCullDistances](ScriptRef:Camera-layerCullDistances.html) script function.
 
 
 Realtime Shadows
 ----------------
 
 
-Realtime shadows are nice, but they can cost quite a lot of performance, both in terms of extra draw calls for the CPU, and extra processing on the GPU. For further details, see the [Shadows page](Shadows.html).
+Realtime shadows are nice, but they can cost quite a lot of performance, both in terms of extra draw calls for the CPU, and extra processing on the GPU. For further details, see the [Shadows page](Shadows.md).
 
 
 GPU: Tips for writing high-performance shaders
@@ -144,7 +144,7 @@ If the shader is written in Cg/HLSL then precision is specified as follows:
 
 If the shader is written in GLSL ES then the floating point precision is specified specified as <span class=keyword>highp</span>, <span class=keyword>mediump</span>, <span class=keyword>lowp</span> respectively.
 
-For further details about shader performance, please read the [Shader Performance page](SL-ShaderPerformance.html).
+For further details about shader performance, please read the [Shader Performance page](SL-ShaderPerformance.md).
 
 
 
@@ -155,12 +155,12 @@ Simple Checklist to make Your Game Faster
 * Keep vertex count below 200K..3M per frame when targetting PCs, depending on the target GPU
 * If you're using built-in shaders, pick ones from Mobile or Unlit category. They work on non-mobile platforms as well; but are simplified and approximated versions of the more complex shaders.
 * Keep the number of different materials per scene low - share as many materials between different objects as possible.
-* Set <span class=keyword>Static</span> property on a non-moving objects to allow internal optimizations like [static batching](DrawCallBatching.html).
+* Set <span class=keyword>Static</span> property on a non-moving objects to allow internal optimizations like [static batching](DrawCallBatching.md).
 * Do not use <span class=keyword>Pixel Lights</span> when it is not necessary - choose to have only a single (preferably directional) pixel light affecting your geometry.
 * Do not use dynamic lights when it is not necessary - choose to bake lighting instead.
 * Use compressed texture formats when possible, otherwise prefer 16bit textures over 32bit.
 * Do not use fog when it is not necessary.
-* Learn benefits of [Occlusion Culling](OcclusionCulling.html) and use it to reduce amount of visible geometry and draw-calls in case of complex static scenes with lots of occlusion. Plan your levels to benefit from ccclusion culling.
+* Learn benefits of [Occlusion Culling](OcclusionCulling.md) and use it to reduce amount of visible geometry and draw-calls in case of complex static scenes with lots of occlusion. Plan your levels to benefit from ccclusion culling.
 * Use skyboxes to "fake" distant geometry.
 * Use pixel shaders or texture combiners to mix several textures instead of a multi-pass approach.
 * If writing custom shaders, always use smallest possible floating point format:

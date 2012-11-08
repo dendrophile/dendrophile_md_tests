@@ -4,43 +4,44 @@ GUI Skin
 
 <span class=keyword>GUISkins</span> are a collection of <span class=keyword>GUIStyles</span> that can be applied to your GUI.  Each <span class=keyword>Control</span> type has its own Style definition.  Skins are intended to allow you to apply style to an entire UI, instead of a single Control by itself.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-GUISkin.png)  
 _A GUI Skin as seen in the <span class=keyword>Inspector</span>_
 
 To create a GUISkin, select <span class=menu>Assets->Create->GUI Skin</span> from the menubar.
 
-GUISkins are part of the <span class=keyword>UnityGUI</span> system.  For more detailed information about UnityGUI, please take a look at the [GUI Scripting Guide](GUIScriptingGuide.html).
+GUISkins are part of the <span class=keyword>UnityGUI</span> system.  For more detailed information about UnityGUI, please take a look at the [GUI Scripting Guide](GUIScriptingGuide.md).
 
 
 Properties
 ----------
 
 
-All of the properties within a GUI Skin are an individual [GUIStyle](class-GUIStyle.html).  Please read the [GUIStyle](class-GUIStyle.html) page for more information about how to use Styles.
+All of the properties within a GUI Skin are an individual [GUIStyle](class-GUIStyle.md).  Please read the [GUIStyle](class-GUIStyle.md) page for more information about how to use Styles.
 
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
 |<span class=component>Font</span> |The global Font to use for every Control in the GUI |
-|<span class=component>Box</span> |The [Style](class-GUIStyle.html) to use for all Boxes |
-|<span class=component>Button</span> |The [Style](class-GUIStyle.html) to use for all Buttons |
-|<span class=component>Toggle</span> |The [Style](class-GUIStyle.html) to use for all Toggles |
-|<span class=component>Label</span> |The [Style](class-GUIStyle.html) to use for all Labels |
-|<span class=component>Text Field</span> |The [Style](class-GUIStyle.html) to use for all Text Fields |
-|<span class=component>Text Area</span> |The [Style](class-GUIStyle.html) to use for all Text Areas |
-|<span class=component>Window</span> |The [Style](class-GUIStyle.html) to use for all Windows |
-|<span class=component>Horizontal Slider</span> |The [Style](class-GUIStyle.html) to use for all Horizontal Slider bars |
-|<span class=component>Horizontal Slider Thumb</span> |The [Style](class-GUIStyle.html) to use for all Horizontal Slider Thumb Buttons |
-|<span class=component>Vertical Slider</span> |The [Style](class-GUIStyle.html) to use for all Vertical Slider bars |
-|<span class=component>Vertical Slider Thumb</span> |The [Style](class-GUIStyle.html) to use for all Vertical Slider Thumb Buttons |
-|<span class=component>Horizontal Scrollbar</span> |The [Style](class-GUIStyle.html) to use for all Horizontal Scrollbars |
-|<span class=component>Horizontal Scrollbar Thumb</span> |The [Style](class-GUIStyle.html) to use for all Horizontal Scrollbar Thumb Buttons |
-|<span class=component>Horizontal Scrollbar Left Button</span> |The [Style](class-GUIStyle.html) to use for all Horizontal Scrollbar scroll Left Buttons |
-|<span class=component>Horizontal Scrollbar Right Button</span> |The [Style](class-GUIStyle.html) to use for all Horizontal Scrollbar scroll Right Buttons |
-|<span class=component>Vertical Scrollbar</span> |The [Style](class-GUIStyle.html) to use for all Vertical Scrollbars |
-|<span class=component>Vertical Scrollbar Thumb</span> |The [Style](class-GUIStyle.html) to use for all Vertical Scrollbar Thumb Buttons |
-|<span class=component>Vertical Scrollbar Up Button</span> |The [Style](class-GUIStyle.html) to use for all Vertical Scrollbar scroll Up Buttons |
-|<span class=component>Vertical Scrollbar Down Button</span> |The [Style](class-GUIStyle.html) to use for all Vertical Scrollbar scroll Down Buttons |
+|<span class=component>Box</span> |The [Style](class-GUIStyle.md) to use for all Boxes |
+|<span class=component>Button</span> |The [Style](class-GUIStyle.md) to use for all Buttons |
+|<span class=component>Toggle</span> |The [Style](class-GUIStyle.md) to use for all Toggles |
+|<span class=component>Label</span> |The [Style](class-GUIStyle.md) to use for all Labels |
+|<span class=component>Text Field</span> |The [Style](class-GUIStyle.md) to use for all Text Fields |
+|<span class=component>Text Area</span> |The [Style](class-GUIStyle.md) to use for all Text Areas |
+|<span class=component>Window</span> |The [Style](class-GUIStyle.md) to use for all Windows |
+|<span class=component>Horizontal Slider</span> |The [Style](class-GUIStyle.md) to use for all Horizontal Slider bars |
+|<span class=component>Horizontal Slider Thumb</span> |The [Style](class-GUIStyle.md) to use for all Horizontal Slider Thumb Buttons |
+|<span class=component>Vertical Slider</span> |The [Style](class-GUIStyle.md) to use for all Vertical Slider bars |
+|<span class=component>Vertical Slider Thumb</span> |The [Style](class-GUIStyle.md) to use for all Vertical Slider Thumb Buttons |
+|<span class=component>Horizontal Scrollbar</span> |The [Style](class-GUIStyle.md) to use for all Horizontal Scrollbars |
+|<span class=component>Horizontal Scrollbar Thumb</span> |The [Style](class-GUIStyle.md) to use for all Horizontal Scrollbar Thumb Buttons |
+|<span class=component>Horizontal Scrollbar Left Button</span> |The [Style](class-GUIStyle.md) to use for all Horizontal Scrollbar scroll Left Buttons |
+|<span class=component>Horizontal Scrollbar Right Button</span> |The [Style](class-GUIStyle.md) to use for all Horizontal Scrollbar scroll Right Buttons |
+|<span class=component>Vertical Scrollbar</span> |The [Style](class-GUIStyle.md) to use for all Vertical Scrollbars |
+|<span class=component>Vertical Scrollbar Thumb</span> |The [Style](class-GUIStyle.md) to use for all Vertical Scrollbar Thumb Buttons |
+|<span class=component>Vertical Scrollbar Up Button</span> |The [Style](class-GUIStyle.md) to use for all Vertical Scrollbar scroll Up Buttons |
+|<span class=component>Vertical Scrollbar Down Button</span> |The [Style](class-GUIStyle.md) to use for all Vertical Scrollbar scroll Down Buttons |
 |<span class=component>Custom 1-20</span> |Additional custom Styles that can be applied to any Control |
 |<span class=component>Custom Styles</span> |An array of additional custom Styles that can be applied to any Control |
 |<span class=component>Settings</span> |Additional Settings for the entire GUI |
@@ -64,18 +65,20 @@ Because each individual Control uses a particular Style, it does not make sense 
 
 GUISkins are asset files.  To create a GUI Skin, select <span class=menu>Assets->Create->GUI Skin</span> from the menubar.  This will put a new GUISkin in your <span class=keyword>Project View</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GUISkin-ProjectView.png)  
 _A new GUISkin file in the Project View_
 
 
 ###Editing GUISkins
 
-After you have created a GUISkin, you can edit all of the [Styles](class-GUIStyle.html) it contains in the Inspector.  For example, the <span class=component>Text Field</span> [Style](class-GUIStyle.html) will be applied to all Text Field Controls.
+After you have created a GUISkin, you can edit all of the [Styles](class-GUIStyle.md) it contains in the Inspector.  For example, the <span class=component>Text Field</span> [Style](class-GUIStyle.md) will be applied to all Text Field Controls.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GUISkin-EditingTextField.png)  
 _Editing the Text Field Style in a GUISkin_
 
-No matter how many Text Fields you create in your script, they will all use this [Style](class-GUIStyle.html).  Of course, you have control over changing the styles of one Text Field over the other if you wish.  We'll discuss how that is done next.
+No matter how many Text Fields you create in your script, they will all use this [Style](class-GUIStyle.md).  Of course, you have control over changing the styles of one Text Field over the other if you wish.  We'll discuss how that is done next.
 
 
 ###Applying GUISkins
@@ -122,4 +125,4 @@ function OnGUI () {
 
 ````
 
-For more information about working with GUIStyles, please read the [GUIStyle](class-GUIStyle.html) page.  For more information about using UnityGUI, please read the [GUI Scripting Guide](GUIScriptingGuide.html).
+For more information about working with GUIStyles, please read the [GUIStyle](class-GUIStyle.md) page.  For more information about using UnityGUI, please read the [GUI Scripting Guide](GUIScriptingGuide.md).

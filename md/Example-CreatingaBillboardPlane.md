@@ -6,6 +6,7 @@ Unity comes with a Plane primitive object but a simpler plane may be useful in 2
 
 The first thing is to set the vertices array. We'll assume that the plane lies in the X and Y axes and let its width and height be determined by parameter variables. We'll supply the vertices in the order bottom-left, bottom-right, top-left, top-right.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MeshConstruction.png)  
 
 ````

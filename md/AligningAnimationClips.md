@@ -33,7 +33,7 @@ Working with animation clips is easy in Mecanim.
 |>>> >>><span class=component>Center of Mass</span> |Keeps the center of mass aligned with the root transform position.|
 |>>><span class=component>Offset</span> |Offset to the horizontal root position.|
 |<span class=component>Mirror</span> |Mirror left and right in this clip.|
-|<span class=component>Body Mask</span> |The Body mask applied to this animation clip (see section on [body masks](AvatarBodyMask.html)).|
-|<span class=component>Curves</span> (Unity Pro only)|Parameter-related curves (see [Curves in Mecanim](AnimatorCurves.html)).|
+|<span class=component>Body Mask</span> |The Body mask applied to this animation clip (see section on [body masks](AvatarBodyMask.md)).|
+|<span class=component>Curves</span> (Unity Pro only)|Parameter-related curves (see [Curves in Mecanim](AnimatorCurves.md)).|
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

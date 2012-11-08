@@ -4,16 +4,16 @@ Building Plugins for Desktop Platforms
 ======================================
 
 
-This page describes [Native Code Plugins](Plugins.html) for desktop platforms (Windows/Mac OS X/Linux). Note that plugins are intentionally disabled in webplayers for security reasons.
+This page describes [Native Code Plugins](Plugins.md) for desktop platforms (Windows/Mac OS X/Linux). Note that plugins are intentionally disabled in webplayers for security reasons.
 
 
 Building a Plugin for Mac OS X
 ------------------------------
 
 
-On Mac OSX, [plugins](Plugins.html) are deployed as bundles. You can create the bundle project with XCode by selecting <span class=menu>File->NewProject...</span> and then selecting Bundle - Carbon/Cocoa Loadable Bundle.
+On Mac OSX, [plugins](Plugins.md) are deployed as bundles. You can create the bundle project with XCode by selecting <span class=menu>File->NewProject...</span> and then selecting Bundle - Carbon/Cocoa Loadable Bundle.
 
-If you are using C++ (.cpp) or Objective-C (.mm) to implement the plugin then you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.html).
+If you are using C++ (.cpp) or Objective-C (.mm) to implement the plugin then you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.md).
 
 ````
 extern "C" {
@@ -66,18 +66,18 @@ Examples
 
 ###Simplest Plugin
 This plugin project implements only some very basic operations (print a number, print a string, add two floats, add two integers). This example may be helpful if this is your first Unity plugin.  
-The project can be found [here](Attach:SimplestPluginExample-4.0.zip.html) and includes Windows, Mac, and Linux project files.
+The project can be found [here](Attach:SimplestPluginExample-4.0.zip.md) and includes Windows, Mac, and Linux project files.
 
 ###Rendering from C++ code
-An example multiplatform plugin that works with multithreaded rendering in Unity can be found on the [Native Plugin Interface](NativePluginInterface.html) page.
+An example multiplatform plugin that works with multithreaded rendering in Unity can be found on the [Native Plugin Interface](NativePluginInterface.md) page.
 
 ###Midi Plugin
-A complete example of the Plugin interface can be found [here](http://unity3d.com/tutorials/midiplugin.zip.html).
+A complete example of the Plugin interface can be found [here](http://unity3d.com/tutorials/midiplugin.zip.md).
 
 This is a complete Midi plugin for OS X which uses Apple's CoreMidi API. It provides a simple C API and a C# class to access it from Unity. The C# class contains a high level API, with easy access to NoteOn and NoteOff events and their velocity.
 
 ###Texture Plugin
-An example of how to assign image data to a texture directly in OpenGL (note that this will only work when Unity is using an OpenGL renderer). This example includes both XCode and Visual Studio project files. The plugin, along with an accompanying Unity project, can be found [here](http://unity3d.com/support/resources/example-projects/texture-plugins.html).
+An example of how to assign image data to a texture directly in OpenGL (note that this will only work when Unity is using an OpenGL renderer). This example includes both XCode and Visual Studio project files. The plugin, along with an accompanying Unity project, can be found [here](http://unity3d.com/support/resources/example-projects/texture-plugins.md).
 
 
 ####u30 Details
@@ -85,16 +85,16 @@ Building Plugins for Desktop Platforms
 ======================================
 
 
-This page describes [Native Code Plugins](Plugins.html) for desktop platforms (Windows/Mac OS X) . Note that plugins are intentionally disabled in webplayers for security reasons.
+This page describes [Native Code Plugins](Plugins.md) for desktop platforms (Windows/Mac OS X) . Note that plugins are intentionally disabled in webplayers for security reasons.
 
 
 Building a Plugin for Mac OS X
 ------------------------------
 
 
-On Mac OSX, [plugins](Plugins.html) are deployed as bundles. You can create the bundle project with XCode by selecting <span class=menu>File->NewProject...</span> and then selecting Bundle - Carbon/Cocoa Loadable Bundle.
+On Mac OSX, [plugins](Plugins.md) are deployed as bundles. You can create the bundle project with XCode by selecting <span class=menu>File->NewProject...</span> and then selecting Bundle - Carbon/Cocoa Loadable Bundle.
 
-If you are using C++ (.cpp) or Objective-C (.mm) to implement the plugin then you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.html).
+If you are using C++ (.cpp) or Objective-C (.mm) to implement the plugin then you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.md).
 
 ````
 extern "C" {
@@ -135,16 +135,16 @@ Examples
 
 ###Simplest Plugin
 This plugin project implements only some very basic operations (print a number, print a string, add two floats, add two integers). This example may be helpful if this is your first Unity plugin.  
-The project can be found [here](Attach:SimplestPluginExample.zip.html) and includes both Windows and Mac project files.
+The project can be found [here](Attach:SimplestPluginExample.zip.md) and includes both Windows and Mac project files.
 
 ###Rendering from C++ code
-An example multiplatform plugin that works with multithreaded rendering in Unity can be found on the [Native Plugin Interface](NativePluginInterface.html) page.
+An example multiplatform plugin that works with multithreaded rendering in Unity can be found on the [Native Plugin Interface](NativePluginInterface.md) page.
 
 ###Midi Plugin
-A complete example of the Plugin interface can be found [here](http://unity3d.com/tutorials/midiplugin.zip.html).
+A complete example of the Plugin interface can be found [here](http://unity3d.com/tutorials/midiplugin.zip.md).
 
 This is a complete Midi plugin for OS X which uses Apple's CoreMidi API. It provides a simple C API and a C# class to access it from Unity. The C# class contains a high level API, with easy access to NoteOn and NoteOff events and their velocity.
 
 ###Texture Plugin
-An example of how to assign image data to a texture directly in OpenGL (note that this will only work when Unity is using an OpenGL renderer). This example includes both XCode and Visual Studio project files. The plugin, along with an accompanying Unity project, can be found [here](http://unity3d.com/support/resources/example-projects/texture-plugins.html).
+An example of how to assign image data to a texture directly in OpenGL (note that this will only work when Unity is using an OpenGL renderer). This example includes both XCode and Visual Studio project files. The plugin, along with an accompanying Unity project, can be found [here](http://unity3d.com/support/resources/example-projects/texture-plugins.md).
 

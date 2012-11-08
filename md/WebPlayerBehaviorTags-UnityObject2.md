@@ -20,5 +20,5 @@ u.initPlugin(jQuery("#unityPlayer")[0], "Example.unity3d");
 ````
 In the above example you'll notice that neither <span class=component>disableExternalCall</span> nor <span class=component>disableFullscreen</span> are specified, therefore their default values are used.
 
-See [UnityObject2](WorkingwithUnityObject2#constructor.html) for more details.
+See [UnityObject2](WorkingwithUnityObject2#constructor.md) for more details.
 

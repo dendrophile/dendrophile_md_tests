@@ -2,7 +2,7 @@ Playstation3: Saving and Loading files
 ======================================
 
 
-To save and load data files on Unity PS3 you can use the _[PS3SaveDataUtility](ScriptRef:PS3SaveDataUtility.html.html)_ class.
+To save and load data files on Unity PS3 you can use the _[PS3SaveDataUtility](ScriptRef:PS3SaveDataUtility.html)_ class.
 
 The PS3 Samples -> Save Load unity package included with the Unity PS3 Addon shows how to save and load data to/from the PS3.
 
@@ -72,4 +72,4 @@ else
 
 ````
 
-The result is one from the [PS3ReturnCode](ScriptRef:PS3ReturnCode.html.html) enumeration.
+The result is one from the [PS3ReturnCode](ScriptRef:PS3ReturnCode.html) enumeration.

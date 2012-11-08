@@ -20,6 +20,7 @@ Files & Objects
 * Keep your hierarchies as simple as you can.
 * With big projects in your 3D application, consider having a working file outside your Unity project directory – this can often avert time consuming updates and importing unnecessary data.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/HierarchyWrongRight.png)  
 _Sensibly named objects help you find stuff quickly_
 
@@ -35,6 +36,7 @@ Mesh
     * Other hi density Nurbs/Patch models designed for render
 * Evenly spaced polygons in buildings, landscape and architecture where you can afford them, will help spread lighting and avoid awkward kinks.
 * Avoid really long thin triangles
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GeomWrongRight.png)  
 _Stairway to framerate heaven_
@@ -54,17 +56,20 @@ Textures are more efficient and don’t need rescaling at build time if authored
 * Make use of the available space in your texture, but be aware of different materials requiring different parts of the same texture can end up using loading that texture multiple times.
 * For alpha (cutout) and elements that may require different shaders, separate the  textures. E.g. the single texture below (left) has been replaced by 3 smaller textures below (right)
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Pack_WrongRight2.png)  
 _1 texture (left) vs 3 textures (right)_
 
 * Make use of tiling textures (which seamlessly repeat) then you can use better resolution repeating over space.
 * Remove easily noticeable repeating elements from your bitmap, and be careful with contrast – if you want to add details use decals and objects to break up the repeats.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexWrongRight.png)  
 _Tiling textures ftw_
 
 * Unity takes care of compression for the output platform, so unless your source is already a JPG of the correct resolution it’s better to use a lossless format for your textures.
 * When creating a texture page from photographs, reduce the page to individual modular sections that can repeat, e.g. you don’t need 12 of the same windows using up texture space. That way you can have more pixel detail for that one window.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BuildingWrongRight.png)  
 _Do you need ALL those windows?_
@@ -91,7 +96,7 @@ Saved application files
 
 
 Unity can import, through conversion:  Max, Maya, Blender, Cinema4D, Modo, Lightwave & cheetah3D files, e.g. .MAX, .MB, .MA etc.
-see more in [Importing Objects](HOWTO-importObject.html)
+see more in [Importing Objects](HOWTO-importObject.md)
 
 __Advantages__:
 
@@ -108,7 +113,7 @@ Exported 3D formats
 -------------------
 
 
-Unity can also read FBX, OBJ, 3DS, DAE & DXF files – for a general export guide you can refer to this section [this section](HOWTO-exportFBX.html)
+Unity can also read FBX, OBJ, 3DS, DAE & DXF files – for a general export guide you can refer to this section [this section](HOWTO-exportFBX.md)
 
 __Advantages__:
 

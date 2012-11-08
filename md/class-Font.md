@@ -2,7 +2,7 @@ Font
 ====
 
 
-<span class=keyword>Fonts</span> can be created or imported for use in either the [GUI Text](class-GuiText.html) or the [Text Mesh](class-TextMesh.html) <span class=keyword>Components</span>.
+<span class=keyword>Fonts</span> can be created or imported for use in either the [GUI Text](class-GuiText.md) or the [Text Mesh](class-TextMesh.md) <span class=keyword>Components</span>.
 
 
 Importing Font files
@@ -12,6 +12,7 @@ Importing Font files
 To add a font to your project you need to place the font file in your Assets folder. Unity will then automatically import it. Supported Font formats are TrueType Fonts (.ttf or .dfont files) and OpenType Fonts (.otf files).
 
 To change the <span class=component>Size</span> of the font, highlight it in the <span class=keyword>Project View</span> and you have a number of options in the <span class=keyword>Import Settings</span> in the <span class=keyword>Inspector</span>.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/font_importer.png)  
 _Import Settings for a font_
@@ -69,7 +70,7 @@ If you are using a GUIText or a Text Mesh, you can change its color by using a c
 
 ###UnityGUI
 
-If you are using UnityGUI scripting to display your font, you have much more control over the font's color under different circumstances.  To change the font's color, you create a <span class=keyword>GUISkin</span> from <span class=menu>Assets->Create->GUI Skin</span>, and define the color for the specific control state, e.g. <span class=menu>Label->Normal->Text Color</span>.  For more details, please read the [GUI Skin page](class-GUISkin.html).
+If you are using UnityGUI scripting to display your font, you have much more control over the font's color under different circumstances.  To change the font's color, you create a <span class=keyword>GUISkin</span> from <span class=menu>Assets->Create->GUI Skin</span>, and define the color for the specific control state, e.g. <span class=menu>Label->Normal->Text Color</span>.  For more details, please read the [GUI Skin page](class-GUISkin.md).
 
 Hints
 -----

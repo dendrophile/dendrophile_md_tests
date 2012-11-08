@@ -7,13 +7,14 @@ There are three main steps in creating an animated humanoid character from scrat
 Modelling
 ---------
 
-This is the process of creating your own humanoid [mesh](Meshes.html) in a 3D modelling package - 3DSMax, Maya, Blender, etc. Although this is a whole subject in its own right, there are a few guidelines you can follow to ensure a model works well with animation in a Unity project.
+This is the process of creating your own humanoid [mesh](Meshes.md) in a 3D modelling package - 3DSMax, Maya, Blender, etc. Although this is a whole subject in its own right, there are a few guidelines you can follow to ensure a model works well with animation in a Unity project.
 
 * Observe a __sensible topology__. The exact nature of a "sensible" structure for your mesh is rather subtle but generally, you should bear in mind how the vertices and triangles of the model will be distorted as it is animated. A poor topology will not allow the model to move without unsightly distortion of the mesh. A lot can be learned by studying existing 3D character meshes to see how the topology is arranged and why.
 * Be mindful of the __scale__ of your mesh. Do a test import and compare the size of your imported model with a "meter cube" (the standard Unity cube primitive has a side length of one unit, so it can be taken as a 1m cube for most purposes). Check the units your 3D package is using and adjust the export settings so that the size of the model is in correct proportion to the cube. Unless you are careful, it is easy to create models without any notion of their scale and consequently end up with a set of objects that are disproportionate in size when they are imported into Unity.
 * Arrange the mesh so that the character's feet are standing on the local origin or "anchor point" of the model. Since a character typically walks upright on a floor, it is much easier to handle if its anchor point (ie, its transform position) is directly on that floor.
 * Model in a __T-pose__ if you can. This will help allow space to refine polygon detail where you need it (e.g. underarms). This will also make it easier to position your rig inside the mesh.
 * __Clean up your model__. Where possible, cap holes, weld verts and remove hidden faces, this will help with skinning, especially automated skinning processes.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SkinMesh256.png)  
 >Skin Mesh - Modelled, textured and triangulated
@@ -33,6 +34,7 @@ This is the process of creating a skeleton of joints to control the movements of
     * HIPS - spine - chest - neck - head
     * HIPS - UpLeg - Leg - foot - toe - toe_end
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Skeleton256.png)  
 > Biped Skeleton, positioned in T-pose
 
@@ -49,9 +51,10 @@ Skinning involves binding vertices in your mesh to bones, either directly (rigid
 * Incrementally editing and refining your skinning solution.
 * Sticking to a maximum of four influences when using a soft bind, since this is the maximum number that Unity will handle. If more than four influences affect part of the mesh then at least some information will be lost when playing the animation in Unity.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Skinning256.png)  
 > Interactive Skin Bind, one of many skinning methods
 
-(back to [AssetPreparationandImport](AssetPreparationandImport.html))
+(back to [AssetPreparationandImport](AssetPreparationandImport.md))
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

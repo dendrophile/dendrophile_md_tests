@@ -2,7 +2,7 @@ Metro : Plugins
 ===============
 
 
-You cannot use Metro specific plugins if you use Metro API like this [http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx](http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx.html) in Unity Editor, so we changed a bit how Unity Editor handles them. So basically you make two versions of plugins:
+You cannot use Metro specific plugins if you use Metro API like this [http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx](http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx.md) in Unity Editor, so we changed a bit how Unity Editor handles them. So basically you make two versions of plugins:
 * One for Unity Editor,
 * The other one for Metro runtime.
 

@@ -40,7 +40,7 @@ Total compressed size 5.3 MB. Total decompressed size 9.9 MB.
 
 ````
 
-This game could use a little more optimization!  For more information, we recommend you read the [reducing file size page](ReducingFilesize.html).
+This game could use a little more optimization!  For more information, we recommend you read the [reducing file size page](ReducingFilesize.md).
 
 
 The Most Important Steps
@@ -51,11 +51,11 @@ The Most Important Steps
 
 1. Make the first level be short and not use a lot of assets. This way, the first level can be loaded quickly, and by keeping the player occupied playing it for a minute or two you can be sure that the download of all remaining assets can be completed in the background. Why not have a mini tutorial level where the user can learn the controls of the game? No reason for high-res textures here or loads of objects, or having all your enemies in the first level.  Use the one with the lowest poly-count.  And yes, this means you might have to design your game with the web player experience in mind.
 
-1. There is no reason why all music must be available when the game starts. Externalize the music and load it via the [WWW](ScriptRef:WWW.html.html) class. Unity compresses audio with the high quality codec, Ogg Vorbis. However even when compressed, audio takes up a lot of space, and if you have to fit things into 3 MB, if you have 5 minutes of music all the compression in the world won't save you. Sacrifices are needed. Load a very short track that you can loop until more music has been downloaded. Only load more music when the player is hooked on the first level.
+1. There is no reason why all music must be available when the game starts. Externalize the music and load it via the [WWW](ScriptRef:WWW.html) class. Unity compresses audio with the high quality codec, Ogg Vorbis. However even when compressed, audio takes up a lot of space, and if you have to fit things into 3 MB, if you have 5 minutes of music all the compression in the world won't save you. Sacrifices are needed. Load a very short track that you can loop until more music has been downloaded. Only load more music when the player is hooked on the first level.
 
 1. Optimize your textures using their Import Settings. After you externalize music, textures easily take up 90% of the game. Typical texture sizes are too big for web deployment. In a small browser window, sometimes big textures don't even increase the visual fidelity at all. Make sure you use textures that are only as big as they must be (and be ready for more sacrifices here). Halving the texture resolution actually makes the texture size a quarter of what it was. And of course all textures should be DXT compressed.
 
-1. Generally reduce the size of your web players. There is a manual page committed to the utilities Unity offers for optimizing file size [here](ReducingFilesize.html). Although Unity uses cutting edge LZMA-based compression which usually compresses game data to anywhere from one half to a third of the uncompressed size, you'll need to try everything you can.
+1. Generally reduce the size of your web players. There is a manual page committed to the utilities Unity offers for optimizing file size [here](ReducingFilesize.md). Although Unity uses cutting edge LZMA-based compression which usually compresses game data to anywhere from one half to a third of the uncompressed size, you'll need to try everything you can.
 
 1. Try to avoid Resources.Load.  While Resources.Load can be very handy, Unity will not be able to order your assets by when they are first used when you use Resources.Load, because any script could attempt to load the Resource.  You can set which level will include all assets that can be loaded through Resources.Load in the <span class=menu>Edit->Project Settings->Player</span> using the <span class=component>First Streamed Level With Resources</span> property.  Obviously you want to move Resources.Load assets as late as possible into the game or not use the feature at all.
 
@@ -68,7 +68,7 @@ Streaming in Unity is level based, and there is an easy workflow to set this up.
 
 In order to use streaming in Unity, you select <span class=component>Web Player Streamed</span> in the Build Settings. Then the content automatically starts as soon as all assets used by the first level are loaded. Try to keep the "menu level" to something like 50-100 KB. The stream continues to load as fast as it can, and meanwhile live decompresses.  When you look at the Console during/after a build, you can see how large
 
-You can query the progress of the stream by level, and once a level is available it can be loaded. Use [GetStreamProgressForLevel](ScriptRef:Application.GetStreamProgressForLevel.html.html) for displaying a progress bar and [CanStreamedLevelBeLoaded](ScriptRef:Application.CanStreamedLevelBeLoaded.html.html) to check if all the data is available to load a specific level.
+You can query the progress of the stream by level, and once a level is available it can be loaded. Use [GetStreamProgressForLevel](ScriptRef:Application.GetStreamProgressForLevel.html) for displaying a progress bar and [CanStreamedLevelBeLoaded](ScriptRef:Application.CanStreamedLevelBeLoaded.html) to check if all the data is available to load a specific level.
 
-This form of streaming is of course linear, which matches how games work in most cases. Sometimes that's not enough. Therefore Unity also provides you with API's to load a .unity3d file manually using the [WWW](ScriptRef:WWW.html.html) class. Video and audio can be streamed as well, and can start playing almost immediately, without requiring the movie to be downloaded first. Finally Textures can easily be downloaded via the [WWW](ScriptRef:WWW.html.html) class, as can any textual or binary data your game might depend on.
+This form of streaming is of course linear, which matches how games work in most cases. Sometimes that's not enough. Therefore Unity also provides you with API's to load a .unity3d file manually using the [WWW](ScriptRef:WWW.html) class. Video and audio can be streamed as well, and can start playing almost immediately, without requiring the movie to be downloaded first. Finally Textures can easily be downloaded via the [WWW](ScriptRef:WWW.html) class, as can any textual or binary data your game might depend on.
 

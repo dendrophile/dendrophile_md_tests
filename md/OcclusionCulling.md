@@ -4,8 +4,10 @@ Occlusion Culling (Pro only)
 
 Occlusion Culling is a feature that disables rendering of objects when they are not currently seen by the camera because they are obscured by other objects. This does not happen automatically in 3D computer graphics since most of the time objects farthest away from the camera are drawn first and closer objects are drawn over the top of them (this is called "overdraw"). Occlusion Culling is different from Frustum Culling. Frustum Culling only disables the renderers for objects that are outside the camera's viewing area but does not disable anything hidden from view by overdraw.  Note that when you use Occlusion Culling you will still benefit from Frustum Culling.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingOff.png)  
 _The scene rendered without Occlusion Culling_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingOn.png)  
 _The same scene rendered with Occlusion Culling_
@@ -25,6 +27,7 @@ In order to use Occlusion Culling, there is some manual setup involved.  First, 
 
 You need to tag all scene objects that you want to be part of the occlusion to <span class=menu>Occlusion Static</span> in the <span class=keyword>Inspector</span>. The fastest way to do this is to multi-select the objects you want to be included in occlusion calculations, and mark them as <span class=menu>Occlusion Static</span> and <span class=menu>Occludee Static</span>. 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionStaticDropdown.png)  
 _Marking an object for Occlusion_
 
@@ -35,13 +38,15 @@ Occlusion Culling Window
 
 For most operations dealing with Occlusion Culling, we recommend you use the Occlusion Culling Window (<span class=menu>Window->Occlusion Culling</span>)
 
-In the Occlusion Culling Window, you can work with occluder meshes, and [Occlusion Areas](class-OcclusionArea.html). 
+In the Occlusion Culling Window, you can work with occluder meshes, and [Occlusion Areas](class-OcclusionArea.md). 
 
-If you are in the <span class=menu>Object</span> tab of the <span class=menu>Occlusion Culling Window</span> and have some [Mesh Renderer](class-MeshRenderer.html) selected in the scene, you can modify the relevant Static flags:
+If you are in the <span class=menu>Object</span> tab of the <span class=menu>Occlusion Culling Window</span> and have some [Mesh Renderer](class-MeshRenderer.md) selected in the scene, you can modify the relevant Static flags:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingInspectorObject.png)  
 _Occlusion Culling Window for a Mesh Renderer_
 
-If you are in the <span class=menu>Object</span> tab of the <span class=menu>Occlusion Culling Window</span> and have an [Occlusion Area](class-OcclusionArea.html) selected, you can work with relevant OcclusionArea properties (for more details go to the [Occlusion Area](class-OcclusionArea.html) section)
+If you are in the <span class=menu>Object</span> tab of the <span class=menu>Occlusion Culling Window</span> and have an [Occlusion Area](class-OcclusionArea.md) selected, you can work with relevant OcclusionArea properties (for more details go to the [Occlusion Area](class-OcclusionArea.md) section)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingInspectorOcclusionArea.png)  
 _Occlusion Culling Window for the Occlusion Area_
 
@@ -53,6 +58,7 @@ __NOTE:__ Whenever your camera is outside occlusion areas, occlusion culling wil
 
 Occlusion Culling - Bake
 ------------------------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingInspectorBake.png)  
@@ -76,6 +82,7 @@ When you have finished tweaking these values you can click on the <span class=me
 
 Occlusion Culling - Visualization
 ---------------------------------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingInspectorVisualization.png)  

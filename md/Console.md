@@ -4,10 +4,12 @@ Console
 
 Double-clicking an error in the Status Bar or choosing <span class=menu>Window->Console</span> will bring up the <span class=keyword>Console</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Console-floating.png)  
 _Console in the editor._
 
 The Console shows messages, warnings, errors, or debug output from your game. You can define your own messages to be sent to the Console using <span class=menu>Debug.Log()</span>, <span class=menu>Debug.LogWarning</span>, or <span class=menu>Debug.LogError()</span>.  You can double-click any message to be taken to the script that caused the message.  You also have a number of options on the Console Toolbar.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Console-toolbar.png)  
 _Console control toolbar helps your filter your debug output._

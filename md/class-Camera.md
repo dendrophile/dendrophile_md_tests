@@ -3,6 +3,7 @@ Camera
 
 <span class=keyword>Cameras</span> are the devices that capture and display the world to the player.  By customizing and manipulating cameras, you can make the presentation of your game truly unique.  You can have an unlimited number of cameras in a scene. They can be set to render in any order, at any place on the screen, or only certain parts of the screen.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InspectorCamera35.png)  
 _Unity's flexible Camera object_
 
@@ -35,7 +36,7 @@ Properties
 |>>><span class=component>Vertex Lit</span> |All objects rendered by this camera will be rendered as Vertex-Lit objects. |
 |>>><span class=component>Forward</span> |All objects will be rendered with one pass per material, as was standard in Unity 2.x. |
 |>>><span class=component>Deferred Lighting</span> (Unity Pro only) |All objects will be drawn once without lighting, then lighting of all objects will be rendered together at the end of the render queue. |
-|<span class=component>Target Texture</span> (Unity Pro/Advanced only) |Reference to a [Render Texture](class-RenderTexture.html) that will contain the output of the Camera view. Making this reference will disable this Camera's capability to render to the screen. | 
+|<span class=component>Target Texture</span> (Unity Pro/Advanced only) |Reference to a [Render Texture](class-RenderTexture.md) that will contain the output of the Camera view. Making this reference will disable this Camera's capability to render to the screen. | 
 |<span class=component>HDR</span>|Enables High Dynamic Range rendering for this camera.|
 
 
@@ -51,7 +52,7 @@ You can create multiple Cameras and assign each one to a different <span class=c
 Unity supports different Rendering Paths. You should choose which one you use depending on your game content and target platform / hardware. Different rendering paths have different features and performance characteristics that mostly affect Lights and Shadows.  
 The rendering Path used by your project is chosen in Player Settings. Additionally, you can override it for each Camera.
 
-For more info on rendering paths, check the [rendering paths page](RenderingPaths.html).
+For more info on rendering paths, check the [rendering paths page](RenderingPaths.md).
 
 
 ###Clear Flags
@@ -61,7 +62,7 @@ Each Camera stores color and depth information when it renders its view.  The po
 
 ####Skybox
 
-This is the default setting.  Any empty portions of the screen will display the current Camera's skybox.  If the current Camera has no skybox set, it will default to the skybox chosen in the [Render Settings](class-RenderSettings.html) (found in <span class=menu>Edit->Render Settings</span>).  It will then fall back to the <span class=component>Background Color</span>. Alternatively a [Skybox component](class-Skybox.html) can be added to the camera. If you want to create a new Skybox, [you can use this guide](HOWTO-UseSkybox.html).
+This is the default setting.  Any empty portions of the screen will display the current Camera's skybox.  If the current Camera has no skybox set, it will default to the skybox chosen in the [Render Settings](class-RenderSettings.md) (found in <span class=menu>Edit->Render Settings</span>).  It will then fall back to the <span class=component>Background Color</span>. Alternatively a [Skybox component](class-Skybox.md) can be added to the camera. If you want to create a new Skybox, [you can use this guide](HOWTO-UseSkybox.md).
 
 
 ####Solid Color
@@ -72,6 +73,7 @@ Any empty portions of the screen will display the current Camera's <span class=c
 ####Depth Only
 
 If you wanted to draw a player's gun without letting it get clipped inside the environment, you would set one Camera at <span class=component>Depth</span> 0 to draw the environment, and another Camera at <span class=component>Depth</span> 1 to draw the weapon alone.  The weapon Camera's <span class=component>Clear Flags</span> should be set to to <span class=component>depth only</span>.  This will keep the graphical display of the environment on the screen, but discard all information about where each object exists in 3-D space.  When the gun is drawn, the opaque parts will completely cover anything drawn, regardless of how close the gun is to the wall.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-ClearFlags.png)  
 _The gun is drawn last, after clearing the depth buffer of the cameras before it_
@@ -90,11 +92,11 @@ The clipping planes also determine how depth buffer precision is distributed ove
 
 Note that the near and far clip planes together with the planes defined by the field of view of the camera describe what is popularly known as the camera _frustum_.  Unity ensures that when rendering your objects those which are completely outside of this frustum are not displayed.  This is called Frustum Culling.  Frustum Culling happens irrespective of whether you use Occlusion Culling in your game.
 
-For performance reasons, you might want to cull small objects earlier. For example, small rocks and debris could be made invisible at much smaller distance than large buildings. To do that, put small objects into a [separate layer](Layers.html) and setup per-layer cull distances using [Camera.layerCullDistances](ScriptRef:Camera-layerCullDistances.html.html) script function.
+For performance reasons, you might want to cull small objects earlier. For example, small rocks and debris could be made invisible at much smaller distance than large buildings. To do that, put small objects into a [separate layer](Layers.md) and setup per-layer cull distances using [Camera.layerCullDistances](ScriptRef:Camera-layerCullDistances.html) script function.
 
 ###Culling Mask
 
-The <span class=component>Culling Mask</span> is used for selectively rendering groups of objects using Layers.  More information on using layers can be found [here](Layers.html).
+The <span class=component>Culling Mask</span> is used for selectively rendering groups of objects using Layers.  More information on using layers can be found [here](Layers.md).
 
 Commonly, it is good practice to put your User Interface on a different layer, then render it by itself with a separate Camera set to render the UI layer by itself.
 
@@ -107,6 +109,7 @@ In order for the UI to display on top of the other Camera views, you'll also nee
 
 It's easy to create a two-player split screen effect using <span class=component>Normalized Viewport Rectangle</span>.  After you have created your two cameras, change both camera H value to be 0.5 then set player one's Y value to 0.5, and player two's Y value to 0.  This will make player one's camera display from halfway up the screen to the top, and player two's camera will start at the bottom and stop halfway up the screen.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-Viewport.png)  
 _Two-player display created with <span class=component>Normalized Viewport Rectangle</span>_
 
@@ -115,17 +118,20 @@ _Two-player display created with <span class=component>Normalized Viewport Recta
 
 Marking a Camera as <span class=component>Orthographic</span> removes all perspective from the Camera's view. This is mostly useful for making isometric or 2D games.
 
-Note that fog is rendered uniformly in orthographic camera mode and may therefore not appear as expected. Read more about why in the [component reference on Render Settings](class-RenderSettings.html).
+Note that fog is rendered uniformly in orthographic camera mode and may therefore not appear as expected. Read more about why in the [component reference on Render Settings](class-RenderSettings.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-Non-Ortho-FPS.png)  
 _Perspective camera._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-Ortho-FPS.png)  
 _Orthographic camera. Objects do not get smaller with distance here!_
 
 ###Render Texture
 
-This feature is only available for Unity Advanced licenses .  It will place the camera's view onto a [Texture](class-RenderTexture.html) that can then be applied to another object.  This makes it easy to create sports arena video monitors, surveillance cameras, reflections etc.
+This feature is only available for Unity Advanced licenses .  It will place the camera's view onto a [Texture](class-RenderTexture.md) that can then be applied to another object.  This makes it easy to create sports arena video monitors, surveillance cameras, reflections etc.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-RenderTexture.png)  
 _A Render Texture used to create a live arena-cam_

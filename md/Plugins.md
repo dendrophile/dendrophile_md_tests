@@ -11,7 +11,7 @@ In order to use a plugin you need to do two things:-
 * Write functions in a C-based language and compile them into a library.
 * Create a C# script which calls functions in the library.
 
-The plugin should provide a simple C interface which the C# script then exposes to other user scripts. It is also possible for Unity to call functions exported by the plugin when certain low-level rendering events happen (for example, when a graphics device is created), see the [Native Plugin Interface](NativePluginInterface.html) page for details.
+The plugin should provide a simple C interface which the C# script then exposes to other user scripts. It is also possible for Unity to call functions exported by the plugin when certain low-level rendering events happen (for example, when a graphics device is created), see the [Native Plugin Interface](NativePluginInterface.md) page for details.
 
 
 Here is a very simple example:
@@ -74,23 +74,23 @@ For further details and examples, see the following pages:-
 
 
 ###desktop Details
-* [Building Plugins for Desktop Platforms](PluginsForDesktop.html)
+* [Building Plugins for Desktop Platforms](PluginsForDesktop.md)
 
 ###ios Details
-* [Building Plugins for iOS](PluginsForIOS.html)
+* [Building Plugins for iOS](PluginsForIOS.md)
 
 ###android Details
-* [Building Plugins for Android](PluginsForAndroid.html)
+* [Building Plugins for Android](PluginsForAndroid.md)
 
 ###xbox360 Details
-* [Building Plugins for Xbox 360](PluginsForXbox360.html)
+* [Building Plugins for Xbox 360](PluginsForXbox360.md)
 
 ###ps3 Details
-* [Building Plugins for PlayStation3](ps3-nativeplugins.html)
+* [Building Plugins for PlayStation3](ps3-nativeplugins.md)
 
 Further Information
 -------------------
 
-* [Native Plugin Interface](NativePluginInterface.html) - this is needed if you want to do rendering in your plugin.
-* [Mono Interop with native libraries](http://www.mono-project.com/Interop_with_Native_Libraries.html).
-* [P-invoke documentation on MSDN](http://msdn2.microsoft.com/en-us/library/fzhhdwae.aspx.html).
+* [Native Plugin Interface](NativePluginInterface.md) - this is needed if you want to do rendering in your plugin.
+* [Mono Interop with native libraries](http://www.mono-project.com/Interop_with_Native_Libraries.md).
+* [P-invoke documentation on MSDN](http://msdn2.microsoft.com/en-us/library/fzhhdwae.aspx.md).

@@ -4,11 +4,13 @@ Quality Settings
 
 Unity allows you to set the level of graphical quality it will attempt to render. Generally speaking, quality comes at the expense of framerate and so it may be best not to aim for the highest quality on mobile devices or older hardware since it will have a detrimental effect on gameplay. The <span class=keyword>Quality Settings</span> inspector (menu: <span class=menu>Edit->Project Settings->Quality</span>) is split into two main areas. At the top, there is the following matrix:-
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/QualSettingsTop.png)  
 
 Unity lets you assign a name to a given combination of quality options for easy reference. The rows of the matrix let you choose which of the different platforms each quality level will apply to. The Default row at the bottom of the matrix is not a quality level in itself but rather sets the default quality level used for each platform (a green checkbox in a column denotes the level currently chosen for that platform). Unity comes with six quality levels pre-enabled but you can add your own levels using the button below the matrix. You can use the trashcan icon (the rightmost column) to delete an unwanted quality level.
 
 You can click on the name of a quality level to select it for editing, which is done in the panel below the settings matrix:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/QualitySettingsBottom.png)  
 
@@ -40,13 +42,14 @@ The quality options you can choose for a quality level are as follows:-
 |<span class=component>Maximum LOD Level</span>|The highest LOD that will be used by the game. Models which have a LOD above this level will not be used and omitted from the build (which will save storage and memory space).|
 
 ##u40 Details
-|<span class=component>Particle Raycast Budget</span>|The maximum number of raycasts to use for approximate particle system collisions (those with <span class=component>Medium</span> or <span class=component>Low</span> quality). See [Particle System Collision Module](ParticleSystemModules40.html).|
+|<span class=component>Particle Raycast Budget</span>|The maximum number of raycasts to use for approximate particle system collisions (those with <span class=component>Medium</span> or <span class=component>Low</span> quality). See [Particle System Collision Module](ParticleSystemModules40.md).|
 
 Tearing
 -------
 
 
 The picture on the display device is not continuously updated but rather the updates happen at regular intervals much like frame updates in Unity. However, Unity's updates are not necessarily synchronised with those of the display, so it is possible for Unity to issue a new frame while the display is still rendering the previous one. This will result in a visual artifact called "tearing" at the position onscreen where the frame change occurs.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Tearing.png)  
 _Simulated example of tearing. The shift in the picture is clearly visible in the magnified portion._
@@ -58,8 +61,10 @@ It is possible to set Unity to switch frames only during the period where the di
 
 Anti aliasing improves the appearance of polygon edges, so they are not "jagged", but smoothed out on the screen. However, it incurs a performance cost for the graphics card and uses more video memory (there's no cost on the CPU though). The level of anti-aliasing determines how smooth polygon edges are (and how much video memory does it consume).
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AntiAliasingNone.png)  
 _Without anti-aliasing, polygon edges are "jagged"._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AntiAliasing6x.png)  
 _With 6x anti-aliasing, polygon edges are smoothed out._
@@ -68,10 +73,12 @@ _With 6x anti-aliasing, polygon edges are smoothed out._
 <a id="softparticles"></a>
 ###Soft Particles
 
-Soft Particles fade out near intersections with other scene geometry. This looks much nicer, however it's more expensive to compute (more complex pixel shaders), and only works on platforms that support [depth textures](SL-DepthTextures.html). Furthermore, you have to use [Deferred Lighting](RenderTech-DeferredLighting.html) rendering path, or make the camera render [depth textures](SL-CameraDepthTexture.html) from scripts.
+Soft Particles fade out near intersections with other scene geometry. This looks much nicer, however it's more expensive to compute (more complex pixel shaders), and only works on platforms that support [depth textures](SL-DepthTextures.md). Furthermore, you have to use [Deferred Lighting](RenderTech-DeferredLighting.md) rendering path, or make the camera render [depth textures](SL-CameraDepthTexture.md) from scripts.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SoftParticlesOff.png)  
 _Without Soft Particles - visible intersections with the scene._
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SoftParticlesOn.png)  

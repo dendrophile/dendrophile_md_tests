@@ -2,7 +2,8 @@ NavMesh Agent (Pro Only)
 ========================
 
 
-The <span class=component>NavMesh Agent</span> component is used in connection with pathfinding, and is the place to put information about how this agent navigates the  [NavMesh](NavmeshandPathfinding.html). You can access it in <span class=menu>Component->Navigation->Nav Mesh Agent</span>
+The <span class=component>NavMesh Agent</span> component is used in connection with pathfinding, and is the place to put information about how this agent navigates the  [NavMesh](NavmeshandPathfinding.md). You can access it in <span class=menu>Component->Navigation->Nav Mesh Agent</span>
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NavMeshAgent.png)  
 
@@ -19,6 +20,6 @@ The <span class=component>NavMesh Agent</span> component is used in connection w
 |<span class=component>Height</span>|The height of the agent (used in debug graphics).
 |<span class=component>Base offset</span> |Vertical offset of the collision geometry relative to the actual geometry.
 |<span class=component>Obstacle Avoidance Type</span> |The level of quality of avoidance.
-|<span class=component>NavMesh Walkable</span> |Specifies the types of [Navmesh layers](class-NavMeshLayers.html) that the agent can traverse.
+|<span class=component>NavMesh Walkable</span> |Specifies the types of [Navmesh layers](class-NavMeshLayers.md) that the agent can traverse.
 
-(back to [Navigation and Pathfinding](NavmeshandPathfinding.html))
+(back to [Navigation and Pathfinding](NavmeshandPathfinding.md))

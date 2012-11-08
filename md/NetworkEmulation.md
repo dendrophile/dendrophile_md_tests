@@ -6,6 +6,7 @@ As part of Unity's Networking feature set, you can choose to emulate slower inte
 
 To enable Network emulation, go to <span class=menu>Edit->Network Emulation</span>, and choose your desired connection speed emulation.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NetworkEmulationMenu.jpg)  
 _Enabling Network Emulation_
 

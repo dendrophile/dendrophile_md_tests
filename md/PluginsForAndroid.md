@@ -2,15 +2,15 @@ Building Plugins for Android
 ============================
 
 
-This page describes [Native Code Plugins](Plugins.html) for Android.
+This page describes [Native Code Plugins](Plugins.md) for Android.
 
 Building a Plugin for Android
 -----------------------------
 
 
-To build a plugin for Android, you should first obtain the [Android NDK](http://developer.android.com/sdk/ndk.html) and familiarize yourself with the steps involved in building a shared library.
+To build a plugin for Android, you should first obtain the [Android NDK](http://developer.android.com/sdk/ndk.md) and familiarize yourself with the steps involved in building a shared library.
 
-If you are using C++ (.cpp) to implement the plugin you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.html).
+If you are using C++ (.cpp) to implement the plugin you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.md).
 
 ````
 extern "C" {
@@ -30,7 +30,7 @@ private static extern float FooPluginFunction ();
 ````
 
 Please note that <span class=component>PluginName</span> should not include the prefix ('lib') nor the extension ('.so') of the filename.
-It is advisable to wrap all native code methods with an additional C# code layer. This code should check [Application.platform](ScriptRef:Application-platform.html.html) and call native methods only when the app is running on the actual device; dummy values can be returned from the C# code when running in the Editor. You can also use [platform defines](http://docwiki.unity3d.com/index.php?n=Main.PlatformDependentCompilation.html) to control platform dependent code compilation.
+It is advisable to wrap all native code methods with an additional C# code layer. This code should check [Application.platform](ScriptRef:Application-platform.html) and call native methods only when the app is running on the actual device; dummy values can be returned from the C# code when running in the Editor. You can also use [platform defines](http://docwiki.unity3d.com/index.php?n=Main.PlatformDependentCompilation.md) to control platform dependent code compilation.
 
 Deployment
 ----------
@@ -47,12 +47,12 @@ The Android plugin mechanism also allows Java to be used to enable interaction w
 
 ###Building a Java Plugin for Android
 There are several ways to create a Java plugin but the result in each case is that you end up with a .jar file containing the .class files for your plugin.
-One approach is to download the [JDK ](http://www.oracle.com/technetwork/java/javase/downloads/index.html.html), then compile your .java files from the command line with _javac_. This will create .class files which you can then package into a .jar with the _jar_ command line tool.
-Another option is to use the [Eclipse ](http://www.eclipse.org.html) IDE together with the [ADT ](http://developer.android.com/sdk/eclipse-adt.html.html).
+One approach is to download the [JDK ](http://www.oracle.com/technetwork/java/javase/downloads/index.html.md), then compile your .java files from the command line with _javac_. This will create .class files which you can then package into a .jar with the _jar_ command line tool.
+Another option is to use the [Eclipse ](http://www.eclipse.org.md) IDE together with the [ADT ](http://developer.android.com/sdk/eclipse-adt.html.md).
 
 ###Using Your Java Plugin from Native Code
 
-Once you have built your Java plugin (.jar) you should copy it to the <span class=menu>Assets->Plugins->Android</span> folder in the Unity project. Unity will package your .class files together with the rest of the Java code and then access the code using the [Java Native Interface (JNI) ](http://en.wikipedia.org/wiki/Java_Native_Interface.html). JNI is used both when calling native code from Java and when interacting with Java (or the JavaVM) from native code.
+Once you have built your Java plugin (.jar) you should copy it to the <span class=menu>Assets->Plugins->Android</span> folder in the Unity project. Unity will package your .class files together with the rest of the Java code and then access the code using the [Java Native Interface (JNI) ](http://en.wikipedia.org/wiki/Java_Native_Interface.md). JNI is used both when calling native code from Java and when interacting with Java (or the JavaVM) from native code.
 
 To find your Java code from the native side you need access to the Java VM. Fortunately, that access can be obtained easily by adding a function like this to your C/C++ code:
 
@@ -81,9 +81,9 @@ jobject createJavaObject(JNIEnv* jni_env) {
 
 You can choose whichever approach you prefer, be it raw JNI through <span class=keyword>AndroidJNI</span> class methods, or <span class=keyword>AndroidJNIHelper</span> together with <span class=keyword>AndroidJNI</span> and eventually <span class=keyword>AndroidJavaObject/AndroidJavaClass</span> for maximum automation and convenience.
 
-[UnityEngine.AndroidJNI](ScriptRef:AndroidJNI.html.html) is a wrapper for the JNI calls available in C (as described above). All methods in this class are static and have a 1:1 mapping to the Java Native Interface. [UnityEngine.AndroidJNIHelper](ScriptRef:AndroidJNIHelper.html.html) provides helper functionality used by the next level, but is exposed as public methods because they may be useful for some special cases.
+[UnityEngine.AndroidJNI](ScriptRef:AndroidJNI.html) is a wrapper for the JNI calls available in C (as described above). All methods in this class are static and have a 1:1 mapping to the Java Native Interface. [UnityEngine.AndroidJNIHelper](ScriptRef:AndroidJNIHelper.html) provides helper functionality used by the next level, but is exposed as public methods because they may be useful for some special cases.
 
-Instances of [UnityEngine.AndroidJavaObject](ScriptRef:AndroidJavaObject.html.html) and [UnityEngine.AndroidJavaClass](ScriptRef:AndroidJavaClass.html.html) have a 1:1 mapping to an instance of java.lang.Object and java.lang.Class (or subclasses thereof) on the Java side, respectively. They essentially provide 3 types of interaction with the Java side: 
+Instances of [UnityEngine.AndroidJavaObject](ScriptRef:AndroidJavaObject.html) and [UnityEngine.AndroidJavaClass](ScriptRef:AndroidJavaClass.html) have a 1:1 mapping to an instance of java.lang.Object and java.lang.Class (or subclasses thereof) on the Java side, respectively. They essentially provide 3 types of interaction with the Java side: 
     * Call a method
     * Get the value of a field
     * Set the value of a field
@@ -106,7 +106,7 @@ The <span class=keyword>Call</span> is separated into two categories: <span clas
 
 ````
 
-Here, we're creating an instance of [java.lang.String](http://developer.android.com/reference/java/lang/String.html.html), initialized with a [string](http://developer.android.com/reference/java/lang/String.html#String(java.lang.StringBuilder).html) of our choice and retrieving the [hash value](http://developer.android.com/reference/java/lang/String.html#hashCode().html) for 
+Here, we're creating an instance of [java.lang.String](http://developer.android.com/reference/java/lang/String.html.md), initialized with a [string](http://developer.android.com/reference/java/lang/String.html#String(java.lang.StringBuilder).md) of our choice and retrieving the [hash value](http://developer.android.com/reference/java/lang/String.html#hashCode().md) for 
 that string.
 
 The <span class=keyword>AndroidJavaObject</span> constructor takes at least one parameter, the name of class for which we want to construct an instance. Any parameters after the class name are for the constructor call on the object, in this case the string "some_string". The subsequent <span class=keyword>Call</span> to hashCode() returns an 'int' which is why we use that as the generic type parameter to the <span class=keyword>Call</span> method.
@@ -135,11 +135,11 @@ One of the plugin samples above shows how to get the cache directory for the cur
 
 ````
 
-In this case, we start with <span class=keyword>AndroidJavaClass</span> instead of <span class=keyword>AndroidJavaObject</span> because we want to access a static member of <span class=keyword>com.unity3d.player.UnityPlayer</span> rather than create a new object (an instance is created automatically by the <span class=keyword>Android UnityPlayer</span>). Then we access the static field "currentActivity" but this time we use <span class=keyword>AndroidJavaObject</span> as the generic parameter. This is because the actual field type ([android.app.Activity](http://developer.android.com/reference/android/app/Activity.html.html)) is a subclass of [java.lang.Object](http://developer.android.com/reference/java/lang/Object.html.html), and any [non-primitive type](http://developer.android.com/reference/java/lang/Class.html.html) must be accessed as <span class=keyword>AndroidJavaObject</span>. The exceptions to this rule are strings, which can be accessed directly even though they don't represent a primitive type in Java. 
+In this case, we start with <span class=keyword>AndroidJavaClass</span> instead of <span class=keyword>AndroidJavaObject</span> because we want to access a static member of <span class=keyword>com.unity3d.player.UnityPlayer</span> rather than create a new object (an instance is created automatically by the <span class=keyword>Android UnityPlayer</span>). Then we access the static field "currentActivity" but this time we use <span class=keyword>AndroidJavaObject</span> as the generic parameter. This is because the actual field type ([android.app.Activity](http://developer.android.com/reference/android/app/Activity.html.md)) is a subclass of [java.lang.Object](http://developer.android.com/reference/java/lang/Object.html.md), and any [non-primitive type](http://developer.android.com/reference/java/lang/Class.html.md) must be accessed as <span class=keyword>AndroidJavaObject</span>. The exceptions to this rule are strings, which can be accessed directly even though they don't represent a primitive type in Java. 
 
-After that it is just a matter of traversing the <span class=keyword>Activity</span> through [getCacheDir()](http://developer.android.com/reference/android/content/Context.html#getCacheDir().html) to get the File object representing the cache directory, and then calling [getCanonicalPath()](http://developer.android.com/reference/java/io/File.html#getCanonicalPath().html) to get a string representation. 
+After that it is just a matter of traversing the <span class=keyword>Activity</span> through [getCacheDir()](http://developer.android.com/reference/android/content/Context.html#getCacheDir().md) to get the File object representing the cache directory, and then calling [getCanonicalPath()](http://developer.android.com/reference/java/io/File.html#getCanonicalPath().md) to get a string representation. 
 
-Of course, nowadays you don't need to do that to get the cache directory since Unity provides access to the application's cache and file directory with [Application.temporaryCachePath](ScriptRef:Application-temporaryCachePath.html.html) and [Application.persistentDataPath](ScriptRef:Application-persistentDataPath.html.html).
+Of course, nowadays you don't need to do that to get the cache directory since Unity provides access to the application's cache and file directory with [Application.temporaryCachePath](ScriptRef:Application-temporaryCachePath.html) and [Application.persistentDataPath](ScriptRef:Application-persistentDataPath.html).
 
 ###Example 3
 Finally, here is a trick for passing data from Java to script code using <span class=keyword>UnitySendMessage</span>.
@@ -163,7 +163,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 ````
 
-The Java class <span class=keyword>com.unity3d.player.UnityPlayer</span> now has a static method <span class=keyword>UnitySendMessage</span>, equivalent to the iOS [UnitySendMessage](Main.Plugins#iPhonePlugins.html) on 
+The Java class <span class=keyword>com.unity3d.player.UnityPlayer</span> now has a static method <span class=keyword>UnitySendMessage</span>, equivalent to the iOS [UnitySendMessage](Main.Plugins#iPhonePlugins.md) on 
 the native side. It can be used in Java to pass data to script code. 
 
 Here though, we call it directly from script code, which essentially relays the message on the Java side. This then calls back to the native/Unity code to deliver the message to the object named "Main Camera". This object has a script attached which contains a method called "JavaMessage". 
@@ -209,10 +209,10 @@ Extending the UnityPlayerActivity Java Code
 
 With Unity Android it is possible to extend the standard <span class=keyword>UnityPlayerActivity</span> class (the primary Java class for the Unity Player on Android, similar to AppController.mm on Unity iOS).
 
-An application can override any and all of the basic interaction between Android OS and Unity Android. You can enable this by creating a new [Activity ](http://developer.android.com/reference/android/app/Activity.html.html) which derives from UnityPlayerActivity (UnityPlayerActivity.java can be found at <span class=menu>/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/src/com/unity3d/player</span> on Mac and usually at <span class=menu>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\src\com\unity3d\player</span> on Windows). 
+An application can override any and all of the basic interaction between Android OS and Unity Android. You can enable this by creating a new [Activity ](http://developer.android.com/reference/android/app/Activity.html.md) which derives from UnityPlayerActivity (UnityPlayerActivity.java can be found at <span class=menu>/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/src/com/unity3d/player</span> on Mac and usually at <span class=menu>C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\src\com\unity3d\player</span> on Windows). 
 
 To do this, first locate the <span class=menu>classes.jar</span> shipped with Unity Android. It is found in the installation folder (usually <span class=menu>C:\Program Files\Unity\Editor\Data</span> (on Windows) or <span class=menu>/Applications/Unity</span> (on Mac)) in a sub-folder called <span class=menu>PlaybackEngines/AndroidPlayer/bin</span>. Then add  <span class=menu>classes.jar</span> to the classpath used to compile the new Activity. The resulting .class file(s) should be compressed into a .jar file and placed in the <span class=menu>Assets->Plugins->Android</span> folder.
-Since the manifest dictates which activity to launch it is also necessary to create a new [AndroidManifest.xml ](http://developer.android.com/guide/topics/manifest/manifest-intro.html.html). The AndroidManifest.xml file should also be placed in the <span class=menu>Assets->Plugins->Android</span> folder.
+Since the manifest dictates which activity to launch it is also necessary to create a new [AndroidManifest.xml ](http://developer.android.com/guide/topics/manifest/manifest-intro.html.md). The AndroidManifest.xml file should also be placed in the <span class=menu>Assets->Plugins->Android</span> folder.
 
 The new activity could look like the following example, __OverrideExample.java__:
 ````
@@ -289,17 +289,17 @@ Examples
 
 
 ###Native Plugin Sample
-A simple example of the use of a native code plugin can be found [here](Attach:AndroidNativePlugin.zip.html)
+A simple example of the use of a native code plugin can be found [here](Attach:AndroidNativePlugin.zip.md)
 
 This sample demonstrates how C code can be invoked from a Unity Android application.
 The package includes a scene which displays the sum of two values as calculated by the native plugin.
-Please note that you will need the [Android NDK](http://developer.android.com/sdk/ndk/index.html.html) to compile the plugin.
+Please note that you will need the [Android NDK](http://developer.android.com/sdk/ndk/index.html.md) to compile the plugin.
 
 ###Java Plugin Sample
-An example of the use of Java code can be found [here](Attach:AndroidJavaPlugin.zip.html)
+An example of the use of Java code can be found [here](Attach:AndroidJavaPlugin.zip.md)
 
 This sample demonstrates how Java code can be used to interact with the Android OS and how C++ creates a bridge between C# and Java.
 The scene in the package displays a button which when clicked fetches the application cache directory, as defined by the Android OS.
-Please note that you will need both the JDK and the [Android NDK](http://developer.android.com/sdk/ndk/index.html.html) to compile the plugins.
+Please note that you will need both the JDK and the [Android NDK](http://developer.android.com/sdk/ndk/index.html.md) to compile the plugins.
 
-[Here](Attach:AndroidJavaPluginProject.zip.html) is a similar example but based on a prebuilt JNI library to wrap the native code into C#.
+[Here](Attach:AndroidJavaPluginProject.zip.md) is a similar example but based on a prebuilt JNI library to wrap the native code into C#.

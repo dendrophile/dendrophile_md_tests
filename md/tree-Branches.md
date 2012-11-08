@@ -9,6 +9,7 @@ Distribution
 
 Adjusts the count and placement of branches in the group. Use the curves to fine tune position, rotation and scale. The curves are relative to the parent branch or to the area spread in case of a trunk.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesDistribution.png)  
 
 
@@ -27,6 +28,7 @@ Geometry
 
 Select what type of geometry is generated for this branch group and which materials are applied. <span class=component>LOD Multiplier</span> allows you to adjust the quality of this group relative to tree's <span class=component>LOD Quality</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesGeometry.png)  
 
 
@@ -43,6 +45,7 @@ Shape
 -----
 
 Adjusts the shape and growth of the branches. Use the curves to fine tune the shape, all curves are relative to the branch itself.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesShape.png)  
 
@@ -65,6 +68,7 @@ Adjusts the shape and growth of the branches. Use the curves to fine tune the sh
 |<span class=component>Flare Height</span>      |Defines how far up the trunk the flares start.|
 |<span class=component>Flare Noise</span>       |Defines the noise of the flares, lower values will give a more wobbly look, while higher values gives a more stochastic look.|
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesShapeFrond.png)  
 
 __These properties are for child branches only, not trunks.__
@@ -82,6 +86,7 @@ Breaking
 
 Controls the breaking of branches.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesBreaking.png)  
 
 
@@ -95,6 +100,7 @@ Fronds
 ------
 
 Here you can adjust the number of fronds and their properties. This tab is only available if you have Frond geometry enabled in the <span class=component>Geometry</span> tab.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesFronds.png)  
 
@@ -113,6 +119,7 @@ Animation
 
 Adjusts the parameters used for animating this group of branches. The wind zones are only active in Play Mode.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TreeNode-BranchPropertiesAnimation.png)  
 
 
@@ -121,5 +128,5 @@ Adjusts the parameters used for animating this group of branches. The wind zones
 |<span class=component>Main Wind</span>       |Primary wind effect. This creates a soft swaying motion and is typically the only parameter needed for primary branches.|
 |<span class=component>Main Turbulence</span> |Secondary turbulence effect. Produces more stochastic motion, which is individual per branch. Typically used for branches with fronds, such as ferns and palms.|
 |<span class=component>Edge Turbulence</span> |Turbulence along the edge of fronds. Useful for ferns, palms, etc.|
-|<span class=component>Create Wind Zone</span>|Creates a [Wind Zone](class-WindZone.html).|
+|<span class=component>Create Wind Zone</span>|Creates a [Wind Zone](class-WindZone.md).|
 

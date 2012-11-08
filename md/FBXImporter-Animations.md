@@ -2,6 +2,7 @@ FBX Importer - Animations Tab
 =============================
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimImporterAnimationsTab.png)  
 
 

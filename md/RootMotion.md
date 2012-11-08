@@ -8,13 +8,14 @@ Body Transform
 
 The body transform must be set to be the same for all humanoid characters (from a retargeting standpoint). The body mass center should be used as the body position as this will nearly follow a straight line in most circumstances. The body orientation is an average of the lower and upper body orientation. Do not use the hips to store the world-space position and orientation of the animation as this can lead to unpredictable results.  The body orientation is at identity for the Avatar T-Pose.
 
-The body position and orientation are stored in the <span class=keyword>Animation Clip</span> (using the [Muscle definitions](MuscleDefinitions.html) set up in the Avatar). They are the only world-space curves stored in the <span class=keyword>Animation Clip</span>. Everything else: muscle curves and IK goals (Hands and Feet) are stored relative to the body transform. 
+The body position and orientation are stored in the <span class=keyword>Animation Clip</span> (using the [Muscle definitions](MuscleDefinitions.md) set up in the Avatar). They are the only world-space curves stored in the <span class=keyword>Animation Clip</span>. Everything else: muscle curves and IK goals (Hands and Feet) are stored relative to the body transform. 
 
 Root Transform
 --------------
 
 
 The Root Transform is a projection on the Y plane of the Body Transform and is computed at runtime. At every frame, a change in the Root Transform is computed. This change in transform is then applied to the Game Object to make it move.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimRootMotionPreview.png)  
 > _The circle below the character represents the root transform_
@@ -24,6 +25,7 @@ Animation Clip Inspector
 
 
 The Animation Clip Editor settings (<span class=keyword>Root Transform Rotation</span>, <span class=keyword>Root Transform Position (Y)</span> and <span class=keyword>Root Transform Position (XZ)</span>) let you control the Root Transform projection from the Body Transform. Depending on these settings some parts of the Body Transform may be transferred Root Transform. For example you can decide if you want the motion Y position to be part of the Root Motion (trajectory) or part of the pose (body transform), which is known as <span class=inspector>Baked into Pose</span>.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimRootMotion.png)  
 

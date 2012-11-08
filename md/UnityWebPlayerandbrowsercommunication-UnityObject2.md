@@ -2,7 +2,7 @@ Unity Web Player and browser communication with UnityObject2
 ============================================================
 
 
-For the most part, browser communication is done the same way as [UnityObject](UnityWebPlayerandbrowsercommunication.html). However, calling Unity web player content functions from a webpage, is done in the following way:
+For the most part, browser communication is done the same way as [UnityObject](UnityWebPlayerandbrowsercommunication.md). However, calling Unity web player content functions from a webpage, is done in the following way:
 
 ````
 

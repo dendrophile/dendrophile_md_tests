@@ -3,11 +3,11 @@ Shadows in Unity
 
 
 
-Unity Pro makes it possible to use real-time <span class=keyword>shadows</span> on any light. Objects can cast shadows onto each other and onto parts of themselves ("self shadowing"). All types of [Lights](class-Light.html) - Directional, Spot and Point - support shadows.
+Unity Pro makes it possible to use real-time <span class=keyword>shadows</span> on any light. Objects can cast shadows onto each other and onto parts of themselves ("self shadowing"). All types of [Lights](class-Light.md) - Directional, Spot and Point - support shadows.
 
-Using shadows can be as simple as choosing <span class=menu>Hard Shadows</span> or <span class=menu>Soft Shadows</span> on a [Light](class-Light.html). However, if you want optimal shadow quality and performance, there are some additional things to consider.
+Using shadows can be as simple as choosing <span class=menu>Hard Shadows</span> or <span class=menu>Soft Shadows</span> on a [Light](class-Light.md). However, if you want optimal shadow quality and performance, there are some additional things to consider.
 
-The [Shadow Troubleshooting](ShadowTroubleshooting.html) page contains solutions to common shadowing problems.
+The [Shadow Troubleshooting](ShadowTroubleshooting.md) page contains solutions to common shadowing problems.
 
 Curiously enough, the best shadows are non-realtime ones! Whenever your game level geometry and lighting is static, just precompute lightmaps in your 3D application. Computing shadows offline will always result in better quality and performance than displaying them in real time. _Now onto the realtime ones..._
 
@@ -16,15 +16,15 @@ Tweaking shadow quality
 -----------------------
 
 
-Unity uses so called [shadow maps](http://en.wikipedia.org/wiki/Shadow_mapping.html) to display shadows. Shadow mapping is a texture based approach, it's easiest to think of it as "shadow textures" projecting out from lights onto the scene. Thus much like regular texturing, quality of shadow mapping mostly depends on two factors:
+Unity uses so called [shadow maps](http://en.wikipedia.org/wiki/Shadow_mapping.md) to display shadows. Shadow mapping is a texture based approach, it's easiest to think of it as "shadow textures" projecting out from lights onto the scene. Thus much like regular texturing, quality of shadow mapping mostly depends on two factors:
 * The <span class=keyword>resolution</span> (size) of the shadow maps. The larger the shadow maps, the better the shadow quality.
 * The <span class=keyword>filtering</span> of the shadows. <span class=keyword>Hard shadows</span> take the nearest shadow map pixel. <span class=keyword>Soft shadows</span> average several shadow map pixels, resulting in smoother looking shadows (but soft shadows are more expensive to render).
 
 Different <span class=component>Light</span> types use different algorithms to calculate shadows.
-* For Directional lights, the crucial settings for shadow quality are <span class=menu>Shadow Distance</span> and <span class=menu>Shadow Cascades</span>, found in [Quality Settings](class-QualitySettings.html). <span class=menu>Shadow Resolution</span> is also taken into account, but the first thing to try to improve directional shadow quality is reducing shadow distance. All the details about directional light shadows can be found here: [Directional Shadow Details](DirectionalShadowDetails.html).
+* For Directional lights, the crucial settings for shadow quality are <span class=menu>Shadow Distance</span> and <span class=menu>Shadow Cascades</span>, found in [Quality Settings](class-QualitySettings.md). <span class=menu>Shadow Resolution</span> is also taken into account, but the first thing to try to improve directional shadow quality is reducing shadow distance. All the details about directional light shadows can be found here: [Directional Shadow Details](DirectionalShadowDetails.md).
 * For Spot and Point lights, <span class=menu>Shadow Resolution</span> determines shadow map size. Additionally, for lights that cover small area on the screen, smaller shadow map resolutions are used.
 
-Details on how shadow map sizes are computed are in [Shadow Size Details](ShadowSizeDetails.html) page.
+Details on how shadow map sizes are computed are in [Shadow Size Details](ShadowSizeDetails.md) page.
 
 
 Shadow performance
@@ -35,7 +35,7 @@ Realtime shadows are quite performance hungry, so use them sparingly. For each l
 
 <span class=keyword>Soft shadows</span> are more expensive to render than <span class=keyword>Hard shadows</span>. The cost is entirely on the graphics card though (it's only longer shaders), so Hard vs. Soft shadows don't make any impact on the CPU or memory.
 
-[Quality Settings](class-QualitySettings.html) contains a setting called <span class=menu>Shadow Distance</span> - this is how far from the camera shadows are drawn. Often it makes no sense to calculate and display shadows that are 500 meters away from the camera, so use as low shadow distance as possible for your game. This will help performance (and will improve quality of directional light shadows, see above).
+[Quality Settings](class-QualitySettings.md) contains a setting called <span class=menu>Shadow Distance</span> - this is how far from the camera shadows are drawn. Often it makes no sense to calculate and display shadows that are 500 meters away from the camera, so use as low shadow distance as possible for your game. This will help performance (and will improve quality of directional light shadows, see above).
 
 <a id="hardware"></a>
 Hardware support for shadows
@@ -67,7 +67,7 @@ Notes
 -----
 
 
-* [Forward rendering path](RenderTech-ForwardRendering.html) supports only one directional shadow casting light. [Vertex Lit](RenderTech-VertexLit.html) rendering path does not support realtime shadows.
+* [Forward rendering path](RenderTech-ForwardRendering.md) supports only one directional shadow casting light. [Vertex Lit](RenderTech-VertexLit.md) rendering path does not support realtime shadows.
 * Vertex-lit lights don't have shadows.
 * Vertex-lit materials won't receive shadows (but do cast shadows).
 * Transparent objects don't cast or receive shadows. Transparent Cutout objects do cast and receive shadows.

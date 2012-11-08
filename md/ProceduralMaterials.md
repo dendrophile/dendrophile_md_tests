@@ -6,7 +6,7 @@ Unity incorporates a new asset type known as <span class=keyword>Procedural Mate
 
 The script code that generates a texture procedurally will typically take up much less space in storage and transmission than a bitmap image and so Procedural Materials can help reduce download times. Additionally, the generation script can be equipped with parameters that can be changed in order to vary the visual properties of the material at runtime. These properties can be anything from color variations to the size of bricks in a wall. Not only does this mean that many variations can be generated from a single Procedural Material but also that the material can be animated on a frame-by-frame basis. Many interesting visual effects are possible - imagine a character gradually turning to stone or acid damaging a surface as it touches.
 
-Unity's Procedural Material system is based around an industry standard product called Substance, developed by [Allegorithmic](http://www.allegorithmic.com/.html)
+Unity's Procedural Material system is based around an industry standard product called Substance, developed by [Allegorithmic](http://www.allegorithmic.com/.md)
 
 
 Supported Platforms
@@ -33,6 +33,7 @@ Each Procedural Material is a custom script which generates a particular type of
 
 Procedural Materials can also incorporate complex texture animation. For example, you could animate the hands of the clock or cockroaches running across a floor.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SubstanceCockroach.png)  
 
 
@@ -43,6 +44,7 @@ Creating Procedural Materials From Scratch
 Procedural Materials can work with any combination of procedurally generated textures and stored bitmaps. Additionally, included bitmap images can be filtered and modified before use. Unlike a standard Material, a Procedural Material can use vector images in the form of SVG files which allows for resolution-independent textures.
 
 The design tools available for creating Procedural Materials from scratch use visual, node-based editing similar to the kind found in artistic tools. This makes creation accessible to artists who may have little or no coding experience. As an example, here is a screenshot from Allegorithmic's Substance Designer which shows a "brick wall" Procedural Material under construction: 
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SubstanceDesigner.png)  
 
@@ -71,7 +73,7 @@ Using the Substance Player to Analyze Performance
 -------------------------------------------------
 
 
-Since the complexity of a Procedural Material can affect runtime performance, Allegorithmic incorporates profiling features in its _Substance Player_ tool. This tool is available to download for free from [Allegorithmic's website](http://www.allegorithmic.com/.html).
+Since the complexity of a Procedural Material can affect runtime performance, Allegorithmic incorporates profiling features in its _Substance Player_ tool. This tool is available to download for free from [Allegorithmic's website](http://www.allegorithmic.com/.md).
 
 Substance Player uses the same optimized rendering engine as the one integrated into Unity, so its rendering measurement is more representative of performance in Unity than that of Substance Designer.
 

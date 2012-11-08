@@ -5,6 +5,7 @@ Audio High Pass Filter (PRO only)
 The <span class=keyword>Audio High Pass Filter</span> passes high frequencies of an AudioSource and cuts off signals with frequencies lower than the <span class=component>Cutoff Frequency</span>.  
 The <span class=component>Highpass resonance Q</span> (known as Highpass Resonance Quality Factor) determines how much the filter's self-resonance is dampened. Higher <span class=component>Highpass resonance Q</span> indicates a lower rate of energy loss i.e. the oscillations die out more slowly.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioHighPassFilter.png)  
 _The Audio high Pass filter properties in the inspector._
 

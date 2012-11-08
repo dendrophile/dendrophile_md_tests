@@ -2,6 +2,7 @@ Skinned Cloth
 =============
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SkinnedCloth.png)  
 _Skinned cloth in the scene view and in the inspector._
 
@@ -11,7 +12,7 @@ What the SkinnedCloth component does, is to take the vertex output from the Skin
 
 These coefficients can be visually edited using the scene view and the inspector, when the game object with the SkinnedCloth component is selected. There are two editing modes, selection and vertex painting. In selection mode, you click on vertices in the scene view to select them, and then edit their coefficients in the inspector. In vertex paining mode, you set the coefficient values you want in the inspector, enable the "paint" button next to those coefficients you want to change, and click on the vertices to apply the values to those.
 
-Note that skinned cloth simulation is only driven by the vertices skinned by the SkinnedMeshRenderer, and will not otherwise interact with any colliders. This makes skinned cloth simulation much faster then the fully physical [Interactive Cloth](class-InteractiveCloth.html) component, as it does not need to be simulated on the same frame rate and the same thread as the rest of the physics simulation.
+Note that skinned cloth simulation is only driven by the vertices skinned by the SkinnedMeshRenderer, and will not otherwise interact with any colliders. This makes skinned cloth simulation much faster then the fully physical [Interactive Cloth](class-InteractiveCloth.md) component, as it does not need to be simulated on the same frame rate and the same thread as the rest of the physics simulation.
 
 You can disable or enable the skinned cloth component at any time to turn it on or off. Turning it off will switch rendering to the normal SkinnedMeshRenderer, so you can switch between these whenever needed to dynamically adjust for varying performance. You can also smoothly cross-fade between the two modes from a script using the SkinnedCloth.SetEnabledFading() method, to make the transition unnoticeable to the player.
 
@@ -32,6 +33,7 @@ There a four coefficients per vertex, which define how cloth vertices can move w
 
 Refer to this image for a visual representation on how these coefficients work with respect to a skinned vertex and normal for different values of maxDistanceBias. The red area is the collision sphere defined by collisionSphereRadius and collisionSphereDistance, which the cloth vertex cannot enter. Thus, the green area, defined by maxDistance and maxDistanceBias subtracted by the red area defines the space in which the cloth vertex can move.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SkinnedClothCoefficients.png)  
 
 The SkinnedCloth inspector
@@ -41,6 +43,7 @@ The SkinnedCloth inspector
 When you select a GameObject with a SkinnedCloth component, you can use the SkinnedCloth inspector to edit cloth vertex coefficients, and other properties. The inspector has three tabs:
 
 ###Vertex Selection Tool
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SkinnedClothInfo.png)  
 
 In this mode you can select vertices in the scene view, and the set their coefficients in the inspector (see the previous section for an explanation on how the cloth coefficients work). It is possible to set multiple coefficients by holding the shift key, or by dragging a rectangle with the mouse. When multiple vertices are selected, the inspector will display average values for the vertices coefficients. When you change the values, however, that coefficient will be set to the same value for all vertices. If you switch the scene view to wireframe mode, you will also be able to see and to select back-facing vertices, this can be useful when you want to select full parts of the character.
@@ -48,11 +51,13 @@ In this mode you can select vertices in the scene view, and the set their coeffi
 To help you understand which values the coefficients have for all the vertices, you can click the eye icon next to a coefficient field, to make the editor visualize that coefficient in the scene view. This shows the vertices with the lowest value of that coefficient in a green tint, mid-range values will be yellow, and the highest values get a blue tint. The colors scale is always chosen relative to the used value range of that coefficient, and is independent of absolute values.
 
 ###Vertex Painting Tool
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SkinnedClothPaint.png)  
 
 Similar to the vertex selection, this is a tool to help you configure the vertex coefficient values. Unlike vertex selection, you don't need to click on a vertex before changing a value - in this mode, you just enter the values you want to set, enable the paintbrush toggle next to the coefficients you want to change, and then click on all vertices you want to set that value for.
 
 ###Configuration
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SkinnedClothSettings.png)  
 
 The third tab lets you configure various properties of the skinned cloth:

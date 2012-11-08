@@ -4,6 +4,7 @@ Unity 3.5 upgrade guide
 
 If you have an FBX file with a root node marked up as a skeleton, it will be imported with an additional root node in 3.5, compared to 3.4 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/upgrade35hierarchy.png)  
 
 Unity 3.5 does this because when importing animated characters, the most common setup is to have one root node with all bones below and a skeleton next to it in the hierarchy.  

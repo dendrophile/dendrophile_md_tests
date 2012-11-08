@@ -23,12 +23,12 @@ Further reading:
 Other Examples:
 ---------------
 
-* Forums post - [Loading Textures from Web (in AS3)](http://forum.unity3d.com/threads/128057-Flash-Simple-AS3-Bridge-Demo-Loading-textures-from-web.?p=864642&viewfull=1#post864642.html)
+* Forums post - [Loading Textures from Web (in AS3)](http://forum.unity3d.com/threads/128057-Flash-Simple-AS3-Bridge-Demo-Loading-textures-from-web.?p=864642&viewfull=1#post864642.md)
 
 Useful Resources:
 -----------------
 
-* [Scripting Reference: ActionScript](http://unity3d.com/support/documentation/ScriptReference/ActionScript.html.html)
-* [Flash Development section on the Unity forums](http://forum.unity3d.com/forums/36-Flash-Development.html)
-* [Flash questions on Unity Answers](http://answers.unity3d.com/questions/topics/flash.html.html)
+* [Scripting Reference: ActionScript](http://unity3d.com/support/documentation/ScriptReference/ActionScript.html.md)
+* [Flash Development section on the Unity forums](http://forum.unity3d.com/forums/36-Flash-Development.md)
+* [Flash questions on Unity Answers](http://answers.unity3d.com/questions/topics/flash.html.md)
 

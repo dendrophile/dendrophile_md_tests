@@ -3,7 +3,7 @@ Xbox 360: Getting Started
 
 
 ###Developing for Xbox 360
-To develop for the Xbox 360 you must be a Microsoft Certified Xbox 360 Developer and own the appropriate hardware. See the [Xbox 360 Setup](xbox360-setup.html) page for a seat setup checklist.
+To develop for the Xbox 360 you must be a Microsoft Certified Xbox 360 Developer and own the appropriate hardware. See the [Xbox 360 Setup](xbox360-setup.md) page for a seat setup checklist.
 
 ###Access Xbox 360 unique functionality
 Unity Xbox provides a number of new scripting APIs to access Xbox Live services, storage devices, Avatars and much more. See the _UnityEngine.X360_ namespace in the scripting API.
@@ -18,7 +18,7 @@ Unity Xbox provides a number of new scripting APIs to access Xbox Live services,
     * Expect ~440MB free system memory with an empty project loaded.
 1. Fixed resolution
     * 720p (1280x720) is the only resolution you'll have to deal with.
-1. No hardware [MSAA](http://en.wikipedia.org/wiki/Multisample_anti-aliasing.html)
+1. No hardware [MSAA](http://en.wikipedia.org/wiki/Multisample_anti-aliasing.md)
     * Unity for Xbox does not do hardware MSAA. Use "AntialiasingAsPostEffect" technique "FXAA3" from the "Image Effects" standard package for best results.
 1. XMA audio compression
     * Unity will compress audio to XMA when targeting Xbox 360.

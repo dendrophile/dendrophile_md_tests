@@ -4,6 +4,7 @@ Network Manager
 
 The <span class=keyword>Network Manager</span> contains two very important properties for making Networked multiplayer games.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NetworkSet.png)  
 _The Network Manager_
 

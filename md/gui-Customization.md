@@ -18,6 +18,7 @@ GUIStyles are designed to mimic Cascading Style Sheets (CSS) for web browsers.  
 
 Where the Control defines the content, the Style defines the appearance. This allows you to create combinations like a functional <span class=component>Toggle</span> which looks like a normal <span class=component>Button</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-ToggleStyles.png)  
 _Two Toggle Controls styled differently_
 
@@ -26,8 +27,10 @@ _Two Toggle Controls styled differently_
 
 As stated earlier, GUISkins are a collection of GUIStyles.  Styles define the appearance of a GUI Control.  You do not have to use a Skin if you want to use a Style.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GuiStyleInspector.png)  
 _A single GUIStyle shown in the Inspector_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-GUISkin.png)  
 _A single GUISkin shown in the Inspector - observe that it contains multiple GUIStyles_ 
@@ -71,6 +74,7 @@ public class GUITest : MonoBehaviour {
 }
 
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-DifferentDefaultStyles.png)  
 _The controls created by the code example above_
@@ -117,12 +121,13 @@ public class GUITest : MonoBehaviour {
 
 When you have declared a GUIStyle, you can modify that style in the Inspector.  There are a great number of States you can define, and apply to any type of Control.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ModifyingStyleInInspector.png)  
 _Styles are modified on a per-script, per-GameObject basis_
 
 Any Control State must be assigned a <span class=component>Background</span> Color before the specified <span class=component>Text Color</span> will be applied.
 
-For more information about individual GUIStyles, please read the [GUIStyle Component Reference page](class-GUIStyle.html).
+For more information about individual GUIStyles, please read the [GUIStyle Component Reference page](class-GUIStyle.md).
 
 
 Working with Skins

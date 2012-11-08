@@ -2,7 +2,7 @@ Surface Shader Lighting Examples
 ================================
 
 
-Here are some examples of [Surface Shaders](SL-SurfaceShaderLighting|<span class=keyword>customlightingmodels</span>]]in[[SL-SurfaceShaders.html). General Surface Shader examples are in [this page](SL-SurfaceShaderExamples.html).
+Here are some examples of [Surface Shaders](SL-SurfaceShaderLighting|<span class=keyword>customlightingmodels</span>]]in[[SL-SurfaceShaders.md). General Surface Shader examples are in [this page](SL-SurfaceShaderExamples.md).
 
 Because Deferred Lighting does not play well with some custom per-material lighting models, in most examples below we make the shaders compile to Forward Rendering only.
 
@@ -34,10 +34,11 @@ We'll start with a shader that uses built-in Lambert lighting model:
   }
 
 Here's how it looks like with a texture and without an actual texture (one directional light is in the scene):   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderDiffuseTexture.png)  
 
 
-Now, let's do exactly the same, but write out _our own lighting model_ instead of using built-in Lambert one. [Surface Shader Lighting Models](SL-SurfaceShaderLighting.html) are just some functions that we need to write. Here's a simple Lambert one. Note that the "shader part" itself did not change at all (grayed out):
+Now, let's do exactly the same, but write out _our own lighting model_ instead of using built-in Lambert one. [Surface Shader Lighting Models](SL-SurfaceShaderLighting.md) are just some functions that we need to write. Here's a simple Lambert one. Note that the "shader part" itself did not change at all (grayed out):
 
   %gray%Shader "Example/Diffuse Texture" {
   %gray%  Properties {
@@ -108,6 +109,7 @@ Here's Wrapped Diffuse - a modification of Diffuse lighting, where illumination 
   %gray%}
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderDiffuseWrap.png)  
 
 
@@ -152,7 +154,9 @@ Here's a "Ramp" lighting model that uses a texture ramp to define how surface re
   %gray%}
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderToonRamp.png)  
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderToonRampItself.png)  
 
@@ -197,6 +201,7 @@ Here's a simple specular lighting model. It's quite simple to what built-in Blin
   %gray%  }
   %gray%  Fallback "Diffuse"
   %gray%}
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderSimpleSpecular.png)  

@@ -10,6 +10,7 @@ Building in Release Mode
 
 You can choose between the <span class=keyword>Debug</span> and <span class=keyword>Release</span> options on the <span class=keyword>Active Build Configuration</span> drop-down menu in Xcode. Building as <span class=keyword>Release</span> instead of <span class=keyword>Debug</span> can reduce the size of the built player by as much as 2-3MB, depending on the game.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/iphone-activeBuildConfig.png)  
 _The Active Build Configuration drop-down_
 
@@ -58,7 +59,7 @@ __Note:__ it can sometimes be difficult to determine which classes are getting s
 
 ###Simple Checklist for Making Your Distribution as Small as Possible
 
-1. Minimize your assets: enable PVRTC compression for textures and reduce their resolution as far as possible. Also, minimize the number of uncompressed sounds. There are some additional tips for file size reduction [here](Main.ReducingFilesize.html).
+1. Minimize your assets: enable PVRTC compression for textures and reduce their resolution as far as possible. Also, minimize the number of uncompressed sounds. There are some additional tips for file size reduction [here](Main.ReducingFilesize.md).
 1. Set the iOS Stripping Level to <span class=keyword>Use micro mscorlib</span>.
 1. Set the script call optimization level to <span class=keyword>Fast but no exceptions</span>.
 1. Don't use anything that lives in System.dll or System.Xml.dll in your code. These libraries are __not__ compatible with micro mscorlib.

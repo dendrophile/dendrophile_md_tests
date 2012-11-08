@@ -2,7 +2,7 @@ Network Instantiate
 ===================
 
 
-The [Network.Instantiate](ScriptRef:Network.Instantiate.html.html) function offers a straightforward way to instantiate a prefab on all clients, similar to the effect of [Object.Instantiate](ScriptRef:Object.Instantiate.html.html) on a single client. The instantiating client is the one that controls the object (ie, the Input class is only accessible from scripts running on the client instance) but changes will be reflected across the network.
+The [Network.Instantiate](ScriptRef:Network.Instantiate.html) function offers a straightforward way to instantiate a prefab on all clients, similar to the effect of [Object.Instantiate](ScriptRef:Object.Instantiate.html) on a single client. The instantiating client is the one that controls the object (ie, the Input class is only accessible from scripts running on the client instance) but changes will be reflected across the network.
 
 
 The argument list for <span class=component>Network.Instantiate()</span> is as follows:
@@ -19,7 +19,7 @@ Technical Details
 -----------------
 
 
-Behind the scenes, network instantiation is built around an RPC call which contains an identifier for the prefab along with the position and other details. The RPC call is always buffered in the same manner as other RPC calls, so that instantiated objects will appear on new clients when they connect. See the [RPC](net-RPCDetails.html) page for further details about buffering.
+Behind the scenes, network instantiation is built around an RPC call which contains an identifier for the prefab along with the position and other details. The RPC call is always buffered in the same manner as other RPC calls, so that instantiated objects will appear on new clients when they connect. See the [RPC](net-RPCDetails.md) page for further details about buffering.
 
 
 Communication Groups

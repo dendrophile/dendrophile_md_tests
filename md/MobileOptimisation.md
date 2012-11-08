@@ -116,11 +116,11 @@ Spend some time looking into different rendering approaches and design your game
 Use platform specific texture compression.
 
 ###Further reading
-* PowerVR SGX Architecture Guide [http://imgtec.com/powervr/insider/powervr-sdk-docs.asp](http://imgtec.com/powervr/insider/powervr-sdk-docs.asp.html)
-* Tegra GLES2 feature guide [http://developer.download.nvidia.com/tegra/docs/tegra_gles2_development.pdf](http://developer.download.nvidia.com/tegra/docs/tegra_gles2_development.pdf.html)
-* Qualcomm Adreno GLES performance guide [http://developer.qualcomm.com/file/607/adreno200performanceoptimizationopenglestipsandtricksmarch10.pdf](http://developer.qualcomm.com/file/607/adreno200performanceoptimizationopenglestipsandtricksmarch10.pdf.html)
-* Engel, Rible [http://altdevblogaday.com/2011/08/04/programming-the-xperia-play-gpu-by-wolfgang-engel-and-maurice-ribble/](http://altdevblogaday.com/2011/08/04/programming-the-xperia-play-gpu-by-wolfgang-engel-and-maurice-ribble/.html)
-* ARM Mali GPU Optimization guide [http://www.malideveloper.com/developer-resources/documentation/index.php](http://www.malideveloper.com/developer-resources/documentation/index.php.html)
+* PowerVR SGX Architecture Guide [http://imgtec.com/powervr/insider/powervr-sdk-docs.asp](http://imgtec.com/powervr/insider/powervr-sdk-docs.asp.md)
+* Tegra GLES2 feature guide [http://developer.download.nvidia.com/tegra/docs/tegra_gles2_development.pdf](http://developer.download.nvidia.com/tegra/docs/tegra_gles2_development.pdf.md)
+* Qualcomm Adreno GLES performance guide [http://developer.qualcomm.com/file/607/adreno200performanceoptimizationopenglestipsandtricksmarch10.pdf](http://developer.qualcomm.com/file/607/adreno200performanceoptimizationopenglestipsandtricksmarch10.pdf.md)
+* Engel, Rible [http://altdevblogaday.com/2011/08/04/programming-the-xperia-play-gpu-by-wolfgang-engel-and-maurice-ribble/](http://altdevblogaday.com/2011/08/04/programming-the-xperia-play-gpu-by-wolfgang-engel-and-maurice-ribble/.md)
+* ARM Mali GPU Optimization guide [http://www.malideveloper.com/developer-resources/documentation/index.php](http://www.malideveloper.com/developer-resources/documentation/index.php.md)
 
 ###Screen resolution
 
@@ -144,7 +144,7 @@ And cons:
 * TBDR needs more transistors allocated for the tiling and deferred parts, leaving conceptually less transistors for “raw performance”. It’s very hard (i.e. practically impossible) to get GPU timing for a draw call on TBDR, making profiling hard.
 
 ###Further reading
-* PowerVR SGX Architecture Guide [http://imgtec.com/powervr/insider/powervr-sdk-docs.asp](http://imgtec.com/powervr/insider/powervr-sdk-docs.asp.html)
+* PowerVR SGX Architecture Guide [http://imgtec.com/powervr/insider/powervr-sdk-docs.asp](http://imgtec.com/powervr/insider/powervr-sdk-docs.asp.md)
 
 ###Screen resolution
 

@@ -18,9 +18,9 @@ public class ExampleObject
 
 Now create a C# or JavaScript object which matches the AS3 implementation.
 
-The [NotRenamed](http://unity3d.com/support/documentation/ScriptReference/NotRenamedAttribute.html.html) attribute used below prevents name mangling of constructors, methods, fields and properties. 
+The [NotRenamed](http://unity3d.com/support/documentation/ScriptReference/NotRenamedAttribute.html.md) attribute used below prevents name mangling of constructors, methods, fields and properties. 
 
-The [NotConverted](http://unity3d.com/support/documentation/ScriptReference/NotConvertedAttribute.html.html) attribute instructs the build pipeline not to convert a type or member to the target platform. Normally when you build to Flash, each of your C#/JavaScript scripts are converted to an ActionScript (`.as`) script. Adding the [NotConverted] attribute overrides this process, allowing you to provide your own version of the .as script, manually. The dummy C#/JavaScript which you provide allows Unity to know the signature of the class (i.e. which functions it should be allowed to call), and your .as script provides the implementations of those functions. Note that the ActionScript version will only be used when you build to Flash. In editor or when built to other platforms, Unity will use your C#/JavaScript version.
+The [NotConverted](http://unity3d.com/support/documentation/ScriptReference/NotConvertedAttribute.html.md) attribute instructs the build pipeline not to convert a type or member to the target platform. Normally when you build to Flash, each of your C#/JavaScript scripts are converted to an ActionScript (`.as`) script. Adding the [NotConverted] attribute overrides this process, allowing you to provide your own version of the .as script, manually. The dummy C#/JavaScript which you provide allows Unity to know the signature of the class (i.e. which functions it should be allowed to call), and your .as script provides the implementations of those functions. Note that the ActionScript version will only be used when you build to Flash. In editor or when built to other platforms, Unity will use your C#/JavaScript version.
 
 ###C#
 ````

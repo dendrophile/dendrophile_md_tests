@@ -4,11 +4,12 @@ ShaderLab syntax: Texture Combiners
 
 After the basic vertex lighting has been calculated, textures are applied. In ShaderLab this is done using __SetTexture__ command.
 
-_SetTexture commands have no effect when [fragment programs](SL-ShaderPrograms.html) are used; as in that case pixel operations are completely described in the shader._
+_SetTexture commands have no effect when [fragment programs](SL-ShaderPrograms.md) are used; as in that case pixel operations are completely described in the shader._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./PipelineFFP.png)  
 
-Texturing is the place to do old-style combiner effects. You can have multiple SetTexture commands inside a pass - all textures are applied in sequence, like layers in a painting program. SetTexture commands must be placed at the end of a [Pass](SL-Pass.html).
+Texturing is the place to do old-style combiner effects. You can have multiple SetTexture commands inside a pass - all textures are applied in sequence, like layers in a painting program. SetTexture commands must be placed at the end of a [Pass](SL-Pass.md).
 
 Syntax
 ------
@@ -32,7 +33,7 @@ Texture block `combine` command
 
 All the __src__ properties can be either one of _previous_, _constant_, _primary_ or _texture_.  
 * __Previous__ is the the result of the previous SetTexture.
-* __Primary__ is the color from the [lighting calculation](SL-Material.html) or the vertex color if it is [bound](SL-BindChannels.html).
+* __Primary__ is the color from the [lighting calculation](SL-Material.md) or the vertex color if it is [bound](SL-BindChannels.md).
 * __Texture__ is the color of the texture specified by _[_TextureName]_ in the SetTexture (see above).
 * __Constant__ is the color specified in __ConstantColor__.
 
@@ -61,7 +62,8 @@ Details
 =======
 
 
-Before [fragment programs](SL-ShaderPrograms.html) existed, older graphics cards used a layered approach to textures. The textures are applied one after each other, modifying the color that will be written to the screen. For each texture, the texture is typically combined with the result of the previous operation.
+Before [fragment programs](SL-ShaderPrograms.md) existed, older graphics cards used a layered approach to textures. The textures are applied one after each other, modifying the color that will be written to the screen. For each texture, the texture is typically combined with the result of the previous operation.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./SetTextureGraph.png)  
 
@@ -85,14 +87,14 @@ Specular highlights
 -------------------
 
 
-By default the __primary__ color is the sum of the diffuse, ambient and specular colors (as defined in the [Lighting calculation](SL-Material.html)). If you specify __SeparateSpecular On__ in the pass options, the specular color will be added in _after_ the combiner calculation, rather than before. This is the default behavior of the built-in VertexLit shader.
+By default the __primary__ color is the sum of the diffuse, ambient and specular colors (as defined in the [Lighting calculation](SL-Material.md)). If you specify __SeparateSpecular On__ in the pass options, the specular color will be added in _after_ the combiner calculation, rather than before. This is the default behavior of the built-in VertexLit shader.
 
 
 Graphics hardware support
 -------------------------
 
 
-Modern graphics cards with [fragment shader](SL-ShaderPrograms.html) support ("shader model 2.0" on desktop, OpenGL ES 2.0 on mobile) support all <span class=component>SetTexture</span> modes and at least 4 texture stages (many of them support 8). If you're running on really old hardware (made before 2003 on PC, or before iPhone3GS on mobile), you might have as low as two texture stages. The shader author should write separate [SubShaders](SL-SubShader.html) for the cards he or she wants to support.
+Modern graphics cards with [fragment shader](SL-ShaderPrograms.md) support ("shader model 2.0" on desktop, OpenGL ES 2.0 on mobile) support all <span class=component>SetTexture</span> modes and at least 4 texture stages (many of them support 8). If you're running on really old hardware (made before 2003 on PC, or before iPhone3GS on mobile), you might have as low as two texture stages. The shader author should write separate [SubShaders](SL-SubShader.md) for the cards he or she wants to support.
 
 
 Examples

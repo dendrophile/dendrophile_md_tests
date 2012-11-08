@@ -4,7 +4,7 @@ Contrast Stretch image effect
 
 <span class=keyword>Contrast Stretch</span> dynamically adjusts the contrast of the image according to the range of brightness levels it contains. The adjustment takes place gradually over a period of time, so the player can be briefly dazzled by bright outdoor light when emerging from a dark tunnel, say. Equally, when moving from a bright scene to a dark one, the "eye" takes some time to adapt.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Understanding Contrast Stretch
 ------------------------------
@@ -16,11 +16,14 @@ It is common for an image to use less than the full range of available brightnes
 
 Contrast stretching is evocative of the way the eye adapts to different light conditions. When walking from an outdoor area to a dimly lit building, the view will briefly appear indistinct until the contrast is stretched to reveal the detail. When emerging from the building, the contrast stretch will have the effect of making the outdoor scene appear dazzling bright until the "eye" of the player adjusts.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxNone.png)  
 _No Contrast Stretch applied._
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxContrast1.png)  
 _Contrast stretch applied with a dark skybox. Note that buildings get brighter._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxContrast2.png)  
 _Contrast stretch applied with a very bright skybox. Note that buildings get darker._

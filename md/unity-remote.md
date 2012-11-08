@@ -7,13 +7,13 @@ Unity Remote is an application that allows you to use your iOS device as a remot
 Where can I find Unity Remote?
 ------------------------------
 
-Unity remote is available for download from the AppStore at no charge. If you prefer to build and deploy the application yourself, you can download the source [here](http://unity3d.com/support/resources/unity-extensions/unity-remote.html) at the Unity website.
+Unity remote is available for download from the AppStore at no charge. If you prefer to build and deploy the application yourself, you can download the source [here](http://unity3d.com/support/resources/unity-extensions/unity-remote.md) at the Unity website.
 
 How do I build Unity Remote?
 ----------------------------
 
 
-First, download the project source code [here](http://unity3d.com/support/resources/unity-extensions/unity-remote.html) and unzip it to your preferred location. The zip file contains an XCode project to build Unity Remote and install it on your device. 
+First, download the project source code [here](http://unity3d.com/support/resources/unity-extensions/unity-remote.md) and unzip it to your preferred location. The zip file contains an XCode project to build Unity Remote and install it on your device. 
 
 Assuming you have already created the provisioning profile and successfully installed iOS builds on your device, you just need to open the Xcode project file UnityRemote.xcodeproj. Once XCode is launched, you should click "Build and Go" to install the app on your iOS device. If you have never built and run applications before, we recommend that you try building some of the Apple examples first to familiarize yourself with XCode and iOS.
 
@@ -26,7 +26,8 @@ Xcode shows strange errors while deploying Unity Remote to my device.  What shou
 
 This indicates that the default Identifier in the Unity Remote project is not compatible with your provisioning profile. You will have to alter this Identifier manually in your XCode project. The Identifier must match your provisioning profile.
 
-You will need to create an AppID with an trailing asterisk if you have not already done so; you can do this in the Program Portal on Apple's iPhone Developer Program. First, go to the Program Portal and choose the AppIDs tab. Then, click the Add ID button in the top right corner and type your usual bundle identifier followed by dot and asterisk (eg, com.mycompany.*) in the App ID Bundle Seed ID and Bundle Identifier field. Add the new AppID to your provisioning profile, then download and reinstall it. Don't forget to restart Xcode afterwards. If you have any problems creating the AppID, consult the [Provisioning How-to section](http://developer.apple.com/iphone/manage/provisioningprofiles/howto.action.html) on Apple's website.
+You will need to create an AppID with an trailing asterisk if you have not already done so; you can do this in the Program Portal on Apple's iPhone Developer Program. First, go to the Program Portal and choose the AppIDs tab. Then, click the Add ID button in the top right corner and type your usual bundle identifier followed by dot and asterisk (eg, com.mycompany.*) in the App ID Bundle Seed ID and Bundle Identifier field. Add the new AppID to your provisioning profile, then download and reinstall it. Don't forget to restart Xcode afterwards. If you have any problems creating the AppID, consult the [Provisioning How-to section](http://developer.apple.com/iphone/manage/provisioningprofiles/howto.action.md) on Apple's website.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/target_unity_remote_info.png)  
 _Don't forget to change the Identifier before you install Unity Remote on your device._

@@ -4,9 +4,10 @@ Edge Detection image effect
 
 <span class=keyword>Edge Detect</span> image effect adds black edges to the image wherever color differences exceed some threshold.
 
-If more sophisticated geometry-based edge detection is required, the Standard Assets also provide such a [normals and depth-based edge detection](script-EdgeDetectEffectNormals.html) effect.
+If more sophisticated geometry-based edge detection is required, the Standard Assets also provide such a [normals and depth-based edge detection](script-EdgeDetectEffectNormals.md) effect.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxEdge.png)  
 _Edge Detect image effect applied to the scene_

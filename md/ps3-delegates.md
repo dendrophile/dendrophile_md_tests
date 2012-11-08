@@ -2,7 +2,7 @@ Playstation3: System Notifications
 ==================================
 
 
-If you want to process notifications sent from the system to your application you can subscribe a delegate to the [PS3SystemUtility.OnSystemNotification](ScriptRef:PS3SystemUtility.OnSystemNotification.html.html) property. The notifications can be sent by the System, Pad controllers, Move controllers or the Camera. The list of notification ids are available in the [PS3SystemConstants](ScriptRef:PS3SystemConstants.html.html) enumeration.
+If you want to process notifications sent from the system to your application you can subscribe a delegate to the [PS3SystemUtility.OnSystemNotification](ScriptRef:PS3SystemUtility.OnSystemNotification.html) property. The notifications can be sent by the System, Pad controllers, Move controllers or the Camera. The list of notification ids are available in the [PS3SystemConstants](ScriptRef:PS3SystemConstants.html) enumeration.
 
 ###Example
 

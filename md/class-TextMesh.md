@@ -4,6 +4,7 @@ Text Mesh
 
 The <span class=keyword>Text Mesh</span> generates 3D geometry that displays text strings.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-TextMesh.png)  
 _The Text Mesh <span class=keyword>Inspector</span>_
 
@@ -24,14 +25,14 @@ Properties
 |<span class=component>Anchor</span> |Which point of the text shares the position of the Transform. |
 |<span class=component>Alignment</span> |How lines of text are aligned (Left, Right, Center). |
 |<span class=component>Tab Size</span> |How much space will be inserted for a tab '\t' character. This is a multiplum of the 'spacebar' character offset. |
-|<span class=component>Font</span> |The [TrueType Font](class-Font.html) to use when rendering the text. |
+|<span class=component>Font</span> |The [TrueType Font](class-Font.md) to use when rendering the text. |
 
 
 Details
 -------
 
 
-Text Meshes can be used for rendering road signs, graffiti etc.  The Text Mesh places text in the 3D scene. To make generic 2D text for GUIs, use a [GUI Text](class-GuiText.html) component instead.
+Text Meshes can be used for rendering road signs, graffiti etc.  The Text Mesh places text in the 3D scene. To make generic 2D text for GUIs, use a [GUI Text](class-GuiText.md) component instead.
 
 Follow these steps to create a Text Mesh with a custom Font:
 1. Import a font by dragging a TrueType Font - a __.ttf__ file - from the Explorer (Windows) or Finder (OS X) into the <span class=keyword>Project View</span>.
@@ -45,6 +46,6 @@ Hints
 -----
 
 * When entering text into the <span class=component>Text</span> property, you can create a line break by holding <span class=menu>Alt</span> and pressing <span class=menu>Return</span>.
-* You can download free TrueType Fonts from [1001freefonts.com](http://www.1001freefonts.com/fonts/afonts.htm.html) (download the Windows fonts since they contain TrueType Fonts).
+* You can download free TrueType Fonts from [1001freefonts.com](http://www.1001freefonts.com/fonts/afonts.htm.md) (download the Windows fonts since they contain TrueType Fonts).
 * If you are scripting the <span class=component>Text</span> property, you can add line breaks by inserting the escape character "\n" in your strings.
 

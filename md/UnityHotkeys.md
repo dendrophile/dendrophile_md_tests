@@ -1,4 +1,4 @@
-This page gives an overview of the default Unity Hotkeys. You can also download a PDF of the table for [Windows](Attach:Unity_HotKeys_Win.pdf.html) and [MacOSX](Attach:Unity_HotKeys_Mac.pdf.html). Where a command has _CTRL/CMD_ as part of the keystroke, this indicates that the Control key should be used on Windows and the Command key on MacOSX.
+This page gives an overview of the default Unity Hotkeys. You can also download a PDF of the table for [Windows](Attach:Unity_HotKeys_Win.pdf.md) and [MacOSX](Attach:Unity_HotKeys_Mac.pdf.md). Where a command has _CTRL/CMD_ as part of the keystroke, this indicates that the Control key should be used on Windows and the Command key on MacOSX.
 
 
 |    |

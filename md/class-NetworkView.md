@@ -2,7 +2,8 @@ Network View
 ============
 
 
-<span class=keyword>Network Views</span> are the gateway to creating networked multiplayer games in Unity.  They are simple to use, but they are extremely powerful.  For this reason, it is recommended that you understand the fundamental concepts behind networking before you start experimenting with Network Views.  You can learn and discover the fundamental concepts in the [Network Reference Guide](NetworkReferenceGuide.html).
+<span class=keyword>Network Views</span> are the gateway to creating networked multiplayer games in Unity.  They are simple to use, but they are extremely powerful.  For this reason, it is recommended that you understand the fundamental concepts behind networking before you start experimenting with Network Views.  You can learn and discover the fundamental concepts in the [Network Reference Guide](NetworkReferenceGuide.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-NetworkView.png)  
 _The Network View <span class=keyword>Inspector</span>_
@@ -17,8 +18,8 @@ Properties
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
-|<span class=component>State Synchronization</span> |The type of [State Synchronization](net-StateSynchronization.html) used by this Network View |
-|>>><span class=component>Off</span> |No State Synchronization will be used. This is the best option if you only want to send [RPCs](net-RPCDetails.html) |
+|<span class=component>State Synchronization</span> |The type of [State Synchronization](net-StateSynchronization.md) used by this Network View |
+|>>><span class=component>Off</span> |No State Synchronization will be used. This is the best option if you only want to send [RPCs](net-RPCDetails.md) |
 |>>><span class=component>Reliable Delta Compressed</span> |The difference between the last state and the current state will be sent, if nothing has changed nothing will be sent. This mode is ordered. In the case of packet loss, the lost packet is re-sent automatically |
 |>>><span class=component>Unreliable</span> |The complete state will be sent. This uses more bandwidth, but the impact of packet loss is minimized |
 |<span class=component>Observed</span> |The <span class=keyword>Component</span> data that will be sent across the network |
@@ -83,7 +84,7 @@ function OnSerializeNetworkView (stream : BitStream, info : NetworkMessageInfo) 
 
 <span class=component>OnSerializeNetworkView</span> is called according to the <span class=component>sendRate</span> specified in the network manager project settings. By default this is 15 times per second.
 
-If you want to use Remote Procedure Calls in your script all you need is a NetworkView component present in the same GameObject the script is attached to. The NetworkView can be used for something else, or in case it's only used for sending RPCs it can have no script observed and state synchronization turned off. The function which is to be callable from the network must have the  <span class=component>@RPC</span> attribute. Now, from any script attached to the same GameObject, you call [networkView.RPC()](ScriptRef:NetworkView.RPC.html.html) to execute the Remote Procedure Call.
+If you want to use Remote Procedure Calls in your script all you need is a NetworkView component present in the same GameObject the script is attached to. The NetworkView can be used for something else, or in case it's only used for sending RPCs it can have no script observed and state synchronization turned off. The function which is to be callable from the network must have the  <span class=component>@RPC</span> attribute. Now, from any script attached to the same GameObject, you call [networkView.RPC()](ScriptRef:NetworkView.RPC.html) to execute the Remote Procedure Call.
 
 ````
 
@@ -102,13 +103,13 @@ function PlayerFire () {
 
 ````
 
-RPCs are transmitted reliably and ordered. For more information about RPCs, see the [RPC Details](net-RPCDetails.html) page.
+RPCs are transmitted reliably and ordered. For more information about RPCs, see the [RPC Details](net-RPCDetails.md) page.
 
 
 Hints
 -----
 
 
-* Read through the [Network Reference Guide](NetworkReferenceGuide.html) if you're still unclear about how to use Network Views
+* Read through the [Network Reference Guide](NetworkReferenceGuide.md) if you're still unclear about how to use Network Views
 * State Synchronization does not need to be disabled to use Remote Procedure Calls
 * If you have more than one Network View and want to call an RPC on a specific one, use <span class=component>GetComponents(NetworkView)[i].RPC()</span>.

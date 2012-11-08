@@ -3,6 +3,7 @@ Spring Joint
 
 The <span class=keyword>Spring Joint</span> groups together two <span class=keyword>Rigidbodies</span>, constraining them to move like they are connected by a spring.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-SpringJoint.png)  
 _The Spring Joint <span class=keyword>Inspector</span>_
 

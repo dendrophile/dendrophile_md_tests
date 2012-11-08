@@ -4,6 +4,7 @@ Fixed Joint
 
 <span class=keyword>Fixed Joints</span> restricts an object's movement to be dependent upon another object.  This is somewhat similar to <span class=keyword>Parenting</span> but is implemented through physics rather than <span class=keyword>Transform</span> hierarchy.  The best scenarios for using them are when you have objects that you want to easily break apart from each other, or connect two object's movement without parenting.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-FixedJoint.png)  
 _The Fixed Joint <span class=keyword>Inspector</span>_
 

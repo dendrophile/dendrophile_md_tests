@@ -10,6 +10,7 @@ Addition
 
 When two vectors are added together, the result is equivalent to taking the original vectors as "steps", one after the other. Note that the order of the two parameters doesn't matter, since the result is the same either way.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/VectorAdd.png)  
 
 If the first vector is taken as a point in space then the second can be interpreted as an offset or "jump" from that position. For example, to find a point 5 units above a location on the ground, you could use the following calculation:-
@@ -26,6 +27,7 @@ Subtraction
 
 
 Vector subtraction is most often used to get the direction and distance from one object to another. Note that the order of the two parameters <span class=component>does</span> matter with subtraction:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/VectorSubtract.png)  
 
@@ -67,9 +69,11 @@ Dot Product
 
 The dot product takes two vectors and returns a scalar. This scalar is equal to the magnitudes of the two vectors multiplied together and the result multiplied by the cosine of the angle between the vectors. When both vectors are normalized, the cosine essentially states how far the first vector extends in the second's direction (or vice-versa - the order of the parameters doesn't matter).
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/DotProduct.png)  
 
 It is easy enough to think in terms of angles and then find the corresponding cosines using a calculator. However, it is useful to get an intuitive understanding of some of the main cosine values as shown in the diagram below:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CosineValues.png)  
 
@@ -84,9 +88,11 @@ The other operations are defined for 2D and 3D vectors and indeed vectors with a
 
 The result vector is perpendicular to the two input vectors. The "left hand rule" can be used to remember the direction of the output vector from the ordering of the input vectors. If the first parameter is matched up to the thumb of the hand and the second parameter to the forefinger, then the result will point in the direction of the middle finger. If the order of the parameters is reversed then the resulting vector will point in the exact opposite direction but will have the same magnitude.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LeftHandRuleDiagram.png)  
 
 The magnitude of the result is equal to the magnitudes of the input vectors multiplied together and then that value multiplied by the sine of the angle between them. Some useful values of the sine function are shown below:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SineValues.png)  
 

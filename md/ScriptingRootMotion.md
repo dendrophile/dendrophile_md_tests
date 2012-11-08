@@ -9,11 +9,13 @@ Sometimes your animation comes as "in-place", which means if you put it in a sce
 * Select the animation clip from the available clips
 * Make sure <span class=component>Loop Pose</span> is properly aligned (the light next to it is green), and that the checkbox for <span class=component>Loop Pose</span> is clicked
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimRootMotionChristmasTree.png)  
 
 * Preview the animation in the animation viewer to make sure the beginning and the end of the animation align smoothly, and that the character is moving "in-place"
-* On the animation clip [create a curve](AnimatorCurves.html) that will control the speed of the character (you can add a curve from the <span class=inspector>Animation Import inspector</span> <span class=menu>Curves-> +</span>)
+* On the animation clip [create a curve](AnimatorCurves.md) that will control the speed of the character (you can add a curve from the <span class=inspector>Animation Import inspector</span> <span class=menu>Curves-> +</span>)
 * Name that curve something meaningful, like "Runspeed"
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimRootMotionCurve.png)  
 
@@ -21,13 +23,14 @@ Sometimes your animation comes as "in-place", which means if you put it in a sce
 * Drop the desired animation clip into it, this should create a state with the name of the animation (say <span class=component>Run</span>)
 * Add a parameter to the Controller with the same name as the curve (in this case, "Runspeed")
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimRootMotionController.png)  
 
 * Select the character <span class=component>Dude</span> in the <span class=inspector>Hierarchy</span>, whose inspector should already have an <span class=component>Animator</span> component.
 * Drag <span class=component>RootMotionController</span> onto the <span class=component>Controller</span> property of the Animator
 * If you press play now, you should see the "Dude" running in place
 
-* Finally, to control the motion, we will need to create a script (RootMotionScript.cs), that implements the `[OnAnimatorMove](ScriptRef:MonoBehavior.OnAnimatorMove.html)` callback.
+* Finally, to control the motion, we will need to create a script (RootMotionScript.cs), that implements the `[OnAnimatorMove](ScriptRef:MonoBehavior.OnAnimatorMove)` callback.
 ````
 
 using UnityEngine;
@@ -52,8 +55,9 @@ public class RootMotionScript : MonoBehaviour {
 
 ````
 * Attach RootMotionScript.cs to "Dude"
-* Note that the Animator component detects there is a script with `[OnAnimatorMove](ScriptRef:MonoBehavior.OnAnimatorMove.html)` and <span class=component>Apply Root Motion</span> property shows up as _Handled by Script_
+* Note that the Animator component detects there is a script with `[OnAnimatorMove](ScriptRef:MonoBehavior.OnAnimatorMove)` and <span class=component>Apply Root Motion</span> property shows up as _Handled by Script_
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimRootMotionDude.png)  
 * Now you should see that the character is moving at the speed specified.
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

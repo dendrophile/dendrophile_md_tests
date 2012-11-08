@@ -2,18 +2,19 @@ Depth of Field
 ==============
 
 
-<span class=keyword>Depth of Field</span> is a common postprocessing effect that simulates the properties of a camera lens. This version is a more modern and sophisticated version of the old [Depth of Field 3.4 effect](script-DepthOfField34.html) that works especially well with [HDR](HDR.html) rendering and a [DirectX 11](DirectX11.html) compatible graphics device.
+<span class=keyword>Depth of Field</span> is a common postprocessing effect that simulates the properties of a camera lens. This version is a more modern and sophisticated version of the old [Depth of Field 3.4 effect](script-DepthOfField34.md) that works especially well with [HDR](HDR.md) rendering and a [DirectX 11](DirectX11.md) compatible graphics device.
 
 In real life, a camera can only focus sharply on an object at a specific distance; objects nearer or farther from the camera will be somewhat out of focus. The blurring not only gives a visual cue about an object's distance but also introduces <span class=component>Bokeh</span> which is the term for pleasing visual artifacts that appear around bright areas of the image as they fall out of focus. Common <span class=component>Bokeh</span> shapes are discs, hexagons and other shapes of higher level dihedral groups.
 
-While the regular version only supports disc shapes (generated via circular texture sampling), the [DirectX 11](DirectX11.html) version is able to splat any shape as defined by the <span class=component>Bokeh Texture</span>.
+While the regular version only supports disc shapes (generated via circular texture sampling), the [DirectX 11](DirectX11.md) version is able to splat any shape as defined by the <span class=component>Bokeh Texture</span>.
 
 An example of Depth of Field effect can be seen in the following image, displaying the results of a focused foreground and a defocused background..
 
-![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./DepthOfFieldScatter.png)  
-_The [DirectX11](DirectX11.html) version of this effect can create nicely defined bokeh shapes at a very reasonable cost._
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./DepthOfFieldScatter.png)  
+_The [DirectX11](DirectX11.md) version of this effect can create nicely defined bokeh shapes at a very reasonable cost._
+
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------
@@ -58,8 +59,10 @@ Comparison between DirectX11 and DiscBlur settings
 --------------------------------------------------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/HighRezBokeh.png)  
 _Smooth transitions are possible with the high resolution DX11 version (albeit at a high performance cost)._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BokehDisc.png)  
 _Due to the nature of the standard DiscBlur texture sampling approach, the maximum blur radius is limited before sampling artifacts become appearant. Also, only spherical Bokeh shapes are possible._
@@ -72,8 +75,10 @@ This powerful technique enables proper Scattering, however due to high demands o
 
 The following pictures show that the road, that is neither bright nor bears great frequency changes can just be blurred with a simple box filter without ruining the overall <span class=component>Bokeh</span> experience.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BokehSplatting1.png)  
 _Example with small <span class=component>Max Blur Distance</span>_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BokehSplatting2.png)  
 _Example with big <span class=component>Max Blur Distance</span>_

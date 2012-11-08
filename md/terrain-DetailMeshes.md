@@ -4,6 +4,7 @@ Detail Meshes
 
 Any Terrain decoration that is not trees or grass should be created as a <span class=keyword>Detail Mesh</span>.  This is perfect for things like rocks, 3D shrubbery, or other static items.  To add these, use the <span class=keyword>Paint Foliage</span> button Attach:TerrainGuide-PaintFoliageButton.png . Then choose <span class=menu>Edit Details button->Add Detail Mesh</span>.  You will see the <span class=keyword>Add Detail Mesh</span> dialog appear.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-AddDetailMeshDialog.png)  
 _The Add Detail Mesh dialog_
 
@@ -23,6 +24,7 @@ _The Add Detail Mesh dialog_
 
 After you've clicked the <span class=menu>Add</span> button, you'll see the Detail mesh appear in the <span class=keyword>Inspector</span>.  Detail meshes and grass will appear next to each other.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-DetailMeshInspector.png)  
 _The added Detail mesh appears in the Inspector, beside any Grass objects_
 
@@ -31,6 +33,7 @@ Painting Detail Meshes
 
 
 Painting a Detail mesh works the same as painting textures, trees, or grass. Select the Detail you want to paint, and paint right onto the Terrain in the Scene View.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintingDetailMeshes.png)  
 _Painting Detail meshes is very simple_

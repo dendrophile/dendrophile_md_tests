@@ -2,6 +2,7 @@ Decal
 =====
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Shaders./Shader-NormalDecal.png)  
 
 Decal Properties

@@ -60,6 +60,7 @@ public class GUITest : MonoBehaviour {
 
 This example is a complete, functional level loader. If you copy/paste this script and attach it a <span class=keyword>GameObject</span>, you'll see the following menu appear in when you enter <span class=keyword>Play Mode</span>:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/guiScripting-BasicsLoaderMenuExample.png)  
 _The Loader Menu created by the example code_
 
@@ -121,7 +122,7 @@ Observe that this structure is a function with two arguments.  We'll explore the
 
 ###Type
 
-<span class=keyword>Type</span> is the <span class=keyword>Control Type</span>, and is declared by calling a function in Unity's [GUI class](ScriptRef:GUI.html.html) or the [GUILayout class](ScriptRef:GUILayout.html.html), which is discussed at length in the [Layout Modes](gui-Layout.html) section of the Guide.  For example, <span class=component>GUI.Label()</span> will create a non-interactive label.  All the different control types are explained later, in the [Controls](gui-Controls.html) section of the Guide.
+<span class=keyword>Type</span> is the <span class=keyword>Control Type</span>, and is declared by calling a function in Unity's [GUI class](ScriptRef:GUI.html) or the [GUILayout class](ScriptRef:GUILayout.html), which is discussed at length in the [Layout Modes](gui-Layout.md) section of the Guide.  For example, <span class=component>GUI.Label()</span> will create a non-interactive label.  All the different control types are explained later, in the [Controls](gui-Controls.md) section of the Guide.
 
 
 ###Position
@@ -162,6 +163,7 @@ public class GUITest : MonoBehaviour {
 }
 
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-ScreenWidthHeight.png)  
 _The Boxes positioned by the above example_
@@ -263,6 +265,7 @@ public class GUITest : MonoBehaviour {
 }
 
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-IconStringContent.png)  
 _The Buttons created by the above example_
@@ -366,4 +369,4 @@ public class GUITest : MonoBehaviour {
 
 ````
 
-The scripting reference page for [GUIContent's constructor](ScriptRef:GUIContent.GUIContent.html.html) for an extensive list of examples.
+The scripting reference page for [GUIContent's constructor](ScriptRef:GUIContent.GUIContent.html) for an extensive list of examples.

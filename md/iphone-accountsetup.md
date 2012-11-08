@@ -18,7 +18,7 @@ Please note that these are Apple's requirements as part of using the iPhone SDK,
 3. Download the iPhone SDK
 --------------------------
 
-Download the latest iOS SDK from the [iOS dev center](http://developer.apple.com/iphone.html) and install it.  Do __not__ download the beta version of the SDK - you should use only the latest shipping version. Note that downloading and installing the iPhone SDK will also install XCode.
+Download the latest iOS SDK from the [iOS dev center](http://developer.apple.com/iphone.md) and install it.  Do __not__ download the beta version of the SDK - you should use only the latest shipping version. Note that downloading and installing the iPhone SDK will also install XCode.
 
 4. Get Your Device Identifier
 -----------------------------
@@ -28,7 +28,7 @@ Connect your iOS device to the Mac with the USB cable and launch XCode. XCode wi
 5. Add Your Device
 ------------------
 
-Log in to the [iPhone developer center](http://developer.apple.com/iphone.html) and enter the program portal (button on the right). Go to the Devices page via the link on left side and then click the Add Device button on the right. Enter a name for your device (alphanumeric characters only) and your device's identifier code (noted in step 5 above).  Click the Submit button when done.
+Log in to the [iPhone developer center](http://developer.apple.com/iphone.md) and enter the program portal (button on the right). Go to the Devices page via the link on left side and then click the Add Device button on the right. Enter a name for your device (alphanumeric characters only) and your device's identifier code (noted in step 5 above).  Click the Submit button when done.
 
 6. Create a Certificate
 -----------------------
@@ -43,4 +43,4 @@ The download link is in the same "Certificates" section (just above the "Importa
 8. Create a Provisioning File
 -----------------------------
 
-Provisioning profiles are a bit complex, and need to be set up according to the way you have organized your team.  It is difficult to give general instructions for provisioning, so we recommend that you look at the [Provisioning How-to section](http://developer.apple.com/iphone/manage/provisioningprofiles/howto.action.html) on the Apple Developer website.
+Provisioning profiles are a bit complex, and need to be set up according to the way you have organized your team.  It is difficult to give general instructions for provisioning, so we recommend that you look at the [Provisioning How-to section](http://developer.apple.com/iphone/manage/provisioningprofiles/howto.action.md) on the Apple Developer website.

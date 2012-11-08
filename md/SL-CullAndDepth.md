@@ -2,6 +2,7 @@ ShaderLab syntax: Culling & Depth Testing
 =========================================
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./PipelineCullDepth.png)  
 
 Culling is an optimization that does not render polygons facing away from the viewer. All polygons have a front and a back side. Culling makes use of the fact that most objects are closed; if you have a cube, you will never see the sides facing away from you (there is always a side facing you in front of it) so we don't need to draw the sides facing away. Hence the term: Backface culling.
@@ -45,7 +46,8 @@ Try to apply it to a cube, and notice how the geometry feels all wrong when you 
 
 ###Transparent shader with depth writes
 
-Usually [semitransparent shaders](shader-TransparentFamily.html) do not write into the depth buffer. However, this can create draw order problems, especially with complex non-convex meshes. If you want to fade in & out meshes like that, then using a shader that fills in the depth buffer before rendering transparency might be useful.
+Usually [semitransparent shaders](shader-TransparentFamily.md) do not write into the depth buffer. However, this can create draw order problems, especially with complex non-convex meshes. If you want to fade in & out meshes like that, then using a shader that fills in the depth buffer before rendering transparency might be useful.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TransparentDiffuseZWrite.png)  
 _Semitransparent object; left: standard Transparent/Diffuse shader; right: shader that writes to depth buffer._

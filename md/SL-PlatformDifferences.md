@@ -13,11 +13,11 @@ Vertical texture coordinate conventions differ between Direct3D, OpenGL and Open
 * In Direct3D, the coordinate is zero at the top, and increases downwards.
 * In OpenGL and OpenGL ES, the coordiante is zero at the bottom, and increases upwards.
 
-Most of the time this does not really matter, except when rendering into a [Render Texture](class-RenderTexture.html). In that case, Unity internally flips rendering upside down when rendering into a texture on Direct3D, so that the conventions match between the platforms.
+Most of the time this does not really matter, except when rendering into a [Render Texture](class-RenderTexture.md). In that case, Unity internally flips rendering upside down when rendering into a texture on Direct3D, so that the conventions match between the platforms.
 
-One case where this does not happen, is when [Image Effects](comp-ImageEffects.html) and Anti-Aliasing is used. In this case, Unity renders to screen to get anti-aliasing, and then "resolves" rendering into a RenderTexture for further processing with an Image Effect. The resulting source texture for an image effect is _not flipped upside down_ on Direct3D (unlike all other Render Textures).
+One case where this does not happen, is when [Image Effects](comp-ImageEffects.md) and Anti-Aliasing is used. In this case, Unity renders to screen to get anti-aliasing, and then "resolves" rendering into a RenderTexture for further processing with an Image Effect. The resulting source texture for an image effect is _not flipped upside down_ on Direct3D (unlike all other Render Textures).
 
-If your Image Effect is a simple one (processes one texture at a time), this does not really matter, because [Graphics.Blit](ScriptRef:Graphics.Blit.html.html) takes care of that.
+If your Image Effect is a simple one (processes one texture at a time), this does not really matter, because [Graphics.Blit](ScriptRef:Graphics.Blit.html) takes care of that.
 
 However, __if you're processing more than one RenderTexture together__ in your Image Effect, most likely they will come out at different vertical orientations (only in Direct3D-like platforms, and only when anti-aliasing is used). You need to manually "flip" the screen texture upside down in your vertex shader, like this:
 ````
@@ -33,14 +33,14 @@ if (_MainTex_TexelSize.y < 0)
 
 ````
 
-Check out Edge Detection scene in [Shader Replacement sample project](http://unity3d.com/support/resources/example-projects/shader-replacement.html) for an example of this. Edge detection there uses both screen texture and Camera's [Depth+Normals texture](SL-CameraDepthTexture.html).
+Check out Edge Detection scene in [Shader Replacement sample project](http://unity3d.com/support/resources/example-projects/shader-replacement.md) for an example of this. Edge detection there uses both screen texture and Camera's [Depth+Normals texture](SL-CameraDepthTexture.md).
 
 
 AlphaTest and programmable shaders
 ----------------------------------
 
 
-Some platforms, most notably mobile (OpenGL ES 2.0) and Direct3D 11, do not have fixed function [alpha testing](SL-AlphaTest.html) functionality. When you are using programmable shaders, it's advised to use Cg/HLSL `clip()` function in the pixel shader instead.
+Some platforms, most notably mobile (OpenGL ES 2.0) and Direct3D 11, do not have fixed function [alpha testing](SL-AlphaTest.md) functionality. When you are using programmable shaders, it's advised to use Cg/HLSL `clip()` function in the pixel shader instead.
 
 
 
@@ -52,7 +52,7 @@ Direct3D 11 shader compiler is more picky about syntax
 Direct3D 9 and OpenGL use NVIDIA's Cg to compile shaders, but Direct3D 11 (and Xbox 360) use Microsoft's HLSL shader compiler. HLSL compiler is more picky about various subtle shader errors. For example, it won't accept function output values that aren't initialized properly.
 
 Most common places where you'd run into this:
-* [Surface shader](SL-SurfaceShaders.html) vertex modifier that has an "out" parameter. Make sure to initialize the output like this:
+* [Surface shader](SL-SurfaceShaders.md) vertex modifier that has an "out" parameter. Make sure to initialize the output like this:
       void vert (inout appdata_full v, out Input o) 
       {
         __UNITY_INITIALIZE_OUTPUT(Input,o);__
@@ -90,4 +90,4 @@ iPad2 and MSAA and alpha-blended geometry
 -----------------------------------------
 
 
-There is a bug in apple driver resulting in artifacts when MSAA is enabled and alpha-blended geometry is drawn with non RGBA colorMask. To prevent artifacts we force RGBA colorMask when this configuration is encountered, though it will render built-in Glow FX unusable (as it needs DST_ALPHA for intensity value). Also, please update your shaders if you wrote them yourself (see "Render Setup -> ColorMask" in [Pass Docs](ScriptRef:Main.SL-Pass.html)).
+There is a bug in apple driver resulting in artifacts when MSAA is enabled and alpha-blended geometry is drawn with non RGBA colorMask. To prevent artifacts we force RGBA colorMask when this configuration is encountered, though it will render built-in Glow FX unusable (as it needs DST_ALPHA for intensity value). Also, please update your shaders if you wrote them yourself (see "Render Setup -> ColorMask" in [Pass Docs](ScriptRef:Main.SL-Pass)).

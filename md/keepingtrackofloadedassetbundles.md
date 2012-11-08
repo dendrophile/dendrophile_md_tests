@@ -107,4 +107,4 @@ class ManagedAssetBundleExample : MonoBehaviour {
 Please bear in mind, that the AssetBundleManager class in this example is static, and any AssetBundles that you are referencing will not be destroyed when loading a new scene. Use this class as a guide but as recommended initially it is best if you _unload_ AssetBundles right after they have been used. You can always clone a previously Instantiated object, removing the need to load the AssetBundles again.
 
 
-[back to AssetBundles Intro](AssetBundlesIntro.html)
+[back to AssetBundles Intro](AssetBundlesIntro.md)

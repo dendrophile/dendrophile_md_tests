@@ -2,7 +2,7 @@ Vertex Lit Rendering Path Details
 =================================
 
 
-This page describes details of <span class=keyword>Vertex Lit</span> [rendering path](RenderingPaths.html).
+This page describes details of <span class=keyword>Vertex Lit</span> [rendering path](RenderingPaths.md).
 
 Vertex Lit path generally renders each object in one pass, with lighting from all lights calculated at object vertices.
 

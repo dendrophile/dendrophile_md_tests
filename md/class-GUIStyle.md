@@ -4,10 +4,11 @@ GUI Style
 
 <span class=keyword>GUI Styles</span> are a collection of custom attributes for use with <span class=keyword>UnityGUI</span>.  A single GUI Style defines the appearance of a single UnityGUI <span class=keyword>Control</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GuiStyleInspector.png)  
 _A GUI Style in the <span class=keyword>Inspector</span>_
 
-If you want to add style to more than one control, use a [GUI Skin](class-GUISkin.html) instead of a GUI Style.  For more information about UnityGUI, please read the [GUI Scripting Guide](GUIScriptingGuide.html).
+If you want to add style to more than one control, use a [GUI Skin](class-GUISkin.md) instead of a GUI Style.  For more information about UnityGUI, please read the [GUI Scripting Guide](GUIScriptingGuide.md).
 
 
 Properties
@@ -65,6 +66,7 @@ var customGuiStyle : GUIStyle;
 
 When you attach this script to a GameObject, you will see the custom Style available to modify in the <span class=keyword>Inspector</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ModifyingStyleInInspector.png)  
 _A Style declared in a script can be modified in each instance of the script_
 
@@ -84,7 +86,8 @@ function OnGUI () {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/guiStyle-TwoButtonsOneIsStyled.png)  
 _Two Buttons, one with Style, as created by the code example_
 
-For more information about using UnityGUI, please read the [GUI Scripting Guide](GUIScriptingGuide.html).
+For more information about using UnityGUI, please read the [GUI Scripting Guide](GUIScriptingGuide.md).

@@ -14,7 +14,7 @@ For example, when you want to create a flaming sword:
 
 You should now see particles emitting from the mesh.
 
-Play around with the values in the [Mesh Particle Emitter](class-MeshParticleEmitter.html).
+Play around with the values in the [Mesh Particle Emitter](class-MeshParticleEmitter.md).
 
 Especially enable <span class=component>Interpolate Triangles</span> in the Mesh Particle Emitter Inspector and set <span class=component>Min Normal Velocity</span> and <span class=component>Max Normal Velocity</span> to 1.
 
@@ -30,4 +30,4 @@ You should now see textured particles emitting from the mesh.
 See Also
 --------
 
-* [Mesh Particle Emitter Component Reference page](class-MeshParticleEmitter.html)
+* [Mesh Particle Emitter Component Reference page](class-MeshParticleEmitter.md)

@@ -32,7 +32,7 @@ IEnumerator Start () {
 ````
 
 
-An alternative approach is to fully encrypt the AssetBundles from source and then download them using the WWW class. You can give them whatever file extension you like as long as your server serves them up as binary data. Once downloaded you would then use your decryption routine on the data from the .bytes property of your WWW instance to get the decrypted AssetBundle file data and create the AssetBundle from memory using [AssetBundle.CreateFromMemory](ScriptRef:AssetBundle.CreateFromMemory.html.html).
+An alternative approach is to fully encrypt the AssetBundles from source and then download them using the WWW class. You can give them whatever file extension you like as long as your server serves them up as binary data. Once downloaded you would then use your decryption routine on the data from the .bytes property of your WWW instance to get the decrypted AssetBundle file data and create the AssetBundle from memory using [AssetBundle.CreateFromMemory](ScriptRef:AssetBundle.CreateFromMemory.html).
 
 
 ````
@@ -58,9 +58,9 @@ IEnumerator Start () {
 ````
 
 
-The advantage of this latter approach over the first one is that you can use any method (except AssetBundles.LoadFromCacheOrDownload) to transmit your bytes and the data is fully encrypted - for example sockets in a plugin. The drawback is that it won't be Cached using Unity's automatic caching. You can in all players except the WebPlayer store the file manually on disk and load it using [AssetBundles.CreateFromFile](ScriptRef:AssetBundle.CreateFromFile.html.html)
+The advantage of this latter approach over the first one is that you can use any method (except AssetBundles.LoadFromCacheOrDownload) to transmit your bytes and the data is fully encrypted - for example sockets in a plugin. The drawback is that it won't be Cached using Unity's automatic caching. You can in all players except the WebPlayer store the file manually on disk and load it using [AssetBundles.CreateFromFile](ScriptRef:AssetBundle.CreateFromFile.html)
 
-A third approach would combine the best of both approaches and store an AssetBundle itself as a TextAsset, inside another normal AssetBundles. The unencrypted AssetBundle containing the encrypted one would be cached. The original AssetBundle could then be loaded into memory, decrypted and instantiated using [AssetBundle.CreateFromMemory](ScriptRef:AssetBundle.CreateFromMemory.html.html).
+A third approach would combine the best of both approaches and store an AssetBundle itself as a TextAsset, inside another normal AssetBundles. The unencrypted AssetBundle containing the encrypted one would be cached. The original AssetBundle could then be loaded into memory, decrypted and instantiated using [AssetBundle.CreateFromMemory](ScriptRef:AssetBundle.CreateFromMemory.html).
 
 ````
 string url = "http://www.mywebsite.com/mygame/assetbundles/assetbundle1.unity3d";
@@ -88,4 +88,4 @@ IEnumerator Start () {
 ````
 
 
-[back to AssetBundles Intro](AssetBundlesIntro.html)
+[back to AssetBundles Intro](AssetBundlesIntro.md)

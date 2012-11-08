@@ -2,11 +2,12 @@ Practical Guide to Optimization for Mobiles - Graphics Methods
 ==============================================================
 
 
-What are mobile devices capable of? How should you plan your game accordingly? If your game runs slow, and the profiler indicates that it's a rendering bottleneck, how do you know what to change, and how to make your game look good but still run fast? This page is dedicated to a general and non-technical exposition of the methods. If you are looking for the specifics, see the [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.html) page.
+What are mobile devices capable of? How should you plan your game accordingly? If your game runs slow, and the profiler indicates that it's a rendering bottleneck, how do you know what to change, and how to make your game look good but still run fast? This page is dedicated to a general and non-technical exposition of the methods. If you are looking for the specifics, see the [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.md) page.
 
 (:table width=100%:)
 (:cellnr:)
 (:div style="float:right; padding:5px; color:#BBBBBB; font-size:10px; width:302px;":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/iphonegames2.jpg)  
 (:divend:)
 
@@ -35,6 +36,7 @@ What you can reasonably expect to run on current consumer mobiles:
 
 (:cellnr:)
 (:div style="float:right; padding:5px; color:#BBBBBB; font-size:10px; width:302px;":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/imgEffects.jpg)  
 (:divend:)
 What you CANNOT reasonably expect to run on current consumer mobiles:
@@ -51,6 +53,7 @@ What you CANNOT reasonably expect to run on current consumer mobiles:
 
 (:cellnr:)
 (:div style="float:right; padding:5px; color:#BBBBBB; font-size:10px; width:302px;":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ShadowGunExample.jpg)  
 (:divend:)
 
@@ -58,9 +61,9 @@ Examples - How top-notch mobile games are made
 ----------------------------------------------
 
 
-###[Shadowgun ](http://www.youtube.com/watch?v=YhA0cbu1BxI.html)
+###[Shadowgun ](http://www.youtube.com/watch?v=YhA0cbu1BxI.md)
 
-Shadowgun is an impressive example of what can be done on current mobile hardware. But more specifically, it's a good example of what cannot be done, and how to get around the limitations. Especially because a small part of the game has been made __publicly available__ in this [blog post](http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/.html).
+Shadowgun is an impressive example of what can be done on current mobile hardware. But more specifically, it's a good example of what cannot be done, and how to get around the limitations. Especially because a small part of the game has been made __publicly available__ in this [blog post](http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/.md).
 
 Here's a basic rundown of things that Shadowgun does in order to keep performance up:
 
@@ -74,7 +77,7 @@ Here's a basic rundown of things that Shadowgun does in order to keep performanc
     * Real bumpmapping only used on characters.
     * As much contrast and detail as possible is baked into the diffuse texture maps. Lighting information from bumpmaps is baked in.
     * A good example is their statue texture, or their shiny wall, as seen on the right. No bumpmaps are used to render these, the specularity is faked by baking it into the texture. Lightmapping is combined with a vertex-lighting-based specular highlight to give these models a shiny look.
-    * If you want to learn how to create textures like this one, check out the [Rendering Optimizations page](Main.iphone-PracticalRenderingOptimizations.html).
+    * If you want to learn how to create textures like this one, check out the [Rendering Optimizations page](Main.iphone-PracticalRenderingOptimizations.md).
 
 * Dense particles - avoided.
     * UV-scrolling textures used instead of dense particle effects.
@@ -90,9 +93,10 @@ Here's a basic rundown of things that Shadowgun does in order to keep performanc
 
 (:cellnr:)
 (:div style="float:right; padding:5px; color:#BBBBBB; font-size:10px; width:302px;":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/skycastle.jpg)  
 (:divend:)
-###[Sky Castle Demo ](http://video.unity3d.com/video/4991636/sky-castle-demo.html)
+###[Sky Castle Demo ](http://video.unity3d.com/video/4991636/sky-castle-demo.md)
 
 This demo was designed to show what Unity is capable of on high-end Android devices.
 
@@ -111,14 +115,14 @@ Bottom line - What this means for your game
 -------------------------------------------
 
 
-The more you respect and understand the limitations of the mobile devices, the better your game will look, and the smoother it will perform. If you want to make a high-class game for mobile, you will benefit from understanding Unity's graphics pipeline and being able to write your own shaders. But if you want something to grab to use right away, ShadowGun's shaders, available [here](http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/.html), are a good place to start.
+The more you respect and understand the limitations of the mobile devices, the better your game will look, and the smoother it will perform. If you want to make a high-class game for mobile, you will benefit from understanding Unity's graphics pipeline and being able to write your own shaders. But if you want something to grab to use right away, ShadowGun's shaders, available [here](http://blogs.unity3d.com/2012/03/23/shadowgun-optimizing-for-mobile-sample-level/.md), are a good place to start.
 
 
 There is no question that games attempt to follow the laws of nature. The movement of every parabolic projectile and the color of every pixel of shiny chrome is derived by formulas first written to mimic observations of the real world. But a game is one part scientific simulation and one part painting. You can't compete in the mobile market with physically accurate rendering; the hardware simply isn't there yet, if you try to imitate the real world all the way, your game will end up limited, drab, and laggy.
 
 You have to pick up your polygons and your blend modes like they're paintbrushes. 
 
-The [baked bumpmaps](Main.iphone-PracticalRenderingOptimizations.html) shown in [Shadowgun ](http://www.youtube.com/watch?v=YhA0cbu1BxI.html) are great examples of this. There are specular highlights already in the texture - the human eye doesn't notice that they don't actually line up with the reflected light and view directions - they are simply high-contrast details on the texture, completely faked, yet they end up looking great. This is a common cheating technique which has been used in many successful games. Compare the visor in [the first Halo screenshot ever released](http://en.wikipedia.org/wiki/File:First_official_halo_screenshot.jpg.html) with the visor from this [release screenshot](http://halo.wikia.com/wiki/File:MJOLNIR_Armor.jpg.html). It appears that the armor protrusions from the top of the helmet are reflected in the visor, but the reflection is actually baked into the visor texture. In League of Legends, [a spell effect](http://www.youtube.com/watch?v=TQSLPO8LEhY&t=0m34s.html) appears to have a pixel-light attached to it, but it actually is a blended plane with a texture that was probably generated by taking a screenshot of a pixel light shining on the ground.
+The [baked bumpmaps](Main.iphone-PracticalRenderingOptimizations.md) shown in [Shadowgun ](http://www.youtube.com/watch?v=YhA0cbu1BxI.md) are great examples of this. There are specular highlights already in the texture - the human eye doesn't notice that they don't actually line up with the reflected light and view directions - they are simply high-contrast details on the texture, completely faked, yet they end up looking great. This is a common cheating technique which has been used in many successful games. Compare the visor in [the first Halo screenshot ever released](http://en.wikipedia.org/wiki/File:First_official_halo_screenshot.jpg.md) with the visor from this [release screenshot](http://halo.wikia.com/wiki/File:MJOLNIR_Armor.jpg.md). It appears that the armor protrusions from the top of the helmet are reflected in the visor, but the reflection is actually baked into the visor texture. In League of Legends, [a spell effect](http://www.youtube.com/watch?v=TQSLPO8LEhY&t=0m34s.md) appears to have a pixel-light attached to it, but it actually is a blended plane with a texture that was probably generated by taking a screenshot of a pixel light shining on the ground.
 
 ###What works well:
 
@@ -129,7 +133,7 @@ The [baked bumpmaps](Main.iphone-PracticalRenderingOptimizations.html) shown in 
     * Current mobile hardware is not really cut out for lots of dynamic lights, and it can't do shadows. Lightprobes are a really neat solution for complex game worlds with static lighting.
 
 * Specialized shaders and detailed, high-contrast textures
-    * The shaders in ShadowGun minimize per-pixel calculations and exploit complex and high-quality textures. See our [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.html) page for information on how to make textures that look great even when the shader is simple.
+    * The shaders in ShadowGun minimize per-pixel calculations and exploit complex and high-quality textures. See our [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.md) page for information on how to make textures that look great even when the shader is simple.
 
 * Cartoon Graphics
     * Who says your game has to look like a photo? If you make lighting and atmosphere the responsibility of the texture artist, not the engine, you hardly even have to worry about optimizing rendering.
@@ -147,7 +151,7 @@ The [baked bumpmaps](Main.iphone-PracticalRenderingOptimizations.html) shown in 
 
 ###But how do I actually _do_ it?
 
-See our [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.html) page.
+See our [Rendering Optimizations](Main.iphone-PracticalRenderingOptimizations.md) page.
 
 (:tocportion:)
 

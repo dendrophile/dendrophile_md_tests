@@ -33,6 +33,7 @@ Angle distortion
 
 
 These screenshots were made for equal resolution, but with different uvs. Look at artefacts, and how the shape of light was slightly changed. There are only 4 triangles, actually, so shape distortion can be far uglier.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/uv2_angle_distortion_bad.png)  
 
 
@@ -41,4 +42,5 @@ Area distortion
 
 
 There are 2 spotlight with same parameters, the difference being only pointing to areas with different lightmap resolution, due to relative triangle scale being not preserved
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/uv2_area_distortion_resolution.png)  

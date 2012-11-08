@@ -2,7 +2,8 @@ Audio Source
 ============
 
 
-The <span class=keyword>Audio Source</span> plays back an [Audio Clip](class-AudioClip.html) in the scene. If the Audio Clip is a 3D clip, the source is played back at a given position and will attenuate over distance. The audio can be spread out between speakers (stereo to 7.1) (_Spread_) and morphed between 3D and 2D (_PanLevel_). This can be controlled over distance with falloff curves. Also, if the [listener](class-AudioListener.html) is within one or multiple [Reverb Zones](class-AudioReverbZone.html), reverberations is applied to the source. (PRO only) Individual filters can be applied to each audio source for an even richer audio experience. See [Audio Effects](class-AudioEffect.html) for more details.
+The <span class=keyword>Audio Source</span> plays back an [Audio Clip](class-AudioClip.md) in the scene. If the Audio Clip is a 3D clip, the source is played back at a given position and will attenuate over distance. The audio can be spread out between speakers (stereo to 7.1) (_Spread_) and morphed between 3D and 2D (_PanLevel_). This can be controlled over distance with falloff curves. Also, if the [listener](class-AudioListener.md) is within one or multiple [Reverb Zones](class-AudioReverbZone.md), reverberations is applied to the source. (PRO only) Individual filters can be applied to each audio source for an even richer audio experience. See [Audio Effects](class-AudioEffect.md) for more details.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-AudioSource.png)  
 _The Audio Source gizmo in the <span class=keyword>Scene View</span> and its settings in the <span class=keyword>inspector</span>._
@@ -43,6 +44,7 @@ Types of Rolloff
 
 There are three Rolloff modes: Logarithmic, Linear and Custom Rolloff. The Custom Rolloff can be modified by modifying the volume distance curve as described below. If you try to modify the volume distance function when it is set to Logarithmic or Linear, the type will automatically change to Custom Rolloff.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TypesOfRollOff.png)  
 _Rolloff Modes that an audio source can have._
 
@@ -57,10 +59,11 @@ There are several properties of the audio that can be modified as a function of 
 %blue%<span class=keyword>Spread</span>%%: Angle (degrees 0.0 - 360.0) over distance.  
 %color=#B838CF define=purple%<span class=keyword>Low-Pass</span>%% (only if LowPassFilter is attached to the AudioSource): Cutoff Frequency (22000.0-10.0) over distance.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioDistanceFunctions.png)  
 _Distance functions for Volume, Pan, Spread and Low-Pass audio filter. The current distance to the Audio Listener is marked in the graph._
 
-To modify the distance functions, you can edit the curves directly. For more information, see the guide to [Editing Curves](EditingCurves.html).
+To modify the distance functions, you can edit the curves directly. For more information, see the guide to [Editing Curves](EditingCurves.md).
 
 Creating Audio Sources
 ----------------------
@@ -83,7 +86,7 @@ Platform specific details
 
 ###ios Details
 On mobile platforms compressed audio is encoded as MP3 for speedier decompression. Beware that this compression can remove samples at the end of the clip and potentially break a "perfect-looping" clip. Make sure the clip is right on a specific MP3 sample boundary to avoid sample clipping - tools to perform this task are widely available.
-For performance reasons audio clips can be played back using the Apple hardware codec. To enable this, check the "Use Hardware" checkbox in the import settings. See the [Audio Clip](class-AudioClip.html) documentation for more details.
+For performance reasons audio clips can be played back using the Apple hardware codec. To enable this, check the "Use Hardware" checkbox in the import settings. See the [Audio Clip](class-AudioClip.md) documentation for more details.
 
 ###android Details
 On mobile platforms compressed audio is encoded as MP3 for speedier decompression. Beware that this compression can remove samples at the end of the clip and potentially break a "perfect-looping" clip. Make sure the clip is right on a specific MP3 sample boundary to avoid sample clipping - tools to perform this task are widely available.

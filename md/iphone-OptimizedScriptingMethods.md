@@ -9,6 +9,7 @@ A historical example
 
 
 (:div style="float:right; padding:5px":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/spaceInvaders.jpg)  
 (:divend:)
 
@@ -20,7 +21,7 @@ The creators of space invaders only had a small amount of RAM, and they had to e
 
 This is hardly realistic, but it happens to be __fun__. Tension is released in a climactic moment when the alien invaders approach the ground, similar to a climax in film or literature. The invaders' close proximity gives the adept player near-instantaneous reload time, allowing them to miraculously defend earth by mashing the fire key in perfect time. Good game designs live in a bizarre space between the interactive narrative and the background technology that powers it all. It's hard to plan out awesome, fun, efficient stuff like this, because code logistics and user interaction are two wildly different and deeply finicky things, and using them together to synthesize something fresh and fun takes a lot of thought and experimentation. 
 
-You probably can't plan out every aspect of your game in terms of interaction and playing nice with mobile hardware simultaneously. It's more likely that these "gems" where the two meet in harmony will pop up as accidents while you're experimenting. But having a solid understanding of the way your code runs on the hardware you intend to deploy on will help. If you want to see the detailed technical explanation of why object pooling is better, and learn about memory allocation, see our [Scripting Optimizations](Main.iphone-PracticalScriptingOptimizations.html) page.
+You probably can't plan out every aspect of your game in terms of interaction and playing nice with mobile hardware simultaneously. It's more likely that these "gems" where the two meet in harmony will pop up as accidents while you're experimenting. But having a solid understanding of the way your code runs on the hardware you intend to deploy on will help. If you want to see the detailed technical explanation of why object pooling is better, and learn about memory allocation, see our [Scripting Optimizations](Main.iphone-PracticalScriptingOptimizations.md) page.
 
 
 Will X run fast on Mobiles?
@@ -54,6 +55,7 @@ Examples
 
 
 (:div style="float:right; padding:5px":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/coinsLighting.jpg)  
 (:divend:)
 
@@ -62,7 +64,7 @@ Examples
 * NO: Each coin is a separate object with a rigidbody and a script that rotates it and allows it to be picked up.
 
 * YES: The coins are a particle system with an animated texture, one script does the collision testing for all the coins and sets their color according to distance from a light.
-    * This example is implemented in the [Scripting Optimization](Main.iphone-PracticalScriptingOptimizations#Animated_Sprite_Particle_System.html) page.
+    * This example is implemented in the [Scripting Optimization](Main.iphone-PracticalScriptingOptimizations#Animated_Sprite_Particle_System.md) page.
 
 ###Your custom-built soft-body simulation
 
@@ -80,7 +82,7 @@ The how and why of script optimization
 --------------------------------------
 
 
-See our page on [Optimizing Scripts](Main.iphone-PracticalScriptingOptimizations.html).
+See our page on [Optimizing Scripts](Main.iphone-PracticalScriptingOptimizations.md).
 
 
 (:tocportion:)

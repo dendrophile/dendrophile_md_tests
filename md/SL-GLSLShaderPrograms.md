@@ -2,7 +2,7 @@ GLSL Shader Programs
 ====================
 
 
-In addition to using [Cg/HSL shader programs](SL-ShaderPrograms.html), OpenGL Shading Language (GLSL) shaders can be written directly.
+In addition to using [Cg/HSL shader programs](SL-ShaderPrograms.md), OpenGL Shading Language (GLSL) shaders can be written directly.
 
 However, _'use of raw GLSL is only recommended for testing_', or when you know you will only target Mac OS X or OpenGL ES 2.0 compatible mobile devices. In majority of normal cases, Unity will cross-compile Cg/HLSL into optimized GLSL (this is done by default for mobile platforms, and can be optionally turned on for desktop platforms via `#pragma glsl`).
 

@@ -58,7 +58,7 @@ Master player is TCR compliant.
 
 Development Build feature that enables you to catch null references.
 Enabling it will cause the compiler to emit explicit null checks around every managed deref operation and throw a NullPointerException. This does influence performance slightly.
-Disabling it will cause the console to crash under the same conditions. See [Debugging](Main.xbox360-debugging.html) for more details.
+Disabling it will cause the console to crash under the same conditions. See [Debugging](Main.xbox360-debugging.md) for more details.
 
 <a id="CompressLibs"></a>Compress Libs
 --------------------------------------
@@ -96,8 +96,8 @@ Step-by-step guide:
 1. Generate the .SPA and .SPA.H files for your configuration.
 1. Enter the path to the .SPA file.
 
-[#Generate_SPAConfig.cs](#Generate_SPAConfig.cs.html)Generate _SPAConfig.cs
----------------------------------------------------------------------------
+<a id="Generate_SPAConfig.cs"></a>Generate _SPAConfig.cs
+--------------------------------------------------------
 
 Convenience feature enabled only when the SPA config is specified.
 Enabling this will have Unity look for a .SPA.H file in the same folder as the specified .SPA file and convert it to a Unity script containing a single `enum SPAConfig`. Hardcoding values is not an option as they may change after rebuilding the SPA files.
@@ -105,7 +105,7 @@ Enabling this will have Unity look for a .SPA.H file in the same folder as the s
 <a id="EnableAvatarRendering"></a>Enable Avatar rendering
 ---------------------------------------------------------
 
-Initializes the Avatar system. See [Avatars](Main.xbox360-avatars.html) for more details.
+Initializes the Avatar system. See [Avatars](Main.xbox360-avatars.md) for more details.
 
 <a id="DeployKinectResources"></a>Deploy Kinect resources
 ---------------------------------------------------------

@@ -4,7 +4,8 @@ How do I install or upgrade Standard Assets?
 
 Unity ships with multiple <span class=keyword>Standard Assets</span> packages.  These are collections of assets that are widely used by most Unity customers.  When you create a new project from the Project Wizard you can optionally include these asset collections.  These assets are copied from the Unity install folder into your new project.  This means that if you upgrade Unity to a new version you will not get the new version of these assets and so upgrading them is needed.  Also, consider that a newer version of e.g. an effect might behave differently for performance or quality reasons and thus requires retweaking of parameters.  It's important to consider this before upgrading if you don't want your game to suddenly look or behave differently.  Check with the package contents and Unity's release notes.
 
-Standard Assets contain useful things like a first person controller, skyboxes, lens flares, [Water prefabs](HOWTO-Water.html), [Image Effects](comp-ImageEffects.html) and so on.
+Standard Assets contain useful things like a first person controller, skyboxes, lens flares, [Water prefabs](HOWTO-Water.md), [Image Effects](comp-ImageEffects.md) and so on.
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/HOWTO-InstallPackages.png)  

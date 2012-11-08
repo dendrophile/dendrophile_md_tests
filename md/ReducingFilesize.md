@@ -23,6 +23,7 @@ Unity prints an overview of the used file size
 
 After Unity has completed building a player, it prints an overview of what type of asset took up the most file size, and it prints which assets were included in the build. To see it just open the editor console log: <span class=menu>Open Editor Log</span> button in the Console window (<span class=menu>Window -> Console</span>).
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FileSizeOptimization.png)  
 _An overview of what took up space_
 
@@ -34,6 +35,7 @@ Optimizing texture size
 Often textures take up most space in the build. The first to do is to use compressed texture formats (DXT(<span class=keyword>Desktop platforms</span>) or PVRTC) where you can.
 
 If that doesn't get the size down, try to reduce the size of the textures. The trick here is that you don't need to modfiy the actual source content. Simply select the texture in the Project view and set <span class=component>Max Texture Size</span> in Import Settings. It is a good idea to zoom in on an object that uses the texture, then adjust the <span class=component>Max Texture Size</span> until it starts looking worse in the <span class=keyword>Scene View</span>.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FileSizeOptimizationTexture.png)  
 _Changing the Maximum Texture Size will not affect your texture asset, just its resolution in the game_
@@ -92,7 +94,7 @@ Optimizing mesh and animation size
 ----------------------------------
 
 
-[Meshes](class-Mesh.html) and imported Animation Clips can be compressed so they take up less space in your game file. Compression can be turned on in Mesh Import Settings.
+[Meshes](class-Mesh.md) and imported Animation Clips can be compressed so they take up less space in your game file. Compression can be turned on in Mesh Import Settings.
 
 Mesh and Animation compression uses quantization, which means it takes less space but the compression can introduce some inaccuracies. Experiment with what level of compression is still acceptable for your models.
 
@@ -107,7 +109,8 @@ Reducing included dlls in the Players
 -------------------------------------
 
 
-When building a player (Desktop, Android or iOS) it is important to not depend on <span class=keyword>System.dll</span> or <span class=keyword>System.Xml.dll</span>.  Unity does not include <span class=keyword>System.dll</span> or <span class=keyword>System.Xml.dll</span> in the players installation.  That means, if you want to use Xml or some Generic containers which live in <span class=keyword>System.dll</span> then the required dlls will be included in the players.  This usually adds 1mb to the download size, obviously this is not very good for the distribution of your players and you should really avoid it.  If you need to parse some Xml files, you can use a smaller xml library like this one [Mono.Xml.zip](Attach:Mono.Xml.zip.html).  While most Generic containers are contained in mscorlib, Stack<> and few others are in <span class=keyword>System.dll</span>. So you really want to avoid those.
+When building a player (Desktop, Android or iOS) it is important to not depend on <span class=keyword>System.dll</span> or <span class=keyword>System.Xml.dll</span>.  Unity does not include <span class=keyword>System.dll</span> or <span class=keyword>System.Xml.dll</span> in the players installation.  That means, if you want to use Xml or some Generic containers which live in <span class=keyword>System.dll</span> then the required dlls will be included in the players.  This usually adds 1mb to the download size, obviously this is not very good for the distribution of your players and you should really avoid it.  If you need to parse some Xml files, you can use a smaller xml library like this one [Mono.Xml.zip](Attach:Mono.Xml.zip.md).  While most Generic containers are contained in mscorlib, Stack<> and few others are in <span class=keyword>System.dll</span>. So you really want to avoid those.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FileSizeMonoDependency.png)  
 _As you can see, Unity is including System.Xml.dll and System.dll, when building a player_

@@ -4,6 +4,7 @@ Mesh Particle Emitter (Legacy)
 
 The <span class=keyword>Mesh Particle Emitter</span> emits particles around a mesh. Particles are spawned from the surface of the mesh, which can be necessary when you want to make your particles interact in a complex way with objects.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-MeshPE.png)  
 _The Mesh Particle Emitter <span class=keyword>Inspector</span>_
 
@@ -42,10 +43,12 @@ Interpolate Triangles
 
 Enabling your emitter to <span class=component>Interpolate Triangles</span> will allow particles to be spawned between the mesh's vertices.  This option is off by default, so particles will only be spawned at the vertices.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MeshPE-InterpolateOff.png)  
 _A sphere with <span class=component>Interpolate Triangles</span> off (the default)_
 
 Enabling this option will spawn particles on and in-between vertices, essentially all over the mesh's surface (seen below).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MeshPE-InterpolateOn.png)  
 _A sphere with <span class=component>Interpolate Triangles</span> on_
@@ -58,6 +61,7 @@ Systematic
 
 
 Enabling <span class=component>Systematic</span> will cause your particles to be spawned in your mesh's vertex order.  The vertex order is set by your 3D modeling application.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MeshPE-Systematic.png)  
 _An MPE attached to a sphere with <span class=component>Systematic</span> enabled_
@@ -75,7 +79,7 @@ For example, create a Mesh Particle System, use a cube mesh as the emitter, enab
 See Also
 --------
 
-* [How to make a Mesh Particle Emitter](HOWTO-MeshParticleEmitter.html)
+* [How to make a Mesh Particle Emitter](HOWTO-MeshParticleEmitter.md)
 
 
 Hints

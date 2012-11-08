@@ -21,11 +21,11 @@ The player log is located under <user>\AppData\Local\Packages\<productname>\Temp
 
 ###Before you can proceed you need to acquire Windows 8 developer license, this can be done in two following ways:
 * Build an empty Metro application from Visual Studio and deploy it, if you're doing this first time, a dialog window for getting developer license should open, follow the steps.
-* See this link -  [http://msdn.microsoft.com/en-us/library/windows/apps/hh696646(v=vs.110).aspx](http://msdn.microsoft.com/en-us/library/windows/apps/hh696646(v=vs.110).aspx.html)
+* See this link -  [http://msdn.microsoft.com/en-us/library/windows/apps/hh696646(v=vs.110).aspx](http://msdn.microsoft.com/en-us/library/windows/apps/hh696646(v=vs.110).aspx.md)
 
 ###Following is only needed if you want to produce and install package (appx) files:
 * Although you can use Unity provided UnityTest.pfx certificate (password: unity) it's best to generate your own. You can do that by going to Player settings and clicking Create... button under Publishing Settings (Metro) > Certificate. Specify publisher name, password (optional) and click Create.
-* Whichever certificate you use it must be installed. Instructions can be found here [http://technet.microsoft.com/en-us/library/dd441378(office.13).aspx](http://technet.microsoft.com/en-us/library/dd441378(office.13).aspx.html)
+* Whichever certificate you use it must be installed. Instructions can be found here [http://technet.microsoft.com/en-us/library/dd441378(office.13).aspx](http://technet.microsoft.com/en-us/library/dd441378(office.13).aspx.md)
 * By default Windows allows installing apps from Windows store only. To change that launch GPEdit.msc, browse to Computer Configuration > Administrative Templates > Windows Components > App Package Deployment, double-click "Allow all trusted apps to install" and select Enabled > OK.
 
 ###Further reading:

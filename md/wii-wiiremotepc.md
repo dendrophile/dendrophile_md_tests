@@ -59,6 +59,6 @@ Wii Remote on PC
 -->Attach:ui.jpg
 
 ###Download Links:
-[http://files.unity3d.com/tomas/WiiPadEmu2011-07-28_12-30.zip](http://files.unity3d.com/tomas/WiiPadEmu2011-07-28_12-30.zip.html)
+[http://files.unity3d.com/tomas/WiiPadEmu2011-07-28_12-30.zip](http://files.unity3d.com/tomas/WiiPadEmu2011-07-28_12-30.zip.md)
 
 That's it for basic usage !

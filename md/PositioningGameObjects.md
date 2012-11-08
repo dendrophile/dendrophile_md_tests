@@ -18,6 +18,7 @@ Translate, Rotate, and Scale
 
 Use the Transform Tools in the Toolbar to Translate, Rotate, and Scale individual GameObjects.  Each has a corresponding Gizmo that appears around the selected GameObject in the Scene View.  You can use the mouse and manipulate any Gizmo axis to alter the <span class=keyword>Transform</span> Component of the GameObject, or you can type values directly into the number fields of the Transform Component in the Inspector. Each of the three transform modes can be selected with a hotkey - __W__ for Translate, __E__ for Rotate and __R__ for Scale.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TransformGizmo35.png)  
 (:comment Source psd is TransformGizmo35.psd :)
 
@@ -25,7 +26,7 @@ Use the Transform Tools in the Toolbar to Translate, Rotate, and Scale individua
 * At the center of the Translate gizmo, there are three small squares that can be used to drag the object within a single plane (ie, two axes can be moved at once while the third is kept still).
 * If you have a three button mouse, you can click the middle button to adjust the last-adjusted axis (which turns yellow) without clicking directly on it.
 * Be careful when using the scaling tool, as non-uniform scales (e.g. 1,2,1) can cause unusual scaling of child objects.
-* For more information on transforming GameObjects, please view the [Transform Component](class-Transform.html) page.
+* For more information on transforming GameObjects, please view the [Transform Component](class-Transform.md) page.
 
 
 Gizmo Display Toggles
@@ -33,6 +34,7 @@ Gizmo Display Toggles
 
 
 The <span class=keyword>Gizmo Display Toggles</span> are used to define the location of any Transform Gizmo. 
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/HandlePositionButtons.png)  
 _Gizmo Display Toggles_
@@ -53,6 +55,7 @@ Unit Snapping
 While dragging any Gizmo Axis using the Translate Tool, you can hold the <span class=menu>Control</span> key (<span class=menu>Command</span> on Mac) to snap to increments defined in the <span class=keyword>Snap Settings</span>.
 
 You can change the unit distance that is used for the unit snapping using the menu <span class=menu>Edit->Snap Settings...</span>
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SceneViewUnitSnappingSettings.png)  
 _Scene View Unit Snapping settings._
@@ -79,6 +82,7 @@ You can assemble your worlds more easily with a feature called <span class=keywo
 
 With this you can assemble your worlds really fast. For example, you can place roads in a racing game with high precision and add power up items on the vertices of a mesh.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SceneViewVertexSnapping.png)  
 _Assembling roads with Vertex Snapping._
 
@@ -92,5 +96,5 @@ Using vertex snapping in Unity is simple. Just follow these steps:
 * <span class=menu>Shift-V</span> acts as a toggle of this functionality.
 * You can snap vertex to vertex, vertex to surface and pivot to vertex.
 
-A video on how to use vertex snapping can be found [here](http://vimeo.com/10945727.html).
+A video on how to use vertex snapping can be found [here](http://vimeo.com/10945727.md).
 

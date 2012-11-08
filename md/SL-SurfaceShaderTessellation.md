@@ -2,10 +2,10 @@ Surface Shaders with DX11 Tessellation
 ======================================
 
 
-[Surface Shaders](SL-SurfaceShaders.html) have some support for DirectX 11 GPU Tessellation. Idea is:
+[Surface Shaders](SL-SurfaceShaders.md) have some support for DirectX 11 GPU Tessellation. Idea is:
 * Tessellation is indicated by `tessellate:FunctionName` modifier. That function computes triangle edge and inside tessellation factors.
 * When tessellation is used, "vertex modifier" (`vertex:FunctionName`) is invoked _after_ tessellation, for each generated vertex in the domain shader. Here you'd typically to displacement mapping.
-* Surface shaders can optionally compute [phong tessellation](https://www.google.lt/search?q=phong+tessellation.html) to smooth model surface even without any displacement mapping.
+* Surface shaders can optionally compute [phong tessellation](https://www.google.lt/search?q=phong+tessellation.md) to smooth model surface even without any displacement mapping.
 
 
 Current limitations of tessellation support:
@@ -79,6 +79,7 @@ The above shader is fairly standard, points of intetest:
 
 Here's how some simple objects would look like with this shader:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderTess1-none.png)  
 
 
@@ -150,6 +151,7 @@ Let's add fixed amount of tessellation, i.e. the same tessellation level for the
     }
 
 The tessellation function, `tessFixed` in our shader, returns four tessellation factors as a single float4 value: tree factors for each edge of the triangle, and one factor for the inside of the triangle. Here, we just return a constant value that is set in material properties.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderTess2-fixed.png)  
 
@@ -226,6 +228,7 @@ We can also change tessellation level based on distance from the camera. For exa
     }
 
 Here the tessellation function takes three parameters; the vertex data of three triangle corners before tessellation. This is needed to compute tessellation levels, which depend on vertex positions now. We include a built-in helper file `Tessellation.cginc` and call `UnityDistanceBasedTess` function from it to do all the work. That function computes distance of each vertex to the camera and derives final tessellation factors.
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderTess3-distance.png)  
@@ -305,6 +308,7 @@ Instead, tessellation levels could be computed based on triangle edge length on 
 Here again, we just call `UnityEdgeLengthBasedTess` function from `Tessellation.cginc` to do all the actual work.
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderTess4-edgelength.png)  
 
 
@@ -317,7 +321,7 @@ Phong Tessellation
 
 
 
-[Phong Tessellation](https://www.google.lt/search?q=phong+tessellation.html) modifies positions of the subdivided faces so that the resulting surface follows the mesh normals a bit. It's quite an effective way of making low-poly meshes become more smooth.
+[Phong Tessellation](https://www.google.lt/search?q=phong+tessellation.md) modifies positions of the subdivided faces so that the resulting surface follows the mesh normals a bit. It's quite an effective way of making low-poly meshes become more smooth.
 
 Unity's surface shaders can compute Phong tessellation automatically using `tessphong:VariableName` compilation directive. Here's an example shader:
 
@@ -372,6 +376,7 @@ Unity's surface shaders can compute Phong tessellation automatically using `tess
 
 Here's a comparison between regular shader (top row) and one that uses Phong tessellation (bottom row). You can see that even without any displacement mapping,
 the surface becomes more round.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderPhongTess.png)  
 

@@ -4,10 +4,12 @@ Color Correction image effect
 
 <span class=keyword>Color Correction</span> allows you apply arbitrary color correction to your scene as a postprocessing effect (just like the Curves tool in Photoshop or Gimp). This page explains how to setup color correction in Photoshop and then apply _exactly_ the same color correction at runtime in Unity.
 
-Like all [image effects](comp-ImageEffects.html), Color Correction is only available in Pro version of Unity. Make sure to have the [Pro Standard Assets installed](HOWTO-InstallStandardAssets.html).
+Like all [image effects](comp-ImageEffects.md), Color Correction is only available in Pro version of Unity. Make sure to have the [Pro Standard Assets installed](HOWTO-InstallStandardAssets.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxColorCorr.png)  
 _Color correction applied to the scene. Color ramp used (magnified) is shown at the right._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./FxColorRamp.png)  
 _Color ramp used for the image above._
@@ -36,7 +38,7 @@ Color correction works by remapping the original image colors through the color 
 1. result.blue = pixel's blue value in ramp image at (original.blue + <span class=component>RampOffsetB</span>) index
 So for example, to invert the colors in the image you only need to flip the original color ramp horizontally (so that it goes from white to black instead of from black to white).
 
-A simpler version of color remapping that only remaps based on luminance can be achieved with [Grayscale](script-GrayscaleEffect.html) image effect.
+A simpler version of color remapping that only remaps based on luminance can be achieved with [Grayscale](script-GrayscaleEffect.md) image effect.
 
 
 ###Tips:

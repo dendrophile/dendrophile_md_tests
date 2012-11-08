@@ -29,8 +29,11 @@ Moving, orbiting and zooming are key operations in Scene View navigation, so Uni
 
 When the hand tool is selected (shortcut: <span class=menu>Q</span>), the following mouse controls are available:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/UI-ViewTool.png)  
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-EyeTool.png)  
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-ZoomTool.png)  
 
 Holding down <span class=menu>Shift</span> will increase the rate of movement and zooming.
@@ -67,6 +70,7 @@ Scene Gizmo
 
 In the upper-right corner of the Scene View is the <span class=keyword>Scene Gizmo</span>.  This displays the Scene View Camera's current orientation, and allows you to quickly modify the viewing angle.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-SceneGizmo.png)  
 
 
@@ -76,8 +80,10 @@ You can click on any of the arms to snap the Scene View Camera to that direction
 ###u40 Details
 You can click on any of the arms to snap the Scene View Camera to that direction.  Click the middle of the Scene Gizmo, or the text below it, to toggle between <span class=keyword>Isometric Mode</span> and <span class=keyword>Perspective Mode</span>.  You can also always shift-click the middle of the Scene Gizmo to get a "nice" perspective view with an angle that is looking at the scene from the side and slightly from above.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-Non-Ortho.png)  
 _Perspective mode._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Camera-Ortho.png)  
 _Isometric mode. Objects do not get smaller with distance here!_

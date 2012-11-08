@@ -97,7 +97,7 @@ This script is added to a GameObject as Component. The AssetBundle is loaded in 
 * Once the WWW object has downloaded AssetBundle file, the .assetBundle property is used to retrieve an AssetBundle object. This object is the interface to load objects from the AssetBundle file.
 * In this example a reference to a prefab in the AssetBundle is retrieved from the AssetBundle using the .mainAsset property. This property is set when building the AssetBundle passing an Object as the first parameter.  The main asset in the AssetBundle can be used to store a TextAsset with a list of objects inside the AssetBundle and any other information about them.
 
-Please note that for simplicity the previous example is not doing any safety checks. Please look at the code [here](DownloadingAssetBundles.html) for a more complete example.
+Please note that for simplicity the previous example is not doing any safety checks. Please look at the code [here](DownloadingAssetBundles.md) for a more complete example.
 (:showhideend:)
 
 1. %item value=5%<a id="howtouseeditor"></a>How do I use AssetBundles in the Editor?
@@ -192,7 +192,7 @@ The previous script should be saved to a file named ExampleLoadingBundle.cs insi
 
 1. %item value=6%<a id="howdoIcache"></a>How do I cache AssetBundles?
 
-You can use [WWW.LoadFromCacheOrDownload](ScriptRef:WWW.LoadFromCacheOrDownload.html.html) which automatically takes care of saving your AssetBundles to disk. Be aware that on the Webplayer you are limited to 50MB in total (shared between all webplayers). You can buy a separate caching license for your game if you require more space.
+You can use [WWW.LoadFromCacheOrDownload](ScriptRef:WWW.LoadFromCacheOrDownload.html) which automatically takes care of saving your AssetBundles to disk. Be aware that on the Webplayer you are limited to 50MB in total (shared between all webplayers). You can buy a separate caching license for your game if you require more space.
 
 
 1. %item value=7%<a id="crossplatform"></a>Are AssetBundles cross-platform?
@@ -215,22 +215,22 @@ For example, a bundle created while the Webplayer build target was active would 
 
 1. %item value=8%<a id="howidentified"></a>How are assets in AssetBundles identified?
 
-When you build AssetBundles the assets are identified internally by their filename without the extension. For example a Texture located in your Project folder at "Assets/Textures/myTexture.jpg" is identified and loaded using "myTexture" if you use the default method. You can have more control over this by supplying your own array of ids (strings)  for each object when Building your AssetBundle with [BuildPipeline.BuildAssetBundleExplicitAssetNames](ScriptRef:BuildPipeline.BuildAssetBundleExplicitAssetNames.html.html).
+When you build AssetBundles the assets are identified internally by their filename without the extension. For example a Texture located in your Project folder at "Assets/Textures/myTexture.jpg" is identified and loaded using "myTexture" if you use the default method. You can have more control over this by supplying your own array of ids (strings)  for each object when Building your AssetBundle with [BuildPipeline.BuildAssetBundleExplicitAssetNames](ScriptRef:BuildPipeline.BuildAssetBundleExplicitAssetNames.html).
 
 
 1. %item value=9%<a id="reusebundles"></a>Can I reuse my AssetBundles in another game?
 
-AssetBundles allow you to share content between different games. The requirement is that any Assets which are referenced by GameObjects in your AssetBundle must either be included in the AssetBundle or exist in the application (loaded in the current scene). To make sure the referenced Assets are included in the AssetBundle when they are built you can pass the [BuildAssetBundleOptions.CollectDependencies](ScriptRef:BuildAssetBundleOptions.CollectDependencies.html.html) option.
+AssetBundles allow you to share content between different games. The requirement is that any Assets which are referenced by GameObjects in your AssetBundle must either be included in the AssetBundle or exist in the application (loaded in the current scene). To make sure the referenced Assets are included in the AssetBundle when they are built you can pass the [BuildAssetBundleOptions.CollectDependencies](ScriptRef:BuildAssetBundleOptions.CollectDependencies.html) option.
 
 
 1. %item value=10%<a id="futureplayer"></a>Will an AssetBundle built now be usable with future versions of Unity?
 
-AssetBundles can contain a structure called a <span class=keyword>type tree</span> which allows information about asset types to be understood correctly between different versions of Unity. On desktop platforms, the type tree is included by default but can be disabled by passing the [BuildAssetBundleOptions.DisableWriteTypeTree](ScriptRef:BuildAssetBundleOptions.DisableWriteTypeTree.html.html) to the BuildAssetBundle function. Webplayers intrinsically rely on the type tree and so it is always included (ie, the DisableWriteTypeTree option has no effect). Type trees are never included for mobile and console asset bundles and so you will need to rebuild these bundles whenever the serialization format changes. This can happen in new versions of Unity. (Except for bugfix releases) It also happens if you add or remove serialized fields in monobehaviour's that are included in the asset bundle. When loading an AssetBundle Unity will give you an error message if the AssetBundle must be rebuilt.
+AssetBundles can contain a structure called a <span class=keyword>type tree</span> which allows information about asset types to be understood correctly between different versions of Unity. On desktop platforms, the type tree is included by default but can be disabled by passing the [BuildAssetBundleOptions.DisableWriteTypeTree](ScriptRef:BuildAssetBundleOptions.DisableWriteTypeTree.html) to the BuildAssetBundle function. Webplayers intrinsically rely on the type tree and so it is always included (ie, the DisableWriteTypeTree option has no effect). Type trees are never included for mobile and console asset bundles and so you will need to rebuild these bundles whenever the serialization format changes. This can happen in new versions of Unity. (Except for bugfix releases) It also happens if you add or remove serialized fields in monobehaviour's that are included in the asset bundle. When loading an AssetBundle Unity will give you an error message if the AssetBundle must be rebuilt.
 
 1. %item value=11%<a id="futureplayer"></a>How can I list the objects in an AssetBundle?
 
-You can use [AssetBundle.LoadAll](ScriptRef:AssetBundle.LoadAll.html.html) to retrieve an array containing all objects from the AssetBundle. It is not possible to get a list of the identifiers directly. A common workaround is to keep a separate TextAsset to hold the names of the assets in the AssetBundle.
+You can use [AssetBundle.LoadAll](ScriptRef:AssetBundle.LoadAll.html) to retrieve an array containing all objects from the AssetBundle. It is not possible to get a list of the identifiers directly. A common workaround is to keep a separate TextAsset to hold the names of the assets in the AssetBundle.
 
 
-[back to AssetBundles Intro](AssetBundlesIntro.html)
+[back to AssetBundles Intro](AssetBundlesIntro.md)
 

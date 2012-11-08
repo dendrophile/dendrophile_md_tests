@@ -2,7 +2,7 @@ Playstation3: Trophies
 ======================
 
 
-Unity allows you to use the Trophy system of the PS3 by means of the[PS3TrophyUtility](ScriptRef:PS3TrophyUtility.html.html) class. The trophy system rewards users upon accomplishing various missions in the game and keeps a record of these accomplishments.
+Unity allows you to use the Trophy system of the PS3 by means of the[PS3TrophyUtility](ScriptRef:PS3TrophyUtility.html) class. The trophy system rewards users upon accomplishing various missions in the game and keeps a record of these accomplishments.
 
 The PS3 Samples -> Trophy unity package included with the Unity PS3 Addon shows how to save and load data to/from the PS3.
 

@@ -2,7 +2,7 @@ Playstation3: NP DRM
 ====================
 
 
-The [PS3DRMUtility](ScriptRef:PS3DRMUtility.html.html) class gives you access to the NP DRM utility for the PlayStation 3. The NP DRM utility performs access rights management for the PlayStation®Network ("NP") commerce service and is used to access NPDRM files.
+The [PS3DRMUtility](ScriptRef:PS3DRMUtility.html) class gives you access to the NP DRM utility for the PlayStation 3. The NP DRM utility performs access rights management for the PlayStation®Network ("NP") commerce service and is used to access NPDRM files.
 
 The PS3 Samples -> DRM unity package included with the Unity PS3 Addon shows a working example of this utility.
 

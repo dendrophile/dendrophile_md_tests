@@ -6,6 +6,7 @@ Player Settings
 
 To see the Player Settings choose <span class=menu>Edit->Project Settings->Player</span> from the menu bar.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetInspTop.png)  
 _Global Settings that apply to any project you create._
 
@@ -28,6 +29,7 @@ Web-Player
 
 ####_Resolution And Presentation_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetWebResPres.png)  
 
 
@@ -37,15 +39,17 @@ Web-Player
 |<span class=component>Default Screen Width</span>     |Screen Width the player will be generated with.|
 |<span class=component>Default Screen Height</span>    |Screen Height the plater will be generated with.|
 |<span class=component>Run in background</span>        |Check this if you dont want to stop executing your game if the player looses focus.|
-|___WebPlayer Template___      |For more information you should check the [UsingWebPlayertemplates | "Using WebPlayer templates page"](UsingWebPlayertemplates|"UsingWebPlayertemplatespage".html), note that for each built-in and custom template there will be an icon in this section.|
+|___WebPlayer Template___      |For more information you should check the [UsingWebPlayertemplates | "Using WebPlayer templates page"](UsingWebPlayertemplates|"UsingWebPlayertemplatespage".md), note that for each built-in and custom template there will be an icon in this section.|
 
 ####_Icon_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetWebIcon.png)  
 
 Icons don't have any meaning for most webplayer builds but they are needed for Native Client builds used as Chrome applications. You can set these icons here.
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetWebOther355.png)  
 
@@ -76,6 +80,7 @@ Standalone
 
 ####_Resolution And Presentation_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetPCResPres35.png)  
 
 
@@ -99,6 +104,7 @@ Standalone
 
 ####_Icon_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSettings-DesktopIcon.png)  
 
 
@@ -107,6 +113,7 @@ Standalone
 |<span class=component>Override for Standalone</span>  |Check if you want to assign a custom icon you would like to be used for your standalone game. Different sizes of the icon should fill in the squares below.|
 
 ####_Splash Image_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSettings-DesktopSplashImage.png)  
 
@@ -117,6 +124,7 @@ Standalone
 
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetPCOther355.png)  
 
@@ -147,6 +155,7 @@ Standalone
 
 #####ios Details
 ####_Resolution And Presentation_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSResPres.png)  
 
@@ -182,6 +191,7 @@ Standalone
 
 ####_Icon_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSIcon355.png)  
 
 
@@ -191,6 +201,7 @@ Standalone
 |<span class=component>Prerendered icon</span>           |If unchecked iOS applies sheen and bevel effects to the application icon.|
 
 ####_Splash Image_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSSplash355.png)  
 
@@ -205,6 +216,7 @@ Standalone
 |<span class=component>High Res iPad Landscape (Pro-only feature)</span>|Specifies texture which should be used as iPad Portrait orientation Splash Screen. Standard Splash Screen size is 2048x1536.|
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSOther355.png)  
 
@@ -289,6 +301,7 @@ __Note:__ If you build for example for iPhone OS 3.2, and then select Simulator 
 
 #####android Details
 ####_Resolution And Presentation_
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSettingsAndroidResolutionPresentation.png)  
 _Resolution and presentation for your Android project builds._
 
@@ -305,6 +318,7 @@ _Resolution and presentation for your Android project builds._
 |!                               |!|
 |                                ||
 |__<span class=component>Icon</span>__                           ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSettings-AndroidIcon.png)  
 _Different icons that your project will have when built._
 
@@ -314,6 +328,7 @@ _Different icons that your project will have when built._
 |!                               |!|
 |                                ||
 |__<span class=component>Splash Image</span>__                    ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSettings-AndroidSplashImage.png)  
 _Splash image that is going to be displayed when your project is launched._
 
@@ -324,6 +339,7 @@ _Splash image that is going to be displayed when your project is launched._
 |!                               |!|
 |                                ||
 |__<span class=component>Other Settings</span>__                 ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetAndroidOther355.png)  
 
 
@@ -369,6 +385,7 @@ _Splash image that is going to be displayed when your project is launched._
 |    |    |
 |:---|:---|
 |!Publishing Settings            ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSettings-AndroidPublishingSettings.png)  
 _Publishing settings for Android Market_
 
@@ -385,7 +402,7 @@ _Publishing settings for Android Market_
 
 #####u30 Details
 |__Android Market Licensing (LVL)__||
-|>>><span class=component>Public Key</span>  |The public key provided by the [Android developer site](http://developer.android.com/guide/publishing/licensing.html#account.html).|
+|>>><span class=component>Public Key</span>  |The public key provided by the [Android developer site](http://developer.android.com/guide/publishing/licensing.html#account.md).|
 
 #####u40 Details
 |>>><span class=component>Split Application Binary</span>  |Split application binary into expansion files, for use with Google Play Store if application is larger than 50 MB. When enabled the player executable and data will be split up, with a generated .apk consisting only of the executable (Java and Native) code (~10MB), and the data for the first scene. The application data will be serialized separately to an APK Expansion File (.obb). |
@@ -398,6 +415,7 @@ Flash
 
 ####_Resolution And Presentation_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetFlashResPres.png)  
 
 
@@ -409,6 +427,7 @@ Flash
 
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetFlashOther355.png)  
 
@@ -429,7 +448,7 @@ Details
 
 
 ##desktop Details
-The Player Settings window is where many technical preference defaults are set. See also [Quality Settings](class-QualitySettings.html) where the different graphics quality levels can be set up.
+The Player Settings window is where many technical preference defaults are set. See also [Quality Settings](class-QualitySettings.md) where the different graphics quality levels can be set up.
 
 ###Publishing a web player
 
@@ -440,6 +459,7 @@ The Player Settings window is where many technical preference defaults are set. 
 
 ###Customizing your Resolution Dialog
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Resolution-GameLauncher.png)  
 _The Resolution Dialog, presented to end-users_
 
@@ -447,7 +467,7 @@ You have the option of adding a custom banner image to the Screen Resolution Dia
 
 ###Publishing to Mac App Store
 
-<span class=component>Use Player Log</span> enables writing a log file with debugging information. This is useful to find out what happened if there are problems with your game. When publishing games for Apple's Mac App Store, it is recommended to turn this off, because Apple may reject your submission otherwise. See [this manual page](LogFiles.html) for further information about log files.
+<span class=component>Use Player Log</span> enables writing a log file with debugging information. This is useful to find out what happened if there are problems with your game. When publishing games for Apple's Mac App Store, it is recommended to turn this off, because Apple may reject your submission otherwise. See [this manual page](LogFiles.md) for further information about log files.
 
 <span class=component>Use Mac App Store Validation</span> enables receipt validation for the Mac App Store. If this is enabled, your game will only run when it contains a valid receipt from the Mac App Store. Use this when submitting games to Apple for publishing on the App Store. This prevents people from running the game on any computer then the one it was purchased on. Note that this feature does not implement any strong copy protection. In particular, any potential crack against one Unity game would work against any other Unity content. For this reason, it is recommended that you implement your own receipt validation code on top of this using Unity's plugin feature. However, since Apple requires plugin validation to initially happen before showing the screen setup dialog, you should still enable this check, or Apple might reject your submission. 
 
@@ -455,7 +475,7 @@ You have the option of adding a custom banner image to the Screen Resolution Dia
 ####ios Details
 ###Bundle Identifier
 
-The <span class=component>Bundle Identifier</span> string must match the provisioning profile of the game you are building.  The basic structure of the identifier is <span class=component>com.CompanyName.GameName</span>. This structure may vary internationally based on where you live, so always default to the string provided to you by Apple for your Developer Account.  Your GameName is set up in your provisioning certificates, that are manageable from the Apple iPhone Developer Center website.  Please refer to the [Apple iPhone Developer Center website](http://developer.apple.com/iphone/.html) for more information on how this is performed.
+The <span class=component>Bundle Identifier</span> string must match the provisioning profile of the game you are building.  The basic structure of the identifier is <span class=component>com.CompanyName.GameName</span>. This structure may vary internationally based on where you live, so always default to the string provided to you by Apple for your Developer Account.  Your GameName is set up in your provisioning certificates, that are manageable from the Apple iPhone Developer Center website.  Please refer to the [Apple iPhone Developer Center website](http://developer.apple.com/iphone/.md) for more information on how this is performed.
 
 ###Stripping Level (Pro-only)
 

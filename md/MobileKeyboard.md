@@ -11,10 +11,10 @@ Using the Keyboard
 ------------------
 
 ###GUI Elements
-The keyboard will appear automatically when a user taps on editable GUI elements. Currently, [GUI.TextField](ScriptRef:GUI.TextField.html.html), [GUI.TextArea](ScriptRef:GUI.TextArea.html.html) and [GUI.PasswordField](ScriptRef:GUI.PasswordField.html.html) will display the keyboard; see the  [GUI class](ScriptRef:GUI.html.html) documentation for further details.
+The keyboard will appear automatically when a user taps on editable GUI elements. Currently, [GUI.TextField](ScriptRef:GUI.TextField.html), [GUI.TextArea](ScriptRef:GUI.TextArea.html) and [GUI.PasswordField](ScriptRef:GUI.PasswordField.html) will display the keyboard; see the  [GUI class](ScriptRef:GUI.html) documentation for further details.
 
 ###Manual Keyboard Handling
-Use the <span class=component>iPhoneKeyboard.Open</span> function to open the keyboard. Please see the [iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html.html) scripting reference for the parameters that this function takes.
+Use the <span class=component>iPhoneKeyboard.Open</span> function to open the keyboard. Please see the [iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html) scripting reference for the parameters that this function takes.
 
 Keyboard Type Summary
 ---------------------
@@ -40,7 +40,7 @@ By default, an edit box will be created and placed on top of the keyboard after 
 Keyboard Orientation
 --------------------
 
-By default, the keyboard automatically follows the device orientation. To disable or enable rotation to a certain orientation, use the following properties available in [iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html.html):
+By default, the keyboard automatically follows the device orientation. To disable or enable rotation to a certain orientation, use the following properties available in [iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html):
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
@@ -52,7 +52,7 @@ By default, the keyboard automatically follows the device orientation. To disabl
 Visibility and Keyboard Size
 ----------------------------
 
-There are three keyboard properties in [iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html.html) that determine keyboard visibility status and size on the screen.
+There are three keyboard properties in [iPhoneKeyboard](ScriptRef:iPhoneKeyboard.html) that determine keyboard visibility status and size on the screen.
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
@@ -76,6 +76,7 @@ iPhoneKeyboard.Open("", iPhoneKeyboardType.Default, false, false, true);
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/KeyboardSecure.png)  
 _Hiding text while typing_
 
@@ -89,8 +90,10 @@ iPhoneKeyboard.Open("", iPhoneKeyboardType.Default, false, false, true, true);
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/KeyboardClassic.png)  
 _Classic keyboard_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/KeyboardAlert.png)  
 _Alert keyboard_

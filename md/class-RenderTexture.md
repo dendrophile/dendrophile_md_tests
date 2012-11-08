@@ -2,7 +2,7 @@ Render Texture
 ==============
 
 
-<span class=keyword>Render Textures</span> are special types of <span class=keyword>Textures</span> that are created and updated at runtime. To use them, you first create a new Render Texture and designate one of your [Cameras](class-Camera.html) to render into it. Then you can use the Render Texture in a <span class=keyword>Material</span> just like a regular Texture. The [Water](HOWTO-Water.html) prefabs in Unity Standard Assets are an example of real-world use of Render Textures for making real-time reflections and refractions.
+<span class=keyword>Render Textures</span> are special types of <span class=keyword>Textures</span> that are created and updated at runtime. To use them, you first create a new Render Texture and designate one of your [Cameras](class-Camera.md) to render into it. Then you can use the Render Texture in a <span class=keyword>Material</span> just like a regular Texture. The [Water](HOWTO-Water.md) prefabs in Unity Standard Assets are an example of real-world use of Render Textures for making real-time reflections and refractions.
 
 Render Textures are a Unity Pro feature.
 
@@ -11,7 +11,8 @@ Properties
 ----------
 
 
-The Render Texture <span class=keyword>Inspector</span> is different from most Inspectors, but very similar to the [Texture Inspector](class-Texture2D.html).
+The Render Texture <span class=keyword>Inspector</span> is different from most Inspectors, but very similar to the [Texture Inspector](class-Texture2D.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-RenderTexture.png)  
 _The Render Texture Inspector is almost identical to the Texture Inspector_
@@ -43,6 +44,7 @@ A very quick way to make a live arena-camera in your game:
 1. Create a wide, tall and thin box
 1. Drag the Render Texture onto it to create a Material that uses the render texture.
 1. Enter Play Mode, and observe that the box's texture is updated in real-time based on the new Camera's output.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RenderTextureLiveCam.png)  
 _Render Textures are set up as demonstrated above_

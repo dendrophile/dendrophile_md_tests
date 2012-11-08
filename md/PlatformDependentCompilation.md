@@ -55,6 +55,7 @@ We are going to show a small example of how to use the precompiled code. This wi
 
 First of all, select the platform you want to test your code against by clicking on <span class=menu>File __->__ Build Settings</span>. This will bring the build settings window to select your target platform.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BuildSettings.png)  
 _Build Settings window with the WebPlayer Selected as Target platform._
 

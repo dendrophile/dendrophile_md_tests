@@ -4,10 +4,11 @@ Screen Overlay
 
 The <span class=keyword>Screen Overlay</span> image effect introduces an easy way to blend different kinds of textures over the entire screen to create custom looks or effects.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OverlayExample2.png)  
 _Example using overlay to create a low quality camera <span class=component>light leak</span> effect_
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------

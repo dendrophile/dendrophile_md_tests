@@ -4,6 +4,7 @@ Skinned Mesh Renderer
 
 The <span class=keyword>Skinned Mesh Renderer</span> is automatically added to imported meshes when the imported mesh is skinned.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-SkinnedMeshRenderer.png)  
 _An animated character rendered using the Skinned Mesh Renderer_
 
@@ -15,7 +16,7 @@ Properties
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
-|<span class=component>Cast Shadows</span> (Pro only) |If enabled, this <span class=keyword>Mesh</span> will create shadows when a shadow-creating [Light](class-Light.html) shines on it |
+|<span class=component>Cast Shadows</span> (Pro only) |If enabled, this <span class=keyword>Mesh</span> will create shadows when a shadow-creating [Light](class-Light.md) shines on it |
 |<span class=component>Receive Shadows</span> (Pro only) |If enabled, this Mesh will display any shadows being cast upon it |
 |<span class=component>Materials</span> |A list of <span class=keyword>Materials</span> to render model with. |
 |<span class=component>Quality</span> |The maximum amount of bones affecting every vertex. |
@@ -29,6 +30,7 @@ Details
 
 Skinned Meshes are used for rendering characters. Characters are animated using bones, and every bone affects a part of the mesh. Multiple bones can affect the same vertex and are weighted.  The main advantage to using boned characters in Unity is you can enable the bones to be affected by physics, making your characters into ragdolls.  You can enable/disable bones via scripting, so your character instantly goes ragdoll when it is hit by an explosion.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RagdollRobot.png)  
 _A Skinned Mesh enabled as a Ragdoll_
 
@@ -36,7 +38,7 @@ _A Skinned Mesh enabled as a Ragdoll_
 
 Unity can skin every vertex with either 1, 2, or 4 bones. 4 bone weights look nicest and are most expensive. 2 Bone weights is a good compromise and can be commonly used in games.
 
-If <span class=component>Quality</span> is set to <span class=component>Automatic</span>, the [Quality Settings](class-QualitySettings.html) <span class=component>Blend Weights</span> value will be used. This allows end-users to choose a quality setting that gives them optimum performance.
+If <span class=component>Quality</span> is set to <span class=component>Automatic</span>, the [Quality Settings](class-QualitySettings.md) <span class=component>Blend Weights</span> value will be used. This allows end-users to choose a quality setting that gives them optimum performance.
 
 
 ###Update When Offscreen and Bounds

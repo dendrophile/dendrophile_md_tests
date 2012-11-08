@@ -4,6 +4,7 @@ Interactive Cloth
 
 The Interactive  Cloth class is a Component that simulates a "cloth-like" behavior on a mesh. Use this Component if you want to use cloth in your scene.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InteractiveCloth.png)  
 _Interactive cloth in the scene view and its properties in the inspector._
 
@@ -62,7 +63,7 @@ Hints.
 ------
 
 * Using lots of clothes in your game will reduce exponentially the performance of your game.
-* If you want to simulate clothing on characters, check out the [Skinned Cloth](class-SkinnedCloth.html) component instead, which interacts with the SkinnedMeshRenderer component and is much faster then InteractiveCloth.
+* If you want to simulate clothing on characters, check out the [Skinned Cloth](class-SkinnedCloth.md) component instead, which interacts with the SkinnedMeshRenderer component and is much faster then InteractiveCloth.
 * To attach the cloth to other objects, use the _Attached Colliders_ property to assign other objects to attach to. The colliders must overlap some vertices of the cloth mesh for this to work.
 * Attached Colliders' objects must intersect with the cloth you are attaching to.
 

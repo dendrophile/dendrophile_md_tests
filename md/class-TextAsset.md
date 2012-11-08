@@ -10,6 +10,7 @@ Text Asset
 * __.xml__
 * __.bytes__
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TextAssetInspector.png)  
 _The Text Asset <span class=keyword>Inspector</span>_
 

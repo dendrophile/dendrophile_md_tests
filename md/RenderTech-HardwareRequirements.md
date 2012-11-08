@@ -24,7 +24,7 @@ Realtime Shadows
 ----------------
 
 
-Realtime Shadows currently work on desktop & console platforms. On desktops, they generally need Shader Model 2.0 capable GPU. On Windows (Direct3D), the GPU also needs to support shadow mapping features; most discrete GPUs support that since 2003 and most integrated GPUs support that since 2007. Technically, on Direct3D 9 the GPU has to support [D16/D24X8 or DF16/DF24](http://aras-p.info/texts/D3D9GPUHacks.html.html) texture formats; and on OpenGL it has to support GL_ARB_depth_texture extension.
+Realtime Shadows currently work on desktop & console platforms. On desktops, they generally need Shader Model 2.0 capable GPU. On Windows (Direct3D), the GPU also needs to support shadow mapping features; most discrete GPUs support that since 2003 and most integrated GPUs support that since 2007. Technically, on Direct3D 9 the GPU has to support [D16/D24X8 or DF16/DF24](http://aras-p.info/texts/D3D9GPUHacks.html.md) texture formats; and on OpenGL it has to support GL_ARB_depth_texture extension.
 
 Flash does support realtime shadows, but due to lack of depth bias and shader limitations, they can have self-shadowing artifacts (increase light's shadow bias) and somewhat more "hard" edges.
 
@@ -37,7 +37,7 @@ Image Effects
 -------------
 
 
-[Image Effects](comp-ImageEffects.html) require render-to-texture functionality, which is generally supported on anything made in this millenium. However, all except the simplest effects require quite programmable pixel shaders, so for all practical purposes they require Shader Model 2.0 on desktop (discrete GPUs since 2003; integrated GPUs since 2005) and OpenGL ES 2.0 on mobile platforms.
+[Image Effects](comp-ImageEffects.md) require render-to-texture functionality, which is generally supported on anything made in this millenium. However, all except the simplest effects require quite programmable pixel shaders, so for all practical purposes they require Shader Model 2.0 on desktop (discrete GPUs since 2003; integrated GPUs since 2005) and OpenGL ES 2.0 on mobile platforms.
 
 Some image effects work on Flash, but quite a lot of them do not; either due to no support for non-power-of-two textures, shader limitations or lacking features like depth texture support.
 

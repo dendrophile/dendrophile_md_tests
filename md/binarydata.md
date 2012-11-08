@@ -2,7 +2,7 @@ Storing and loading binary data in an AssetBundle
 =================================================
 
 
-The first step is to save your binary data file with the ".bytes" extension. Unity will treat this file as a [TextAsset](ScriptRef:TextAsset.html.html). As a TextAsset the file can be included when you build your AssetBundle. Once you have downloaded the AssetBundle in your application and loaded the TextAsset object, you can use the .bytes property of the TextAsset to retrieve your binary data.
+The first step is to save your binary data file with the ".bytes" extension. Unity will treat this file as a [TextAsset](ScriptRef:TextAsset.html). As a TextAsset the file can be included when you build your AssetBundle. Once you have downloaded the AssetBundle in your application and loaded the TextAsset object, you can use the .bytes property of the TextAsset to retrieve your binary data.
 
 ````
 string url = "http://www.mywebsite.com/mygame/assetbundles/assetbundle1.unity3d";
@@ -25,4 +25,4 @@ IEnumerator Start () {
 ````
 
 
-[back to AssetBundles Intro](AssetBundlesIntro.html)
+[back to AssetBundles Intro](AssetBundlesIntro.md)

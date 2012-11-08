@@ -4,6 +4,7 @@ Using web player templates
 
 When you build a webplayer project, Unity embeds the player in an HTML page so that it can be played in the browser. The default page is very simple, with just a white background and some minimal text. There are actually three different variations of this page which can be selected from the Player Settings inspector (menu: Edit > Project Settings > Player).
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/WPPlayerSettings.png)  
 
 The built-in HTML pages are fine for testing and demonstrating a minimal player but for production purposes, it is often desirable to see the player hosted in the page where it will eventually be deployed. For example, if the Unity content interacts with other elements in the page via the external call interface then it must be tested with a page that provides those interacting elements. Unity allows you to supply your own pages to host the player by using __webplayer templates__.
@@ -14,6 +15,7 @@ Structure of a Webplayer Template
 
 
 Custom templates are added to a project by creating a folder called "WebPlayerTemplates" in the Assets folder - the templates themselves are sub-folders within this folder. Each template folder contains an index.html or index.php file along with any other resources the page needs, such as images or stylesheets.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/WPTemplatesFoldout.png)  
 
@@ -68,6 +70,7 @@ If you add a tag to the index file with the form UNITY_CUSTOM_XXX, then this tag
 ````
 
 ...is added to the source, the Player Settings will look like this:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/WPPlayerSettingsCustomTag.png)  
 

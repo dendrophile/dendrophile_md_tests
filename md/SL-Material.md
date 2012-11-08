@@ -3,7 +3,8 @@ ShaderLab syntax: Color, Material, Lighting
 
 The material and lighting parameters are used to control the built-in vertex lighting. Vertex lighting is the standard Direct3D/OpenGL lighting model that is computed for each vertex. <span class=component>Lighting on</span> turns it on. Lighting is affected by <span class=keyword>Material</span> block, <span class=keyword>ColorMaterial</span> and <span class=keyword>SeparateSpecular</span> commands.
 
-Per-pixel lights are usually implemented with custom vertex/fragment programs and don't use vertex lighting. For these you don't use any of the commands described here, instead you define your own [vertex and fragment programs](SL-ShaderPrograms.html) where you do all lighting, texturing and anything else yourself.
+Per-pixel lights are usually implemented with custom vertex/fragment programs and don't use vertex lighting. For these you don't use any of the commands described here, instead you define your own [vertex and fragment programs](SL-ShaderPrograms.md) where you do all lighting, texturing and anything else yourself.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./PipelineTL.png)  
 
@@ -24,14 +25,14 @@ The top level commands control whether to use fixed function lighting or not, an
 This contains settings for how the material reacts to the light. Any of these properties can be left out, in which case they default to black (i.e. have no effect).
 
 :__Diffuse__ _Color_: The diffuse color component. This is an object's base color.
-:__Ambient__ _Color_: The ambient color component. This is the color the object has when it's hit by the ambient light set in the [class-RenderSettings](class-RenderSettings.html).
+:__Ambient__ _Color_: The ambient color component. This is the color the object has when it's hit by the ambient light set in the [class-RenderSettings](class-RenderSettings.md).
 :__Specular__ _Color_: The color of the object's specular highlight.
 :__Shininess__ _Number_: The sharpness of the highlight, between 0 and 1. At 0 you get a huge highlight that looks a lot like diffuse lighting, at 1 you get a tiny speck.
 :__Emission__ _Color_: The color of the object when it is not hit by any light.
 
 The full color of lights hitting the object is:
 
-  __Ambient__ * [RenderSettings ambient setting](class-RenderSettings.html) +
+  __Ambient__ * [RenderSettings ambient setting](class-RenderSettings.md) +
   (Light Color * __Diffuse__ + Light Color * __Specular__) + __Emission__
 
 The light parts of the equation (within parenthesis) is repeated for all lights that hit the object.
@@ -89,7 +90,7 @@ Shader "VertexLit Simple" {
 ````
 
 
-And finally, a full fledged vertex-lit shader (see also [SetTexture](SL-SetTexture.html) reference page):
+And finally, a full fledged vertex-lit shader (see also [SetTexture](SL-SetTexture.md) reference page):
 ````
 Shader "VertexLit" {
     Properties {

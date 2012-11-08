@@ -20,17 +20,18 @@ Installation
 
 Download the latest Lightwave FBX exporter from:
 
-* [OS X lighwave 8.2 and 9.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW82_MACOS.pkg.sit.html)
-* [OS X Lighwave 8.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW80_MACOS.pkg.sit.html)
-* [Windows Lighwave 8.2 and 9.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW82_WIN.zip.html)
-* [Windows Lighwave 8.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW80_WIN.zip.html)
+* [OS X lighwave 8.2 and 9.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW82_MACOS.pkg.sit.md)
+* [OS X Lighwave 8.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW80_MACOS.pkg.sit.md)
+* [Windows Lighwave 8.2 and 9.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW82_WIN.zip.md)
+* [Windows Lighwave 8.0 plugin](http://unity3d.com/lightwave_plugins/mbr_FBX200508_LW80_WIN.zip.md)
 
-By downloading these plugins you automatically agree to [this licence](http://unity3d.com/lightwave_plugins/License.txt.html).
+By downloading these plugins you automatically agree to [this licence](http://unity3d.com/lightwave_plugins/License.txt.md).
 
 
 There are two versions of the plugin, one for LightWave 8.0 and one for LightWave 8.2 through 9.0. Make sure you install the correct version.
 
 The plugin for Mac comes in an OS X package. If you double-click the package to install it, the installer will try to put it in the correct folder. If it can't find your LightWave plugin folder, it will create its own LightWave folder in your <span class=menu>Applications</span> folder and dump it there. If the latter occurs you should move it to your LightWave plugin folder (or any sub-folder). Once there you have to add the plugin to LightWave via the "Edit Plugins" panel (<span class=menu>Option-F11</span>) -  see the LightWave manual for more details on how to add plugins.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Lightwave./LWexpEditPlugs.jpg)  
 
@@ -47,6 +48,7 @@ All objects and animations have to be exported from Layout (there is no Modeler 
 
 ###1. Select Export to FBX from the Generics menu
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Lightwave./LWexpGenerics2.jpg)  
 
 
@@ -56,6 +58,7 @@ All objects and animations have to be exported from Layout (there is no Modeler 
 * In the FBX dialogue panel you MUST select <span class=component>Embed Textures</span> otherwise the exported object will have no UVs. This is a bug in the Lightwave fbx exporter and will be fixed in a future version according to Autodesk.
 * If you want to export animations into Unity you must have "Animations" checked. You also need to have "Lights" or "Cameras" checked.
 * To change the name of the exported animation clip in Unity, change the name from "LW Take 001" to your liking.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Lightwave./fbxtex602b.jpg)  
 

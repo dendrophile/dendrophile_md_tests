@@ -4,6 +4,7 @@ Tree - Wind Zones
 
 <span class=keyword>Wind Zones</span> add realism to the trees you create by making them wave their branches and leaves as if blown by the wind.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InspectorWindZones.png)  
 _To the left a Spherical Wind Zone, to the right a Directional Wind zone._
 
@@ -27,7 +28,7 @@ Details
 -------
 
 <span class=keyword>Wind Zones</span> are used only by the tree creator for animating leaves and branches. This can help your scenes appear more natural and allows forces (such as explosions) within the game to look like they are interacting with the trees.
-For more information about how a tree works, just visit the [tree class page](class-Tree.html).
+For more information about how a tree works, just visit the [tree class page](class-Tree.md).
 
 Using Wind Zones in Unity.
 --------------------------
@@ -35,7 +36,7 @@ Using Wind Zones in Unity.
 Using <span class=keyword>Wind Zones</span> in Unity is really simple.  
 First of all, to create a new <span class=keyword>wind zone</span> just click on <span class=menu>Game Object -> Create Other -> Wind Zone</span>.  
 
-Place the wind zone (depending on the type) near the trees created with the [tree creator](class-Tree.html) and watch it interact with your trees!.
+Place the wind zone (depending on the type) near the trees created with the [tree creator](class-Tree.md) and watch it interact with your trees!.
 
 __Note:__ If the wind zone is Spherical you should place it so that the trees you want to blow are within the sphere's radius. If the wind zone is directional it doesn't matter where in the scene you place it. 
 Hints

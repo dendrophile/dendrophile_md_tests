@@ -2,7 +2,8 @@ Audio Clip
 ==========
 
 
-<span class=keyword>Audio Clips</span> contain the audio data used by [Audio Sources](class-AudioSource.html).  Unity supports mono, stereo and multichannel audio assets (up to eight channels). The audio file formats that Unity can import are __.aif__, __.wav__, __.mp3__, and __.ogg__. Unity can also import [tracker modules](TrackerModules.html) in the __.xm__, __.mod__, __.it__, and __.s3m__ formats. The tracker module assets behave the same way as any other audio assets in Unity although no waveform preview is available in the asset import inspector.
+<span class=keyword>Audio Clips</span> contain the audio data used by [Audio Sources](class-AudioSource.md).  Unity supports mono, stereo and multichannel audio assets (up to eight channels). The audio file formats that Unity can import are __.aif__, __.wav__, __.mp3__, and __.ogg__. Unity can also import [tracker modules](TrackerModules.md) in the __.xm__, __.mod__, __.it__, and __.s3m__ formats. The tracker module assets behave the same way as any other audio assets in Unity although no waveform preview is available in the asset import inspector.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioClipImporter35.png)  
 _The Audio Clip <span class=keyword>Inspector</span>_
@@ -40,7 +41,7 @@ As a general rule of thumb, _Compressed_ audio (or modules) are best for long fi
 Using 3D Audio
 --------------
 
-If an audio clip is marked as a <span class=component>3D Sound</span> then it will be played back so as to simulate its position in the game world's 3D space. 3D sounds emulate the distance and location of sounds by attenuating volume and panning across speakers. Both mono and multiple channel sounds can be positioned in 3D. For multiple channel audio, use the _spread_ option on the [Audio Source](class-AudioSource.html) to spread and split out the discrete channels in speaker space. Unity offers a variety of options to control and fine-tune the audio behavior in 3D space - see the [Audio Source](class-AudioSource.html) component reference for further details.   
+If an audio clip is marked as a <span class=component>3D Sound</span> then it will be played back so as to simulate its position in the game world's 3D space. 3D sounds emulate the distance and location of sounds by attenuating volume and panning across speakers. Both mono and multiple channel sounds can be positioned in 3D. For multiple channel audio, use the _spread_ option on the [Audio Source](class-AudioSource.md) to spread and split out the discrete channels in speaker space. Unity offers a variety of options to control and fine-tune the audio behavior in 3D space - see the [Audio Source](class-AudioSource.md) component reference for further details.   
 
 Platform specific details
 -------------------------

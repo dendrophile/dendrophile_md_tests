@@ -17,7 +17,7 @@ For a texture this consists of:
 * The source asset:  "myTexture.psd" file
 * The meta file: "myTexture.psd.meta" (Stores all importer settings)
 * The internal version number of the texture importer
-* A hash of version numbers of all [AssetPostprocessors](ScriptRef:AssetPostprocessor.html.html)
+* A hash of version numbers of all [AssetPostprocessors](ScriptRef:AssetPostprocessor.html)
 
 If that hash is different from what is stored on the Cache Server, the asset will be reimported, otherwise the cached version will be downloaded. The client Unity editor will only pull assets from the server as they are needed - assets don't get pushed to each project as they change.
 

@@ -5,16 +5,16 @@ Features currently not supported by Unity iOS
 Graphics
 --------
 
-* DXT texture compression is not supported; use PVRTC formats instead. Please see the [Texture2D Component page](class-Texture2D.html) for more information.
+* DXT texture compression is not supported; use PVRTC formats instead. Please see the [Texture2D Component page](class-Texture2D.md) for more information.
 * Rectangular textures can not be compressed to PVRTC formats.
-* Movie Textures are not supported; use a full-screen streaming playback instead. Please see the [Movie playback page](Main.VideoFiles.html) for more information.
+* Movie Textures are not supported; use a full-screen streaming playback instead. Please see the [Movie playback page](Main.VideoFiles.md) for more information.
 * Open GL ES2.0 is not supported on iPhone, iPhone 3G, iPod Touch 1st and iPod Touch 2nd Generation hardware.
 
 
 Audio
 -----
 
-* Ogg audio compression is not supported. Ogg audio will be  automatically converted to MP3 when you switch to iOS platform in the Editor. Please see the [AudioClip Component page](class-AudioClip.html) for more information about audio support in Unity iOS.
+* Ogg audio compression is not supported. Ogg audio will be  automatically converted to MP3 when you switch to iOS platform in the Editor. Please see the [AudioClip Component page](class-AudioClip.md) for more information about audio support in Unity iOS.
 
 Scripting
 ---------

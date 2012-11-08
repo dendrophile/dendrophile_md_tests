@@ -4,6 +4,7 @@ Asset Import and Creation
 
 A large part of making a game is utilizing your asset source files in your <span class=keyword>GameObjects</span>. This goes for textures, models, sound effects and behaviour scripts. Using the <span class=keyword>Project View</span> inside Unity, you have quick access to all the files that make up your game:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-Project.png)  
 _The Project View displays all source files and created <span class=keyword>Prefabs</span>_
 

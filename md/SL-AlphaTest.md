@@ -4,6 +4,7 @@ ShaderLab syntax: Alpha testing
 
 The alpha test is a last chance to reject a pixel from being written to the screen.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL./PipelineAlpha.png)  
 
 After the final output color has been calculated, the color can optionally have its alpha value compared to a fixed value. If the test fails, the pixel is not written to the display.
@@ -35,7 +36,8 @@ A floating-point number between 0 and 1. This can also be a variable reference t
 Details
 -------
 
-The alpha test is important when rendering concave objects with transparent parts. The graphics card maintains a record of the depth of every pixel written to the screen. If a new pixel is further away than one already rendered, the new pixel is not written to the display. This means that even with [Blending](SL-Blend.html), objects will not show through.
+The alpha test is important when rendering concave objects with transparent parts. The graphics card maintains a record of the depth of every pixel written to the screen. If a new pixel is further away than one already rendered, the new pixel is not written to the display. This means that even with [Blending](SL-Blend.md), objects will not show through.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/sl-alphatest2.jpg)  
 

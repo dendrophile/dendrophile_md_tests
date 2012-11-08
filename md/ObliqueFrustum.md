@@ -4,6 +4,7 @@ Using an Oblique Frustum
 
 By default, the view frustum is arranged symmetrically around the camera's centre line but it doesn't necessarily need to be. The frustum can be made "oblique", which means that one side is at a smaller angle to the centre line than the opposite side. The effect is rather like taking a printed photograph and cutting one edge off. This makes the perspective on one side of the image seem more condensed giving the impression that the viewer is very close to the object visible at that edge. An example of how this can be used is a car racing game where the frustum might be flattened at its bottom edge. This would make the viewer seem closer to the road, accentuating the feeling of speed.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ObliqueFrustum.png)  
 
 While the camera class doesn't have functions to set the obliqueness of the frustum, it can be done quite easily by altering the projection matrix:-

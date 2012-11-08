@@ -9,7 +9,7 @@ Syntax
 
 __UsePass__ "_Shader/Name_"
 
-Inserts all passes with a given name from a given shader. _Shader/Name_ contains the name of the shader and the name of the pass, separated by a slash character. Note that only first supported [subshader](SL-SubShader.html) is taken into account.
+Inserts all passes with a given name from a given shader. _Shader/Name_ contains the name of the shader and the name of the pass, separated by a slash character. Note that only first supported [subshader](SL-SubShader.md) is taken into account.
 
 
 Details
@@ -20,7 +20,7 @@ Some of the shaders could reuse existing passes from other shaders, reducing cod
 
     __UsePass__ "Specular/BASE"
 
-In order for UsePass to work, a name must be given to the pass one wishes to use. The [Name](SL-Name.html) command inside the pass gives it a name:
+In order for UsePass to work, a name must be given to the pass one wishes to use. The [Name](SL-Name.md) command inside the pass gives it a name:
 
     __Name__ "_MyPassName_"
 

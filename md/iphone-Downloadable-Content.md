@@ -2,7 +2,7 @@ Preparing your application for "In App Purchases"
 =================================================
 
 
-This chapter does __not__ aim to cover how to integrate your game with Apple's "StoreKit" API. It is assumed that you already have integration with "StoreKit" via a [native code plugin](Main.Plugins.html).
+This chapter does __not__ aim to cover how to integrate your game with Apple's "StoreKit" API. It is assumed that you already have integration with "StoreKit" via a [native code plugin](Main.Plugins.md).
 
 Apple's "StoreKit" documentation defines four kinds of __Products__ that could be sold via the "In App Purchase" process: 
 * Content
@@ -10,7 +10,7 @@ Apple's "StoreKit" documentation defines four kinds of __Products__ that could b
 * Services
 * Subscriptions
 
-This chapter covers the first case only and focuses mainly on the downloadable content concept. [AssetBundles](ScriptRef:AssetBundle.html.html) are ideal candidates for use as downloadable content, and two scenarios will be covered:
+This chapter covers the first case only and focuses mainly on the downloadable content concept. [AssetBundles](ScriptRef:AssetBundle.html) are ideal candidates for use as downloadable content, and two scenarios will be covered:
 * How to export asset bundles for use on iOS
 * How download and cache them on iOS
 
@@ -37,15 +37,16 @@ static function ExportBundle(){
 ````
 1. Design your objects that need to be downloadable as prefabs
 1. Select a prefab that needs to be exported and mouse right click
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/iPhoneAssetBundleExport.png)  
 If the first two steps were done properly, then the _Build AssetBundle From Selection - Track dependencies_ context menu item should be visible.
 1. Select it if you want to include everything that this asset uses.
-1. A save dialog will be shown, enter the desired asset bundle file name. An __.assetbundle__ extension will be added automatically. The Unity iOS runtime accepts only asset bundles built with the same version of the Unity editor as the final application. Read [BuildPipeline.BuildAssetBundle](ScriptRef:BuildPipeline.BuildAssetBundle.html.html) for details.
+1. A save dialog will be shown, enter the desired asset bundle file name. An __.assetbundle__ extension will be added automatically. The Unity iOS runtime accepts only asset bundles built with the same version of the Unity editor as the final application. Read [BuildPipeline.BuildAssetBundle](ScriptRef:BuildPipeline.BuildAssetBundle.html) for details.
 
 Downloading your assets on iOS
 ------------------------------
 
-1. Asset bundles can be downloaded and loaded by using the [WWW class](ScriptRef:WWW-assetBundle.html.html) and instantiating a main asset. Code sample:
+1. Asset bundles can be downloaded and loaded by using the [WWW class](ScriptRef:WWW-assetBundle.html) and instantiating a main asset. Code sample:
 ````
 
 	var download : WWW;
@@ -87,7 +88,7 @@ Downloading your assets on iOS
 
 ````
 
-1. Cache a downloaded asset bundle using the .NET file API and for reuse it in the future by loading it via [WWW class](ScriptRef:WWW.html.html) and __file:///pathtoyourapplication/Documents/savedassetbundle.assetbundle__. Sample code for caching:
+1. Cache a downloaded asset bundle using the .NET file API and for reuse it in the future by loading it via [WWW class](ScriptRef:WWW.html) and __file:///pathtoyourapplication/Documents/savedassetbundle.assetbundle__. Sample code for caching:
 ````
 
 	// Code designed for caching on iPhone, cachedAssetBundle path must be different when running in Editor

@@ -2,13 +2,15 @@ Off-mesh links (Pro only)
 =========================
 
 
-Note that this section is primarily about the _manual_ off-mesh links, namely those that are set up by the user via the <span class=component>OffMeshLink</span> component. For automatically generated off-mesh links, see the the [Navmesh intro](NavmeshandPathfinding.html)
+Note that this section is primarily about the _manual_ off-mesh links, namely those that are set up by the user via the <span class=component>OffMeshLink</span> component. For automatically generated off-mesh links, see the the [Navmesh intro](NavmeshandPathfinding.md)
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OffMeshLinkInScene.png)  
 
 It is possible that the _navmesh static_ geometry in the scene is disconnected, thus making it impossible for agents to get from one part of the world to the other.
 
 To remedy this, Unity has a system of <span class=keyword>Off-mesh links</span>
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OffMeshLink.png)  
 _The OffMeshLink component_
@@ -35,4 +37,4 @@ have immediate effect. All other properties require a Navmesh re-bake before the
 If the start or end transforms are unassigned when baking, or if the position of either the start or end transforms is too far away from the NavMesh to find valid positions, the off-mesh links will not be generated. In this case, an error is displayed in the Console window.
 
 
-(back to [Navigation and Pathfinding](NavmeshandPathfinding.html))
+(back to [Navigation and Pathfinding](NavmeshandPathfinding.md))

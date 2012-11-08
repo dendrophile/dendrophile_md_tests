@@ -10,6 +10,7 @@ Unity supports keyboard, joystick and gamepad input.
 
 Virtual axes and buttons can be created in the <span class=keyword>Input Manager</span>, and end users can configure Keyboard input in a nice screen configuration dialog.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InputSelector.png)  
 
 You can setup joysticks, gamepads, keyboard, and mouse, then access them all through one simple scripting interface.
@@ -26,6 +27,7 @@ Every project has the following default input axes when it's created:
 ###Adding new Input Axes
 
 If you want to add new virtual axes go to the <span class=menu>Edit->Project Settings->Input</span> menu. Here you can also change the settings of each axis.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InputAxis.png)  
 
@@ -92,20 +94,20 @@ value = Input.GetKey ("a");
 Mobile Input
 ============
 
-On iOS and Android, the [Input](ScriptRef:Input.html.html) class offers access to touchscreen, accelerometer and geographical/location input.
+On iOS and Android, the [Input](ScriptRef:Input.html) class offers access to touchscreen, accelerometer and geographical/location input.
 
-Access to keyboard on mobile devices is provided via the [iOS keyboard](MobileKeyboard#iOS.html).
+Access to keyboard on mobile devices is provided via the [iOS keyboard](MobileKeyboard#iOS.md).
 Multi-Touch Screen
 ------------------
 
 
-The iPhone and iPod Touch devices are capable of tracking up to five fingers touching the screen simultaneously. You can retrieve the status of each finger touching the screen during the last frame by accessing the [Input.touches](ScriptRef:Input-touches.html.html) property array.
+The iPhone and iPod Touch devices are capable of tracking up to five fingers touching the screen simultaneously. You can retrieve the status of each finger touching the screen during the last frame by accessing the [Input.touches](ScriptRef:Input-touches.html) property array.
 
 
 ###android Details
 Android devices don't have a unified limit on how many fingers they track. Instead, it varies from device to device and can be anything from two-touch on older devices to five fingers on some newer devices.
 
-Each finger touch is represented by an [Input.Touch](ScriptRef:Touch.html.html) data structure:
+Each finger touch is represented by an [Input.Touch](ScriptRef:Touch.html) data structure:
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
@@ -147,14 +149,14 @@ function Update () {
 ````
 
 ###Mouse Simulation
-On top of native touch support Unity iOS/Android provides a mouse simulation. You can use mouse functionality from the standard [Input](ScriptRef:Input.html.html) class.
+On top of native touch support Unity iOS/Android provides a mouse simulation. You can use mouse functionality from the standard [Input](ScriptRef:Input.html) class.
 
 Device Orientation
 ------------------
 
 Unity iOS/Android allows you to get discrete description of the device physical orientation in three-dimensional space. Detecting a change in orientation can be useful if you want to create game behaviors depending on how the user is holding the device.
 
-You can retrieve device orientation by accessing the  [Input.deviceOrientation](ScriptRef:Input-deviceOrientation.html.html) property. Orientation can be one of the following:
+You can retrieve device orientation by accessing the  [Input.deviceOrientation](ScriptRef:Input-deviceOrientation.html) property. Orientation can be one of the following:
 
 |    |
 |:---|
@@ -177,7 +179,7 @@ represents -1g. If you hold the device upright (with the home button at the
 bottom) in front of you, the X axis is positive along the right, the Y axis is
 positive directly up, and the Z axis is positive pointing toward you.
 
-You can retrieve the accelerometer value by accessing the [Input.acceleration](ScriptRef:Input-acceleration.html.html) property.
+You can retrieve the accelerometer value by accessing the [Input.acceleration](ScriptRef:Input-acceleration.html) property.
 
 The following is an example script which will move an object using the accelerometer:
 ````
@@ -233,7 +235,7 @@ function LowPassFilterAccelerometer() : Vector3 {
 The greater the value of `LowPassKernelWidthInSeconds`, the slower the filtered value will converge towards the current input sample (and vice versa). You should be able to use the `LowPassFilter()` function instead of `avgSamples()`.
 
 ###I'd like as much precision as possible when reading the accelerometer. What should I do?
-Reading the [Input.acceleration](ScriptRef:Input-acceleration.html.html) variable does not equal sampling the hardware. Put simply, Unity samples the hardware at a frequency of 60Hz and stores the result into the variable. In reality, things are a little bit more complicated -- accelerometer sampling doesn't occur at consistent time intervals, if under significant CPU loads. As a result, the system might report 2 samples during one frame, then 1 sample during the next frame.
+Reading the [Input.acceleration](ScriptRef:Input-acceleration.html) variable does not equal sampling the hardware. Put simply, Unity samples the hardware at a frequency of 60Hz and stores the result into the variable. In reality, things are a little bit more complicated -- accelerometer sampling doesn't occur at consistent time intervals, if under significant CPU loads. As a result, the system might report 2 samples during one frame, then 1 sample during the next frame.
 
 You can access all measurements executed by accelerometer during the frame. The following code will illustrate a simple average of all the accelerometer events that were collected within the last frame:
 
@@ -257,8 +259,8 @@ Further Reading
 
 The Unity mobile input API is originally based on Apple's API. It may help to learn more about the native API to better understand Unity's Input API.
 You can find the Apple input API documentation here:
-* [Programming Guide: Event Handling (Apple iPhone SDK documentation)](file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/EventHandling/chapter_8_section_1.html.html)
-* [UITouch Class Reference (Apple iOS SDK documentation)](file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITouch_Class/Reference/Reference.html.html)
+* [Programming Guide: Event Handling (Apple iPhone SDK documentation)](file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/EventHandling/chapter_8_section_1.html.md)
+* [UITouch Class Reference (Apple iOS SDK documentation)](file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITouch_Class/Reference/Reference.html.md)
 
 __Note:__ The above links reference your locally installed iPhone SDK Reference Documentation and will contain native ObjectiveC code. It is not necessary to understand these documents for using Unity on mobile devices, but may be helpful to some!
 
@@ -269,5 +271,5 @@ __Note:__ The above links reference your locally installed iPhone SDK Reference 
 Device geographical location
 ----------------------------
 
-Device geographical location can be obtained via the [iPhoneInput.lastLocation](ScriptRef:iPhoneInput-lastLocation.html.html) property. Before calling this property you should start location service updates using [iPhoneSettings.StartLocationServiceUpdates()](ScriptRef:iPhoneSettings.StartLocationServiceUpdates.html.html) and check the service status via [iPhoneSettings.locationServiceStatus](ScriptRef:iPhoneSettings-locationServiceStatus.html.html). See the [scripting reference](ScriptRef:iPhoneSettings.StartLocationServiceUpdates.html.html) for details.
+Device geographical location can be obtained via the [iPhoneInput.lastLocation](ScriptRef:iPhoneInput-lastLocation.html) property. Before calling this property you should start location service updates using [iPhoneSettings.StartLocationServiceUpdates()](ScriptRef:iPhoneSettings.StartLocationServiceUpdates.html) and check the service status via [iPhoneSettings.locationServiceStatus](ScriptRef:iPhoneSettings-locationServiceStatus.html). See the [scripting reference](ScriptRef:iPhoneSettings.StartLocationServiceUpdates.html) for details.
 

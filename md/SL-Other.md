@@ -6,7 +6,7 @@ Category
 --------
 
 
-__Category__ is a logical grouping of any commands below it. This is mostly used to "inherit" rendering state. For example, your shader might have multiple [subshaders](SL-SubShader.html), and each of them requires [fog](SL-Fog.html) to be off, [blending](SL-Blend.html) set to additive, etc. You can use Category for that:
+__Category__ is a logical grouping of any commands below it. This is mostly used to "inherit" rendering state. For example, your shader might have multiple [subshaders](SL-SubShader.md), and each of them requires [fog](SL-Fog.md) to be off, [blending](SL-Blend.md) set to additive, etc. You can use Category for that:
 ````
 
 Shader "example" {

@@ -18,8 +18,10 @@ At this point the empty object should contain both versions of the mesh, and "kn
 
 You can preview the effect of this, by dragging the camera icon left and right in the window for the <span class=component>LODGroup</span> component.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LOD0_demo.jpg)  
 >_camera at LOD 0_
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LOD1_demo.jpg)  
 >_camera at LOD 1_
 
@@ -42,7 +44,7 @@ Setting up LODs for different platforms
 ---------------------------------------
 
 
-You can tweak your LOD settings for each platform in [Quality Settings](class-QualitySettings.html), in particular the properties of <span class=menu>LOD bias</span> and <span class=menu>Maximum LOD Level</span>. 
+You can tweak your LOD settings for each platform in [Quality Settings](class-QualitySettings.md), in particular the properties of <span class=menu>LOD bias</span> and <span class=menu>Maximum LOD Level</span>. 
 
 Utilities
 ---------
@@ -52,6 +54,6 @@ Here are some options that help you work with LODs
 
 |    |    |
 |:---|:---|
-|Recalculate Bounds|If there is new geometry added to the LODGroup, that is not reflected in the bounding volume, press this to update the bounds. One example where this is needed is when one of the geometries is part of a [prefab](Prefabs.html), and new geometry is added to that prefab. Geometry added directly to the LODGroup will automatically updates the bounds|
-|Update Lightmaps|Updates the <span class=component>Scale in Lightmap</span> property in the [lightmaps](Lightmapping.html) based on the LOD level boundaries.|
+|Recalculate Bounds|If there is new geometry added to the LODGroup, that is not reflected in the bounding volume, press this to update the bounds. One example where this is needed is when one of the geometries is part of a [prefab](Prefabs.md), and new geometry is added to that prefab. Geometry added directly to the LODGroup will automatically updates the bounds|
+|Update Lightmaps|Updates the <span class=component>Scale in Lightmap</span> property in the [lightmaps](Lightmapping.md) based on the LOD level boundaries.|
 |Upload to Importer|Uploads the LOD level boundaries to the importer|

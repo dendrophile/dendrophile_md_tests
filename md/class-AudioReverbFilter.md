@@ -2,7 +2,8 @@ Audio Reverb Filter (PRO only)
 ==============================
 
 
-The <span class=keyword>Audio Reverb Filter</span> takes an [Audio Clip](class-AudioClip.html) and distorts it to create a personalized reverb effect.
+The <span class=keyword>Audio Reverb Filter</span> takes an [Audio Clip](class-AudioClip.md) and distorts it to create a personalized reverb effect.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioReverbFilter.png)  
 _The Audio Reverb filter properties in the inspector._

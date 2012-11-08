@@ -6,13 +6,13 @@ Polygon count matters
 
 On most graphics cards today, polygon count does not really matter. The common knowledge is that object count and fillrate is much more important. Unfortunately, not so on the majority of older integrated chips (Intel 945 / GMA 950 and similar). How much it matters depends on the complexity of the vertex shaders or lighting and the speed of the CPU (thats right, most integrated cards transform & light vertices on the CPU).
 
-[Big Bang Brain Games](http://www.freeverse.com/braingames/.html) never went above 25 thousand triangles in a scene using 1-2 per-vertex lights and no pixel lights (essentially a [VertexLit rendering path](RenderTech-VertexLit.html)). Quality Settings were used to speed up performance automatically when frame rate drops. So on higher end machines a higher quality setting was used which had pixel lights enabled.
+[Big Bang Brain Games](http://www.freeverse.com/braingames/.md) never went above 25 thousand triangles in a scene using 1-2 per-vertex lights and no pixel lights (essentially a [VertexLit rendering path](RenderTech-VertexLit.md)). Quality Settings were used to speed up performance automatically when frame rate drops. So on higher end machines a higher quality setting was used which had pixel lights enabled.
 
 What slows things down is drawing objects multiple times, using complex vertex shaders and lots of polygons. This means:
-* Use [VertexLit rendering path](RenderTech-VertexLit.html) if possible. This will draw each object just once, no matter how many lights are in the scene.
-* Try not to use lights at all, even vertex lights. Lights make sense if your geometry moves, or if your lights move. Otherwise bake the illumination using [Lightmapper](Lightmapping.html), it will run faster and look better.
+* Use [VertexLit rendering path](RenderTech-VertexLit.md) if possible. This will draw each object just once, no matter how many lights are in the scene.
+* Try not to use lights at all, even vertex lights. Lights make sense if your geometry moves, or if your lights move. Otherwise bake the illumination using [Lightmapper](Lightmapping.md), it will run faster and look better.
 * Optimize your geometry (see section below).
-* Use [Rendering Statistics](RenderingStatistics.html) window and [Profiler](Profiler.html)!
+* Use [Rendering Statistics](RenderingStatistics.md) window and [Profiler](Profiler.md)!
 
 
 Optimize model geometry
@@ -31,7 +31,7 @@ For a graphics card however, some vertices have to be split into separate ones. 
 Bake lighting.
 --------------
 
-Bake ligthing either into lightmaps or vertex colors. Unity has a great [Lightmapper](Lightmapping.html) built-in; also you can bake lightmaps in many 3D modeling packages.
+Bake ligthing either into lightmaps or vertex colors. Unity has a great [Lightmapper](Lightmapping.md) built-in; also you can bake lightmaps in many 3D modeling packages.
 
 The process of generating a lightmapped environment takes only a little longer than just placing a light in the scene in Unity, __but__:
 * It usually will run a lot faster; especially if you have many lights.

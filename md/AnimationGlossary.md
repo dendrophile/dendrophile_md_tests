@@ -9,7 +9,7 @@ A Glossary of Animation and Mecanim terms
 |! Animation Clip related terms |||||
 |Attach:MecanimAnimationClipIcon.png|Animation Clip |Animation data that can be used for animated characters or simple animations. It is a simple "unit" piece of motion, such as (one specific instance of) "Idle", "Walk" or "Run"|sub-Asset| |
 |Attach:MecanimBodyMaskAssetIcon.png|Body Mask |A specification for which body parts to include or exclude for a skeleton |Asset (`.mask`)|Used in Animation Layers and in the importer|
-| |Animation[<<](<<.html)Curves|Curves can be attached to animation clips and controlled by various parameters from the game| | |
+| |Animation[<<](<<.md)Curves|Curves can be attached to animation clips and controlled by various parameters from the game| | |
 ||! Avatar related terms |||||
 |Attach:MecanimAvatarIcon.png|Avatar|An interface for retargeting one skeleton to another|sub-Asset| |
 | |Retargeting|Applying animations created for one model to another|Process | |
@@ -22,7 +22,7 @@ A Glossary of Animation and Mecanim terms
 |! Animator and Animator Controller related terms |||||
 | |Animator Component |Component on a model that animates that model using the Mecanim animation system. The component has a reference to an Animator Controller asset that controls the animation.|Component| |
 | |Root Motion|Motion of character's root, whether it's controlled by the animation itself or externally. | | |
-|Attach:MecanimAnimatorControllerIcon.png|Animator Controller (Asset) [<<](<<.html)|The Animator Controller controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.|Asset (`.controller`)| |
+|Attach:MecanimAnimatorControllerIcon.png|Animator Controller (Asset) [<<](<<.md)|The Animator Controller controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components.|Asset (`.controller`)| |
 | |Animator Controller (Window)|The window where the Animator Controller Asset is visualized and edited. |Window| |
 | |Animation Layer |An Animation Layer contains an Animation State Machine that controls animations of a model or part of it. An example of this is if you have a full-body layer for walking / jumping and a higher layer for upper-body motions such as throwing object / shooting. The higher layers take precedence for the body parts they control. | | |
 | |Animation State Machine|A graph controlling the interaction of Animation States. Each state references an Animation Blend Tree or a single Animation Clip.| | |

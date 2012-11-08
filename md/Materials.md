@@ -4,6 +4,7 @@ Materials and Shaders
 
 There is a close relationship between <span class=keyword>Materials</span> and <span class=keyword>Shaders</span> in Unity.  Shaders contain code that defines what kind of properties and assets to use.  Materials allow you to adjust properties and assign assets.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Shader-NormalBumpSpec.png)  
 _A Shader is implemented through a Material_
 
@@ -34,17 +35,18 @@ Built-in Shaders
 ----------------
 
 
-There is a library of [built-in Shaders](Built-inShaderGuide.html) that come standard with every installation of Unity.  There are over 30 of these [built-in Shaders](Built-inShaderGuide.html), and six basic families.
+There is a library of [built-in Shaders](Built-inShaderGuide.md) that come standard with every installation of Unity.  There are over 30 of these [built-in Shaders](Built-inShaderGuide.md), and six basic families.
 
-* [Normal ](shader-NormalFamily.html): For opaque textured objects.
-* [Transparent ](shader-TransparentFamily.html): For partly transparent objects. The texture's alpha channel defines the level of transparency.
-* [TransparentCutOut ](shader-TransparentCutoutFamily.html): For objects that have only fully opaque and fully transparent areas, like fences.
-* [Self-Illuminated ](shader-SelfIllumFamily.html): For objects that have light emitting parts.
-* [Reflective ](shader-ReflectiveFamily.html): For opaque textured objects that reflect an environment <span class=keyword>Cubemap</span>.
+* [Normal ](shader-NormalFamily.md): For opaque textured objects.
+* [Transparent ](shader-TransparentFamily.md): For partly transparent objects. The texture's alpha channel defines the level of transparency.
+* [TransparentCutOut ](shader-TransparentCutoutFamily.md): For objects that have only fully opaque and fully transparent areas, like fences.
+* [Self-Illuminated ](shader-SelfIllumFamily.md): For objects that have light emitting parts.
+* [Reflective ](shader-ReflectiveFamily.md): For opaque textured objects that reflect an environment <span class=keyword>Cubemap</span>.
 
-In each group, built-in shaders range by complexity, from the simple <span class=component>VertexLit</span> to the complex <span class=component>Parallax Bumped with Specular</span>.  For more information about performance of Shaders, please read the built-in Shader [performance page](shader-Performance.html)
+In each group, built-in shaders range by complexity, from the simple <span class=component>VertexLit</span> to the complex <span class=component>Parallax Bumped with Specular</span>.  For more information about performance of Shaders, please read the built-in Shader [performance page](shader-Performance.md)
 
 This grid displays a thumbnail of all built-in Shaders:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/BuiltinShaders.png)  
 _The builtin Unity shaders matrix_
@@ -59,6 +61,7 @@ Unity has an extensive Shader system, allowing you to tweak the look of all in-g
 A Shader basically defines a formula for how the in-game shading should look. Within any given Shader is a number of properties (typically textures). Shaders are implemented through <span class=keyword>Materials</span>, which are attached directly to individual <span class=keyword>GameObjects</span>.  Within a Material, you will choose a Shader, then define the properties (usually textures and colors, but properties can vary) that are used by the Shader.
 
 This is rather complex, so let's look at a workflow diagram:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/material_diagram.png)  
 
@@ -77,4 +80,4 @@ A Material defines:
 
 Shaders are meant to be written by graphics programmers. They are created using the <span class=keyword>ShaderLab</span> language, which is quite simple. However, getting a shader to work well on a variety graphics cards is an involved job and requires a fairly comprehensive knowledge of how graphics cards work.
 
-A number of shaders are built into Unity directly, and some more come in the [Standard Assets](HOWTO-InstallStandardAssets.html) Library.  If you like, there is plenty more shader information in the [Built-in Shader Guide](Built-inShaderGuide.html).
+A number of shaders are built into Unity directly, and some more come in the [Standard Assets](HOWTO-InstallStandardAssets.md) Library.  If you like, there is plenty more shader information in the [Built-in Shader Guide](Built-inShaderGuide.md).

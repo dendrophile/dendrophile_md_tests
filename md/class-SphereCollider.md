@@ -3,6 +3,7 @@ Sphere Collider
 
 The <span class=keyword>Sphere Collider</span> is a basic sphere-shaped collision primitive.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-SphereCollider.png)  
 _A pile of Sphere Colliders_
 
@@ -27,6 +28,7 @@ Details
 
 
 The Sphere Collider can be resized to uniform scale, but not along individual axes. It works great for falling boulders, ping pong balls, marbles, etc.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/spherecollider.png)  
 _A standard Sphere Collider_

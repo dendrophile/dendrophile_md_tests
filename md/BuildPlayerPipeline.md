@@ -54,7 +54,7 @@ Windows
 -------
 
 
-On Windows, the PostprocessBuildPlayer script is not supported, but you can use editor scripting to achieve the same effect. You can use [BuildPipeline.BuildPlayer](ScriptRef:BuildPipeline.BuildPlayer.html.html) to run the build and then follow it with whatever postprocessing code you need:-
+On Windows, the PostprocessBuildPlayer script is not supported, but you can use editor scripting to achieve the same effect. You can use [BuildPipeline.BuildPlayer](ScriptRef:BuildPipeline.BuildPlayer.html) to run the build and then follow it with whatever postprocessing code you need:-
 
 ````
 using UnityEditor;

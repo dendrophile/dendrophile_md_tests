@@ -6,4 +6,4 @@ Animator Component and Animator Controller
 
 (:include class-AnimatorController:)
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

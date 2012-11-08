@@ -103,4 +103,4 @@ public class SocialExample : MonoBehaviour {
 }
 
 ````
-For more info on the Social API, check out the [Social API Scripting Reference](ScriptRef:Social.html.html)
+For more info on the Social API, check out the [Social API Scripting Reference](ScriptRef:Social.html)

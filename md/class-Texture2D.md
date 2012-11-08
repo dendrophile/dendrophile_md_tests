@@ -13,6 +13,7 @@ Properties
 
 
 The <span class=keyword>Texture Inspector</span> looks a bit different from most others:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterFull40.png)  
 
 The inspector is split into two sections, the <span class=keyword>Texture Importer</span> and the texture preview.
@@ -32,9 +33,10 @@ The topmost item in the inspector is the <span class=menu>Texture Type</span> me
 |>>><span class=component>Texture</span> |This is the most common setting used for all the textures in general. |
 |>>><span class=component>Normal Map</span> |Select this to turn the color channels into a format suitable for real-time normal mapping. For more info, see [Normal Maps](#normalmaps) |
 |>>><span class=component>GUI</span> |Use this if your texture is going to be used on any HUD/GUI Controls. |
-|>>><span class=component>Reflection</span> |Also known as Cube Maps, used to create reflections on textures. check [Cubemap Textures](class-Cubemap.html) for more info.|
+|>>><span class=component>Reflection</span> |Also known as Cube Maps, used to create reflections on textures. check [Cubemap Textures](class-Cubemap.md) for more info.|
 |>>><span class=component>Cookie</span> |This sets up your texture with the basic parameters used for the Cookies of your lights|
 |>>><span class=component>Advanced</span> |Select this when you want to have specific parameters on your texture and you want to have total control over your texture. |
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterTexture40.png)  
 _Basic Texture Settings Selected_
@@ -51,6 +53,7 @@ _Basic Texture Settings Selected_
 |>>><span class=component>Bilinear</span> |The Texture becomes blurry up close |
 |>>><span class=component>Trilinear</span> |Like Bilinear, but the Texture also blurs between the different mip levels |
 |<span class=component>Aniso Level</span> |Increases texture quality when viewing the texture at a steep angle. Good for floor and ground textures, see [below](#anisotropy). |
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterNormalMap40.png)  
 _Normal Map Settings in the Texture Importer_
@@ -72,6 +75,7 @@ _Normal Map Settings in the Texture Importer_
 |>>><span class=component>Trilinear</span> |Like Bilinear, but the Texture also blurs between the different mip levels |
 |<span class=component>Aniso Level</span> |Increases texture quality when viewing the texture at a steep angle. Good for floor and ground textures, see [below](#anisotropy). |
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterGUI40.png)  
 _GUI Settings for the Texture Importer_
 
@@ -82,6 +86,7 @@ _GUI Settings for the Texture Importer_
 |>>><span class=component>Point</span> |The Texture becomes blocky up close |
 |>>><span class=component>Bilinear</span> |The Texture becomes blurry up close |
 |>>><span class=component>Trilinear</span> |Like Bilinear, but the Texture also blurs between the different mip levels |
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterCursor40.png)  
 _Cursor settings for the Texture Importer_
@@ -96,6 +101,7 @@ _Cursor settings for the Texture Importer_
 |>>><span class=component>Point</span> |The Texture becomes blocky up close |
 |>>><span class=component>Bilinear</span> |The Texture becomes blurry up close |
 |>>><span class=component>Trilinear</span> |Like Bilinear, but the Texture also blurs between the different mip levels |
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterReflection40.png)  
 _Reflection Settings in the Texture Importer_
@@ -117,7 +123,8 @@ _Reflection Settings in the Texture Importer_
 |<span class=component>Aniso Level</span> |Increases texture quality when viewing the texture at a steep angle. Good for floor and ground textures, see [below](#anisotropy). |
 
 
-An interesting way to add a lot of visual detail to your scenes is to use <span class=keyword>Cookies</span> - greyscale textures you use to control the precise look of in-game lighting. This is fantastic for making moving clouds and giving an impression of dense foliage. The [Light](class-Light.html) page has more info on all this, but the main thing is that for textures to be usable for cookies you just need to set the <span class=menu>Texture Type</span> to Cookie.
+An interesting way to add a lot of visual detail to your scenes is to use <span class=keyword>Cookies</span> - greyscale textures you use to control the precise look of in-game lighting. This is fantastic for making moving clouds and giving an impression of dense foliage. The [Light](class-Light.md) page has more info on all this, but the main thing is that for textures to be usable for cookies you just need to set the <span class=menu>Texture Type</span> to Cookie.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterCookie40.png)  
 _Cookie Settings in the Texture Importer_
@@ -135,6 +142,7 @@ _Cookie Settings in the Texture Importer_
 |<span class=component>Fixup edge seams</span> |(Point light only) Removes visual artifacts at the joined edges of the map image(s). |
 |<span class=component>Alpha from Greyscale</span> |If enabled, an alpha transparency channel will be generated by the image's existing values of light & dark. |
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterLightmap40.png)  
 _Lightmap settings in the Texture Importer_
 
@@ -146,6 +154,7 @@ _Lightmap settings in the Texture Importer_
 |>>><span class=component>Bilinear</span> |The Texture becomes blurry up close |
 |>>><span class=component>Trilinear</span> |Like Bilinear, but the Texture also blurs between the different mip levels |
 |<span class=component>Aniso Level</span> |Increases texture quality when viewing the texture at a steep angle. Good for floor and ground textures, see [below](#anisotropy). |
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TexImporterAdvanced40.png)  
 _The Advanced Texture Importer Settings dialog_
@@ -168,7 +177,7 @@ _The Advanced Texture Importer Settings dialog_
 |>>><span class=component>FacesHorizontal</span> |The texture contains the six faces of the cube arranged in a horizontal strip in the order +x -x +y -y +z -z. |
 |>>><span class=component>CrossVertical</span> |The texture contains the six faces of the cube arranged in a vertically oriented cross. |
 |>>><span class=component>CrossHorizontal</span> |The texture contains the six faces of the cube arranged in a horizontally oriented cross. |
-|<span class=component>Read/Write Enabled</span> |Select this to enable access to the texture data from scripts (GetPixels, SetPixels and other [Texture2D](ScriptRef:Texture2D.html.html) functions). Note however that a copy of the texture data will be made, doubling the amount of memory required for texture asset. Use only if absolutely necessary. This is only valid for uncompressed and DTX compressed textures, other types of compressed textures cannot be read from. Disabled by default. |
+|<span class=component>Read/Write Enabled</span> |Select this to enable access to the texture data from scripts (GetPixels, SetPixels and other [Texture2D](ScriptRef:Texture2D.html) functions). Note however that a copy of the texture data will be made, doubling the amount of memory required for texture asset. Use only if absolutely necessary. This is only valid for uncompressed and DTX compressed textures, other types of compressed textures cannot be read from. Disabled by default. |
 |<span class=component>Import Type</span> |The way the image data is interpreted. |
 |>>><span class=component>Default</span> |Standard texture. |
 |>>><span class=component>Normal Map</span> |Texture is treated as a normal map (enables other options) |
@@ -198,6 +207,7 @@ Per-Platform Overrides
 
 
 When you are building for different platforms, you have to think about the resolution of your textures for the target platform, the size and the quality. You can set default options and then override the defaults for a specific platform.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TextureImporterOverride.png)  
 _Default settings for all platforms._
@@ -294,7 +304,7 @@ Unity can read the following file formats: PSD, TIFF, JPG, TGA, PNG, GIF, BMP, I
 
 Ideally texture sizes should be powers of two on the sides. These sizes are as follows: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 or 2048 pixels. The textures do not have to be square, i.e. width can be different from height.
 
-It is possible to use other (non power of two) texture sizes with Unity. Non power of two texture sizes work best when used on [GUI Textures](class-GuiTexture.html), however if used on anything else they will be converted to an uncompressed RGBA 32 bit format. That means they will take up more video memory (compared to PVRT(iOS)/DXT(Desktop) compressed textures), will be slower to load and slower to render (if you are on iOS mode). In general you'll use non power of two sizes only for GUI purposes.
+It is possible to use other (non power of two) texture sizes with Unity. Non power of two texture sizes work best when used on [GUI Textures](class-GuiTexture.md), however if used on anything else they will be converted to an uncompressed RGBA 32 bit format. That means they will take up more video memory (compared to PVRT(iOS)/DXT(Desktop) compressed textures), will be slower to load and slower to render (if you are on iOS mode). In general you'll use non power of two sizes only for GUI purposes.
 
 Non power of two texture assets can be scaled up at import time using the <span class=component>Non Power of 2</span> option in the advanced texture type in the import settings. Unity will scale texture contents as requested, and in the game they will behave just like any other texture, so they can still be compressed and very fast to load.  
 
@@ -302,7 +312,7 @@ One potential problem with using non power of two textures this is that Unity wi
 
 ###UV Mapping
 
-When mapping a 2D texture onto a 3D model, some sort of wrapping is done. This is called <span class=keyword>UV mapping</span> and is done in your 3D modelling app. Inside Unity, you can scale and move the texture using [Materials](class-Material.html). Scaling normal & detail maps is especially useful.
+When mapping a 2D texture onto a 3D model, some sort of wrapping is done. This is called <span class=keyword>UV mapping</span> and is done in your 3D modelling app. Inside Unity, you can scale and move the texture using [Materials](class-Material.md). Scaling normal & detail maps is especially useful.
 
 
 <a id="mipmaps"></a>
@@ -319,19 +329,20 @@ Normal maps are used by normal map shaders to make low-polygon models look as if
 
 ###Detail Maps
 
-If you want to make a terrain, you normally use your main texture to show where there are areas of grass, rocks sand, etc... If your terrain has a decent size, it will end up very blurry. [Detail textures](HOWTO-UseDetailTexture.html) hide this fact by fading in small details as your main texture gets up close.
+If you want to make a terrain, you normally use your main texture to show where there are areas of grass, rocks sand, etc... If your terrain has a decent size, it will end up very blurry. [Detail textures](HOWTO-UseDetailTexture.md) hide this fact by fading in small details as your main texture gets up close.
 
 When drawing detail textures, a neutral gray is invisible, white makes the main texture twice as bright and black makes the main texture completely black.
 
 
 ###Reflections (Cube Maps)
 
-If you want to use texture for reflection maps (e.g. use the <span class=component>Reflective</span> builtin shaders), you need to use [Cubemap Textures](class-Cubemap.html).
+If you want to use texture for reflection maps (e.g. use the <span class=component>Reflective</span> builtin shaders), you need to use [Cubemap Textures](class-Cubemap.md).
 
 <a id="anisotropy"></a>
 ###Anisotropic filtering
 
-Anisotropic filtering increases texture quality when viewed from a grazing angle, at some expense of rendering cost (the cost is entirely on the graphics card). Increasing anisotropy level is usually a good idea for ground and floor textures. In [Quality Settings](class-QualitySettings.html) anisotropic filtering can be forced for all textures or disabled completely.
+Anisotropic filtering increases texture quality when viewed from a grazing angle, at some expense of rendering cost (the cost is entirely on the graphics card). Increasing anisotropy level is usually a good idea for ground and floor textures. In [Quality Settings](class-QualitySettings.md) anisotropic filtering can be forced for all textures or disabled completely.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnisotropicComparison.png)  
 _No anisotropy (left) / Maximum anisotropy (right) used on the ground texture_

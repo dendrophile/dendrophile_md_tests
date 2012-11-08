@@ -8,7 +8,7 @@ Unity Asset Server Overview
 
 The <span class=keyword>Unity Asset Server</span> is an asset and version control system with a graphical user interface integrated into Unity.  It is meant to be used by team members working together on a project on different computers either in-person or remotely.  The Asset Server is highly optimized for handling large binary assets in order to cope with large multi gigabyte project folders. When uploading assets, <span class=keyword>Import Settings</span> and other meta data about each asset is uploaded to the asset server as well. Renaming and moving files is at the core of the system and well supported.
 
-It is available only for Unity Pro, and is an additional license per client.  To purchase an Asset Server Client License, please visit the Unity store at [http://unity3d.com/store](http://unity3d.com/store.html)
+It is available only for Unity Pro, and is an additional license per client.  To purchase an Asset Server Client License, please visit the Unity store at [http://unity3d.com/store](http://unity3d.com/store.md)
 
 New to Source Control?
 ----------------------
@@ -26,7 +26,7 @@ Setting up the Asset Server
 ---------------------------
 
 
-The Asset Server requires a one time server setup and a client configuration for each user.  You can read about how to do that in the [Asset Server Setup page](assetserver-Setup.html).
+The Asset Server requires a one time server setup and a client configuration for each user.  You can read about how to do that in the [Asset Server Setup page](assetserver-Setup.md).
 
 The rest of this guide explains how to deploy, administrate, and regularly use the Asset Server.
 

@@ -9,6 +9,7 @@ Here are simple steps how to do it (these steps might change in the future build
 
 * Build Visual Studio solution. You can ignore Autoconnect Profiler and Script Debugging checkoxes, on Metro they do not do anything.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/metro-debugging-editor.jpg)  
 
 * Open the newly created solution file. It contains Assembly-CSharp.pdb, that means you are able to debug your C# files.
@@ -16,5 +17,6 @@ Here are simple steps how to do it (these steps might change in the future build
 * You now have all of your C# files, and you can place the breakpoints you want.
 * Before pressing F5, set Debug Type to Mixed (Managed and Native)
 * Click F5 and enjoy, you should see something like this:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/metro-debugging-vs.jpg)  

@@ -4,6 +4,7 @@ Rigidbody
 
 <span class=keyword>Rigidbodies</span> enable your <span class=keyword>GameObjects</span> to act under the control of physics. The Rigidbody can receive forces and torque to make your objects move in a realistic way.  Any GameObject must contain a Rigidbody to be influenced by gravity, act under added forces via scripting, or interact with other objects through the NVIDIA PhysX physics engine.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-Rigidbody.png)  
 _Rigidbodies allow GameObjects to act under physical influence_
 
@@ -51,27 +52,28 @@ When an object is under physics control, it moves semi-independently of the way 
 
 ###Scripting
 
-To control your Rigidbodies, you will primarily use scripts to add forces or torque. You do this by calling <span class=component>[AddForce()](ScriptRef:Rigidbody.AddForce.html.html)</span> and <span class=component>[AddTorque()](ScriptRef:Rigidbody.AddTorque.html.html)</span> on the object's Rigidbody.  Remember that you shouldn't be directly altering the object's Transform when you are using physics.
+To control your Rigidbodies, you will primarily use scripts to add forces or torque. You do this by calling <span class=component>[AddForce()](ScriptRef:Rigidbody.AddForce.html)</span> and <span class=component>[AddTorque()](ScriptRef:Rigidbody.AddTorque.html)</span> on the object's Rigidbody.  Remember that you shouldn't be directly altering the object's Transform when you are using physics.
 
 
 ###Animation
 
-For some situations, mainly creating ragdoll effects, it is neccessary to switch control of the object between animations and physics. For this purpose Rigidbodies can be marked <span class=component>[isKinematic](ScriptRef:Rigidbody-isKinematic.html.html)</span>. While the Rigidbody is marked <span class=component>isKinematic</span>, it will not be affected by collisions, forces, or any other part of physX. This means that you will have to control the object by manipulating the [Transform](class-Transform.html) component directly.  Kinematic Rigidbodies will affect other objects, but they themselves will not be affected by physics. For example, Joints which are attached to Kinematic objects will constrain any other Rigidbodies attached to them and Kinematic Rigidbodies will affect other Rigidbodies through collisions.
+For some situations, mainly creating ragdoll effects, it is neccessary to switch control of the object between animations and physics. For this purpose Rigidbodies can be marked <span class=component>[isKinematic](ScriptRef:Rigidbody-isKinematic.html)</span>. While the Rigidbody is marked <span class=component>isKinematic</span>, it will not be affected by collisions, forces, or any other part of physX. This means that you will have to control the object by manipulating the [Transform](class-Transform.md) component directly.  Kinematic Rigidbodies will affect other objects, but they themselves will not be affected by physics. For example, Joints which are attached to Kinematic objects will constrain any other Rigidbodies attached to them and Kinematic Rigidbodies will affect other Rigidbodies through collisions.
 
 
 ###Colliders
 
 Colliders are another kind of component that must be added alongside the Rigidbody in order to allow collisions to occur.  If two Rigidbodies bump into each other, the physics engine will not calculate a collision unless both objects also have a Collider attached.  Collider-less Rigidbodies will simply pass through each other during physics simulation.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RigidbodyandCollider.png)  
 _Colliders define the physical boundaries of a Rigidbody_
 
 Add a Collider with the <span class=component>Component->Physics</span> menu.  View the Component Reference page of any individual Collider for more specific information:
-* [Box Collider](class-BoxCollider.html) - primitive shape of a cube
-* [Sphere Collider](class-SphereCollider.html) - primitive shape of a sphere
-* [Capsule Collider](class-CapsuleCollider.html) - primitive shape of a capsule
-* [Mesh Collider](class-MeshCollider.html) - creates a collider from the object's mesh, cannot collide with another Mesh Collider
-* [Wheel Collider](class-WheelCollider.html) - specifically for creating cars or other moving vehicles
+* [Box Collider](class-BoxCollider.md) - primitive shape of a cube
+* [Sphere Collider](class-SphereCollider.md) - primitive shape of a sphere
+* [Capsule Collider](class-CapsuleCollider.md) - primitive shape of a capsule
+* [Mesh Collider](class-MeshCollider.md) - creates a collider from the object's mesh, cannot collide with another Mesh Collider
+* [Wheel Collider](class-WheelCollider.md) - specifically for creating cars or other moving vehicles
 
 
 ###Compound Colliders

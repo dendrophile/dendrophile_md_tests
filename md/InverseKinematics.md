@@ -6,16 +6,17 @@ Most animation is produced by rotating the angles of joints in a skeleton to pre
 
 However, it is often useful to look at the task of posing joints from the opposite point of view - given a chosen position in space, work backwards and find a valid way of orienting the joints so that the end point lands at that position. This can be useful when you want a character to touch an object at a point selected by the user or plant its feet convincingly on an uneven surface. This approach is known as <span class=keyword>Inverse Kinematics</span> (IK) and is supported in Mecanim for any humanoid character _with a correctly configured Avatar_.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimIKGrabbing.png)  
 
 To set up IK for a character, you typically have objects around the scene that a character interacts with, and then set up the IK thru script, in particular, Animator functions like
-[SetIKPositionWeight](ScriptRef:Animator.SetIKPositionWeight.html.html),
-[SetIKRotationWeight](ScriptRef:Animator.SetIKRotationWeight.html.html),
-[SetIKPosition](ScriptRef:Animator.SetIKPosition.html.html),
-[SetIKRotation](ScriptRef:Animator.SetIKRotation.html.html),
-[SetLookAtPosition](ScriptRef:Animator.SetIKLookAtPosition.html.html),
-[bodyPosition](ScriptRef:Animator-bodyPosition.html.html),
-[bodyRotation](ScriptRef:Animator-bodyRotation.html.html)
+[SetIKPositionWeight](ScriptRef:Animator.SetIKPositionWeight.html),
+[SetIKRotationWeight](ScriptRef:Animator.SetIKRotationWeight.html),
+[SetIKPosition](ScriptRef:Animator.SetIKPosition.html),
+[SetIKRotation](ScriptRef:Animator.SetIKRotation.html),
+[SetLookAtPosition](ScriptRef:Animator.SetIKLookAtPosition.html),
+[bodyPosition](ScriptRef:Animator-bodyPosition.html),
+[bodyRotation](ScriptRef:Animator-bodyRotation.html)
 
 In the illustration above, we show a character grabbing a cylindrical object. How do we make this happen?
 
@@ -74,8 +75,9 @@ public class IKCtrl : MonoBehaviour {
 As we do not intend for the character to grab the entire object with his hand, we position a sphere where the hand should be on the cylinder, and rotate it accordingly. 
 
 This sphere should then be placed as the "Right Hand Obj" property of the IKCtrl script
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimIKSetupInspector.png)  
 
 Observe the character grabbing and ungrabbing the object as you click the <span class=component>IKActive</span> checkbox
 
-(back to [Mecanim introduction](MecanimAnimationSystem.html))
+(back to [Mecanim introduction](MecanimAnimationSystem.md))

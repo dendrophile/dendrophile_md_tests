@@ -4,6 +4,7 @@ Computing a Normal/Perpendicular vector
 
 A normal vector (ie, a vector perpendicular to a plane) is required frequently during mesh generation and may also be useful in path following and other situations. Given three points in the plane, say the corner points of a mesh triangle, it is easy to find the normal. Pick any of the three points and then subtract it from each of the two other points separately to give two vectors:-
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CalculateNormal.png)  
 
 ````

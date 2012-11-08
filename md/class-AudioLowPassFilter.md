@@ -2,9 +2,10 @@ Audio Low Pass Filter (PRO only)
 ================================
 
 
-The <span class=keyword>Audio Low Pass Filter</span> filter passes low frequencies of an [AudioSource](class-AudioSource.html), or all sound reaching an [AudioListener](class-AudioListener.html), and cuts frequencies higher than the <span class=component>Cutoff Frequency</span>.  
+The <span class=keyword>Audio Low Pass Filter</span> filter passes low frequencies of an [AudioSource](class-AudioSource.md), or all sound reaching an [AudioListener](class-AudioListener.md), and cuts frequencies higher than the <span class=component>Cutoff Frequency</span>.  
 The <span class=component>Lowpass Resonance Q</span> (known as Lowpass Resonance Quality Factor) determines how much the filter's self-resonance is dampened. Higher <span class=component>Lowpass Resonance Q</span> indicates a lower rate of energy loss i.e. the oscillations die out more slowly.  
 The <span class=keyword>Audio Low Pass Filter</span> has a Rolloff curve associated with it, making it possible to set <span class=component>Cutoff Frequency</span> over distance between the AudioSource and the AudioListener.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioLowPassFilter.png)  
 _The Audio Low Pass filter properties in the inspector._

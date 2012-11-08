@@ -2,10 +2,10 @@ HTML code to load Unity content with UnityObject2
 =================================================
 
 
-Loading unity content with UnityObject2 is similiar to the way it's done with [UnityObject](HTMLcodetoloadUnityWebPlayercontent.html), except the URL used for the unityObjectURL is: 
+Loading unity content with UnityObject2 is similiar to the way it's done with [UnityObject](HTMLcodetoloadUnityWebPlayercontent.md), except the URL used for the unityObjectURL is: 
 "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
 
-You can now instantiante the <span class=component>UnityObject2</span> class to assist you in various Unity related tasks. The most inportant one is to embed Unity content. This is performed by instantiating <span class=component>UnityObject2</span> and calling <span class=component>initPlugin</span> on the new instance. See [UnityObject2.initPlugin](WebPlayerDeployment-UnityObject2#initPlugin.html)
+You can now instantiante the <span class=component>UnityObject2</span> class to assist you in various Unity related tasks. The most inportant one is to embed Unity content. This is performed by instantiating <span class=component>UnityObject2</span> and calling <span class=component>initPlugin</span> on the new instance. See [UnityObject2.initPlugin](WebPlayerDeployment-UnityObject2#initPlugin.md)
 
 ````
 

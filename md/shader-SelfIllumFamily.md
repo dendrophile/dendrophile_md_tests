@@ -6,76 +6,76 @@ The <span class=keyword>Self-Illuminated</span> shaders will emit light only ont
 
 This is mostly used for light emitting objects. For example, parts of the wall texture could be self-illuminated to simulate lights or displays.  It can also be useful to light power-up objects that should always have consistent lighting throughout the game, regardless of the lights shining on it.
 
-[Self-Illuminated Vertex-Lit](shader-SelfIllumVertexLit.html)
--------------------------------------------------------------
+[Self-Illuminated Vertex-Lit](shader-SelfIllumVertexLit.md)
+-----------------------------------------------------------
 
 
-[Attach:Shaders./Thumb-IllumVertex.png](shader-SelfIllumVertexLit.html)
+[Attach:Shaders./Thumb-IllumVertex.png](shader-SelfIllumVertexLit.md)
 
 _'Assets needed:_'
 * One <span class=component>Base</span> texture, no alpha channel required
 * One <span class=component>Illumination</span> texture with alpha channel for Illumination Map
 
-[shader-SelfIllumVertexLit| &#187; More details](shader-SelfIllumVertexLit|&#187;Moredetails.html)
+[shader-SelfIllumVertexLit| &#187; More details](shader-SelfIllumVertexLit|&#187;Moredetails.md)
 
 
-[Self-Illuminated Diffuse](shader-SelfIllumDiffuse.html)
+[Self-Illuminated Diffuse](shader-SelfIllumDiffuse.md)
+------------------------------------------------------
+
+
+[Attach:Shaders./Thumb-IllumDiffuse.png](shader-SelfIllumDiffuse.md)
+
+_'Assets needed:_'
+* One <span class=component>Base</span> texture, no alpha channel required
+* One <span class=component>Illumination</span> texture with alpha channel for Illumination Map
+
+[shader-SelfIllumDiffuse | &#187; More details](shader-SelfIllumDiffuse|&#187;Moredetails.md)
+
+
+[Self-Illuminated Specular](shader-SelfIllumSpecular.md)
 --------------------------------------------------------
 
 
-[Attach:Shaders./Thumb-IllumDiffuse.png](shader-SelfIllumDiffuse.html)
-
-_'Assets needed:_'
-* One <span class=component>Base</span> texture, no alpha channel required
-* One <span class=component>Illumination</span> texture with alpha channel for Illumination Map
-
-[shader-SelfIllumDiffuse | &#187; More details](shader-SelfIllumDiffuse|&#187;Moredetails.html)
-
-
-[Self-Illuminated Specular](shader-SelfIllumSpecular.html)
-----------------------------------------------------------
-
-
-[Attach:Shaders./Thumb-IllumSpec.png](shader-SelfIllumSpecular.html)
+[Attach:Shaders./Thumb-IllumSpec.png](shader-SelfIllumSpecular.md)
 
 _'Assets needed:_'
 * One <span class=component>Base</span> texture with alpha channel for Specular Map
 * One <span class=component>Illumination</span> texture with alpha channel for Illumination Map
 
-[shader-SelfIllumSpecular | &#187; More details](shader-SelfIllumSpecular|&#187;Moredetails.html)
+[shader-SelfIllumSpecular | &#187; More details](shader-SelfIllumSpecular|&#187;Moredetails.md)
 
 
-[Self-Illuminated Bumped](shader-SelfIllumBumpedDiffuse.html)
--------------------------------------------------------------
+[Self-Illuminated Bumped](shader-SelfIllumBumpedDiffuse.md)
+-----------------------------------------------------------
 
 
-[Attach:Shaders./Thumb-IllumBump.png](shader-SelfIllumBumpedDiffuse.html)
+[Attach:Shaders./Thumb-IllumBump.png](shader-SelfIllumBumpedDiffuse.md)
 
 _'Assets needed:_'
 * One <span class=component>Base</span> texture, no alpha channel required
 * One <span class=component>Normal map</span> normal map with alpha channel for Illumination
 
-[shader-SelfIllumBumpedDiffuse | &#187; More details](shader-SelfIllumBumpedDiffuse|&#187;Moredetails.html)
+[shader-SelfIllumBumpedDiffuse | &#187; More details](shader-SelfIllumBumpedDiffuse|&#187;Moredetails.md)
 
 
-[Self-Illuminated Bumped Specular](shader-SelfIllumBumpedSpecular.html)
------------------------------------------------------------------------
+[Self-Illuminated Bumped Specular](shader-SelfIllumBumpedSpecular.md)
+---------------------------------------------------------------------
 
 
-[Attach:Shaders./Thumb-IllumBumpSpec.png](shader-SelfIllumBumpedSpecular.html)
+[Attach:Shaders./Thumb-IllumBumpSpec.png](shader-SelfIllumBumpedSpecular.md)
 
 _'Assets needed:_'
 * One <span class=component>Base</span> texture with alpha channel for Specular Map
 * One <span class=component>Normal map</span> normal map with alpha channel for Illumination Map
 
-[shader-SelfIllumBumpedSpecular | &#187; More details](shader-SelfIllumBumpedSpecular|&#187;Moredetails.html)
+[shader-SelfIllumBumpedSpecular | &#187; More details](shader-SelfIllumBumpedSpecular|&#187;Moredetails.md)
 
 
-[Self-Illuminated Parallax](shader-SelfIllumParallaxDiffuse.html)
------------------------------------------------------------------
+[Self-Illuminated Parallax](shader-SelfIllumParallaxDiffuse.md)
+---------------------------------------------------------------
 
 
-[Attach:Shaders./Thumb-IllumParallaxBump.png](shader-SelfIllumParallaxDiffuse.html)
+[Attach:Shaders./Thumb-IllumParallaxBump.png](shader-SelfIllumParallaxDiffuse.md)
 
 _'Assets needed:_'
 * One <span class=component>Base</span> texture, no alpha channel required
@@ -84,14 +84,14 @@ _'Assets needed:_'
 _'Note:_'
 One consideration of this shader is that the <span class=component>Bumpmap</span> texture's alpha channel doubles as a Illumination and the Parallax Depth.
 
-[shader-SelfIllumParallaxDiffuse | &#187; More details](shader-SelfIllumParallaxDiffuse|&#187;Moredetails.html)
+[shader-SelfIllumParallaxDiffuse | &#187; More details](shader-SelfIllumParallaxDiffuse|&#187;Moredetails.md)
 
 
-[Self-Illuminated Parallax Specular](shader-SelfIllumParallaxSpecular.html)
----------------------------------------------------------------------------
+[Self-Illuminated Parallax Specular](shader-SelfIllumParallaxSpecular.md)
+-------------------------------------------------------------------------
 
 
-[Attach:Shaders./Thumb-IllumParallaxBumpSpec.png](shader-SelfIllumParallaxSpecular.html)
+[Attach:Shaders./Thumb-IllumParallaxBumpSpec.png](shader-SelfIllumParallaxSpecular.md)
 
 _'Assets needed:_'
 * One <span class=component>Base</span> texture with alpha channel for Specular Map
@@ -100,4 +100,4 @@ _'Assets needed:_'
 _'Note:_'
 One consideration of this shader is that the <span class=component>Bumpmap</span> texture's alpha channel doubles as a Illumination and the Parallax Depth.
 
-[shader-SelfIllumParallaxSpecular | &#187; More details](shader-SelfIllumParallaxSpecular|&#187;Moredetails.html)
+[shader-SelfIllumParallaxSpecular | &#187; More details](shader-SelfIllumParallaxSpecular|&#187;Moredetails.md)

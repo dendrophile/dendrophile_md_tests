@@ -16,7 +16,7 @@ Shipping Games with NaCl
 ------------------------
 
 
-In its current state, NaCl is not enabled for generic web pages in Chrome by default. While you can embed a NaCl player into any web page, and direct your users to manually enable NaCl in chrome://flags, the only way to currently ship NaCl games and have them work out of the box is to deploy them on the [Chrome Web Store](https://chrome.google.com/webstore.html) (for which NaCl is enabled by default). Note that the Chrome Web Store is fairly unrestrictive, and allows you to host content embedded into your own web site, or to use your own payment processing system if you like. The plan is that this restriction will be lifted when Google has finished a new technology called portable NaCl (PNaCl), which lets you ship executables as LLVM bitcode, thus making NaCl apps independent of any specific CPU architectures. Then NaCl should be enabled for any arbitrary web site.
+In its current state, NaCl is not enabled for generic web pages in Chrome by default. While you can embed a NaCl player into any web page, and direct your users to manually enable NaCl in chrome://flags, the only way to currently ship NaCl games and have them work out of the box is to deploy them on the [Chrome Web Store](https://chrome.google.com/webstore.md) (for which NaCl is enabled by default). Note that the Chrome Web Store is fairly unrestrictive, and allows you to host content embedded into your own web site, or to use your own payment processing system if you like. The plan is that this restriction will be lifted when Google has finished a new technology called portable NaCl (PNaCl), which lets you ship executables as LLVM bitcode, thus making NaCl apps independent of any specific CPU architectures. Then NaCl should be enabled for any arbitrary web site.
 
 ###Notes on Build size
 
@@ -63,13 +63,13 @@ WWW class:
 ----------
 
 
-The WWW class is supported in NaCl, but follows different security policies then the Unity Web Player. While the Unity Web Player uses [crossdomain.xml](SecuritySandbox.html) policy files, similar to flash, Unity NaCl has to follow the cross-origin security model followed by NaCl, documented [here](http://www.w3.org/TR/cors/.html). Basically, in order to access html documents on a different domain then the player is hosted, you need to configure your web server to send a `Access-Control-Allow-Origin` respond header for the requests, which allows the domain hosting the player.
+The WWW class is supported in NaCl, but follows different security policies then the Unity Web Player. While the Unity Web Player uses [crossdomain.xml](SecuritySandbox.md) policy files, similar to flash, Unity NaCl has to follow the cross-origin security model followed by NaCl, documented [here](http://www.w3.org/TR/cors/.md). Basically, in order to access html documents on a different domain then the player is hosted, you need to configure your web server to send a `Access-Control-Allow-Origin` respond header for the requests, which allows the domain hosting the player.
 
 Communicating with browser javascript in NaCl
 ---------------------------------------------
 
 
-Interacting with the web page using JavaScript is supported, and is very similar to [using the Unity Web Player](UnityWebPlayerandbrowsercommunication.html), with one exception: The syntax for sending messages to Unity from html javascript is different, because it has to go through the NaCl module. When you are using the default Unity-generated html, then this code will work:
+Interacting with the web page using JavaScript is supported, and is very similar to [using the Unity Web Player](UnityWebPlayerandbrowsercommunication.md), with one exception: The syntax for sending messages to Unity from html javascript is different, because it has to go through the NaCl module. When you are using the default Unity-generated html, then this code will work:
 
 `document.getElementById('UnityEmbed').postMessage("GameObject.Message(parameter)");`
 
@@ -81,4 +81,4 @@ Since NaCl does not allow access to the user file system, it will not write log 
 
 * Do a Build & Run in the edtior once to make sure your game is installed into Chrome as an app.
 * On Mac OS X, start Chrome from a Terminal, and start the app by clicking on it's icon. You should see the Unity player log output in the terminal.
-* On Windows it's the same, but you need to set the NACL_EXE_STDOUT and NACL_EXE_STDERR environment variables, and start Chrome with the --no-sandbox option. See Google's [documentation](https://sites.google.com/a/chromium.org/dev/nativeclient/how-tos/debuggingtips.html).
+* On Windows it's the same, but you need to set the NACL_EXE_STDOUT and NACL_EXE_STDERR environment variables, and start Chrome with the --no-sandbox option. See Google's [documentation](https://sites.google.com/a/chromium.org/dev/nativeclient/how-tos/debuggingtips.md).

@@ -6,7 +6,8 @@ You can choose to emulate less capable graphics hardware when working in the Uni
 
 To enable Graphics emulation, go to <span class=menu>Edit->Graphics Emulation</span>, and choose your desired emulation level.
 
-__Note:__ The available graphic emulation options change depending on the platform you are currently targeting. More information can be found on the [Publishing builds page](PublishingBuilds.html).
+__Note:__ The available graphic emulation options change depending on the platform you are currently targeting. More information can be found on the [Publishing builds page](PublishingBuilds.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GraphicsEmulationMenu.jpg)  
 _Enabling Graphics Emulation_

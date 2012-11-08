@@ -3,6 +3,7 @@ Practical Guide to Optimization for Mobiles - Future & High End Devices
 
 
 (:div style="float:right; padding:5px; color:#BBBBBB; font-size:10px; width:310px;":)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/unwritten.jpg)  
 (:divend:)
 
@@ -18,7 +19,7 @@ What can these new devices do?
 * HD video playback
 * Faster script execution
 
-To get a sense of what is already being done for this coming generation of phones & tablets, watch [NVIDIA's promotional video for Tegra 3](http://www.youtube.com/watch?v=2U2r3yKg0Ng.html). Bladeslinger and Shadowgun are Unity titles.
+To get a sense of what is already being done for this coming generation of phones & tablets, watch [NVIDIA's promotional video for Tegra 3](http://www.youtube.com/watch?v=2U2r3yKg0Ng.md). Bladeslinger and Shadowgun are Unity titles.
 
 
 (:tocportion:)

@@ -4,7 +4,8 @@ Line Renderer
 
 The <span class=keyword>Line Renderer</span> takes an array of two or more points in 3D space and draws a straight line between each one. A single Line Renderer Component can thus be used to draw anything from a simple straight line, to a complex spiral. The line is always continuous; if you need to draw two or more completely separate lines, you should use multiple GameObjects, each with its own Line Renderer.
 
-The Line Renderer does not render one pixel thin lines. It renders billboard lines that have width and can be textured. It uses the same algorithm for line rendering as the [Trail Renderer](class-TrailRenderer.html).
+The Line Renderer does not render one pixel thin lines. It renders billboard lines that have width and can be textured. It uses the same algorithm for line rendering as the [Trail Renderer](class-TrailRenderer.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-LineRenderer.png)  
 _The Line Renderer <span class=keyword>Inspector</span>_

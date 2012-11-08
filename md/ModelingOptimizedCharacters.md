@@ -8,14 +8,14 @@ Use a Single Skinned Mesh Renderer
 ----------------------------------
 
 
-You should use only a single [skinned mesh renderer](class-SkinnedMeshRenderer.html) for each character. Unity optimizes animation using visibility culling and bounding volume updates and these optimizations are only activated if you use one [animation component](class-Animation.html) and one skinned mesh renderer in conjunction. The rendering time for a model could roughly double as a result of using two skinned meshes in place of a single mesh and there is seldom any practical advantage in using multiple meshes.
+You should use only a single [skinned mesh renderer](class-SkinnedMeshRenderer.md) for each character. Unity optimizes animation using visibility culling and bounding volume updates and these optimizations are only activated if you use one [animation component](class-Animation.md) and one skinned mesh renderer in conjunction. The rendering time for a model could roughly double as a result of using two skinned meshes in place of a single mesh and there is seldom any practical advantage in using multiple meshes.
 
 
 Use as Few Materials as Possible
 --------------------------------
 
 
-You should also keep the number of [materials](class-Material.html) on each mesh as low as possible. The only reason why you might want to have more than one material on a character is that you need to use different shaders for different parts (eg, a special shader for the eyes). However, two or three materials per character should be sufficient in almost all cases.
+You should also keep the number of [materials](class-Material.md) on each mesh as low as possible. The only reason why you might want to have more than one material on a character is that you need to use different shaders for different parts (eg, a special shader for the eyes). However, two or three materials per character should be sufficient in almost all cases.
 
 
 Use as Few Bones as Possible

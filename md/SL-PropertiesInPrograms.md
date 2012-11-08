@@ -2,7 +2,7 @@ Accessing shader properties in Cg
 =================================
 
 
-Shader declares Material properties in a [Properties](SL-Properties.html) block. If you want to access some of those properties in a [shader program](SL-ShaderPrograms.html), you need to declare a Cg/HLSL variable with the same name and a matching type. An example is provided in [Shader Tutorial: Vertex and Fragment Programs](ShaderTut2.html).
+Shader declares Material properties in a [Properties](SL-Properties.md) block. If you want to access some of those properties in a [shader program](SL-ShaderPrograms.md), you need to declare a Cg/HLSL variable with the same name and a matching type. An example is provided in [Shader Tutorial: Vertex and Fragment Programs](ShaderTut2.md).
 
 For example these shader properties:
 ````

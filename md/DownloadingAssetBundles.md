@@ -2,11 +2,11 @@ Downloading AssetBundles
 ------------------------
 
 
-This section assumes you already learned how to build asset bundles. If you have not, please see [Building AssetBundles](BuildingAssetBundles.html)
+This section assumes you already learned how to build asset bundles. If you have not, please see [Building AssetBundles](BuildingAssetBundles.md)
 
 There are two ways to download an AssetBundle
-1. __Non-caching:__ This is done using a creating a new [WWW object](ScriptRef:WWW.WWW.html.html). The AssetBundles are not cached to Unity’s Cache folder in the local storage device.
-1. __Caching:__ This is done using the [WWW.LoadFromCacheOrDownload](ScriptRef:WWW.LoadFromCacheOrDownload.html.html) call. The AssetBundles are cached to Unity’s Cache folder in the local storage device. The WebPlayer shared cache allows up to 50 MB of cached AssetBundles. PC/Mac Standalone applications and iOS/Android applications have a limit of 4 GB. WebPlayer applications that make use of a dedicated cache are limited to the number of bytes specified in the caching license agreement. Please refer to the scripting documentation for other platforms.
+1. __Non-caching:__ This is done using a creating a new [WWW object](ScriptRef:WWW.WWW.html). The AssetBundles are not cached to Unity’s Cache folder in the local storage device.
+1. __Caching:__ This is done using the [WWW.LoadFromCacheOrDownload](ScriptRef:WWW.LoadFromCacheOrDownload.html) call. The AssetBundles are cached to Unity’s Cache folder in the local storage device. The WebPlayer shared cache allows up to 50 MB of cached AssetBundles. PC/Mac Standalone applications and iOS/Android applications have a limit of 4 GB. WebPlayer applications that make use of a dedicated cache are limited to the number of bytes specified in the caching license agreement. Please refer to the scripting documentation for other platforms.
 
 Here's an example of a non-caching download:
 
@@ -34,7 +34,7 @@ using System.Collections; class NonCachingLoadExample : MonoBehaviour {
 }
 ````
 
-The recommended way to download AssetBundles is to use [WWW.LoadFromCacheOrDownload](ScriptRef:WWW.LoadFromCacheOrDownload.html.html). For example:
+The recommended way to download AssetBundles is to use [WWW.LoadFromCacheOrDownload](ScriptRef:WWW.LoadFromCacheOrDownload.html). For example:
 
 ````
 using System;
@@ -78,6 +78,7 @@ When you access the `.assetBundle` property, the downloaded data is extracted an
 ###Putting it all together
 
 Now that the components are in place you can build a scene that will allow you to load your AssetBundle and display the contents on screen. 
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AssetBundlesExampleFinalProject.png)  
 Final project structure
@@ -130,4 +131,4 @@ class LoadAssetFromAssetBundle : MonoBehaviour
 ````
 
 
-[back to AssetBundles Intro](AssetBundlesIntro.html)
+[back to AssetBundles Intro](AssetBundlesIntro.md)

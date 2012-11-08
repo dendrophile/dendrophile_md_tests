@@ -7,21 +7,23 @@ Depth of Field 3.4
 <span class=keyword>Depth of Field 3.4</span> is a common postprocessing effect that simulates the properties of a camera lens. The name refers to the fact that the effect was added in Unity 3.4.
 
 ##u40 Details
-<span class=keyword>Depth of Field 3.4</span> is a common postprocessing effect that simulates the properties of a camera lens. The name refers to the fact that the effect was added in Unity 3.4, but now is superseded by a more modern [Depth Of Field Scatter](script-DepthOfFieldScatter.html) effect which uses optimized techniques to simulate lens blurs and enables better transitions between focal areas. However, depending on the use case, performance might be a lot better in the old 3.4 version as it was developed for older hardware.
+<span class=keyword>Depth of Field 3.4</span> is a common postprocessing effect that simulates the properties of a camera lens. The name refers to the fact that the effect was added in Unity 3.4, but now is superseded by a more modern [Depth Of Field Scatter](script-DepthOfFieldScatter.md) effect which uses optimized techniques to simulate lens blurs and enables better transitions between focal areas. However, depending on the use case, performance might be a lot better in the old 3.4 version as it was developed for older hardware.
 
 In real life, a camera can only focus sharply on an object at a specific distance; objects nearer or farther from the camera will be somewhat out of focus. The blurring not only gives a visual cue about an object's distance but also introduces <span class=component>bokeh</span> which is the term for pleasing visual artifacts that appear around bright areas of the image as they fall out of focus.
 
 An example of the new Depth of Field effect can be seen in the following images, displaying the results of a defocused foreground and a defocused background. Notice how the foreground blur overlaps with the rest while the background doesn't.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./DofExample1.png)  
 _Only the nearby pipes are in the focal area_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./DofExample2.png)  
 _Foreground vs Background blurring with Depth of Field_
 
-You might also consider using the [Tilt Shift effect](script-TiltShift.html) for a more straightforward but less sophisticated depth-of-field effect.
+You might also consider using the [Tilt Shift effect](script-TiltShift.md) for a more straightforward but less sophisticated depth-of-field effect.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------

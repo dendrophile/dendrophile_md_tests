@@ -37,6 +37,7 @@ Using the DLL
 
 Once compiled, the DLL file can simply be dragged into the Unity project like any other asset. The DLL asset has a foldout triangle which can be used to reveal the separate classes inside the library. Classes that derive from MonoBehaviour can be dragged onto Game Objects like ordinary scripts. Non-MonoBehaviour classes can be used directly from other scripts in the usual way.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/DLLScreenshot.png)  
 _A folded-out DLL with the classes visible_
 

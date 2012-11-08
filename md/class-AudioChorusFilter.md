@@ -2,9 +2,10 @@ Audio Chorus Filter (PRO only)
 ==============================
 
 
-The <span class=keyword>Audio Chorus Filter</span> takes an [Audio Clip](class-AudioClip.html) and processes it creating a chorus effect. 
+The <span class=keyword>Audio Chorus Filter</span> takes an [Audio Clip](class-AudioClip.md) and processes it creating a chorus effect. 
 
 The chorus effect modulates the original sound by a sinusoid low frequency oscillator (LFO).  The output sounds like there are multiple sources emitting the same sound with slight variations - resembling a choir.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioChorusFilter.png)  
 _The Audio high Pass filter properties in the inspector._

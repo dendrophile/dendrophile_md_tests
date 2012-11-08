@@ -2,18 +2,18 @@ Performance of Unity shaders
 ============================
 
 
-There are a number of factors that can affect the overall performance of your game.  This page will talk specifically about the performance considerations for [Built-in Shaders](Built-inShaderGuide.html). Performance of a shader mostly depends on two things: shader itself and which [Rendering Path](RenderingPaths.html) is used by the project or specific camera. For performance tips when writing your own shaders, see [ShaderLab Shader Performance](SL-ShaderPerformance.html) page.
+There are a number of factors that can affect the overall performance of your game.  This page will talk specifically about the performance considerations for [Built-in Shaders](Built-inShaderGuide.md). Performance of a shader mostly depends on two things: shader itself and which [Rendering Path](RenderingPaths.md) is used by the project or specific camera. For performance tips when writing your own shaders, see [ShaderLab Shader Performance](SL-ShaderPerformance.md) page.
 
 Rendering Paths and shader performance
 --------------------------------------
 
 
-From the rendering paths Unity supports, [Deferred Lighting](RenderTech-DeferredLighting.html) and [Vertex Lit](RenderTech-VertexLit.html) paths have the most predictable performance. In Deferred lighting, each object is generally drawn twice, no matter what lights are affecting it. Similarly, in Vertex Lit each object is generally drawn once. So then, the performance differences in shaders mostly depend on how many textures they use and what calculations they do.
+From the rendering paths Unity supports, [Deferred Lighting](RenderTech-DeferredLighting.md) and [Vertex Lit](RenderTech-VertexLit.md) paths have the most predictable performance. In Deferred lighting, each object is generally drawn twice, no matter what lights are affecting it. Similarly, in Vertex Lit each object is generally drawn once. So then, the performance differences in shaders mostly depend on how many textures they use and what calculations they do.
 
 
 ###Shader Performance in Forward rendering path
 
-In [Forward](RenderTech-ForwardRendering.html) rendering path, performance of a shader depends on __both__ the shader itself and the lights in the scene. The following section explains the details. There are two basic categories of shaders from a performance perspective, <span class=keyword>Vertex-Lit</span>, and <span class=keyword>Pixel-Lit</span>.
+In [Forward](RenderTech-ForwardRendering.md) rendering path, performance of a shader depends on __both__ the shader itself and the lights in the scene. The following section explains the details. There are two basic categories of shaders from a performance perspective, <span class=keyword>Vertex-Lit</span>, and <span class=keyword>Pixel-Lit</span>.
 
 <span class=keyword>Vertex-Lit</span> shaders in Forward rendering path are always cheaper than Pixel-Lit shaders. These shaders work by calculating lighting based on the mesh vertices, using all lights at once.  Because of this, no matter how many lights are shining on the object, it will only have to be drawn once.
 
@@ -28,7 +28,7 @@ General shader performance
 --------------------------
 
 
-Out of [Built-in Shaders](Built-inShaderGuide.html), they come roughly in this order of increasing complexity:
+Out of [Built-in Shaders](Built-inShaderGuide.md), they come roughly in this order of increasing complexity:
 * <span class=keyword>Unlit</span>. This is just a texture, not affected by any lighting.
 * <span class=keyword>VertexLit</span>.
 * <span class=keyword>Diffuse</span>.

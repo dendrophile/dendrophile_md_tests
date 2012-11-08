@@ -12,9 +12,11 @@ Using the <span class=keyword>Icon Selector</span>, you can easily set custom ic
 
 Note: When an asset's icon is changed, the asset will be marked as modified and therefore picked up by Revision Control Systems.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GameObjectInspectorAndIconSelector.png)  
 (:comment image source GameObjectInspectorAndIconSelector.psd :)
 _Selecting an icon for a GameObject_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ScriptInspectorAndIconSelector.png)  
 (:comment image source GameObjectInspectorAndIconSelector.psd :)
@@ -30,6 +32,7 @@ The visibility of an individual component's gizmos depends on whether the compon
 To show the state of the current gizmo and icon, click on <span class=menu>Gizmos</span> in the control bar of the Scene or Game View. The toggles here are used to set which icons and gizmos are visible.
 
 Note that the scripts that show up in the <span class=menu>Scripts</span> section are those that either have a custom icon or have an <span class=menu>OnDrawGizmos ()</span> or <span class=menu>OnDrawGizmosSelected ()</span> function implemented.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SceneViewGizmosWindow.png)  
 (:comment image source SceneViewGizmosWindow.psd :)

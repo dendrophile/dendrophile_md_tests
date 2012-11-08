@@ -9,6 +9,7 @@ Terrain Textures are also called splat maps.  What this means is you can define 
 __Note:__ Using an amount of textures in a multiple of four provides the greatest benefit for performance and storage of the Terrain alpha maps.
 
 To being working with textures, click on the <span class=keyword>Paint Textures</span> button \
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-SplatMapsButton.png)  
 in the Inspector.
 
@@ -18,9 +19,11 @@ Adding a Terrain Texture
 
 Before you can begin painting Terrain Textures, you will add at least one to the Terrain from your Project folder.  Click the <span class=menu>Options Button->Add Texture...</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-AddTextureMenu.png)  
 
 This will bring up the Add Terrain Texture dialog.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-AddTextureDialog1.png)  
 _The Add Terrain Texture dialog_
@@ -31,9 +34,10 @@ Now, set the <span class=component>Tile Size X</span> and <span class=component>
 
 
 ###u40 Details
-In Unity 4, you can also assign a normal map texture. For the normal map to have any effect, the terrain must be using a normal map-capable shader; assign a material with normal mapped terrain shader in [Terrain Settings](terrain-OtherSettings.html) tab.
+In Unity 4, you can also assign a normal map texture. For the normal map to have any effect, the terrain must be using a normal map-capable shader; assign a material with normal mapped terrain shader in [Terrain Settings](terrain-OtherSettings.md) tab.
 
 Click the <span class=menu>Add</span> Button and you'll see your first Terrain Texture tile across the entire Terrain.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-FirstTextureAdded.png)  
 
@@ -47,9 +51,11 @@ Once you've added at least two Terrain Textures, you can blend them together in 
 
 Select the Terrain Texture you want to use.  The currently selected Terrain Texture will be highlighted in blue.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintTexture1.png)  
 
 Select the Brush you want to use.  The currently selected Brush will be highlighted in blue.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintTexture2.png)  
 
@@ -61,13 +67,16 @@ __Opacity__ is the transparency or amount of texture applied for a given amount 
 
 __Target Strength__ is the maximum opacity you can reach by painting continuously. 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintTexture3.png)  
 
 Click and drag on the terrain to draw the Terrain Texture.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintTexture3.5.png)  
 
 Use a variety of Textures, Brushes, Sizes, and Opacities to create a great variety of blended styles.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintTexture4.png)  
 

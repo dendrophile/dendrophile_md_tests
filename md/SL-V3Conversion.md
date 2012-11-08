@@ -4,7 +4,7 @@ Unity 3.x Shader Conversion Guide
 
 Unity 3 has many new features and changes to its rendering system, and ShaderLab did update accordingly. Some advanced shaders that were used in Unity 2.x, especially the ones that used per-pixel lighting, will need update for Unity 3. If you have trouble updating them - just ask for our help!
 
-For general graphics related Unity 3 upgrade details, see [Rendering Upgrade Details](RenderingUpgradeDetails.html).
+For general graphics related Unity 3 upgrade details, see [Rendering Upgrade Details](RenderingUpgradeDetails.md).
 
 When you open your Unity 2.x project in Unity 3.x, it will automatically upgrade your shader files as much as possible. The document below lists all the changes that were made to shaders, and what to do when you need manual shader upgrade.
 
@@ -13,7 +13,7 @@ Per-pixel lit shaders
 ---------------------
 
 
-In Unity 2.x, writing shaders that were lit per-pixel was quite complicated. Those shaders would have multiple passes, with <span class=keyword>LightMode</span> tags on each (usually <span class=component>PixelOrNone</span>, <span class=component>Vertex</span> and <span class=component>Pixel</span>). With addition of [Deferred Lighting](RenderTech-DeferredLighting.html) in Unity 3.0 and changes in old forward rendering, we needed an easier, more robust and future proof way of writing shaders that interact with lighting. __All old per-pixel lit shaders need to be rewritten__ to be [Surface Shaders](SL-SurfaceShaders.html).
+In Unity 2.x, writing shaders that were lit per-pixel was quite complicated. Those shaders would have multiple passes, with <span class=keyword>LightMode</span> tags on each (usually <span class=component>PixelOrNone</span>, <span class=component>Vertex</span> and <span class=component>Pixel</span>). With addition of [Deferred Lighting](RenderTech-DeferredLighting.md) in Unity 3.0 and changes in old forward rendering, we needed an easier, more robust and future proof way of writing shaders that interact with lighting. __All old per-pixel lit shaders need to be rewritten__ to be [Surface Shaders](SL-SurfaceShaders.md).
 
 
 Cg shader changes
@@ -53,7 +53,7 @@ Other Changes
 
 ###RECT textures are gone
 
-In Unity 2.x, [RenderTextures](class-RenderTexture.html) could be not power of two in size, so called "RECT" textures. They were designated by "RECT" texture type in shader properties and used as `samplerRECT`, `texRECT` and so on in Cg shaders. Texture coordinates for RECT textures were a special case in OpenGL: they were in pixels. In all other platforms, texture coordinates were just like for any other texture: they went from 0.0 to 1.0 over the texture.
+In Unity 2.x, [RenderTextures](class-RenderTexture.md) could be not power of two in size, so called "RECT" textures. They were designated by "RECT" texture type in shader properties and used as `samplerRECT`, `texRECT` and so on in Cg shaders. Texture coordinates for RECT textures were a special case in OpenGL: they were in pixels. In all other platforms, texture coordinates were just like for any other texture: they went from 0.0 to 1.0 over the texture.
 
 In Unity 3.0 we have decided to remove this OpenGL special case, and treat non power of two RenderTextures the same everywhere. It is recommended to replace `samplerRECT`, `texRECT` and similar uses with regular `sampler2D` and `tex2D`. Also, if you were doing any special pixel adressing for OpenGL case, you need to remove that from your shader, i.e. just keep the non-OpenGL part (look for `SHADER_API_D3D9` or `SHADER_API_OPENGL` macros in your shaders).
 

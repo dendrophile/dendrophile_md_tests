@@ -6,6 +6,7 @@ To apply occlusion culling to moving objects you have to create an <span class=k
 
 After creating the <span class=keyword>Occlusion Area</span>, just check the _Is Target Volume_ checkbox to occlude moving objects. 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingOcclusionArea.png)  
 _Occlusion Area properties for moving objects._
 
@@ -27,6 +28,7 @@ _Occlusion Area properties for moving objects._
 After you have added the Occlusion Area, you need to see how it divides the box into cells. To see how the occlusion area will be calculated, Select <span class=menu>Edit</span> and toggle the <span class=menu>View</span> button 
 in the <span class=keyword>Occlusion Culling Preview Panel</span>. 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingEditView.png)  
 
 Testing the generated occlusion
@@ -34,6 +36,7 @@ Testing the generated occlusion
 
 
 After your occlusion is set up, you can test it by enabling the _Occlusion Culling_ (in the <span class=keyword>Occlusion Culling Preview Panel</span> in Visualize mode) and moving the <span class=keyword>Main Camera</span> around in the scene view.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OcclusionCullingVisualize.png)  
 _The Occlusion View mode in Scene View_

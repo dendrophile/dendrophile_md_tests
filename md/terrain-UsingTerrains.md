@@ -8,15 +8,18 @@ Creating a new Terrain
 
 A new <span class=keyword>Terrain</span> can be created from <span class=menu>Terrain->Create Terrain</span>.  This will add a Terrain to your <span class=keyword>Project</span> and <span class=keyword>Hierarchy Views</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CreateTerrainMenu.png)  
 
 Your new Terrain will look like this in the <span class=keyword>Scene View</span>:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NewTerrain_SceneView.png)  
 _A new Terrain in Scene View_
 
 If you would like a differently sized Terrain, choose <span class=menu>Terrain->Set Resolution</span> from the menu bar.  There are a number of settings that related to Terrain size which you can change from this dialog.  
   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainResolutionDialog.png)  
 _Setting the resolution of your terrain._  
   
@@ -43,6 +46,7 @@ Editing the Terrain
 
 
 With the Terrain selected, you can look at the <span class=keyword>Inspector</span> to see some incredible new Terrain editing tools.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainEditingTools.png)  
 _Terrain Editing Tools appear in the Inspector_

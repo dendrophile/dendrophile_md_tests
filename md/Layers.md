@@ -2,7 +2,7 @@ Layers
 ======
 
 
-<span class=keyword>Layers</span> are most commonly used by <span class=keyword>Cameras</span> to render only a part of the scene, and by <span class=keyword>Lights</span> to illuminate only parts of the scene. But they can also used by raycasting to selectively ignore colliders or to create [collisions](LayerBasedCollision.html).
+<span class=keyword>Layers</span> are most commonly used by <span class=keyword>Cameras</span> to render only a part of the scene, and by <span class=keyword>Lights</span> to illuminate only parts of the scene. But they can also used by raycasting to selectively ignore colliders or to create [collisions](LayerBasedCollision.md).
 
 
 Creating Layers
@@ -13,6 +13,7 @@ The first step is to create a new layer, which we can then assign to a <span cla
 
 We create a new layer in one of the empty User Layers. We choose layer 8.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Layer-CreateNewLayer.png)  
 
 
@@ -21,6 +22,7 @@ Assigning Layers
 
 
 Now that you have created a new layer, you have to assign the layer to one of the game objects.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Layer-ChooseLayer.png)  
 
@@ -35,6 +37,7 @@ Using the camera's culling mask, you can selectively render objects which are in
 To do this, select the camera that should selectively render objects.
 
 Modify the culling mask by checking or unchecking layers in the culling mask property.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Layer-CullingMask.png)  
 

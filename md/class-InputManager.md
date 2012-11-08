@@ -5,6 +5,7 @@ Input Manager
 ##desktop Details
 The <span class=keyword>Input Manager</span> is where you define all the different input axes and game actions for your project.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InputSetAll.png)  
 _The Input Manager_
 
@@ -47,10 +48,11 @@ All the axes that you set up in the Input Manager serve two purposes:
 
 All defined axes will be presented to the player in the game launcher, where they will see its name, detailed description, and default buttons.  From here, they will have the option to change any of the buttons defined in the axes.  Therefore, it is best to write your scripts making use of axes instead of individual buttons, as the player may want to customize the buttons for your game.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Input-GameLauncher.png)  
 _The game launcher's Input window is displayed when your game is run_
 
-See also: [Input](Input.html).
+See also: [Input](Input.md).
 
 Hints
 -----
@@ -61,10 +63,10 @@ Hints
 ###ios Details
 This section is not supported on iOS devices.
 
-For more info on how to work with input on iOS devices, please refer to the [iOS Input](Input#iPhoneInput.html) page.
+For more info on how to work with input on iOS devices, please refer to the [iOS Input](Input#iPhoneInput.md) page.
 
 
 ###android Details
 This section is not supported on Android devices.
 
-For more info on how to work with input on Android devices, please refer to the [Android Input](Input#AndroidInput.html) page.
+For more info on how to work with input on Android devices, please refer to the [Android Input](Input#AndroidInput.md) page.

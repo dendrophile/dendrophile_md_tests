@@ -5,9 +5,10 @@ Motion Blur image effect
 <span class=keyword>Motion Blur</span> image effect enhances fast-moving scenes by leaving "motion trails" of previously rendered frames.
 
 ##u40 Details
-For a modern implementation of Motion Blur, please refer to the new [Camera Motion Blur Effect](script-CameraMotionBlur.html).
+For a modern implementation of Motion Blur, please refer to the new [Camera Motion Blur Effect](script-CameraMotionBlur.md).
 
-Like all [image effects](comp-ImageEffects.html), Motion Blur is only available in Unity Pro. Make sure to have the [Pro Standard Assets installed](HOWTO-InstallStandardAssets.html).
+Like all [image effects](comp-ImageEffects.md), Motion Blur is only available in Unity Pro. Make sure to have the [Pro Standard Assets installed](HOWTO-InstallStandardAssets.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxMotionBlur.png)  
 _Motion Blur effect applied to the rotating scene_

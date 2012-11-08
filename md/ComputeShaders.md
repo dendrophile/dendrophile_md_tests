@@ -2,7 +2,7 @@ Compute Shaders
 ===============
 
 
-Compute Shaders are programs that run on the graphics card, outside of the normal rendering pipeline. They can be used for massively parallel GPGPU algorithms, or to accelerate parts of game rendering. In order to efficiently use them, often an in-depth knowledge of GPU architectures and parallel algorithms is needed; as well as knowledge of [DirectCompute](http://msdn.microsoft.com/en-us/library/windows/desktop/ff476331.aspx.html), [OpenCL](http://en.wikipedia.org/wiki/OpenCL.html) or [CUDA](http://en.wikipedia.org/wiki/CUDA.html).
+Compute Shaders are programs that run on the graphics card, outside of the normal rendering pipeline. They can be used for massively parallel GPGPU algorithms, or to accelerate parts of game rendering. In order to efficiently use them, often an in-depth knowledge of GPU architectures and parallel algorithms is needed; as well as knowledge of [DirectCompute](http://msdn.microsoft.com/en-us/library/windows/desktop/ff476331.aspx.md), [OpenCL](http://en.wikipedia.org/wiki/OpenCL.md) or [CUDA](http://en.wikipedia.org/wiki/CUDA.md).
 
 Compute shaders in Unity are built on top of DirectX 11 DirectCompute technology; and currently require Windows Vista or later and a GPU capable of Shader Model 5.0.
 
@@ -10,7 +10,7 @@ Compute shader assets
 ---------------------
 
 
-Similar to [normal shaders](Shaders.html), Compute Shaders are asset files in your project, with `*.compute` file extension. They are written in DirectX 11 style [HLSL](http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561.aspx.html) language, with minimal amount of `#pragma` compilation directives to indicate which functions to compile as compute shader kernels.
+Similar to [normal shaders](Shaders.md), Compute Shaders are asset files in your project, with `*.compute` file extension. They are written in DirectX 11 style [HLSL](http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561.aspx.md) language, with minimal amount of `#pragma` compilation directives to indicate which functions to compile as compute shader kernels.
 
 Here's a minimal example of a compute shader file:
 ````
@@ -45,6 +45,6 @@ Invoking compute shaders
 ------------------------
 
 
-In your script, define a variable of `ComputeShader` type, assign a reference to the asset, and then you can invoke them with [ComputeShader.Dispatch](ScriptRef:ComputeShader.Dispatch.html.html) function. See scripting reference of [ComputeShader class](ScriptRef:ComputeShader.html.html) for more details.
+In your script, define a variable of `ComputeShader` type, assign a reference to the asset, and then you can invoke them with [ComputeShader.Dispatch](ScriptRef:ComputeShader.Dispatch.html) function. See scripting reference of [ComputeShader class](ScriptRef:ComputeShader.html) for more details.
 
-Closely related to compute shaders is a [ComputeBuffer](ScriptRef:ComputeBuffer.html.html) class, which defines arbitrary data buffer ("structured buffer" in DX11 lingo). [Render Textures](ScriptRef:RenderTexture.html.html) can also be written into from compute shaders, if they have "random access" flag set ("unordered access view" in DX11), see [RenderTexture.enableRandomWrite](ScriptRef:RenderTexture-enableRandomWrite.html.html).
+Closely related to compute shaders is a [ComputeBuffer](ScriptRef:ComputeBuffer.html) class, which defines arbitrary data buffer ("structured buffer" in DX11 lingo). [Render Textures](ScriptRef:RenderTexture.html) can also be written into from compute shaders, if they have "random access" flag set ("unordered access view" in DX11), see [RenderTexture.enableRandomWrite](ScriptRef:RenderTexture-enableRandomWrite.html).

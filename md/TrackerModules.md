@@ -25,4 +25,4 @@ Third Party Tools and Further References
 ----------------------------------------
 
 
-Currently, the most popular tools to create and edit Tracker Modules are MilkyTracker for OSX and OpenMPT for Windows. For more information and discussion, please see the blog post [http://blogs.unity3d.com/2010/06/29/mod-in-unity/ | .mod in Unity](http://blogs.unity3d.com/2010/06/29/mod-in-unity/|.modinUnity.html) from June 2010.
+Currently, the most popular tools to create and edit Tracker Modules are MilkyTracker for OSX and OpenMPT for Windows. For more information and discussion, please see the blog post [.mod in Unity](http://blogs.unity3d.com/2010/06/29/mod-in-unity/.md) from June 2010.

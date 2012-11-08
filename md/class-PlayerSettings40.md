@@ -6,6 +6,7 @@ Player Settings
 
 To see the Player Settings choose <span class=menu>Edit->Project Settings->Player</span> from the menu bar.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetInspTop.png)  
 _Global Settings that apply to any project you create._
 
@@ -30,6 +31,7 @@ Web-Player
 
 ####_Resolution And Presentation_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetWebResPres.png)  
 
 
@@ -39,15 +41,17 @@ Web-Player
 |<span class=component>Default Screen Width</span>     |Screen Width the player will be generated with.|
 |<span class=component>Default Screen Height</span>    |Screen Height the plater will be generated with.|
 |<span class=component>Run in background</span>        |Check this if you dont want to stop executing your game if the player looses focus.|
-|___WebPlayer Template___      |For more information you should check the [UsingWebPlayertemplates | "Using WebPlayer templates page"](UsingWebPlayertemplates|"UsingWebPlayertemplatespage".html), note that for each built-in and custom template there will be an icon in this section.|
+|___WebPlayer Template___      |For more information you should check the [UsingWebPlayertemplates | "Using WebPlayer templates page"](UsingWebPlayertemplates|"UsingWebPlayertemplatespage".md), note that for each built-in and custom template there will be an icon in this section.|
 
 ####_Icon_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetWebIcon4b7.png)  
 
 Icons don't have any meaning for webplayer builds (you can set icons for Native Client builds in the Native Client section of the Player Settings).
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetWebOther4b7.png)  
 
@@ -68,13 +72,14 @@ Icons don't have any meaning for webplayer builds (you can set icons for Native 
 |___Streaming___               ||
 |<span class=component>First Streamed Level</span>     |If you are publishing a Streamed Web Player, this is the index of the first level that will have access to all Resources.Load assets.|
 |___Configuration___||
-|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.html) page for details).|
+|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.md) page for details).|
 |___Optimization___||
 |<span class=component>Optimize Mesh Data</span>|Remove any data from meshes that is not required by the material applied to them (tangents, normals, colors, UV).|
 Standalone
 ----------
 
 ####_Resolution And Presentation_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetPCResPres4b7.png)  
 
@@ -104,6 +109,7 @@ Standalone
 
 ####_Icon_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetPCIcon4b7.png)  
 
 
@@ -112,6 +118,7 @@ Standalone
 |<span class=component>Override for Standalone</span>  |Check if you want to assign a custom icon you would like to be used for your standalone game. Different sizes of the icon should fill in the squares below.|
 
 ####_Splash Image_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetPCSplash4b7.png)  
 
@@ -122,6 +129,7 @@ Standalone
 
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetPCOther4b7.png)  
 
@@ -139,7 +147,7 @@ Standalone
 |<span class=component>Static Batching</span>             |Set this to use Static batching on your build (Inactive by default in webplayers). Unity Pro only.|
 |<span class=component>Dynamic Batching</span>            |Set this to use Dynamic Batching on your build (Activated by default). |
 |___Configuration___||
-|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.html) page for details).
+|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.md) page for details).
 |___Optimization___||
 |<span class=component>API Compatibility Level</span>     ||
 |>>><span class=component>.Net 2.0</span>                 |.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes|
@@ -150,6 +158,7 @@ Standalone
 
 #####ios Details
 ####_Resolution And Presentation_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSResPres.png)  
 
@@ -185,6 +194,7 @@ Standalone
 
 ####_Icon_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSIcon4b7.png)  
 
 
@@ -194,6 +204,7 @@ Standalone
 |<span class=component>Prerendered icon</span>           |If unchecked iOS applies sheen and bevel effects to the application icon.|
 
 ####_Splash Image_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSSplash40.png)  
 
@@ -208,6 +219,7 @@ Standalone
 |<span class=component>High res. iPad Landscape (Pro-only feature)</span>|Specifies texture which should be used as the high res iPad Landscape orientation Splash Screen. Standard Splash Screen size is 2048x1536.|
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetiOSOther4b7.png)  
 
@@ -244,7 +256,7 @@ Standalone
 |<span class=component>Override iPod Music</span>|If selected, the application will silence user's iPod music. Otherwise user's iPod music will continue playing in the background. |
 |<span class=component>UI Requires Persistent WiFi</span> |Specifies whether the application requires a Wi-Fi connection. iOS maintains the active Wi-Fi connection open while the application is running.|
 |<span class=component>Exit on Suspend</span> |Specifies whether the application should quit when suspended to background on iOS versions that support multitasking.|
-|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.html) page for details).
+|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.md) page for details).
 |___Optimization___            ||
 |<span class=component>Api Compatibility Level</span>     |Specifies active .NET API profile|
 |>>><span class=component>.Net 2.0</span>                 |.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes|
@@ -269,6 +281,7 @@ __Note:__ If you build for example for iPhone OS 3.2, and then select Simulator 
 
 #####android Details
 ####_Resolution And Presentation_
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetAndroidResPres4b7.png)  
 _Resolution and presentation for your Android project builds._
 
@@ -285,6 +298,7 @@ _Resolution and presentation for your Android project builds._
 |!                               |!|
 |                                ||
 |!Icon                           ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetAndroidIcon4b7.png)  
 _Different icons that your project will have when built._
 
@@ -294,6 +308,7 @@ _Different icons that your project will have when built._
 |!                               |!|
 |                                ||
 |!Splash Image                    ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetAndroidSplash4b7.png)  
 _Splash image that is going to be displayed when your project is launched._
 
@@ -304,6 +319,7 @@ _Splash image that is going to be displayed when your project is launched._
 |!                               |!|
 |                                ||
 |!Other Settings                 ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetAndroidOther4b7.png)  
 
 
@@ -325,7 +341,7 @@ _Splash image that is going to be displayed when your project is launched._
 |>>><span class=component>Force Internal</span>  |Force app to be installed into internal memory. User will be unable to move the app to external storage.|
 |<span class=component>Internet Access</span>    |When set to Require, will enable networking permissions even if your scripts are not using this. Automatically enabled for development builds.|
 |<span class=component>Write Access</span>    |When set to External (SDCard), will enable write access to external storage such as the SD-Card. Automatically enabled for development builds.|
-|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.html) page for details).|
+|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.md) page for details).|
 |___Optimization___            ||
 |<span class=component>Api Compatibility Level</span>     |Specifies active .NET API profile|
 |>>><span class=component>.Net 2.0</span>                 |.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes|
@@ -342,6 +358,7 @@ _Splash image that is going to be displayed when your project is launched._
 |    |    |
 |:---|:---|
 |!Publishing Settings            ||
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetAndroidPublish40.png)  
 _Publishing settings for Android Market_
 
@@ -365,6 +382,7 @@ Flash
 
 ####_Resolution And Presentation_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetFlashResPres.png)  
 
 
@@ -376,6 +394,7 @@ Flash
 
 
 ####_Other Settings_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetFlashOther4b7.png)  
 
@@ -393,6 +412,7 @@ Google Native Client
 
 ####_Resolution and Presentation_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetNaClResPres4b7.png)  
 
 
@@ -404,6 +424,7 @@ Google Native Client
 
 ####_Icon_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetNaClIcon4b7.png)  
 _Different icons that your project will have when built._
 
@@ -414,6 +435,7 @@ _Different icons that your project will have when built._
 
 ####_Other Settings_
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PlayerSetNaClOther4b7.png)  
 
 
@@ -423,7 +445,7 @@ _Different icons that your project will have when built._
 |<span class=component>Static Batching</span>             |Set this to use Static batching on your build (Inactive by default in webplayers). Unity Pro only.|
 |<span class=component>Dynamic Batching</span>            |Set this to use Dynamic Batching on your build (Activated by default). |
 |___Configuration___||
-|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.html) page for details).
+|<span class=component>Scripting Define Symbols</span>|Custom compilation flags (see the [platform dependent compilation](PlatformDependentCompilation.md) page for details).
 |___Optimization___||
 |<span class=component>API Compatibility Level</span>     ||
 |>>><span class=component>.Net 2.0</span>                 |.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes|
@@ -437,7 +459,7 @@ Details
 
 
 ##desktop Details
-The Player Settings window is where many technical preference defaults are set. See also [Quality Settings](class-QualitySettings.html) where the different graphics quality levels can be set up.
+The Player Settings window is where many technical preference defaults are set. See also [Quality Settings](class-QualitySettings.md) where the different graphics quality levels can be set up.
 
 ###Publishing a web player
 
@@ -448,6 +470,7 @@ The Player Settings window is where many technical preference defaults are set. 
 
 ###Customizing your Resolution Dialog
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Resolution-GameLauncher.png)  
 _The Resolution Dialog, presented to end-users_
 
@@ -455,7 +478,7 @@ You have the option of adding a custom banner image to the Screen Resolution Dia
 
 ###Publishing to Mac App Store
 
-<span class=component>Use Player Log</span> enables writing a log file with debugging information. This is useful to find out what happened if there are problems with your game. When publishing games for Apple's Mac App Store, it is recommended to turn this off, because Apple may reject your submission otherwise. See [this manual page](LogFiles.html) for further information about log files.
+<span class=component>Use Player Log</span> enables writing a log file with debugging information. This is useful to find out what happened if there are problems with your game. When publishing games for Apple's Mac App Store, it is recommended to turn this off, because Apple may reject your submission otherwise. See [this manual page](LogFiles.md) for further information about log files.
 
 <span class=component>Use Mac App Store Validation</span> enables receipt validation for the Mac App Store. If this is enabled, your game will only run when it contains a valid receipt from the Mac App Store. Use this when submitting games to Apple for publishing on the App Store. This prevents people from running the game on any computer then the one it was purchased on. Note that this feature does not implement any strong copy protection. In particular, any potential crack against one Unity game would work against any other Unity content. For this reason, it is recommended that you implement your own receipt validation code on top of this using Unity's plugin feature. However, since Apple requires plugin validation to initially happen before showing the screen setup dialog, you should still enable this check, or Apple might reject your submission. 
 
@@ -463,7 +486,7 @@ You have the option of adding a custom banner image to the Screen Resolution Dia
 ####ios Details
 ###Bundle Identifier
 
-The <span class=component>Bundle Identifier</span> string must match the provisioning profile of the game you are building.  The basic structure of the identifier is <span class=component>com.CompanyName.GameName</span>. This structure may vary internationally based on where you live, so always default to the string provided to you by Apple for your Developer Account.  Your GameName is set up in your provisioning certificates, that are manageable from the Apple iPhone Developer Center website.  Please refer to the [Apple iPhone Developer Center website](http://developer.apple.com/iphone/.html) for more information on how this is performed.
+The <span class=component>Bundle Identifier</span> string must match the provisioning profile of the game you are building.  The basic structure of the identifier is <span class=component>com.CompanyName.GameName</span>. This structure may vary internationally based on where you live, so always default to the string provided to you by Apple for your Developer Account.  Your GameName is set up in your provisioning certificates, that are manageable from the Apple iPhone Developer Center website.  Please refer to the [Apple iPhone Developer Center website](http://developer.apple.com/iphone/.md) for more information on how this is performed.
 
 ###Stripping Level (Pro-only)
 

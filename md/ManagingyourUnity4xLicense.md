@@ -7,9 +7,11 @@ With Unity 4.0 you are now able to manage your license independently (no more co
   
 You will notice a new option under the <span class=keyword>"Unity"</span> drop-down on your toolbar that reads <span class=keyword>“Manage License…”</span>.  This is the unified place within the Editor for all your licensing needs.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/manageLicensedropdown.png)  
 
 Once you have clicked on the <span class=keyword>“Manage License…”</span> option you will be faced with the <span class=keyword>“License Management”</span> window. You then have four options (see image), explained below:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/licenseManagementwindow.png)  
 

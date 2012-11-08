@@ -6,7 +6,7 @@ Graphics
 --------
 
 * Non-square textures are not supported by the ETC format.
-* Movie Textures are not supported, use a full-screen streaming playback instead. Please see the [Movie playback page](Main.VideoFiles.html) for more information.
+* Movie Textures are not supported, use a full-screen streaming playback instead. Please see the [Movie playback page](Main.VideoFiles.md) for more information.
 
 Scripting
 ---------

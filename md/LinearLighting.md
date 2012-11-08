@@ -25,21 +25,25 @@ When using linear lighting input values to the lighting equations are different 
 
 ###Light Falloff
 The falloff from distance and normal based lighting is changed in two ways. Firstly when rendering in linear mode the additional gamma correct that is performed will make light radius' appear larger. Secondly lighting edges will also be harsher. This more correctly models lighting intensity falloff on surfaces.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/lightfalloff.png)  
 
 ###Linear Intensity Response
 When you are using gamma space lighting the colors and textures that are supplied to a shader have a gamma correction applied to them. When they are used in a shader the colors of high luminance are actually brighter then they should be for linear lighting. This means that as light intensity increases the surface will get brighter in a non linear way. This leads to lighting that can be too bright in many places, and can also give models and scenes a washed out feel. When you are using linear lighting, as light intensity increases the response from the surface remains linear. This leads to much more realistic surface shading and a much nicer color response in the surface.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/lineargammahead.png)  
 [-Infinite, 3D Head Scan by Lee Perry-Smith is licensed under a Creative Commons Attribution 3.0 Unported License. Available from: http://www.ir-ltd.net/infinite-3d-head-scan-released-]
 
 ###Linear and Gamma Blending
 When performing blending into the framebuffer the blending occurs in the color space or the framebuffer. When using gamma rendering this means that non linear colors get blended together. This is incorrect. When using linear space rendering blending occurs in linear space, this is correct and leads to expected results.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LinearGammaBlending.png)  
 
 Using Linear Lighting
 ---------------------
 
 Linear lighting results in a different look to the rendered scene. If you author a project for linear lighting it will most likely not look correct if you change to gamma lighting. Because of this if you move to linear lighting from gamma lighting it may take some time to update the project so that it looks as good as before the switch. That being said enabling linear lighting in Unity is quite simple. The feature is implemented on a per project level and is exposed in the Player Settings which can be located at <span class=keyword>Edit -> Project Settings -> Player -> Other Settings</span>
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GammaPlayerSetting.png)  
 
 ###Lightmapping

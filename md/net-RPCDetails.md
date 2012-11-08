@@ -57,7 +57,7 @@ The first parameter of <span class=component>RPC()</span> is the name of the fun
 
 All parameters after the first two are the ones that will be passed to the RPC function and be sent across the network. In this case, "Hello World" will be sent as a parameter and be passed as the text parameter in the PrintText function.
 
-You can also access an extra internal parameter, a [NetworkMessageInfo](ScriptRef:NetworkMessageInfo.html.html) struct which holds additional information, such as where the RPC call came from. This information will be passed automatically, so the PrintText function shown above will be can be declared as:-
+You can also access an extra internal parameter, a [NetworkMessageInfo](ScriptRef:NetworkMessageInfo.html) struct which holds additional information, such as where the RPC call came from. This information will be passed automatically, so the PrintText function shown above will be can be declared as:-
 
 ````
 

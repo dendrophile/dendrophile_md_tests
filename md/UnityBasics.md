@@ -14,20 +14,20 @@ When you are finished reading this section, you will understand how Unity works,
 
 |    |    |
 |:---|:---|
-| |[Learning the Interface](Main.LearningtheInterface.html) |
-|[Attach:basics_interface.jpg](Main.LearningtheInterface.html)|There is a lot to learn, so take the time you need to observe and understand the interface. We will walk through each interface element together.  
+| |[Learning the Interface](Main.LearningtheInterface.md) |
+|[Attach:basics_interface.jpg](Main.LearningtheInterface.md)|There is a lot to learn, so take the time you need to observe and understand the interface. We will walk through each interface element together.  
   
 
 |    |    |
 |:---|:---|
-| |[Asset Workflow](Main.AssetWorkflow.html) |
-|[Attach:basics_assets.jpg](Main.AssetWorkflow.html)|Here we'll explain the steps to use a single asset with Unity. These steps are general and are meant only as an overview for basic actions.   
+| |[Asset Workflow](Main.AssetWorkflow.md) |
+|[Attach:basics_assets.jpg](Main.AssetWorkflow.md)|Here we'll explain the steps to use a single asset with Unity. These steps are general and are meant only as an overview for basic actions.   
   
 
 |    |    |
 |:---|:---|
-|  |[Creating Scenes](Main.CreatingScenes.html) | 
-|[Attach:basics_scenes.jpg](Main.CreatingScenes.html) |Scenes contain the objects of your game. In each Scene, you will place your environments, obstacles, and decorations, designing and building your game in pieces.  
+|  |[Creating Scenes](Main.CreatingScenes.md) | 
+|[Attach:basics_scenes.jpg](Main.CreatingScenes.md) |Scenes contain the objects of your game. In each Scene, you will place your environments, obstacles, and decorations, designing and building your game in pieces.  
   
 
 (:html:)
@@ -38,14 +38,14 @@ When you are finished reading this section, you will understand how Unity works,
 
 |    |    |
 |:---|:---|
-|  |[Publishing Builds](Main.PublishingBuilds.html) |
-|[Attach:basics_publishing.jpg](Main.PublishingBuilds.html) |At any time while you are creating your game, you might want to see how it looks when you build and run it outside of the editor as a standalone or web player. This section will explain how to access the Build Settings and how to create different builds of your games.  
+|  |[Publishing Builds](Main.PublishingBuilds.md) |
+|[Attach:basics_publishing.jpg](Main.PublishingBuilds.md) |At any time while you are creating your game, you might want to see how it looks when you build and run it outside of the editor as a standalone or web player. This section will explain how to access the Build Settings and how to create different builds of your games.  
   
 
 |    |    |
 |:---|:---|
-|  |[Tutorials](http://unity3d.com/support/resources/tutorials/.html) |
-|[Attach:basics_tutorials.jpg](http://unity3d.com/support/resources/tutorials/.html) |These online tutorials will let you work with Unity while you follow along, providing hands-on experience with building real projects.  
+|  |[Tutorials](http://unity3d.com/support/resources/tutorials/.md) |
+|[Attach:basics_tutorials.jpg](http://unity3d.com/support/resources/tutorials/.md) |These online tutorials will let you work with Unity while you follow along, providing hands-on experience with building real projects.  
   
 
 (:html:)

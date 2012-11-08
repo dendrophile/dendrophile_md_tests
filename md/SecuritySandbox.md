@@ -12,15 +12,15 @@ In Unity 3.0, the webplayer implements a security model very similar to the one 
 * Disallowing the usage of System.Reflection.* to call private/internal methods in classes you did not write yourself.
 
 Currently only the first two parts of the security model are emulated in the Editor. 
-Look here for [a detailed list of which methods / classes are available in the webplayer ](ScriptRef:MonoCompatibility.html.html).
+Look here for [a detailed list of which methods / classes are available in the webplayer ](ScriptRef:MonoCompatibility.html.md).
 
 The builtin mutiplayer networking functionality of Unity (`UnityEngine.Network`, `UnityEngine.NetworkView` classes etc) is not affected.
 
 This document describes how to make sure your content keeps working with version 3.0 of the Unity webplayer.
 ------------------------------------------------------------------------------------------------------------
 
-* See [the Unity API reference for information about the WWW class](ScriptRef:WWW.html.html).
-* See [the .NET API reference for information about the .NET Socket class](http://msdn.microsoft.com/en-us/library/system.net.sockets.socket.aspx.html).
+* See [the Unity API reference for information about the WWW class](ScriptRef:WWW.html.md).
+* See [the .NET API reference for information about the .NET Socket class](http://msdn.microsoft.com/en-us/library/system.net.sockets.socket.aspx.md).
 
 The WWW class and sockets use the same policy schema but besides that they are completely separate systems. The WWW policy only defines permissions on the web service where the policy is hosted but socket policies apply to all TCP/UDP socket connections.
 
@@ -67,7 +67,7 @@ Implications for usage of Sockets:
 ==================================
 
 
-A Unity webplayer needs a socket served policy in order to connect to a particular host. This policy is by default hosted by the target host on port __843__ but it can be hosted on other ports as well. The functional difference with a non-default port is that it must be manually fetched with  [Security.PrefetchSocketPolicy()](ScriptRef:Security.PrefetchSocketPolicy.html.html)  API call and if it is hosted on a port higher than 1024 the policy can only give access to other ports higher than 1024.
+A Unity webplayer needs a socket served policy in order to connect to a particular host. This policy is by default hosted by the target host on port __843__ but it can be hosted on other ports as well. The functional difference with a non-default port is that it must be manually fetched with  [Security.PrefetchSocketPolicy()](ScriptRef:Security.PrefetchSocketPolicy.html)  API call and if it is hosted on a port higher than 1024 the policy can only give access to other ports higher than 1024.
 
 When using the default port it works like this: A Unity webplayer tries to make a TCP socket connection to a host, it first checks that the host server will accept the connection.
 It does this by opening a TCP socket on port 843, issues a request, and expects to receive a socket policy over the new connection. The Unity webplayer then checks that the host's policy permits the connection to go ahead and it will proceed without error if so. This process happens transparently to the user's code, which does not need to be modified to use this security model. An example of a socket policy look like this:

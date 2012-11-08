@@ -4,10 +4,12 @@ How do I use Water?
 
 __Note:__ The content on this page applies to the desktop editor mode only.
 
-Unity includes several water prefabs (including needed shaders, scripts and art assets) within the [Standard Assets and Pro Standard Assets packages](HOWTO-InstallStandardAssets.html). Unity includes a basic water, while Unity Pro includes water with real-time reflections and refractions, and in both cases those are provided as separate daylight and nighttime water prefabs.
+Unity includes several water prefabs (including needed shaders, scripts and art assets) within the [Standard Assets and Pro Standard Assets packages](HOWTO-InstallStandardAssets.md). Unity includes a basic water, while Unity Pro includes water with real-time reflections and refractions, and in both cases those are provided as separate daylight and nighttime water prefabs.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Water_Reflective.png)  
 _Reflective daylight water (Unity Pro)_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Water_ReflectiveRefractive.png)  
 _Reflective/Refractive daylight water (Unity Pro)_
@@ -16,11 +18,12 @@ Water setup
 -----------
 
 
-In most cases you just need to place one of the existing Prefabs into your scene (make sure to have the [Standard Assets installed](HOWTO-InstallStandardAssets.html)):
+In most cases you just need to place one of the existing Prefabs into your scene (make sure to have the [Standard Assets installed](HOWTO-InstallStandardAssets.md)):
 * Unity has <span class=keyword>Daylight Simple Water</span> and <span class=keyword>Nighttime Simple Water</span> in <span class=menu>Standard Assets->Water</span>.
 * Unity Pro has <span class=keyword>Daylight Water</span> and <span class=keyword>Nighttime Water</span> in <span class=menu>Pro Standard Assets->Water</span> (but it needs some assets from <span class=menu>Standard Assets->Water</span> as well). Water mode (Simple, Reflective, Refractive) can be set in the Inspector.
 
-The prefab uses an oval-shaped mesh for the water. If you need to use a different [Mesh](class-Mesh.html) the easiest way is to simply change it in the <span class=component>Mesh Filter</span> of the water object:
+The prefab uses an oval-shaped mesh for the water. If you need to use a different [Mesh](class-Mesh.md) the easiest way is to simply change it in the <span class=component>Mesh Filter</span> of the water object:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Water_ChangeMesh.png)  
 

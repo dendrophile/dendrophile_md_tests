@@ -16,6 +16,7 @@ A condition consists of 2 parts:
 1. A parameter value (if needed)
 
 You can adjust the transition between the two animation clips by dragging the start and end values of the overlap. 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MecanimTransitionInspector.png)  
 
-(back to [Animation State Machines](AnimationStateMachines.html))
+(back to [Animation State Machines](AnimationStateMachines.md))

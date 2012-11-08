@@ -30,6 +30,6 @@ Supported Formats
 
 
 
-See the [Sound chapter](Sound.html) in the [Creating Gameplay](CreatingGameplay.html) section of this manual for more information on using sound in Unity.
+See the [Sound chapter](Sound.md) in the [Creating Gameplay](CreatingGameplay.md) section of this manual for more information on using sound in Unity.
 
 (:include class-AudioClip:)

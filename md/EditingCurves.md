@@ -4,15 +4,18 @@ Editing Curves
 
 <span class=keyword>Curves</span> can be used for many different things and there are several different controls in Unity that use curves that can be edited.
 
-* The [Animation View](AnimationEditorGuide.html) uses curves to animate properties over time in an <span class=keyword>Animation Clip</span>.
+* The [Animation View](AnimationEditorGuide.md) uses curves to animate properties over time in an <span class=keyword>Animation Clip</span>.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorCurve.png)  
 _The Animation View._
 
-* Script components can have member variables of type [AnimationCurve](EditingValueProperties.html) that can be used for all kinds of things. Clicking on those in the Inspector will open up the <span class=keyword>Curve Editor</span>.
+* Script components can have member variables of type [AnimationCurve](EditingValueProperties.md) that can be used for all kinds of things. Clicking on those in the Inspector will open up the <span class=keyword>Curve Editor</span>.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurveEditorPopup.png)  
 _The Curve Editor._
 
-* The [Audio Source](class-AudioSource.html) component uses curves to control rolloff and other properties as a function of distance to the Audio Source.
+* The [Audio Source](class-AudioSource.md) component uses curves to control rolloff and other properties as a function of distance to the Audio Source.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AudioSourceCurve.png)  
 _Distance function curves in the AudioSource component in the Inspector._
 
@@ -70,22 +73,29 @@ Editing Tangents
 
 A <span class=keyword>key</span> has two <span class=keyword>tangents</span> - one on the left for the ingoing slope and one on the right for the outgoing slope. The tangents control the shape of the curve between the keys. The <span class=keyword>Animation View</span> have multiple tangent types that can be used to easily control the curve shape. The tangent types for a <span class=keyword>key</span> can be chosen by right-clicking the key.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationTypeOfConnections2.png)  
 _Right-click a <span class=keyword>key</span> to select the tangent type for that key._
 
 In order for animated values to change smoothly when passing a key, the left and right tangent must be co-linear. The following tangent types ensure smoothness:
 * <span class=menu>Auto</span>: The tangents are automatically set so make the curve go smoothly through the key.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationAuto.png)  
 * <span class=menu>Free Smooth</span>: The tangents can be freely set by dragging the tangent handles. They are locked to be co-linear to ensure smoothness.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationFreeSmooth.png)  
 * <span class=menu>Flat</span>: The tangents are set to be horizontal. (This is a special case of <span class=menu>Free Smooth</span>.)
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationFlat.png)  
 
 Sometimes smoothness is not desired. The left and right tangent can be set individually when the tangents are <span class=menu>Broken</span>. The left and right tangent can each be set to one of the following tangent types:
 * <span class=menu>Free</span>: The tangent can be freely set by dragging the tangent handle.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationBrokenFree.png)  
 * <span class=menu>Linear</span>: The tangent points towards the neighboring key. A linear curve segment can be made by setting the tangents at both ends to be <span class=menu>Linear</span>.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationBrokenLinear.png)  
 * <span class=menu>Constant</span>: The curve retains a constant value between two keys. The value of the left key determines the value of the curve segment.
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationBrokenConstant.png)  
 

@@ -15,4 +15,4 @@ Physics
 
 
 ##ios Details
-iOS physics optimization hints can be found [here](Main.iphone-Optimizing-Physics.html). 
+iOS physics optimization hints can be found [here](Main.iphone-Optimizing-Physics.md). 

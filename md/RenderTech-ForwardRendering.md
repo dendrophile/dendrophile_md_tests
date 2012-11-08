@@ -2,7 +2,7 @@ Forward Rendering Path Details
 ==============================
 
 
-This page describes details of <span class=keyword>Forward</span> [rendering path](RenderingPaths.html).
+This page describes details of <span class=keyword>Forward</span> [rendering path](RenderingPaths.md).
 
 Forward Rendering path renders each object in one or more passes, depending on lights that affect the object. Lights themselves are also treated differently by Forward Rendering, depending on their settings and intensity.
 
@@ -15,16 +15,18 @@ In Forward Rendering, some number of brightest lights that affect each object ar
 * Lights that have their Render Mode set to <span class=keyword>Not Important</span> are always per-vertex or SH.
 * Brightest directional light is always per-pixel.
 * Lights that have their Render Mode set to <span class=keyword>Important</span> are always per-pixel.
-* If the above results in less lights than current <span class=keyword>Pixel Light Count</span> [Quality Setting](class-QualitySettings.html), then more lights are rendered per-pixel, in order of decreasing brightness.
+* If the above results in less lights than current <span class=keyword>Pixel Light Count</span> [Quality Setting](class-QualitySettings.md), then more lights are rendered per-pixel, in order of decreasing brightness.
 
 Rendering of each object happens as follows:
 * Base Pass applies one per-pixel directional light and all per-vertex/SH lights.
 * Other per-pixel lights are rendered in additional passes, one pass for each light.
 
 For example, if there is some object that's affected by a number of lights (a circle in a picture below, affected by lights A to H):   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ForwardLightsExample.png)  
 
 Let's assume lights A to H have the same color & intensity, all all of them have Auto rendering mode, so they would be sorted in exactly this order for this object. The brightest lights will be rendered in per-pixel lit mode (A to D), then up to 4 lights in per-vertex lit mode (D to G), and finally the rest of lights in SH (G to H):
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ForwardLightsClassify.png)  
 

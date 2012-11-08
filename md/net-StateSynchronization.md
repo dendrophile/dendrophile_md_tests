@@ -6,13 +6,13 @@ You can enable State Synchronization for a given Network View by choosing either
 
 Unity can synchronize Transform, Animation, Rigidbody and MonoBehaviour components.
 
-[Transforms](class-Transform.html) are serialized by storing position, rotation and scale. Parenting information is not transferred over the network.
+[Transforms](class-Transform.md) are serialized by storing position, rotation and scale. Parenting information is not transferred over the network.
 
-[Animation](class-Animation.html) serializes each running animation state, that is the time, weight, speed and enabled properties.
+[Animation](class-Animation.md) serializes each running animation state, that is the time, weight, speed and enabled properties.
 
-[Rigidbody](class-Rigidbody.html) serializes position, rotation, velocity and angular velocity.
+[Rigidbody](class-Rigidbody.md) serializes position, rotation, velocity and angular velocity.
 
-Scripts (MonoBehaviours) call the function [OnSerializeNetworkView()](ScriptRef:Network.OnSerializeNetworkView.html.html).
+Scripts (MonoBehaviours) call the function [OnSerializeNetworkView()](ScriptRef:Network.OnSerializeNetworkView.html).
 
 
 Reliability and bandwidth
@@ -23,7 +23,7 @@ Network Views currently support two reliability levels Reliable Delta Compressed
 
 Both have their advantages and disadvantages, and the specific details of the game will determine which is the best to use.
 
-For additional information about minimizing bandwidth, please read the [Minimizing Bandwidth page](net-MinimizingBandwidth.html).
+For additional information about minimizing bandwidth, please read the [Minimizing Bandwidth page](net-MinimizingBandwidth.md).
 
 ###Reliable Delta Compressed
 
@@ -50,7 +50,7 @@ Prediction
 ----------
 
 
-When the server has [full authority](Main.net-HighLevelOverview.html) over the world state, the clients only change the game state according to updates they receive from the server. One problem with this is that the delay introduced by waiting for the server to respond can affect gameplay. For example, when a player presses a key to move forward, he won't actually move until the updated state is received from the server. This delay depends on the latency of the connection so the worse the connection the less snappy the control system becomes.
+When the server has [full authority](Main.net-HighLevelOverview.md) over the world state, the clients only change the game state according to updates they receive from the server. One problem with this is that the delay introduced by waiting for the server to respond can affect gameplay. For example, when a player presses a key to move forward, he won't actually move until the updated state is received from the server. This delay depends on the latency of the connection so the worse the connection the less snappy the control system becomes.
 
 One possible solution to this is <span class=keyword>Client-side Prediction</span> which means the client predicts the expected movement update from the server by using approximately the same internal model. So the player responds immediately to input but the server sees its position from the last update. When the state update finally arrives from the server, the client will compare what he predicted with what actually happened. This might differ because the server might know more about the environment around the player, the client just knows what he needs to know. Errors in prediction are corrected as they happen and if they are corrected continuously then the result will smoother and less noticeable.
 

@@ -14,10 +14,10 @@ To temporarily change the material's shader, we change the <span class=component
 	private var invincibleShader = Shader.Find ("Specular");
 
 	function StartInvincibility {
-		[renderer](ScriptRef:Renderer.html.html).[material](ScriptRef:Renderer-material.html.html).shader = invincibleShader;
+		[renderer](ScriptRef:Renderer.html).[material](ScriptRef:Renderer-material.html).shader = invincibleShader;
 	}
 
-When using this script and exiting Play Mode, the state of the <span class=component>[material](ScriptRef:Material.html.html)</span> will be reset to whatever it was before entering Play Mode initially. This happens because whenever renderer.material is accessed, the material is automatically instantiated and the instance is returned.  This instance is simultaneously and automatically applied to the renderer.  So you can make any changes that your heart desires without fear of permanence.
+When using this script and exiting Play Mode, the state of the <span class=component>[material](ScriptRef:Material.html)</span> will be reset to whatever it was before entering Play Mode initially. This happens because whenever renderer.material is accessed, the material is automatically instantiated and the instance is returned.  This instance is simultaneously and automatically applied to the renderer.  So you can make any changes that your heart desires without fear of permanence.
 
 
 Direct Modification
@@ -27,14 +27,14 @@ Direct Modification
 ###IMPORTANT NOTE
 The method presented below will modify actual source asset files used within Unity. These modifications are not undoable. Use them with caution.
 
-Now let's say that we don't want the material to reset when we exit play mode.  For this, you can use [renderer.sharedMaterial](ScriptRef:Renderer-sharedMaterial.html.html).  The sharedMaterial property will return the actual asset used by this renderer (and maybe others).
+Now let's say that we don't want the material to reset when we exit play mode.  For this, you can use [renderer.sharedMaterial](ScriptRef:Renderer-sharedMaterial.html).  The sharedMaterial property will return the actual asset used by this renderer (and maybe others).
 
 The code below will permanently change the material to use the Specular shader.  It will not reset the material to the state it was in before Play Mode.
 
 	private var invincibleShader = Shader.Find ("Specular");
 
 	function StartInvincibility {
-		[renderer](ScriptRef:Renderer.html.html).[sharedMaterial](ScriptRef:Renderer-sharedMaterial.html.html).shader = invincibleShader;
+		[renderer](ScriptRef:Renderer.html).[sharedMaterial](ScriptRef:Renderer-sharedMaterial.html).shader = invincibleShader;
 	}
 
 As you can see, making any changes to a sharedMaterial can be both useful and risky.  Any change made to a sharedMaterial will be permanent, and not undoable.
@@ -64,13 +64,13 @@ Assets that are not automatically instantiated
 ###desktop Details
 There are two different assets that are never automatically instantiated when modifying them.
 
-* [Texture2D](ScriptRef:Texture2D.html.html)
-* [TerrainData](ScriptRef:TerrainData.html.html)
+* [Texture2D](ScriptRef:Texture2D.html)
+* [TerrainData](ScriptRef:TerrainData.html)
 
 Any modifications made to these assets through scripting are always permanent, and never undoable.  So if you're changing your terrain's heightmap through scripting, you'll need to account for instantiating and assigning values on your own.  Same goes for Textures.  If you change the pixels of a texture file, the change is permanent.
 
 ###ios Details
-[Texture2D](ScriptRef:Texture2D.html.html) assets are never automatically instantiated when modifying them. Any modifications made to these assets through scripting are always permanent, and never undoable.  So if you change the pixels of a texture file, the change is permanent.
+[Texture2D](ScriptRef:Texture2D.html) assets are never automatically instantiated when modifying them. Any modifications made to these assets through scripting are always permanent, and never undoable.  So if you change the pixels of a texture file, the change is permanent.
 
 ###android Details
-[Texture2D](ScriptRef:Texture2D.html.html) assets are never automatically instantiated when modifying them. Any modifications made to these assets through scripting are always permanent, and never undoable.  So if you change the pixels of a texture file, the change is permanent.
+[Texture2D](ScriptRef:Texture2D.html) assets are never automatically instantiated when modifying them. Any modifications made to these assets through scripting are always permanent, and never undoable.  So if you change the pixels of a texture file, the change is permanent.

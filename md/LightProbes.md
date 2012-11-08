@@ -11,6 +11,7 @@ Adding Light probes
 
 The Light Probe Group component (menu: <span class=menu>Component -> Rendering -> Light Probe Group</span>) can be added to any available object in the scene. The inspector can be used to add new probes to the group. The probes appear in the scene as yellow spheres which can be positioned in the same manner as GameObjects. Selected probes can also be duplicated with the usual keyboard shortcut (ctrl+d/cmd+d).
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbesTestScene-sourceselected.png)  
 
 
@@ -27,6 +28,7 @@ In some cases, the infrastructure of the game can be useful in choosing light pr
 
 Here light probes have been baked over surfaces where our characters can walk on, but only where there are interesting lighting changes to capture:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbesTestScene-baked.png)  
 
 Flat 2D levels
@@ -35,11 +37,14 @@ Flat 2D levels
 
 As it is now, the light probe system can't bake a completely flat probe cloud. So even if all your characters move only on a plane, you still have to take care to position at least some probes in a higher layer, so that a volume is formed and interpolation can work properly.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbes-placement-original.png)  
 ___Good__: This is the original probe placement. The characters can move up the ramps and up onto the boxes, so it's good to sample lighting up there as well._
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbes-placement-stillgood.png)  
 ___Good__: Here we assume the characters can only move on the plane. Still, there's a couple of probes placed a little bit higher, so that a volume is formed and thin cell are avoided._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbes-placement-bad.png)  
 ___Bad__: The probes are placed too flat, which creates really long and thin cells and produces unintuitive interpolation results._
@@ -50,13 +55,16 @@ Using Light Probes
 
 To allow a mesh to receive lighting from the probe system, you should enable the Use Light Probes option on its Mesh Renderer:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/MeshRendInspector.png)  
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbes-character.png)  
 
 The probe interpolation requires a point in space to represent the position of the mesh that is receiving light. By default, the centre of the mesh's bounding box is used but it is possible to override this by dragging a Transform to the Mesh Renderer's Light Probe Anchor property (this Transform's position will be used as the interpolation point instead). This may be useful when an object contains two separate adjoining meshes; if both meshes are lit individually according to their bounding box positions then the lighting will be discontinuous at the place where they join. This can be prevented by using the same Transform (for example the parent or a child object) as the interpolation point for both Mesh Renderers.
 
 When an object using light probes is the active selected object in the Light Probes Scene View mode, its interpolated probe will be rendered on top of it for preview. The interpolated probe is the one used for rendering the object and is connected with 4 thin blue lines (3 when outside of the probe volume) to the probes it is being interpolated between:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LightProbes-characterandprobes.png)  
 

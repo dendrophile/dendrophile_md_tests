@@ -10,6 +10,6 @@ Syntax
 Details
 -------
 
-A pass can be given a name so that a [UsePass](SL-UsePass.html) command can reference it.
+A pass can be given a name so that a [UsePass](SL-UsePass.md) command can reference it.
 
 

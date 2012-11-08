@@ -5,7 +5,7 @@ Playstation3: Setup for Source Licensees
 Developing for PlayStation®3
 -----------------------------
 
-You must be a PlayStation®3 Registered Developer and own the appropriate hardware. See the [PS3 Setup](ps3-setup.html) page for a seat setup checklist.
+You must be a PlayStation®3 Registered Developer and own the appropriate hardware. See the [PS3 Setup](ps3-setup.md) page for a seat setup checklist.
 
 Prerequisites for compiling/debugging with source code
 ------------------------------------------------------

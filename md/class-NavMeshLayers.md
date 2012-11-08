@@ -8,6 +8,7 @@ During pathfinding, instead of comparing lengths of potential path segments, the
 
 To define custom layers per project
 * Go to <span class=menu>Edit</span>-><span class=menu>Project Settings</span>-><span class=menu>Navmesh Layers</span>
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NavMeshLayers.png)  
 
 * Go to one of the user layers, and set up name and cost
@@ -22,6 +23,7 @@ To apply custom layers to specific geometry
 * Select the geometry in the editor
 * Pull up the <span class=menu>Navigation Mesh</span> window (<span class=menu>Window</span>-><span class=menu>Navigation</span>)
 * Go to the <span class=menu>Object</span> tab, and select the desired <span class=menu>Navigation layer</span> for that object
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/NavigationMeshObjectWindow.png)  
 
 * If you have <span class=menu>Show NavMesh</span> enabled in the <span class=menu>Navmesh Display</span> window, the different layers should show up in different colors in the editor.
@@ -39,6 +41,6 @@ One good use case for using Navmesh Layers is:
 * The pedestrian walkway in the middle is the preferred place for them to go
 * Set up a navmesh layer with high cost for most of the road, and a navmesh layer with a low cost for the pedestrian walkway.
 * This will cause agents to prefer paths that go thru the pedestrian walkway.
-Another relevant topic for advanced pathfinding is [Off-mesh links](class-OffMeshLink.html)
+Another relevant topic for advanced pathfinding is [Off-mesh links](class-OffMeshLink.md)
 
-(back to [Navigation and Pathfinding](NavmeshandPathfinding.html))
+(back to [Navigation and Pathfinding](NavmeshandPathfinding.md))

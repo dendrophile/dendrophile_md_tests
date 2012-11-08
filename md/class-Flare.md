@@ -2,9 +2,10 @@ Flare
 =====
 
 
-<span class=keyword>Flare</span> objects are the source assets that are used by [Lens Flare Components](class-LensFlare.html). The Flare itself is a combination of a texture file and specific information that determines how the Flare behaves.  Then when you want to use the Flare in a <span class=keyword>Scene</span>, you reference the specific Flare from inside a <span class=keyword>LensFlare</span> <span class=keyword>Component</span> attached to a <span class=keyword>GameObject</span>.
+<span class=keyword>Flare</span> objects are the source assets that are used by [Lens Flare Components](class-LensFlare.md). The Flare itself is a combination of a texture file and specific information that determines how the Flare behaves.  Then when you want to use the Flare in a <span class=keyword>Scene</span>, you reference the specific Flare from inside a <span class=keyword>LensFlare</span> <span class=keyword>Component</span> attached to a <span class=keyword>GameObject</span>.
 
-There are some sample Flares in the [Standard Assets](HOWTO-InstallStandardAssets.html) package. If you want to add one of these to your scene, attach a [Lens Flare](class-LensFlare.html) Component to a GameObject, and drag the Flare you want to use into the <span class=component>Flare</span> property of the Lens Flare, just like assigning a <span class=keyword>Material</span> to a <span class=keyword>Mesh Renderer</span>.
+There are some sample Flares in the [Standard Assets](HOWTO-InstallStandardAssets.md) package. If you want to add one of these to your scene, attach a [Lens Flare](class-LensFlare.md) Component to a GameObject, and drag the Flare you want to use into the <span class=component>Flare</span> property of the Lens Flare, just like assigning a <span class=keyword>Material</span> to a <span class=keyword>Mesh Renderer</span>.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FlareInspector.png)  
 _The Flare <span class=keyword>Inspector</span>_
@@ -29,6 +30,7 @@ Properties
 |>>><span class=component>Fade</span> |If enabled, the Element will fade in to full strength when it becomes visible and fade out when it isn't. |
 |<span class=component>Flare Texture</span> |A texture containing images used by this Flare's <span class=component>Elements</span>. It must be arranged according to one of the <span class=component>TextureLayout</span> options. |
 |<span class=component>Texture Layout</span> |How the individual Flare Element images are laid out inside the <span class=component>Flare Texture</span>.  
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FlareLayouts.png)  
 |<span class=component>Use Fog</span> |If enabled, the Flare will fade away with distance fog. This is used commonly for small Flares. |
 

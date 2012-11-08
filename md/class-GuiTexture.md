@@ -4,10 +4,11 @@ GUI Texture
 
 <span class=keyword>GUI Textures</span> are displayed as flat images in 2D. They are made especially for user interface elements, buttons, or decorations.  Their positioning and scaling is performed along the x and y axes only, and they are measured in <span class=keyword>Screen Coordinates</span>, rather than <span class=keyword>World Coordinates</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-GUITexture.png)  
 _The GUI Texture <span class=keyword>Inspector</span>_
 
-__Please Note__: Unity 2.0 introduced <span class=keyword>UnityGUI</span>, a GUI Scripting system.  You may prefer creating user interface elements with UnityGUI instead of GUI Textures.  Read more about how to use UnityGUI in the [GUI Scripting Guide](GUIScriptingGuide.html).
+__Please Note__: Unity 2.0 introduced <span class=keyword>UnityGUI</span>, a GUI Scripting system.  You may prefer creating user interface elements with UnityGUI instead of GUI Textures.  Read more about how to use UnityGUI in the [GUI Scripting Guide](GUIScriptingGuide.md).
 
 
 Properties
@@ -17,7 +18,7 @@ Properties
 
 |**_Property:_** |**_Function:_** |
 |:---|:---|
-|<span class=component>Texture</span>     |Reference to the [Texture](class-Texture2D.html) that will be used as the texture's display. |
+|<span class=component>Texture</span>     |Reference to the [Texture](class-Texture2D.md) that will be used as the texture's display. |
 |<span class=component>Color</span>       |Color that will tint the <span class=component>Texture</span> drawn on screen. |
 |<span class=component>Pixel Inset</span> |Used for pixel-level control of the scaling and positioning of the GUI Texture. All values are measured relative to the position of the GUI Texture's <span class=keyword>Transform</span>. |
 |>>><span class=component>X</span> |Left-most pixel position of the texture.   |
@@ -40,8 +41,10 @@ To create a GUITexture:
 
 GUI Textures are perfect for presenting game interface backgrounds, buttons, or other elements to the player.  Through scripting, you can easily provide visual feedback for different "states" of the texture -- when the mouse is hovering over the texture, or is actively clicking it for example.  Here is the basic breakdown of how the GUI Texture is calculated:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GUITexture-Layout.jpg)  
 _GUI Textures are laid out according to these rules_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GUITexture-Example.png)  
 _The GUI elements seen here were all created with GUI Textures_

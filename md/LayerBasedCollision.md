@@ -3,6 +3,7 @@ Layer-Based Collision Detection.
 
 In Unity 3.x we introduce Layer-Based collision detection, which is a way to make <span class=keyword>Game Objects</span> collide with another specific <span class=keyword>Game Objects</span> that are tied up to specific layers.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LayerBasedCollision.png)  
 _Objects Colliding with their own layer._
 

@@ -4,6 +4,7 @@ Editing Value Properties
 
 Value properties do not reference anything and they can be edited right on the spot. Typical value properties are numbers, toggles, strings, and selection popups, but they can also be colors, vectors, curves, and other types.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-Inspector.png)  
 _Value properties on the inspector can be numbers, checkboxes, strings..._
 
@@ -21,10 +22,12 @@ Properties of the <span class=keyword>Color</span> type will open up the <span c
 
 The Color Picker reference in the inspector is represented by:
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-ColorPickerReference.png)  
 _Color Picker reference in the inspector._
 
 And opens the Color Picker just by clicking on it:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ColorPickerDescr.png)  
 _Color Picker descriptions._
@@ -37,15 +40,17 @@ Finally, the transparency of the Color selected can be controlled  by the <span 
 Curve Editor
 ------------
 
-Properties of the <span class=keyword>AnimationCurve</span> type will open up the <span class=keyword>Curve Editor</span>. The Curve Editor lets you edit a curve or choose from one of the presets. For more information on editing curves, see the guide on [Editing Curves](EditingCurves.html).
+Properties of the <span class=keyword>AnimationCurve</span> type will open up the <span class=keyword>Curve Editor</span>. The Curve Editor lets you edit a curve or choose from one of the presets. For more information on editing curves, see the guide on [Editing Curves](EditingCurves.md).
 
 The type is called AnimationCurve for legacy reasons, but it can be used to define any custom curve function. The function can then be evaluated at runtime from a script. 
 
 An AnimationCurve property is shown in the inspector as a small preview:
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-PopupCurve.png)  
 _A preview of an AnimationCurve in the Inspector._
 
 Clicking on it opens the Curve Editor:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurveEditorPopupDescr.png)  
 _The Curve Editor is for editing AnimationCurves._
@@ -58,6 +63,7 @@ Gradient editor
 
 
 In graphics and animation, it is often useful to be able to blend one colour gradually into another, over space or time. A <span class=keyword>gradient</span> is a visual representation of a colour progression, which simply shows the main colours (which are called <span class=keyword>stops</span>) and all the intermediate shades between them. In Unity, gradients have their own special value editor, shown below.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/GradientDiagram.png)  
 

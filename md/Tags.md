@@ -15,14 +15,15 @@ var respawn = GameObject.FindWithTag ("Respawn");
 Instantiate (respawnPrefab, respawn.position, respawn.rotation);
 ````
 
-This saves us having to manually add our GameObjects to a script’s exposed properties using drag and drop -- a useful timesaver if the same script code is being used in a number of GameObjects. Another example is a [Trigger Collider -> class-SphereCollider](TriggerCollider->class-SphereCollider.html) control script which needs to work out whether the player is interacting with an enemy, as opposed to, say, a random prop or collectable item. Tags make this kind of test easy.
+This saves us having to manually add our GameObjects to a script’s exposed properties using drag and drop -- a useful timesaver if the same script code is being used in a number of GameObjects. Another example is a [Trigger Collider -> class-SphereCollider](TriggerCollider->class-SphereCollider.md) control script which needs to work out whether the player is interacting with an enemy, as opposed to, say, a random prop or collectable item. Tags make this kind of test easy.
 
 
 Applying a Tag
 --------------
 
 
-The <span class=keyword>Inspector</span> will show the Tag and [Layer -> Layers](Layer->Layers.html) drop-down menus just below any GameObject’s name. To apply a Tag to a GameObject, simply open the Tags drop-down and choose the Tag you require:
+The <span class=keyword>Inspector</span> will show the Tag and [Layer -> Layers](Layer->Layers.md) drop-down menus just below any GameObject’s name. To apply a Tag to a GameObject, simply open the Tags drop-down and choose the Tag you require:
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TagDropdown.png)  
 
@@ -33,9 +34,9 @@ Creating new Tags
 -----------------
 
 
-To create a new Tag, click the “Add new tag...” option at the end of the drop-down menu. This will open up the <span class=keyword>Tag Manager</span> in the Inspector. The Tag Manager is described [here](class-TagManager.html).
+To create a new Tag, click the “Add new tag...” option at the end of the drop-down menu. This will open up the <span class=keyword>Tag Manager</span> in the Inspector. The Tag Manager is described [here](class-TagManager.md).
 
-Layers appear similar to Tags, but are used to define how Unity should render GameObjects in the Scene. See the [Layers](Layers.html) page for more information.
+Layers appear similar to Tags, but are used to define how Unity should render GameObjects in the Scene. See the [Layers](Layers.md) page for more information.
 
 
 Hints

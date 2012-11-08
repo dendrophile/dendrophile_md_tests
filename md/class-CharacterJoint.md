@@ -4,7 +4,8 @@ Character Joint
 
 <span class=keyword>Character Joints</span> are mainly used for Ragdoll effects. They are an extended ball-socket joint which allows you to limit the joint on each axis.
 
-If you just want to set up a ragdoll read about [Ragdoll Wizard](wizard-RagdollWizard.html).
+If you just want to set up a ragdoll read about [Ragdoll Wizard](wizard-RagdollWizard.md).
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-CharacterJoint.png)  
 _The Character Joint on a Ragdoll_

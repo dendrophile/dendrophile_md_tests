@@ -10,7 +10,7 @@ Either should enable you to get your meshes into Unity, but there are considerat
 Exported 3D files
 -----------------
 
-Unity can read [here](HOWTO-exportFBX|.FBX]],__.dae__(Collada),__.3DS__,__.dxf__and__.obj__files,FBXexporterscanbefound[[http://autodesk.com/fbx.html) and obj or Collada exporters can also be found for many applications
+Unity can read [.FBX](HOWTO-exportFBX.md), __.dae__ (Collada), __.3DS__, __.dxf__ and __.obj__ files, FBX exporters can be found [here](http://autodesk.com/fbx.md) and obj or Collada exporters can also be found for many applications
 
 __Advantages:__
 * Only export the data you need

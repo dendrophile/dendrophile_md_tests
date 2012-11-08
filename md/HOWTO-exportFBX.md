@@ -27,7 +27,7 @@ Select > Prepare > Check Settings > Export > Verify > Import
 * Nodes, markers and their transforms can be exporte
 * Cameras and Lights are not currently imported in to Unity
 
-###_'Which_' version of FBX are you using? if in doubt use [2012.2](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=18817399.html)
+###_'Which_' version of FBX are you using? if in doubt use [2012.2](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=18817399.md)
 
 * Autodesk update their FBX installer regularly and it can provide different results with different versions of their own software and other 3rd party 3D apps.
 * _'_See Advanced Options >  FBX file format_'_
@@ -45,6 +45,8 @@ Select > Prepare > Check Settings > Export > Verify > Import
 See below for Maya FBX dialogue example:
 
 Fig 1 General, Geometry & Animation
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FBX_A.png)  
 Fig 2 Lights, Advanced options
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FBX_B.png)  

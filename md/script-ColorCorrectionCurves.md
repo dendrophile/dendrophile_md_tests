@@ -12,17 +12,19 @@ Lastly, Saturation is an easy way to adjust all color saturation or desaturation
 
 
 ##u40 Details
-See also the new [Color Correction Lut effect](script-ColorCorrectionLut.html) for lookup texture based color grading.
+See also the new [Color Correction Lut effect](script-ColorCorrectionLut.md) for lookup texture based color grading.
 
 
 ##u40 Details
 The following images demonstrate how by simply enhancing the saturation slider and the blue channel curve can make a scene drastically different
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/noColorCorrection.png)  
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/saturationAndBlueCurve.png)  
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------
@@ -61,9 +63,11 @@ Understanding Curves
 
 Curves offer a powerful way to enhance an image and can be used to increase or decrease contrast, add a tint or create psychedelic color effects. Curves work on each of the red, green and blue color channels separately and are based around the idea of mapping each input brightness level (ie, the original brightness value of a pixel) to an output level of your choosing. The relationship between the input and output levels can be shown on a simple graph:-
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurvesDefault.png)  
 
 The horizontal axis represents the input level and the vertical represents the output level. Any point on the line specifies the output value that a given input is mapped to during processing. When the "curve" is the default straight line running from bottom-left to top-right, the input value is mapped to an identical output value, which will leave the pixel unchanged. However, the curve can be redrawn to re-map the brightness levels as required. A simple example is when the line goes diagonally from top-left to bottom-right:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurvesInvert.png)  
 
@@ -75,17 +79,20 @@ Most of the detail in an image is conveyed by the difference in brightness level
 
 If a shallow slope is used for the curve, rather than the corner-to-corner diagonal then the full range of input values will be squeezed into a narrower range of output values:-
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurvesLowContrast.png)  
 
 This has the effect of reducing the contrast, since the differences between pixel values in the output are necessarily smaller than those in the input (indeed, two slightly different input values may actually get mapped to the same output value). Note that since the image no longer spans the full range of output values, it is possible to slide the curve up and down the range, resulting in an image which is brighter or darker overall (the average brightness is sometimes called the "sit" point and is the parameter adjusted by the brightness control on a TV set). Reduced contrast can give the impression of gloom, fog or a dazzling light source in a scene, depending on the overall brightness.
 
 It is not necessary to reduce the contrast across the whole range of brightness levels. The curve's slope can vary along its length, with the shallower parts corresponding to ranges of reduced contrast. In between the shallow parts, the slope may be steeper than the default, and the contrast will actually increase in these ranges. Changing the curve like this gives a useful way to increase contrast in some parts of the image while reducing it in areas where the detail is less important:-
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurvesWiggly.png)  
 
 ###Colour Effects
 
 If the curves are set identically for each color channel (red, green and blue) then the changes will mainly affect the brightness of pixels while their colors remain relatively unchanged. However, if the curves are set differently for each channel then the colors can change dramatically. Many complex interactions between the color channels are possible but some basic insight can be gained from the following diagram:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RGBCircles.png)  
 
@@ -107,6 +114,7 @@ Editing Curves
 
 
 Clicking on one of the curves in the inspector will open an editing window:-
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/CurvesWindow.png)  
 

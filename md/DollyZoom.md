@@ -6,6 +6,7 @@ Dolly Zoom is the well-known visual effect where the camera simultaneously moves
 
 An object that just fits within the frustum vertically will occupy the whole height of the view as seen on the screen. This is true whatever the object's distance from the camera and whatever the field of view. For example, you can move the camera closer to the object but then widen the field of view so that the object still just fits inside the frustum's height. That particular object will appear the same size onscreen but everything else will change size as the distance and FOV change. This is the essence of the dolly zoom effect.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/EqualFrustumHeight.png)  
 
 Creating the effect in code is a matter of saving the height of the frustum at the object's position at the start of the zoom. Then, as the camera moves, its new distance is found and the FOV adjusted to keep it the same height at the object's position. This can be accomplished with the following code:-

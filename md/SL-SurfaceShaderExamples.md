@@ -2,7 +2,7 @@ Surface Shader Examples
 =======================
 
 
-Here are some examples of [Surface Shader Lighting Examples](SL-SurfaceShaders|<span class=keyword>SurfaceShaders</span>]].Theexamplesbelowfocusonusingbuilt-inlightingmodels;examplesonhowtoimplementcustomlightingmodelsarein[[SL-SurfaceShaderLightingExamples.html).
+Here are some examples of [Surface Shader Lighting Examples](SL-SurfaceShaders|<span class=keyword>SurfaceShaders</span>]].Theexamplesbelowfocusonusingbuilt-inlightingmodels;examplesonhowtoimplementcustomlightingmodelsarein[[SL-SurfaceShaderLightingExamples.md).
 
 Simple
 ------
@@ -27,14 +27,15 @@ We'll start with a very simple shader and build up on that. Here's a shader that
     Fallback "Diffuse"
   }
 
-Here's how it looks like on a model with two [lights](class-Light.html) set up:   
+Here's how it looks like on a model with two [lights](class-Light.md) set up:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderSimple.png)  
 
 Texture
 -------
 
 
-An all-white object is quite boring, so let's add a texture. We'll add a [Properties block](SL-Properties.html) to the shader, so we get a texture selector in our Material. Other changes are in bold below.
+An all-white object is quite boring, so let's add a texture. We'll add a [Properties block](SL-Properties.md) to the shader, so we get a texture selector in our Material. Other changes are in bold below.
 
   Shader "Example/Diffuse Texture" {
     __Properties {__
@@ -55,6 +56,7 @@ An all-white object is quite boring, so let's add a texture. We'll add a [Proper
     } 
     Fallback "Diffuse"
   }
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderDiffuseTex.png)  
 
@@ -87,6 +89,7 @@ Let's add some normal mapping:
     } 
     Fallback "Diffuse"
   }
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderDiffuseBump.png)  
 
@@ -128,6 +131,7 @@ Now, try to add some Rim Lighting to highlight the edges of an object. We'll add
     Fallback "Diffuse"
   }
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderRim.png)  
 
 
@@ -166,6 +170,7 @@ For a different effect, let's add a detail texture that is combined with the bas
   }
 
 Using a checker texture does not make much practical sense, but illustrates what happens:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderDetailTex.png)  
 
 
@@ -202,6 +207,7 @@ How about a detail texture in screen space? It does not make much sense for a so
   }
 
 I removed normal mapping from the shader above, just to make it shorter:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderDetailTexScreenPos.png)  
 
 
@@ -236,6 +242,7 @@ Here's a shader that does cubemapped reflection using built-in `worldRefl` input
   }
 
 And since it assigns the reflection color as Emission, we get a very shiny soldier:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderWorldRefl.png)  
 
 
@@ -271,6 +278,7 @@ If you want to do reflections that are affected by normal maps, it needs to be s
   }
 
 Here's a normal mapped shiny soldier:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderWorldReflNormalmap.png)  
 
 
@@ -306,6 +314,7 @@ Here's a shader that "slices" the object by discarding pixels in nearly horizont
     } 
     Fallback "Diffuse"
   }
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderSlices.png)  
 
@@ -345,6 +354,7 @@ Here's a shader that moves vertices along their normals by the amount specified 
   }
 
 Moving vertices along their normals makes a fat soldier:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderNormalExtrusion.png)  
 
 
@@ -412,6 +422,7 @@ Example below defines a custom `float3 customColor` member, which is computed in
   }
 
 In this example `customColor` is set to the absolute value of the normal:   
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderCustomVertexData.png)  
 
 More practical uses could be computing any per-vertex data that is not provided by built-in Input variables; or optimizing shader computations. For example, it's possible to compute Rim lighting at object's vertices, instead of doing that in the surface shader per-pixel.
@@ -450,6 +461,7 @@ Here's a simple shader that applies tint to final color. This is different from 
     } 
     Fallback "Diffuse"
   }
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderFinalColorSimple.png)  
@@ -538,6 +550,7 @@ Here's a shader that applies fog tint based on distance from screen center. This
     } 
     Fallback "Diffuse"
   }
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SurfaceShaderFinalColorFog.png)  

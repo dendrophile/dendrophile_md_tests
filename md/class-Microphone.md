@@ -8,4 +8,5 @@ With this class, you can start and end a recording from a built-in microphone, g
 
 For more information on how to use this class, see the Scripting Reference. 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Microphone-icon.png)  

@@ -24,6 +24,7 @@ Create an instance of the character by dragging it from the <span class=keyword>
 
 Open the Ragdoll Wizard by choosing <span class=menu>GameObject->Create Other->Ragdoll</span> from the menu bar.  You will now see the Wizard itself.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RagdollWizard.png)  
 _The Ragdoll Wizard_
 

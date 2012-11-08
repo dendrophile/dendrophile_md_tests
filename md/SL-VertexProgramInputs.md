@@ -2,7 +2,7 @@ Providing vertex data to vertex programs
 ========================================
 
 
-For Cg/HLSL [vertex programs](SL-ShaderPrograms.html), the vertex data must be passed in as a structure. Several commonly used vertex structures are defined in [SL-BuiltinIncludes | <span class=keyword>UnityCG.cginc</span> include file](SL-BuiltinIncludes|<span class=keyword>UnityCG.cginc</span>includefile.html), and in most cases it's enough just to use them. The structures are:
+For Cg/HLSL [vertex programs](SL-ShaderPrograms.md), the vertex data must be passed in as a structure. Several commonly used vertex structures are defined in [SL-BuiltinIncludes | <span class=keyword>UnityCG.cginc</span> include file](SL-BuiltinIncludes|<span class=keyword>UnityCG.cginc</span>includefile.md), and in most cases it's enough just to use them. The structures are:
 * <span class=keyword>appdata_base</span>: vertex consists of position, normal and one texture coordinate.
 * <span class=keyword>appdata_tan</span>: vertex consists of position, tangent, normal and one texture coordinate.
 * <span class=keyword>appdata_full</span>: vertex consists of position, tangent, normal, two texture coordinates and color.
@@ -95,6 +95,7 @@ ENDCG
 ````
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL-DebugUV1.png)  
 _Debug UV1 shader applied to a torus knot model_
 
@@ -172,6 +173,7 @@ ENDCG
 }
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL-DebugColors.png)  
 _Debug Colors shader applied to a model that has illumination baked into colors_
 
@@ -212,6 +214,7 @@ ENDCG
 }
 }
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL-DebugNormals.png)  
 _Debug Normals shader applied to a model. You can see that the model has hard shading edges._
@@ -255,6 +258,7 @@ ENDCG
 }
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL-DebugTangents.png)  
 _Debug Tangents shader applied to a model._
 
@@ -295,6 +299,7 @@ ENDCG
 }
 }
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SL-DebugBinormals.png)  
 _Debug Binormals shader applied to a model. Pretty!_

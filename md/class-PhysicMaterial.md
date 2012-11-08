@@ -6,6 +6,7 @@ The <span class=keyword>Physic Material</span> is used to adjust friction and bo
 
 To create a Physic Material select <span class=menu>Assets->Create->Physic Material</span> from the menu bar.  Then drag the Physic Material from the Project View onto a <span class=keyword>Collider</span> in the scene.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Inspector-PhysicMaterial.png)  
 _The Physic Material <span class=keyword>Inspector</span>_
 

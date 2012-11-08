@@ -26,7 +26,7 @@ Command Line Arguments
 
 As mentioned above, the editor and also built games can optionally be supplied with additional commands and information on startup. This is done using the following command line arguments:-
 
-:<span class=component>-batchmode</span>:Run Unity in batch mode. This should always be used in conjunction with the other command line arguments as it ensures no pop up windows appear and eliminates the need for any human intervention. When an exception occurs during execution of script code, asset server updates fail or other operations fail Unity will immediately exit with return code 1. Note that in batch mode, Unity will send a minimal version of its log output to the console. However, the [Log Files](LogFiles.html) still contain the full log information.
+:<span class=component>-batchmode</span>:Run Unity in batch mode. This should always be used in conjunction with the other command line arguments as it ensures no pop up windows appear and eliminates the need for any human intervention. When an exception occurs during execution of script code, asset server updates fail or other operations fail Unity will immediately exit with return code 1. Note that in batch mode, Unity will send a minimal version of its log output to the console. However, the [Log Files](LogFiles.md) still contain the full log information.
 
 
 :<span class=component>-quit</span>:Quit the Unity editor after other commands have finished executing.  Note that this can cause error messages to be hidden (but they will show up in the Editor.log file).
@@ -41,7 +41,7 @@ As mentioned above, the editor and also built games can optionally be supplied w
 
 :<span class=component>-buildLinux64Player <pathname></span>:Build a 64-bit standalone Linux player (eg, -buildLinux64Player path/to/your/build).
 
-:<span class=component>-importPackage <pathname></span>:Import the given [package](HOWTO-exportpackage.html). No import dialog is shown.
+:<span class=component>-importPackage <pathname></span>:Import the given [package](HOWTO-exportpackage.md). No import dialog is shown.
 
 :<span class=component>-createProject <pathname></span>:Create an empty project at the given path.
 
@@ -49,7 +49,7 @@ As mentioned above, the editor and also built games can optionally be supplied w
 
 :<span class=component>-logFile <pathname></span>:Specify where the Editor or Windows standalone log file will be written.
 
-:<span class=component>-assetServerUpdate <IP[Asset Server](=:=]port]projectNameusernamepassword[r<revision>]></span>:Forceanupdateoftheprojectinthe[[AssetServer.html) given by _IP:port_. The port is optional and if not given it is assumed to be the standard one (10733). It is advisable to use this command in conjunction with the _-projectPath_ argument to ensure you are working with the correct project. If no project name is given then the last project opened by Unity is used. If no project exists at the path given by _-projectPath_ then one is created automatically.
+:<span class=component>-assetServerUpdate <IP[Asset Server](=:=]port]projectNameusernamepassword[r<revision>]></span>:Forceanupdateoftheprojectinthe[[AssetServer.md) given by _IP:port_. The port is optional and if not given it is assumed to be the standard one (10733). It is advisable to use this command in conjunction with the _-projectPath_ argument to ensure you are working with the correct project. If no project name is given then the last project opened by Unity is used. If no project exists at the path given by _-projectPath_ then one is created automatically.
 
 
 ###u30 Details
@@ -60,7 +60,7 @@ As mentioned above, the editor and also built games can optionally be supplied w
 
 :<span class=component>-nographics (Windows only)</span>:When running in batch mode, do not initialize graphics device at all. This makes it possible to run your automated workflows on machines that don't even have a GPU.
 
-:<span class=component>-executeMethod <ClassName.MethodName></span>:Execute the static method as soon as Unity is started, the project is open and after the optional asset server update has been performed. This can be used to do continous integration, perform Unit Tests, make builds, prepare some data, etc. If you want to return an error from the commandline process you can either throw an exception which will cause Unity to exit with 1 or else call [EditorApplication.Exit](ScriptRef:EditorApplication.Exit.html.html) with a non-zero code. If you want to pass parameters you can add them to the command line and retrieve them inside the method using System.Environment.GetCommandLineArgs. 
+:<span class=component>-executeMethod <ClassName.MethodName></span>:Execute the static method as soon as Unity is started, the project is open and after the optional asset server update has been performed. This can be used to do continous integration, perform Unit Tests, make builds, prepare some data, etc. If you want to return an error from the commandline process you can either throw an exception which will cause Unity to exit with 1 or else call [EditorApplication.Exit](ScriptRef:EditorApplication.Exit.html) with a non-zero code. If you want to pass parameters you can add them to the command line and retrieve them inside the method using System.Environment.GetCommandLineArgs. 
 
 To use `-executeMethod` __you need to have a script in an Editor folder and a static function in the class__. 
 
@@ -114,7 +114,7 @@ Unity Standalone Player command line arguments
 
 Standalone players built with Unity also understand some command line arguments:
 
-:<span class=component>-batchmode</span>:Run the game in "headless" mode. The game will not display anything or accept user input. This is mostly useful for running servers for [networked games](NetworkReferenceGuide.html).
+:<span class=component>-batchmode</span>:Run the game in "headless" mode. The game will not display anything or accept user input. This is mostly useful for running servers for [networked games](NetworkReferenceGuide.md).
 
 :<span class=component>-force-opengl (Windows only)</span>: Make the game use OpenGL for rendering, even if Direct3D is available. Normally Direct3D is used but OpenGL is used if Direct3D 9.0c is not available.
 
@@ -126,9 +126,9 @@ Standalone players built with Unity also understand some command line arguments:
 
 :<span class=component>-single-instance (Linux & Windows only)</span>:Allow only one instance of the game to run at the time. If another instance is already running then launching it again with `-single-instance` will just focus the existing one.
 
-:<span class=component>-nolog (Windows only)</span>:Do not produce output log. Normally `output_log.txt` is written in the `*_Data` folder next to the game executable, where [Debug.Log](ScriptRef:Debug.Log.html.html) output is printed.
+:<span class=component>-nolog (Windows only)</span>:Do not produce output log. Normally `output_log.txt` is written in the `*_Data` folder next to the game executable, where [Debug.Log](ScriptRef:Debug.Log.html) output is printed.
 
-:<span class=component>-force-d3d9-ref (Windows only)</span>:Make the game run using Direct3D's "Reference" software renderer. The [DirectX SDK](http://msdn.microsoft.com/en-us/directx/default.aspx.html) has to be installed for this to work. This is mostly useful for building automated test suites, where you want to ensure rendering is exactly the same no matter what graphics card is being used.
+:<span class=component>-force-d3d9-ref (Windows only)</span>:Make the game run using Direct3D's "Reference" software renderer. The [DirectX SDK](http://msdn.microsoft.com/en-us/directx/default.aspx.md) has to be installed for this to work. This is mostly useful for building automated test suites, where you want to ensure rendering is exactly the same no matter what graphics card is being used.
 
 :<span class=component>-adapter N (Windows only)</span>:Allows the game to run full-screen on another display, where N denotes the display number.
 

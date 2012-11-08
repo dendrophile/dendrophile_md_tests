@@ -8,4 +8,4 @@ The <span class=keyword>Components</span> of UnityGUI allow you to define the ap
 
 (:tocportion:)
 
-For information about using UnityGUI to create Controls and define their content, please read the [GUI Scripting Guide](GUIScriptingGuide.html).
+For information about using UnityGUI to create Controls and define their content, please read the [GUI Scripting Guide](GUIScriptingGuide.md).

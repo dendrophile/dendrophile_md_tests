@@ -2,7 +2,7 @@ Instantiating Prefabs at runtime
 ================================
 
 
-By this point you should understand the concept of <span class=keyword>Prefabs</span> at a fundamental level.  They are a collection of predefined <span class=keyword>GameObjects</span> & <span class=keyword>Components</span> that are re-usable throughout your game.  If you don't know what a Prefab is, we recommend you read the [Prefabs](Prefabs.html) page for a more basic introduction.
+By this point you should understand the concept of <span class=keyword>Prefabs</span> at a fundamental level.  They are a collection of predefined <span class=keyword>GameObjects</span> & <span class=keyword>Components</span> that are re-usable throughout your game.  If you don't know what a Prefab is, we recommend you read the [Prefabs](Prefabs.md) page for a more basic introduction.
 
 Prefabs come in very handy when you want to instantiate complicated GameObjects at runtime.  The alternative to instantiating Prefabs is to create GameObjects from scratch using code.  Instantiating Prefabs has many advantages over the alternative approach:
 
@@ -105,6 +105,7 @@ Now we only need to create the Prefab, which we do in the Editor.  Here's how:
 1. With the Prefab created, you can safely delete the Cube from the Hierarchy (<span class=menu>Delete</span> on Windows, <span class=menu>Command-Backspace</span> on Mac)
 
 We've created our Brick Prefab, so now we have to attach it to the <span class=component>brick</span> variable in our script.  Select the empty GameObject that contains the script. Notice that a new variable has appeared in the Inspector, called "brick".
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/InspectorWithCubeVar.png)  
 _This variable can accept any GameObject or Prefab_
@@ -250,7 +251,7 @@ void KillSelf () {
 ````
 
 
-The First Person Shooter tutorial explains how to replace a character with a ragdoll version and also synchronize limbs with the last state of the animation. You can find that tutorial on the [Tutorials](Tutorials.html) page.
+The First Person Shooter tutorial explains how to replace a character with a ragdoll version and also synchronize limbs with the last state of the animation. You can find that tutorial on the [Tutorials](Tutorials.md) page.
 
 
 ###Placing a bunch of objects in a specific pattern

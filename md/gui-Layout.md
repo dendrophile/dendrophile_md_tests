@@ -104,6 +104,7 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-GroupCenteredControls.png)  
 _The above example centers controls regardless of the screen resolution_
 
@@ -179,6 +180,7 @@ public class GUITest : MonoBehaviour {
 }
 
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-NestedGroupsClipping.png)  
 _You can nest Groups together to create clipping behaviors_
@@ -305,6 +307,7 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-NestedGroupsLayout.png)  
 _Three Controls arranged with Horizontal & Vertical Groups_
 
@@ -348,4 +351,4 @@ public class GUITest : MonoBehaviour {
 
 ````
 
-For a full list of possible GUILayoutOptions, please read the [GUILayoutOption Scripting Reference page](ScriptRef:GUILayoutOption.html.html).
+For a full list of possible GUILayoutOptions, please read the [GUILayoutOption Scripting Reference page](ScriptRef:GUILayoutOption.html).

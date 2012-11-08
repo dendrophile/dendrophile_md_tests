@@ -2,7 +2,7 @@ Building Plugins for iOS
 ========================
 
 
-This page describes [Native Code Plugins](Plugins.html) for the iOS platform.
+This page describes [Native Code Plugins](Plugins.md) for the iOS platform.
 
 
 Building an Application with a Native Plugin for iOS
@@ -16,7 +16,7 @@ private static extern float FooPluginFunction ();
 1. Set the editor to the iOS build target
 1. Add your native code source files to the generated XCode project's "Classes" folder (this folder is not overwritten when the project is updated, but don't forget to backup your native code).
 
-If you are using C++ (.cpp) or Objective-C (.mm) to implement the plugin you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.html).
+If you are using C++ (.cpp) or Objective-C (.mm) to implement the plugin you must ensure the functions are declared with C linkage to avoid [name mangling issues](http://en.wikipedia.org/wiki/Name_mangling.md).
 
 ````
 extern "C" {
@@ -64,7 +64,7 @@ Examples
 
 
 ###Bonjour Browser Sample
-A simple example of the use of a native code plugin can be found [here](Attach:iPhoneNativeCodeSample.zip.html)
+A simple example of the use of a native code plugin can be found [here](Attach:iPhoneNativeCodeSample.zip.md)
 
 This sample demonstrates how objective-C code can be invoked
 from a Unity iOS application. This application implements a very simple Bonjour client.

@@ -7,10 +7,10 @@ Control Types
 -------------
 
 
-There are a number of different GUI <span class=keyword>Controls</span> that you can create.  This section lists all of the available display and interactive Controls.  There are other GUI functions that affect layout of Controls, which are described in the [Layout](gui-Layout.html) section of the Guide.
+There are a number of different GUI <span class=keyword>Controls</span> that you can create.  This section lists all of the available display and interactive Controls.  There are other GUI functions that affect layout of Controls, which are described in the [Layout](gui-Layout.md) section of the Guide.
 
 
-###[Label](ScriptRef:GUI.Label.html.html)
+###[Label](ScriptRef:GUI.Label.html)
 
 The <span class=component>Label</span> is non-interactive.  It is for display only.  It cannot be clicked or otherwise moved.  It is best for displaying information only.
 
@@ -39,11 +39,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-LabelExample.png)  
 _The Label created by the example code_
 
 
-###[Button](ScriptRef:GUI.Button.html.html)
+###[Button](ScriptRef:GUI.Button.html)
 
 The <span class=component>Button</span> is a typical interactive button.  It will respond a single time when clicked, no matter how long the mouse remains depressed.  The response occurs as soon as the mouse button is released.
 
@@ -79,11 +80,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-ButtonExample.png)  
 _The Button created by the example code_
 
 
-###[RepeatButton](ScriptRef:GUI.RepeatButton.html.html)
+###[RepeatButton](ScriptRef:GUI.RepeatButton.html)
 
 <span class=component>RepeatButton</span> is a variation of the regular <span class=component>Button</span>.  The difference is, <span class=component>RepeatButton</span> will respond every frame that the mouse button remains depressed.  This allows you to create click-and-hold functionality.
 
@@ -119,12 +121,13 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-RepeatButtonExample.png)  
 _The Repeat Button created by the example code_
 
 
 
-###[TextField](ScriptRef:GUI.TextField.html.html)
+###[TextField](ScriptRef:GUI.TextField.html)
 
 The <span class=component>TextField</span> Control is an interactive, editable single-line field containing a text string.
 
@@ -160,12 +163,13 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-TextFieldExample.png)  
 _The TextField created by the example code_
 
 
 
-###[TextArea](ScriptRef:GUI.TextArea.html.html)
+###[TextArea](ScriptRef:GUI.TextArea.html)
 
 The <span class=component>TextArea</span> Control is an interactive, editable multi-line area containing a text string.
 
@@ -201,11 +205,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-TextAreaExample.png)  
 _The TextArea created by the example code_
 
 
-###[Toggle](ScriptRef:GUI.Toggle.html.html)
+###[Toggle](ScriptRef:GUI.Toggle.html)
 
 The <span class=component>Toggle</span> Control creates a checkbox with a persistent on/off state.  The user can change the state by clicking on it.
 
@@ -241,11 +246,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-ToggleExample.png)  
 _The Toggle created by the example code_
 
 
-###[Toolbar](ScriptRef:GUI.Toolbar.html.html)
+###[Toolbar](ScriptRef:GUI.Toolbar.html)
 
 The <span class=component>Toolbar</span> Control is essentially a row of <span class=component>Buttons</span>.  Only one of the Buttons on the Toolbar can be active at a time, and it will remain active until a different Button is clicked. This behavior emulates the behavior of a typical Toolbar.  You can define an arbitrary number of Buttons on the Toolbar.
 
@@ -283,11 +289,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-ToolbarExample.png)  
 _The Toolbar created by the example code_
 
 
-###[SelectionGrid](ScriptRef:GUI.SelectionGrid.html.html)
+###[SelectionGrid](ScriptRef:GUI.SelectionGrid.html)
 
 The <span class=component>SelectionGrid</span> Control is a multi-row <span class=component>Toolbar</span>.  You can determine the number of columns and rows in the grid.  Only one Button can be active at time.
 
@@ -328,11 +335,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-SelectionGridExample.png)  
 _The SelectionGrid created by the example code_
 
 
-###[HorizontalSlider](ScriptRef:GUI.HorizontalSlider.html.html)
+###[HorizontalSlider](ScriptRef:GUI.HorizontalSlider.html)
 
 The <span class=component>HorizontalSlider</span> Control is a typical horizontal sliding knob that can be dragged to change a value between predetermined min and max values.
 
@@ -368,11 +376,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-HorizontalSliderExample.png)  
 _The Horizontal Slider created by the example code_
 
 
-###[VerticalSlider](ScriptRef:GUI.VerticalSlider.html.html)
+###[VerticalSlider](ScriptRef:GUI.VerticalSlider.html)
 
 The <span class=component>VerticalSlider</span> Control is a typical vertical sliding knob that can be dragged to change a value between predetermined min and max values.
 
@@ -408,11 +417,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-VerticalSliderExample.png)  
 _The Vertical Slider created by the example code_
 
 
-###[HorizontalScrollbar](ScriptRef:GUI.HorizontalScrollbar.html.html)
+###[HorizontalScrollbar](ScriptRef:GUI.HorizontalScrollbar.html)
 
 The <span class=component>HorizontalScrollbar</span> Control is similar to a <span class=component>Slider</span> Control, but visually similar to Scrolling elements for web browsers or word processors.  This control is used to navigate the <span class=component>ScrollView</span> Control.
 
@@ -448,11 +458,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-HorizontalScrollbarExample.png)  
 _The Horizontal Scrollbar created by the example code_
 
 
-###[VerticalScrollbar](ScriptRef:GUI.VerticalScrollbar.html.html)
+###[VerticalScrollbar](ScriptRef:GUI.VerticalScrollbar.html)
 
 The <span class=component>VerticalScrollbar</span> Control is similar to a <span class=component>Slider</span> Control, but visually similar to Scrolling elements for web browsers or word processors.  This control is used to navigate the <span class=component>ScrollView</span> Control.
 
@@ -489,11 +500,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-VerticalScrollbarExample.png)  
 _The Vertical Scrollbar created by the example code_
 
 
-###[ScrollView](ScriptRef:GUI.BeginScrollView.html.html)
+###[ScrollView](ScriptRef:GUI.BeginScrollView.html)
 
 <span class=component>ScrollViews</span> are Controls that display a viewable area of a much larger set of Controls.
 
@@ -545,12 +557,13 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-ScrollViewExample.png)  
 _The ScrollView created by the example code_
 
 
 
-###[Window](ScriptRef:GUI.Window.html.html)
+###[Window](ScriptRef:GUI.Window.html)
 
 <span class=component>Windows</span> are drag-able containers of Controls.  They can receive and lose focus when clicked.  Because of this, they are implemented slightly differently from the other Controls.  Each Window has an <span class=component>id</span> number, and its contents are declared inside a separate function that is called when the Window has focus.
 
@@ -594,11 +607,12 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-WindowExample.png)  
 _The Window created by the example code_
 
 
-###[GUI.changed](ScriptRef:GUI-changed.html.html)
+###[GUI.changed](ScriptRef:GUI-changed.html)
 
 To detect if the user did any action in the GUI (clicked a button, dragged a slider, etc), read the <span class=component>GUI.changed</span> value from your script. This gets set to true when the user has done something, making it easy to validate the user input.  
 

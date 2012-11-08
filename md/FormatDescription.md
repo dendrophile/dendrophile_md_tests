@@ -2,7 +2,7 @@ Description of the Format
 =========================
 
 
-Unity's scene format is implemented with the YAML data serialization language. While we can't cover YAML in depth here, it is an open format and its specification is available for free at the [YAML website](http://yaml.org/spec/1.2/spec.html.html). Each object in the scene is written to the file as a separate YAML document, which is introduced in the file by the --- sequence. Note that in this context, the term "object" refers to GameObjects, Components and other scene data collectively; each of these items requires its own YAML document in the scene file. The basic structure of a serialized object can be understood from an example:-
+Unity's scene format is implemented with the YAML data serialization language. While we can't cover YAML in depth here, it is an open format and its specification is available for free at the [YAML website](http://yaml.org/spec/1.2/spec.html.md). Each object in the scene is written to the file as a separate YAML document, which is introduced in the file by the --- sequence. Note that in this context, the term "object" refers to GameObjects, Components and other scene data collectively; each of these items requires its own YAML document in the scene file. The basic structure of a serialized object can be understood from an example:-
 
 ````
 --- !u!1 &6

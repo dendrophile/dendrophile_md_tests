@@ -2,7 +2,7 @@ ShaderLab syntax: Properties
 ============================
 
 
-Shaders can define a list of parameters to be set by artists in Unity's [material inspector](Materials.html). The Properties block in the shader file defines them.
+Shaders can define a list of parameters to be set by artists in Unity's [material inspector](Materials.md). The Properties block in the shader file defines them.
 
 Syntax
 ------
@@ -51,7 +51,7 @@ Properties {
 The _options_ inside curly braces of the texture property are optional. The available options are:
 
 * __TexGen__ _texgenmode_: Automatic texture coordinate generation mode for this texture. Can be one of _ObjectLinear_, _EyeLinear_, _SphereMap_, _CubeReflect_, _CubeNormal_; these correspond directly to OpenGL texgen modes. Note that TexGen is ignored if custom vertex programs are used.
-* __LightmapMode__ If given, this texture will be affected by per-renderer lightmap parameters. That is, the texture to use can be not in the material, but taken from the settings of the Renderer instead, see [Renderer scripting documentation](ScriptRef:Renderer-lightmapIndex.html.html).
+* __LightmapMode__ If given, this texture will be affected by per-renderer lightmap parameters. That is, the texture to use can be not in the material, but taken from the settings of the Renderer instead, see [Renderer scripting documentation](ScriptRef:Renderer-lightmapIndex.html).
 
 ###Example
 

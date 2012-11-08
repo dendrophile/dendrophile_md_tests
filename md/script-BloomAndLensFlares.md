@@ -2,16 +2,17 @@ Bloom and Lens Flares
 =====================
 
 
-<span class=component>Blooming</span> is the optical effect where light from a bright source (such as a glint) appears to leak into surrounding objects. The <span class=keyword>Bloom and Lens Flares</span> image effect adds bloom and also automatically generates lens flares in a highly efficient way. Bloom is a very distinctive effect that can make a big difference to a scene and may suggest a magical or dreamlike environment especially when used in conjunction with [Glow image effect](HDR]]rendering.BloomandLensFlaresisactuallyanenhancedversionofthe[[script-GlowEffect.html) which offers greater control over the bloom at the expense of rendering performance.
+<span class=component>Blooming</span> is the optical effect where light from a bright source (such as a glint) appears to leak into surrounding objects. The <span class=keyword>Bloom and Lens Flares</span> image effect adds bloom and also automatically generates lens flares in a highly efficient way. Bloom is a very distinctive effect that can make a big difference to a scene and may suggest a magical or dreamlike environment especially when used in conjunction with [Glow image effect](HDR]]rendering.BloomandLensFlaresisactuallyanenhancedversionofthe[[script-GlowEffect.md) which offers greater control over the bloom at the expense of rendering performance.
 
 
 ##u40 Details
-Note that this version is deprecated: A more flexible [Bloom effect](script-Bloom.html) has been introduced with 4.0.
+Note that this version is deprecated: A more flexible [Bloom effect](script-Bloom.md) has been introduced with 4.0.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/ImageEffects./bloomAndFlaresExample2.png)  
 _Example showing how <span class=keyword>Bloom and Lens Flares</span> can give a soft glow using the new <span class=component>Screen</span> blend mode. The new anamorphic lens flare type helps evoke a cinematic feeling._
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
 
 Properties
 ----------
@@ -22,7 +23,7 @@ Properties
 |:---|:---|
 |<span class=component>Tweak Mode</span> |Choose complex mode for additional options such as lens flares. |
 |<span class=component>Blend mode</span> |The method used to add bloom to the color buffer. The softer <span class=component>Screen</span> mode is better for preserving bright image details but doesn't work with HDR. |
-|<span class=component>HDR</span> |Whether bloom is using HDR buffers. This will result in a different look as pixel intensities may leave the [0,1] range, see details in [tonemapping](script-Tonemapping.html) and [HDR](HDR.html). |
+|<span class=component>HDR</span> |Whether bloom is using HDR buffers. This will result in a different look as pixel intensities may leave the [0,1] range, see details in [tonemapping](script-Tonemapping.md) and [HDR](HDR.md). |
 |<span class=component>Cast lens flares</span> |Enable or disable automatic lens flare generation. |
 
 

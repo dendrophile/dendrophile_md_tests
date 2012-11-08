@@ -4,6 +4,7 @@ Grass
 
 The <span class=keyword>Paint Foliage</span> button Attach:TerrainGuide-PaintFoliageButton.png allows you to paint grass, rocks, or other decorations around the Terrain.  To paint grass, choose <span class=menu>Edit Details button->Add Grass Texture</span>.  You don't need to create a mesh for grass, just a texture.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-AddGrassTextureDialog.png)  
 _The Add Grass Texture dialog_
 
@@ -26,6 +27,7 @@ At this dialog, you can fine-tune the appearance of the grass with the following
 
 After you've clicked the <span class=menu>Add</span> button, you'll see the grass appear selectable in the <span class=keyword>Inspector</span>.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-AddedGrassInspector.png)  
 _The added grass appears in the Inspector_
 
@@ -34,6 +36,7 @@ Painting Grass
 
 
 Painting grass works the same as painting textures or trees.  Select the grass you want to paint, and paint right onto the Terrain in the <span class=keyword>Scene View</span>
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-PaintingGrass.png)  
 _Painting grass is easy as pie_
@@ -48,8 +51,10 @@ To change any import parameters for a particular Grass Texture, select it choose
 
 You'll find that changing a few parameters can make a world of difference.  Even changing the <span class=component>Max/Min Width</span> and <span class=component>Height</span> parameters can vastly change the way the grass looks, even with the same number of grass objects painted on the Terrain.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-GrassParam1.png)  
 _Grass created with the default parameters_
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/TerrainGuide-GrassParam2.png)  
 _The same number of painted grass objects, now wider and taller_

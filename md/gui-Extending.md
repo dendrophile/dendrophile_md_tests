@@ -59,6 +59,7 @@ public class GUITest : MonoBehaviour {
 
 In this example, calling <span class=component>LabelSlider()</span> and passing the correct arguments will provide a Label paired with a Horizontal Slider.  When writing Compound Controls, you have to remember to return the correct value at the end of the function to make it interactive.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-LabelSlider.png)  
 _The above Compound Control always creates this pair of Controls_
 
@@ -157,6 +158,7 @@ public class GUITest : MonoBehaviour {
 
 ````
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-RGBSlider.png)  
 _The RGB Slider created by the example above_
 
@@ -214,6 +216,7 @@ public class GUITest : MonoBehaviour {
 }
 
 ````
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/gsg-RGBLabelSlider.png)  
 _The Compound RGB Label Slider created by the above code_

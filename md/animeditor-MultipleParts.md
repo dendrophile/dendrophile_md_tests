@@ -12,10 +12,12 @@ The Game Object hierarchy is shown in the panel to the left of the <span class=k
 
 You can access the children of a Game Object by using the foldout triangle next to the object's name. The properties of child objects can be animated just like those of the parent.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorTurretA.png)  
 _Child <span class=keyword>Game Objects</span> can be folded out in the <span class=keyword>Animation View</span>._
 
 Alternatively you can select just the child Game Object you want to animate from the Hierarchy panel or the scene view. When you do this, only the child object is shown in the property list, although the animation data is still handled by the Animation component on the parent.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorTurretB.png)  
 _The child <span class=keyword>Game Objects</span> selected in the <span class=keyword>Hierarchy View</span> are shown in the <span class=keyword>Animation View</span>._
@@ -26,6 +28,7 @@ Handling Multiple Animation Components
 
 
 If both a parent object and one of its children both have an Animation component then either component can animate the child object. The property list can be used to select which one you want to use.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/AnimationEditorCutscene.png)  
 _Select the Animation component you want to edit from the property list_

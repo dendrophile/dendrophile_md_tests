@@ -44,7 +44,7 @@ function ConcatExample(intArray: int[]) {
 }
 ````
 
-The key detail here is that the new pieces don't get added to the string in place, one by one. What actually happens is that each time around the loop, the previous contents of the line variable become dead - a whole new string is allocated to contain the original piece plus the new part at the end. Since the string gets longer with increasing values of i, the amount of heap space being consumed also increases and so it is easy to use up hundreds of bytes of free heap space each time this function is called. If you need to concatenate many strings together then a much better option is the Mono library's [System.Text.StringBuilder](http://msdn.microsoft.com/en-gb/library/system.text.stringbuilder.aspx.html) class.
+The key detail here is that the new pieces don't get added to the string in place, one by one. What actually happens is that each time around the loop, the previous contents of the line variable become dead - a whole new string is allocated to contain the original piece plus the new part at the end. Since the string gets longer with increasing values of i, the amount of heap space being consumed also increases and so it is easy to use up hundreds of bytes of free heap space each time this function is called. If you need to concatenate many strings together then a much better option is the Mono library's [System.Text.StringBuilder](http://msdn.microsoft.com/en-gb/library/system.text.stringbuilder.aspx.md) class.
 
 However, even repeated concatenation won't cause too much trouble unless it is called frequently, and in Unity that usually implies the frame update. Something like:-
 
@@ -163,10 +163,10 @@ Reusable Object Pools
 
 There are many cases where you can avoid generating garbage simply by reducing the number of objects that get created and destroyed. There are certain types of objects in games, such as projectiles, which may be encountered over and over again even though only a small number will ever be in play at once. In cases like this, it is often possible to reuse objects rather than destroy old ones and replace them with new ones. 
 
-See [here](iphone-PracticalScriptingOptimizations#Object%20Pooling.html) for more information on Object Pools and their implementation.
+See [here](iphone-PracticalScriptingOptimizations#Object%20Pooling.md) for more information on Object Pools and their implementation.
 
 Further Information
 -------------------
 
 
-Memory management is a subtle and complex subject to which a great deal of academic effort has been devoted. If you are interested in learning more about it then [memorymanagement.org](http://www.memorymanagement.org/.html) is an excellent resource, listing many publications and online articles. Further information about object pooling can be found on the [Wikipedia page](http://en.wikipedia.org/wiki/Object_pool_pattern.html) and also at [Sourcemaking.com](http://sourcemaking.com/design_patterns/object_pool.html).
+Memory management is a subtle and complex subject to which a great deal of academic effort has been devoted. If you are interested in learning more about it then [memorymanagement.org](http://www.memorymanagement.org/.md) is an excellent resource, listing many publications and online articles. Further information about object pooling can be found on the [Wikipedia page](http://en.wikipedia.org/wiki/Object_pool_pattern.md) and also at [Sourcemaking.com](http://sourcemaking.com/design_patterns/object_pool.md).

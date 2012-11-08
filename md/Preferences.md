@@ -8,6 +8,7 @@ General
 -------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PrefsGeneral40.png)  
 
 
@@ -27,6 +28,7 @@ External Tools
 --------------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PrefsExtTools.png)  
 
 
@@ -44,6 +46,7 @@ Colors
 ------
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PrefsColors.png)  
 
 This panel allows you to choose the colors that Unity uses when displaying various user interface elements.
@@ -53,6 +56,7 @@ Keys
 ----
 
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PrefsKeys.png)  
 
 This panel allows you to set the keystrokes that activate the various commands in Unity.
@@ -60,6 +64,7 @@ This panel allows you to set the keystrokes that activate the various commands i
 
 Cache Server
 ------------
+
 
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PrefsCacheServer35.png)  

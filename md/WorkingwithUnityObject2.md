@@ -2,7 +2,7 @@ Working with UnityObject2
 =========================
 
 
-__Please note that <span class=component>UnityObject2</span> should be used in all new deployments [UnityObject](WorkingwithUnityObject.html), as UnityObject is now deprecated__.
+__Please note that <span class=component>UnityObject2</span> should be used in all new deployments [UnityObject](WorkingwithUnityObject.md), as UnityObject is now deprecated__.
 
 <span class=keyword>UnityObject2</span> is a JavaScript script that simplifies Unity content embedding into HTML and allows you to customize the install process. Having a custom install UI that matches your game and website, will create a more engaging and pleasurable experience for the end-user. It has functions to detect the Unity <span class=keyword>Web Player</span> plugin, initiate Web Player installation and embed Unity content. Although it's possible to deploy <span class=component>UnityObject2.js</span> file on the web server alongside the HTML file it's best to load it directly from the Unity server at <span class=component>[=http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js=]</span>. That way you will always reference the most up to date version of UnityObject2. Please note that the <span class=component>UnityObject2.js</span> file hosted on the Unity server is minified to make it smaller and save traffic. If you want to explore the source code you can find the original file in the <span class=component>Data\Resources</span> folder on Windows and the <span class=component>Contents/Resources</span> folder on Mac OS X.  UnityObject2 by defaults sends anonymous data to GoogleAnalytics which is used to help us identify installation type and conversion rate. UnityObject2 depends on jQuery.
 

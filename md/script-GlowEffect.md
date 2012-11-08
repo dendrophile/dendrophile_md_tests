@@ -7,9 +7,10 @@ Glow image effect
 ##u30 Details
 
 ##u40 Details
-The [Bloom](script-Bloom.html) image effect gives greater control over the glow but has a bit higher processing overhead.
+The [Bloom](script-Bloom.md) image effect gives greater control over the glow but has a bit higher processing overhead.
 
-As with the other [image effects](comp-ImageEffects.html), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.html) installed before it becomes available.
+As with the other [image effects](comp-ImageEffects.md), this effect is only available in Unity Pro and you must have the [Pro Standard Assets](HOWTO-InstallStandardAssets.md) installed before it becomes available.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/FxGlow.png)  
 _Glow effect applied to the scene_

@@ -4,6 +4,7 @@ View Modes
 
 The Scene View control bar lets you choose various options for viewing the scene and also control whether lighting and audio are enabled. These controls only affect the scene view during development and have no effect on the built game.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SceneViewControlBar35.png)  
 (:comment image source SceneViewToolbarPopups.psd :)
 
@@ -14,6 +15,7 @@ Draw Mode
 
 The first drop-down menu selects which <span class=keyword>Draw Mode</span> will be used to depict the scene.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/DrawModeDropdown35.png)  
 (:comment image source SceneViewToolbarPopups.psd :)
 _Draw Mode drop-down_
@@ -21,7 +23,7 @@ _Draw Mode drop-down_
 * __Textured__: show surfaces with their textures visible.
 * __Wireframe__: draw meshes with a wireframe representation.
 * __Tex-Wire__: show meshes textured and with wireframes overlaid.
-* __Render Paths__: show the [rendering path](RenderingPaths.html) for each object using a color code: Green indicates [deferred lighting](RenderTech-DeferredLighting.html), yellow indicates [forward rendering](RenderTech-ForwardRendering.html) and red indicates [vertex lit](RenderTech-VertexLit.html).
+* __Render Paths__: show the [rendering path](RenderingPaths.md) for each object using a color code: Green indicates [deferred lighting](RenderTech-DeferredLighting.md), yellow indicates [forward rendering](RenderTech-ForwardRendering.md) and red indicates [vertex lit](RenderTech-VertexLit.md).
 * __Lightmap Resolution__: overlay a checkered grid on the scene to show the resolution of the lightmaps.
 
 
@@ -30,6 +32,7 @@ Render Mode
 
 
 The next drop-down along selects which of four <span class=keyword>Render Modes</span> will be used to render the scene.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/RenderModeDropdown35.png)  
 (:comment image source SceneViewToolbarPopups.psd :)
@@ -46,6 +49,7 @@ Scene Lighting, Game Overlay, and Audition Mode
 
 
 To the right of the dropdown menus are three buttons which control other aspects of the scene representation.
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/SceneViewButtons35.png)  
 

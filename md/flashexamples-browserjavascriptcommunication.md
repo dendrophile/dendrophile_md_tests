@@ -2,7 +2,7 @@ Example: Browser JavaScript Communication
 =========================================
 
 
-This example shows how AS3 code can communicate JavaScript in the browser. This example makes use of the [ExternalInterface](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/external/ExternalInterface.html.html) ActionScript class.
+This example shows how AS3 code can communicate JavaScript in the browser. This example makes use of the [ExternalInterface](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/external/ExternalInterface.html.md) ActionScript class.
 
 When run, the BrowserCommunicator.TestCommunication() function will register a callback that the browser JavaScript can then call. The ActionScript will then call out to the browser JavaScript, causing an alert popup to be displayed. The exposed ActionScript function will then be invoked by the JavaScript, completing the two-way communication test.
 
@@ -120,7 +120,7 @@ Potential Issues
 _A SecurityError occurred: Error #2060: Security sandbox violation_
 
 This happens when your published SWF does not have permission to access your html file. To fix this locally, you can either:
-* Add the folder containing the SWF to the Flash Player's trusted locations in the [Global Security Settings Panel](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html.html).
+* Add the folder containing the SWF to the Flash Player's trusted locations in the [Global Security Settings Panel](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html.md).
 * Host the file on localhost.
 
-For more information on the Flash Security Sandboxes, please refer to the Adobe [documentation](http://livedocs.adobe.com/flex/3/html/help.html?content=05B_Security_04.html.html).
+For more information on the Flash Security Sandboxes, please refer to the Adobe [documentation](http://livedocs.adobe.com/flex/3/html/help.html?content=05B_Security_04.html.md).

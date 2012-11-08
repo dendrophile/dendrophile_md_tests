@@ -12,7 +12,7 @@ Syntax
 Details
 -------
 
-Tags are basically key-value pairs. Inside a [SubShader](SL-SubShader.html) tags are used to determine rendering order and other parameters of a subshader. Note that the following tags recognized by Unity _'must_' be inside SubShader section and not inside Pass!
+Tags are basically key-value pairs. Inside a [SubShader](SL-SubShader.md) tags are used to determine rendering order and other parameters of a subshader. Note that the following tags recognized by Unity _'must_' be inside SubShader section and not inside Pass!
 
 ###Rendering Order - Queue tag
 
@@ -51,18 +51,18 @@ This will make the object be rendered after all opaque objects, but before trans
 
 ###RenderType tag
 
-<span class=component>RenderType</span> tag categorizes shaders into several predefined groups, e.g. is is an opaque shader, or an alpha-tested shader etc. This is used by [Shader Replacement](SL-ShaderReplacement.html) and in some cases used to produce [camera's depth texture](SL-CameraDepthTexture.html).
+<span class=component>RenderType</span> tag categorizes shaders into several predefined groups, e.g. is is an opaque shader, or an alpha-tested shader etc. This is used by [Shader Replacement](SL-ShaderReplacement.md) and in some cases used to produce [camera's depth texture](SL-CameraDepthTexture.md).
 
 
 
 ###IgnoreProjector tag
 
-If <span class=component>IgnoreProjector</span> tag is given and has a value of "True", then an object that uses this shader will not be affected by [Projectors](class-Projector.html). This is mostly useful on semitransparent objects, because there is no good way for Projectors to affect them.
+If <span class=component>IgnoreProjector</span> tag is given and has a value of "True", then an object that uses this shader will not be affected by [Projectors](class-Projector.md). This is mostly useful on semitransparent objects, because there is no good way for Projectors to affect them.
 
 
 See Also
 --------
 
 
-Passes can be given Tags as well, see [Pass Tags](SL-PassTags.html).
+Passes can be given Tags as well, see [Pass Tags](SL-PassTags.md).
 

@@ -21,6 +21,7 @@ Disabling Analytics
 
 If you do not want to send anonymous data to Unity then the sending of Analytics can be disabled.  To do this untick the box in the Unity Preferences General tab.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/Editor-Analytics.png)  
 _Editor analytics in the preferences pane._
 

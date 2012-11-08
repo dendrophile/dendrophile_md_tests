@@ -18,11 +18,12 @@ Prefab Instances
 
 To create a Prefab instance in the current scene, drag the Prefab from the Project View into the <span class=keyword>Scene</span> or Hierarchy View. This instance is <span class=keyword>linked</span> to the Prefab, as displayed by the blue text used for their name in the Hierarchy View.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/LinkedPrefab.png)  
 _Three of these GameObjects are linked to Prefabs.  One of them is not._
 
 * If you have selected a Prefab instance, and want to make a change that affects all instances, you can click the <span class=menu>Select</span> button in the Inspector to select the source Prefab.
-* Information about instantiating prefabs from scripts is in the [Instantiating Prefabs](InstantiatingPrefabs.html) page.
+* Information about instantiating prefabs from scripts is in the [Instantiating Prefabs](InstantiatingPrefabs.md) page.
 
 ###Inheritance
 
@@ -30,8 +31,10 @@ Inheritance means that whenever the source Prefab changes, those changes are app
 
 This allows you to modify Prefab instances to make them unique from their source Prefabs without breaking the Prefab link.
 
+
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OverrideOff.png)  
 _A linked GameObject with no overrides enabled._
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/OverrideOn.png)  
 _A linked GameObject with several (bold) overrides enabled._
@@ -46,6 +49,7 @@ Imported Prefabs
 
 
 When you place a mesh asset into your Assets folder, Unity automatically imports the file and generates something that looks similar to a Prefab out of the mesh.  This is not actually a Prefab, it is simply the asset file itself.  Instancing and working with assets introduces some limitations that are not present when working with normal Prefabs.  
+
 
 ![](http://docwiki.hq.unity3d.com/uploads/Main/PrefabsVsAssetIcons.png)  
 _Notice the asset icon is a bit different from the Prefab icons_
